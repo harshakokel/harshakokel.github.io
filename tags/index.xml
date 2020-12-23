@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Harsha Kokel</title>
-    <link>https://harshakokel.github.io/tags/</link>
+    <link>http://harshakokel.com/tags/</link>
     <description>Recent content in Tags on Harsha Kokel</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright><atom:link href="https://harshakokel.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright><atom:link href="http://harshakokel.com/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
