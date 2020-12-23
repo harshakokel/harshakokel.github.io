@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Harsha Kokel</title>
+    <link>harshakokel.github.io/</link>
+    <description>Recent content on Harsha Kokel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright><atom:link href="harshakokel.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CV</title>
+      <link>harshakokel.github.io/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>harshakokel.github.io/cv/</guid>
+      <description>Curriculum Vitae hkokel@utdallas.edu
+The University of Texas at Dallas
+Erik Jonsson School of Engineering and Computer Science
+StARLinG Lab: 3.214 800 W. Campbell Road, Dallas, TX 75080  Google Scholar | Semantic Scholar |  DBLP |  ORCID |  Research Gate Resume     Education   Doctor of Philosophy (Ph.D.) Computer Science &amp;nbsp; [ Fall 2018 - present ]  The University of Texas at Dallas, TX, USA  Advisor: Prof.</description>
+    </item>
+    
+    <item>
+      <title>Selected Projects</title>
+      <link>harshakokel.github.io/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>harshakokel.github.io/projects/</guid>
+      <description>Selected Projects   Communicating with Computers This is a DARPA funded project to build intelligent minecraft agent that can communicate and collaborate with humans through chat to build structures. [ video ]     Learning Sparse Graph for GNN Used meta-learning techniques to optimize the graph structure of obtain sparse graph for GNN.     Causal inference from Protein Expression Data Discovering causal molecular relationships from the evaluation of observational data using do-calculus.</description>
+    </item>
+    
+  </channel>
+</rss>
