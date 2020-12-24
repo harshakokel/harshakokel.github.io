@@ -14,6 +14,7 @@
     
     
     <link rel="stylesheet" href="/css/academicons.min.css"/>
+    <link rel="stylesheet" href="/css/ocs-ui.min.css">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Active Advice Seeking for Inverse Reinforcement Learning"/>
 <meta name="twitter:description" content="Phillip Odom and Sriraam Natarajan, AAMAS 2017 In Kunapali et al 2013, authors present a way of incorporating advice in Inverse Reinforcement Learning (IRL) by extending IRL formulation to include constraints based on the expert&rsquo;s advice of preferred and avoided actions, state and reward. Odom et al 2017 expands on Kunapali et al (2013)&rsquo;s formulation of preferred and avoided actions by seeking the advice in active learning setting. The paper proposes a active advice-seeking framework, where instead of seeking mere-label from the expert for selected example as done in active learning, they seek advice (set of preferred and avoided labels) over set of examples."/>
@@ -160,75 +161,20 @@ U_{s}\left(s_{i}\right)=\underbrace{w_{p} F\left(s_{i}\right)}_{\text{demonstrat
 </p>
 
 
-<div id="comments">
-
-  <script>
+<div id="comments"></div>
+<script src="/js/ocs.min.js"></script>
+<script>
   var id =  5 ;
-
-  if (id)
-  {
-    let url = "https://github.com/harshakokel/harshakokel.github.io/issues/".concat(id);
-    let api_url = "https://api.github.com/repos/harshakokel/harshakokel.github.io/issues/".concat(id, "/comments");
-    
-    var commentsDiv = document.getElementById("comments");
-
-    let xhr = new XMLHttpRequest();
-    xhr.responseType = "json";
-    xhr.open("GET", api_url);
-    xhr.setRequestHeader("Accept", "application/vnd.github.v3.html+json");
-    xhr.send();
-
-    xhr.onload = function()
-    {
-      if (xhr.status != 200)
-      {
-        let errorText = document.createElement("p");
-        errorText.innerHTML = "<i>Comments for this post yet are not opened yet (or you have GitHub scripts disabled).</i>";
-        commentsDiv.appendChild(errorText);
-      }
-      else
-      {
-        let comments = xhr.response;
-
-        let mainHeader = document.createElement("h2");
-        mainHeader.innerHTML = "Comments: ".concat(comments.length);
-        commentsDiv.appendChild(mainHeader);
-
-        let issueLink = document.createElement("p");
-        issueLink.innerHTML = "<i>You can leave a comment using this <a href='".concat(url, "'>GitHub issue</a>.</i>");
-        commentsDiv.appendChild(issueLink);
-        
-        comments.forEach(function(comment)
-        {
-            let commentContent = document.createElement("div");
-            commentContent.setAttribute('class', 'gh-comment')
-            commentContent.innerHTML = "".concat(
-                "<div class='gh-header'>",
-                  "<img src='", comment.user.avatar_url, "' />",
-                  "<div style='margin:auto 0;'>",
-                    "<b><a class='gh-username' href='", comment.user.html_url, "'>", comment.user.login, "</a></b>",
-                    " commented at <em>", new Date(comment.created_at), "</em>",
-                  "</div>",
-                "</div>",
-                "<div class='gh-body'>",
-                  comment.body_html,
-                "</div>"
-            );
-            commentsDiv.appendChild(commentContent);
-        });
-      }
-    };
-
-    xhr.onerror = function()
-    {
-      let errorText = document.createElement("p");
-      errorText.innerHTML = "<i>Some error loading comments.</i>";
-      commentsDiv.appendChild(errorText);
-    };
-  }
+    Octomments({
+      github: {
+        owner: 'harshakokel',
+        repo: 'harshakokel.github.io',
+      },
+      issueNumber: id,
+      renderer: [OctommentsRenderer, '#comments']
+    }).init();
 </script>
-
-</div>
+<br>
 
 
 
@@ -289,5 +235,7 @@ U_{s}\left(s_{i}\right)=\underbrace{w_{p} F\left(s_{i}\right)}_{\text{demonstrat
     
     <script src="/js/main.js"></script>
     
+      
+
   </body>
 </html>

@@ -14,6 +14,7 @@
     
     
     <link rel="stylesheet" href="/css/academicons.min.css"/>
+    <link rel="stylesheet" href="/css/ocs-ui.min.css">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Minimal Sufficient Explanations for Factored Markov Decision Processes"/>
 <meta name="twitter:description" content="Omar Zia Khan, Pascal Poupart, and James P Black. ICAPS 2009 Automated planning problems have long been attempted using Markov Decision Processes (MDPs). MDPs are capable of handling the probabilistic and sequential nature of planning problem. They solve the problem by providing a policy which is a mapping from states to actions. However, to use this policy in the real-world, we first need users to trust the policy. The issue of trust can be ameliorated if the policy provides an explanation for its recommeded actions."/>
@@ -169,75 +170,20 @@ V^{\pi^{\star}} \geq V_{MSE} &gt; Q^{\pi^\star}(s_0,a), ,  \forall a \neq \pi^\s
 </p>
 
 
-<div id="comments">
-
-  <script>
+<div id="comments"></div>
+<script src="/js/ocs.min.js"></script>
+<script>
   var id =  4 ;
-
-  if (id)
-  {
-    let url = "https://github.com/harshakokel/harshakokel.github.io/issues/".concat(id);
-    let api_url = "https://api.github.com/repos/harshakokel/harshakokel.github.io/issues/".concat(id, "/comments");
-    
-    var commentsDiv = document.getElementById("comments");
-
-    let xhr = new XMLHttpRequest();
-    xhr.responseType = "json";
-    xhr.open("GET", api_url);
-    xhr.setRequestHeader("Accept", "application/vnd.github.v3.html+json");
-    xhr.send();
-
-    xhr.onload = function()
-    {
-      if (xhr.status != 200)
-      {
-        let errorText = document.createElement("p");
-        errorText.innerHTML = "<i>Comments for this post yet are not opened yet (or you have GitHub scripts disabled).</i>";
-        commentsDiv.appendChild(errorText);
-      }
-      else
-      {
-        let comments = xhr.response;
-
-        let mainHeader = document.createElement("h2");
-        mainHeader.innerHTML = "Comments: ".concat(comments.length);
-        commentsDiv.appendChild(mainHeader);
-
-        let issueLink = document.createElement("p");
-        issueLink.innerHTML = "<i>You can leave a comment using this <a href='".concat(url, "'>GitHub issue</a>.</i>");
-        commentsDiv.appendChild(issueLink);
-        
-        comments.forEach(function(comment)
-        {
-            let commentContent = document.createElement("div");
-            commentContent.setAttribute('class', 'gh-comment')
-            commentContent.innerHTML = "".concat(
-                "<div class='gh-header'>",
-                  "<img src='", comment.user.avatar_url, "' />",
-                  "<div style='margin:auto 0;'>",
-                    "<b><a class='gh-username' href='", comment.user.html_url, "'>", comment.user.login, "</a></b>",
-                    " commented at <em>", new Date(comment.created_at), "</em>",
-                  "</div>",
-                "</div>",
-                "<div class='gh-body'>",
-                  comment.body_html,
-                "</div>"
-            );
-            commentsDiv.appendChild(commentContent);
-        });
-      }
-    };
-
-    xhr.onerror = function()
-    {
-      let errorText = document.createElement("p");
-      errorText.innerHTML = "<i>Some error loading comments.</i>";
-      commentsDiv.appendChild(errorText);
-    };
-  }
+    Octomments({
+      github: {
+        owner: 'harshakokel',
+        repo: 'harshakokel.github.io',
+      },
+      issueNumber: id,
+      renderer: [OctommentsRenderer, '#comments']
+    }).init();
 </script>
-
-</div>
+<br>
 
 
 
@@ -298,5 +244,7 @@ V^{\pi^{\star}} \geq V_{MSE} &gt; Q^{\pi^\star}(s_0,a), ,  \forall a \neq \pi^\s
     
     <script src="/js/main.js"></script>
     
+      
+
   </body>
 </html>
