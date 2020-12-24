@@ -1,0 +1,392 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Advice based relational learning</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="referrer" content="no-referrer">
+    
+    
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    
+    
+    <link rel="stylesheet" href="/css/academicons.min.css"/>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Advice based relational learning"/>
+<meta name="twitter:description" content="Artificial Intelligence (AI) is rapidly becoming one of the most popular tool for solving various problems of humankind. Ranging from trivial day-to-day activity of switching on/off lights, to severe life-changing decision of detecting tumors in scans, all the problems have been tackled with this tool and hence it is no longer acceptable to have a black-box algorithm making calls. AI Community has realized this and hence has put lot of significance on Explainable AI (XAI) in recent years."/>
+
+    <meta property="og:title" content="Advice based relational learning" />
+<meta property="og:description" content="Artificial Intelligence (AI) is rapidly becoming one of the most popular tool for solving various problems of humankind. Ranging from trivial day-to-day activity of switching on/off lights, to severe life-changing decision of detecting tumors in scans, all the problems have been tackled with this tool and hence it is no longer acceptable to have a black-box algorithm making calls. AI Community has realized this and hence has put lot of significance on Explainable AI (XAI) in recent years." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://harshakokel.com/post/advice-based-learning/" />
+<meta property="article:published_time" content="2018-11-04T16:40:08+02:00" />
+<meta property="article:modified_time" content="2018-11-04T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+
+    <meta itemprop="name" content="Advice based relational learning">
+<meta itemprop="description" content="Artificial Intelligence (AI) is rapidly becoming one of the most popular tool for solving various problems of humankind. Ranging from trivial day-to-day activity of switching on/off lights, to severe life-changing decision of detecting tumors in scans, all the problems have been tackled with this tool and hence it is no longer acceptable to have a black-box algorithm making calls. AI Community has realized this and hence has put lot of significance on Explainable AI (XAI) in recent years.">
+<meta itemprop="datePublished" content="2018-11-04T16:40:08+02:00" />
+<meta itemprop="dateModified" content="2018-11-04T16:40:08+02:00" />
+<meta itemprop="wordCount" content="1796">
+
+
+
+<meta itemprop="keywords" content="advice,course,survey," />
+
+    
+  </head>
+  <body>
+
+    
+    <div id="wrapper">
+
+      
+      <div id="main">
+	<div class="inner">
+
+	  
+	  
+<header id="header">
+	<h3><a href="#">Harsha Kokel</a></h3>
+	<ul class="icons">
+		<li id="linkedin">
+			<a target="_blank" href="http://linkedin.com/in/harshakokel" title="linkedin" class="icon brands fa-linkedin">
+				<span class="label" >Linked in</span>
+			</a>
+		</li>
+		<li id="github">
+			<a target="_blank" href="https://github.com/harshakokel" title="github" class="icon brands fa-github">
+				<span class="label" >Github</span>
+			</a>
+		</li>
+		<li id="email">
+			<a  href="mailto:hkokel@utdallas.edu" title="mail" class="icon solid fa-envelope" >
+				<span class="label" >Mail</span>
+			</a>
+		</li>
+		<li id="twitter">
+			<a target="_blank" href="https://twitter.com/harsha_kokel" title="twitter" class="icon brands fa-twitter" >
+				<span class="label" title="Twitter">Twitter</span>
+			</a>
+		</li>
+	</ul>
+</header>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax '})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	  
+<div class="page__section">
+  <nav class="breadcrumb breadcrumb_type5" aria-label="Breadcrumb">
+<ol  class="breadcrumb__list r-list">
+  
+
+
+
+<li class="breadcrumb__group" >
+  <a href="https://harshakokel.com/" class="breadcrumb__point r-link">Home</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+
+<li class="breadcrumb__group"  class="active">
+  <a href="https://harshakokel.com/post/" class="breadcrumb__point r-link">Posts</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+  <li class="breadcrumb__group">
+    Nov 4, 2018
+  </li> 
+  <li class="tags">  Tagged with:
+      <a href="https://harshakokel.com/tags/advice/" class="button">advice</a>  <a href="https://harshakokel.com/tags/course/" class="button">course</a>  <a href="https://harshakokel.com/tags/survey/" class="button">survey</a>
+  </li>
+</ol> 
+
+
+
+</nav>
+</div>
+
+  <header class="main">
+    <h2>Advice based relational learning</h2>
+  </header>
+
+
+  
+  
+
+  <p><strong></strong></p>
+
+  <p><p>Artificial Intelligence (AI) is rapidly becoming one of the most popular tool for solving various problems of humankind. Ranging from trivial day-to-day activity of switching on/off lights, to severe life-changing decision of detecting tumors in scans, all the problems have been tackled with this tool and hence it is no longer acceptable to have a <strong>black-box</strong> algorithm making calls. AI Community has realized this and hence has put lot of significance on Explainable AI (XAI) in recent years. AI research has taken a shift from Human vs Robot to Human-Allied AI or Human-in-the-loop AI. However, this is not an unexplored territory. Advice-based or Knowledge-based methods have been around since the conception of AI. As part of this independent study, I read advice-based methods for data in relational first-order logic.</p>
+<h3 id="advice-based-method">Advice based method</h3>
+<p>Lot of work has been done to incorporate knowledge in propositional domain and was surveyed by me as part of CS 7301 Recent Advances in Computing - Survey of Adv Research in CS in Fall of 2018. I summarize it here and then review the work done in relational domain.</p>
+<p>Usually advice-based methods encode human knowledge or domain information in various forms, a small list with examples is provided below.</p>
+<ul>
+<li>A set of if-then rules is represented as propositional horn clauses<br>
+<strong>Advice</strong>: if $B_1, B_2, &hellip;, B_n$ then $A$<br>
+<strong>Horn clause</strong>: $A \leftarrow B_1, B_2, &hellip;, B_n$</li>
+<li>Qualitative influence between variables is rendered as Qualitative Probabilistic Network (QPN) (Wellman 1990)<br>
+<strong>Advice</strong>: &ldquo;price of apple rises with an increase in demand&rdquo;</li>
+</ul>
+ <div align="center">
+ <img align="center" width="400"  src="/images/abrl_1.png">
+ </div>
+<ul>
+<li>
+<p>Uncertainty between variables is formulated by conditional probability tables</p>
+<p><strong>Advice</strong>: &ldquo;When it is cloudy, it mostly rains&rdquo;</p>
+ <div align="center">
+ <img align="center" width="400"  src="/images/abrl_2.png">
+ </div>
+</li>
+<li>
+<p>Preference statements under a ceteris paribus (all else being equal) is interpreted as CP-Net (Boutilier et al., 2004)</p>
+</li>
+</ul>
+<div align="center">
+<img align="center" width="350"  src="/images/abrl_3.png">
+</div>
+<p><strong>Advice</strong>: Fish soup ($S_f$) is strictly preferred over Vegetable soup ($S_v$), and preference between red ($W_r$) and white ($W_w$) wine is conditioned on the soup. Red wine is preferred if served with a vegetable soup, and white wine is preferred if served with a fish soup</p>
+<p>Once advice is encoded, it is used while learning the model in one of the following ways:</p>
+<ul>
+<li>
+<p><strong>Theory Refinement</strong> Advice is used as initial model with approximate domain knowledge and training examples are then used to refine this model.</p>
+</li>
+<li>
+<p><strong>Objective Refinement</strong> Advice is used to constrain or modify the objective function and then training samples are used to learn a model that maximizes this objective.</p>
+</li>
+<li>
+<p><strong>Observation Refinement</strong> Advice is used to refine, clean or augment part ( or all ) of the observed training samples and then this is used to learn the model.</p>
+</li>
+</ul>
+<h3 id="relational-and-srl-methods">Relational and SRL methods</h3>
+<p>Most of the real-world data is complex, attempts are made to represent them using object (as variables) and relations (as predicates) using first-order logic programs called Inductive Logic Programming (ILP). Add uncertainty to such complex data and they become convoluted. Multiple formalisms have been proposed for such  probabilistic-logic representations using statistical techniques, now popular known as field of  Statistical Relational Learning (SRL) (Getoor 2007). With power of complex representation, these model lose out on other tasks. Specifically, inference and learning (which involves inference) in SRL is NP-hard or harder. For that reason, learning SRL models have been a topic of interest among researchers for a long time and it called for advice-based learning.</p>
+<h3 id="advice-based-relational-methods">Advice-based relational methods</h3>
+<p>First-order logic unlike propositional logic or flat feature vectors have two important linguistic features, viz. variables and quantifiers. These features augment capability of providing a general high-level advice for example we can say &ldquo;Do not change lanes if there is no vehicle in front of you&rdquo; which can be easily written as</p>
+<p>$$
+\begin{align}
+lane(x, l)\ \wedge\ &amp;\neg\ \exists\ y,\ (\ lane(y, l)\ \wedge\  ahead(y, x)\ )<br>
+\<br>
+&amp;\implies \ \neg\ changelane(x) <br>
+\end{align}
+$$
+One straight forward way of  advice-based relational model is to hand-code the predicates or clauses without need of any data.  Pazzani  and  Kibler  (1992)  proposed one of the first successful algorithms for advice-based inductive learning called First Order Combined Learner (FOCL). FOCL is an extension of FOIL (Quinlan, 1990). FOCL uses both inductive as well as explanation-based component (a set of horn clauses provided by human expert) to propose an extension to a learned concept at every step. FOCL has been shown to generalize more accurately than the purely inductive FOIL algorithm. Bergadano and Giordana (1988)  had also proposed ML-SMART, to integrate explanation-based learning (EBL) and inductive techniques to construct operational concept definitions using three components: theory guided component, arbitrary component and a drop component. ML-SMART is able to handle both overly-general and overly-specific theories. The goal is to find rules that cover the positive examples of the concept and exclude the negatives. GRENDEL (Cohen, 1992) is another FOIL based system that uses advice in the form of an antecedent description grammar (ADG) to explicitly represent the inductive hypothesis space.  Mooney and Zelle (1994) reviews advice-based methods developed for ILP which integrate ILP with EBL.</p>
+<p>SRL models have probabilities (parameters) associated with the clauses (structure). Most raw form of advice in SRL can be direct probability values. But, there has been lot of work to incorporate richer form of advice. I briefly describe a few studies:</p>
+<p>&ndash;  <strong>Yang et al. 2014</strong> proposed a cost-sensitive soft margin approach to learn from imbalanced domain. It builds up on the Relational Functional Gradient Boosting (RFGB) (Natarajan et al., 2012) approach of learning an SRL model by including a cost-augmented scoring function equation below that treats positive and negative examples differently in the objective function.</p>
+<p>$$
+c\left(\hat{y_{i}}, y\right)=\alpha I\left(\hat{y_{i}}=1 \wedge y=0\right)+\beta I\left(\hat{y_{i}}=0 \wedge y=1\right)
+$$</p>
+<p>where $\hat{y_{i}}$ is the true label of $i^{th}$ instance and $y$ is the predicted label. $I(\hat{y_{i}} = 1 \wedge y = 0)$ is 1 for false negatives and $I(\hat{y_{i}} = 0 \wedge y = 1)$ is 1 for false positives. Hence, $c(\hat{y_{i}}, y) = \alpha$ when a positive example is misclassified, while $c(\hat{y_{i}},y) = \beta$ when a negative example is misclassified.</p>
+<p>$$
+\log J =\sum_{i} \psi\left(y_{i} ; \mathbf{X}_{i}\right)- \log \sum_{y_{i}^{\prime}} \exp \left\{ \psi\left(y_{i}^{\prime} ; \mathbf{X}_{i}\right)+c\left(\hat{y}_{i}, y_{i}^{\prime}\right) \right\}
+$$</p>
+<p>Taking derivation of this modified objective function gives a nice form of gradient</p>
+<p>$$\Delta=I\left(\hat{y}_{i}=1\right)-\lambda P\left(y_i=1 ; \mathbf{x}_i\right)$$</p>
+<p>where $\lambda=\frac{e^{c\left(\hat{y}_{i}, y=1\right)}}{\sum_{y^{\prime}}\left[P\left(y^{\prime} ; \mathbf{X}_{i}\right) e^{c\left(\hat{y}_{i}, y^{\prime}\right)}\right]}$</p>
+<p>Relational regression trees are then learnt using this soft-gradient.</p>
+<p>&ndash;  <strong>Odom et al. 2015</strong> uses preference advice encoded in Horn clause form as a relational advice constraint and use it as cost function while learning the model.</p>
+<p>A <em>relational advice constraint</em> (RAC), F is defined using a Horn clause $\wedge_i f_i(x_i) \implies label(x_e)$, where $\wedge_i f_i(x_i)$ specifies the conjunction of conditions under which the advice applies on the example arguments $x_e$. Each \textit{relational advice rules} (RAR) is defined using the triple $\langle  F, l+, l- \rangle$ where $F$ is the RAC clause specifying the subset of examples, $l+$ is the preferred label and $l-$ is the avoided label. And, each <em>relational advice set</em> (RAS), $R$ is specified as a set of RAR. Cost function is defined as:</p>
+<p>$$
+c\left(x_{i}, \psi\right)=-\lambda \times \psi\left(x_{i}\right) \times\left[n_{t}\left(x_{i}\right)-n_{f}\left(x_{i}\right)\right]
+$$</p>
+<p>where, $n_t$ indicates the number of advice rules that prefer the example to be true, $n_f$ the number of rules that prefer it to be false, $\lambda$ is scaling factor of the cost function and $\psi(x_i)$ is the current value of the $\psi$ function for the $x$.</p>
+<p>The modified log-likelihood function is:</p>
+<p>$$
+MLL(\mathbf{x}, \mathbf{y})=\sum_{x_{i} \in \mathbf{x}} \log \frac{\exp \left(\psi\left(x_{i} ; y_{i}\right)\right)}{\sum_{y^{\prime}} \exp \left(\psi\left(x_{i} ; y^{\prime}\right)+c\left(y_{i}, y^{\prime}, \psi\right)\right)}
+$$</p>
+<p>Scaled gradient of this is</p>
+<p>$$
+\eta \Delta\left(x_{i}\right) =\alpha \cdot \left[ I\left(y_{i}=1\right)-P\left(y_{i}=1 ; \psi\right) \right] + (1 - \alpha) \cdot\left[n_t\left(x_i\right)-n_f\left(x_i\right)\right]
+$$</p>
+<p>So, when the example label is preferred target in more advice models than the avoided target, $n_t(x_i)-n_f(x_i)$ is set to be positive. This will result in pushing the gradient of these examples in the positive direction. And, $\alpha$ is the linear trade-off between data and advice.</p>
+<p>This approach was successfully adapted in relation extraction and healthcare problems (Odom et al., 2015a; Soni et al., 2016; Natarajan et al., 2017).</p>
+<p>&ndash; Later, <strong>Odom  and  Natarajan  (2018)</strong> extended that constraint-based framework from Odom  et  al.  (2015b) by redefining  $l+$ and $l-$ in <em>relational advice rules</em> (RAR) triple $\langle  F, l+, l- \rangle$ to weighted label. $\beta_t$ weight for preferred label and $\beta_f$ for the avoided label and modifying the cost function.</p>
+<p>$$
+c_{LP}\left(x_{i}, \psi\right)=-\lambda \times \psi\left(x_{i}\right) \times\left[\beta_{t} \times n_{t}\left(x_{i}\right)-\beta_{f} \times n_{f}\left(x_{i}\right)\right]
+$$</p>
+<p>This enables them to include following types of advice:</p>
+<ul>
+<li><strong>Preferential advice:</strong>
+This advice is handled similar to the previous paper, except now magnitude of each constraint is determined by the weights $\beta s$</li>
+<li><strong>Cost-based advice:</strong>
+The soft margin approach in Yang wt al. 2014 is contained in the framework by
+controlling $\beta s$. Specifically, $\beta_t$ handles the sensitivity to false positives and  $\beta_f$ for false negatives.</li>
+<li><strong>Qualitative constraints:</strong>
+In relational domain advice on qualitative constraints can be viewed as providing multiple pieces of advice over a given feature. As the number of objects satisfying this constraint increases more advice will apply.  $n_t$ (or $n_f$ ) to scale based on that feature.</li>
+<li><strong>Privileged information:</strong>
+This is the features that are available during training but not during testing. To handle this, they define a cost function that reduces the KL divergence between $P(y|x)$ and $P(y|x^{RP})$ where $x^{RP}$ is the set of all the features including privilege features.</li>
+</ul>
+<p>$$
+c_{R P}\left(x_{i}, \psi\right)=-\lambda \times K L\left(P_{D}\left(y_{i} | \mathbf{x}_{i}^{\mathrm{RP}}\right) | P\left(y_{i} | \mathbf{x}_{i}\right)\right)<br>
+$$</p>
+<p>The gradients obtained for the modified log-likelihood is as follows:</p>
+<p>$$
+\eta \Delta_{L P}\left(x_{t}\right)= \alpha \cdot \left[ I\left(y_{t}=1\right)-P\left(y_{t}=1 ; \psi\right) \right] + (1- \alpha) \cdot\left[\beta_{t} \cdot n_{t}\left(x_{t}\right)-\beta_{f} \cdot n_{f}\left(x_{t}\right)\right]
+$$</p>
+<p>$$
+\Delta_{R P}\left(x_{i}\right)=I\left(y_{t}=1\right)-P\left(y_{t}=1 ; \psi\right) \<br>
+-\alpha \cdot\left(P\left(y_{t}=1 | \mathrm{x}_{l}^{\mathrm{CF}}\right)-P_{D}\left(y_{t}=1 | \mathrm{x}_{t}^{\mathrm{RP}}\right)\right)
+$$</p>
+<p>&ndash; <strong>Odom  and  Natarajan  (2016)</strong> also introduced active advice seeking a framework for PLMs where model can query the human expert in the most useful areas of the feature space takes full advantage of the data as well as the expert. Advice here is a set of Queries from the model and responses from the expert. Each query is a conjunction of literals which represents set of examples and expert response is a preferred or avoid labels for that query.</p>
+<p>Key idea here is how generate the query. Model calculates the score of each example from the entropy of prediction</p>
+<p>$$
+H\left(x_{i}\right)=\sum_{l \in \text {Labels}} P_{l}\left(y_{i} | x_{i}\right) \log \left(P_{l}\left(y_{i} | x_{i}\right)\right)
+$$</p>
+<p>These scores are used as regression values and a set of weighted first-order-logic clauses are learned that group examples. These clauses are posed as query to the expert.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>There are ways to incorporate the rich domain knowledge gathered by humans over course of time and hence we should not reinvent the wheel by making our model learn solely from the data. There can be situations where learning from data is enough but for complex and rich models it would not be sufficient and such approaches can be very useful in that case.</p>
+</p>
+
+
+<div id="comments">
+
+  <script>
+  var id =  3 ;
+
+  if (id)
+  {
+    let url = "https://github.com/YOUR-ACCOUNT/YOUR-REPOSITORY/issues/".concat(id);
+    let api_url = "https://api.github.com/repos/YOUR-ACCOUNT/YOUR-REPOSITORY/issues/".concat(id, "/comments");
+    
+    var commentsDiv = document.getElementById("comments");
+
+    let xhr = new XMLHttpRequest();
+    xhr.responseType = "json";
+    xhr.open("GET", api_url);
+    xhr.setRequestHeader("Accept", "application/vnd.github.v3.html+json");
+    xhr.send();
+
+    xhr.onload = function()
+    {
+      if (xhr.status != 200)
+      {
+        let errorText = document.createElement("p");
+        errorText.innerHTML = "<i>Comments for this post yet are not opened yet (or you have GitHub scripts disabled).</i>";
+        commentsDiv.appendChild(errorText);
+      }
+      else
+      {
+        let comments = xhr.response;
+
+        let mainHeader = document.createElement("h2");
+        mainHeader.innerHTML = "Comments: ".concat(comments.length);
+        commentsDiv.appendChild(mainHeader);
+
+        let issueLink = document.createElement("p");
+        issueLink.innerHTML = "<i>You can leave a comment using this <a href='".concat(url, "'>GitHub issue</a>.</i>");
+        commentsDiv.appendChild(issueLink);
+        
+        comments.forEach(function(comment)
+        {
+            let commentContent = document.createElement("div");
+            commentContent.setAttribute('class', 'gh-comment')
+            commentContent.innerHTML = "".concat(
+                "<div class='gh-header'>",
+                  "<img src='", comment.user.avatar_url, "' />",
+                  "<div style='margin:auto 0;'>",
+                    "<b><a class='gh-username' href='", comment.user.html_url, "'>", comment.user.login, "</a></b>",
+                    " commented at <em>", new Date(comment.created_at), "</em>",
+                  "</div>",
+                "</div>",
+                "<div class='gh-body'>",
+                  comment.body_html,
+                "</div>"
+            );
+            commentsDiv.appendChild(commentContent);
+        });
+      }
+    };
+
+    xhr.onerror = function()
+    {
+      let errorText = document.createElement("p");
+      errorText.innerHTML = "<i>Some error loading comments.</i>";
+      commentsDiv.appendChild(errorText);
+    };
+  }
+</script>
+
+</div>
+
+
+
+	</div>
+      </div>
+
+      
+<div id="sidebar">
+  <div class="inner">
+
+    
+
+    
+<nav id="menu">
+  <header class="major">
+    <h2>Menu</h2>
+  </header>
+  <ul>
+    
+    
+    
+    <li><a href="/">Homepage</a></li>
+    
+    
+    
+    <li><a href="/cv/">cv</a></li>
+    
+    
+    
+    <li><a href="/projects/">projects</a></li>
+    
+    
+    
+    <li><a href="/post/">BLOG POSTS</a></li>
+    
+    
+  </ul>
+</nav>
+
+
+    
+<footer id="footer">
+  <p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+
+
+  </div>
+</div>
+
+
+    </div>
+    
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    
+    <script src="/js/main.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VQA on Home</title>
+    <link>https://harshakokel.com/tags/vqa/</link>
+    <description>Recent content in VQA on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
+    <lastBuildDate>Mon, 13 Apr 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/vqa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A simple neural network module for relational reasoning</title>
+      <link>https://harshakokel.com/post/relational-network/</link>
+      <pubDate>Mon, 13 Apr 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/post/relational-network/</guid>
+      <description>Adam Santoro, David Raposo, David G.T. Barrett, Mateusz Malinowski, Razvan Pascanu, Peter Battaglia, and Timothy Lillicrap, NeurIPS 2017 Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&amp;rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: a) the graph or relation between entities is not provided rather learned and b) the edges between entities can be of different types.</description>
+    </item>
+    
+  </channel>
+</rss>

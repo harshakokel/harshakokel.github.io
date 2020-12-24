@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Augmenting Neural Networks with First-order Logic</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="referrer" content="no-referrer">
+    
+    
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    
+    
+    <link rel="stylesheet" href="/css/academicons.min.css"/>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Augmenting Neural Networks with First-order Logic"/>
+<meta name="twitter:description" content="Tao Li, Vivek Srikumar, ACL 2019 This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples."/>
+
+    <meta property="og:title" content="Augmenting Neural Networks with First-order Logic" />
+<meta property="og:description" content="Tao Li, Vivek Srikumar, ACL 2019 This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://harshakokel.com/post/nn-with-fol/" />
+<meta property="article:published_time" content="2020-09-22T16:40:08+02:00" />
+<meta property="article:modified_time" content="2020-09-22T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+
+    <meta itemprop="name" content="Augmenting Neural Networks with First-order Logic">
+<meta itemprop="description" content="Tao Li, Vivek Srikumar, ACL 2019 This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.">
+<meta itemprop="datePublished" content="2020-09-22T16:40:08+02:00" />
+<meta itemprop="dateModified" content="2020-09-22T16:40:08+02:00" />
+<meta itemprop="wordCount" content="502">
+
+
+
+<meta itemprop="keywords" content="neurosymbolic,course," />
+
+    
+  </head>
+  <body>
+
+    
+    <div id="wrapper">
+
+      
+      <div id="main">
+	<div class="inner">
+
+	  
+	  
+<header id="header">
+	<h3><a href="#">Harsha Kokel</a></h3>
+	<ul class="icons">
+		<li id="linkedin">
+			<a target="_blank" href="http://linkedin.com/in/harshakokel" title="linkedin" class="icon brands fa-linkedin">
+				<span class="label" >Linked in</span>
+			</a>
+		</li>
+		<li id="github">
+			<a target="_blank" href="https://github.com/harshakokel" title="github" class="icon brands fa-github">
+				<span class="label" >Github</span>
+			</a>
+		</li>
+		<li id="email">
+			<a  href="mailto:hkokel@utdallas.edu" title="mail" class="icon solid fa-envelope" >
+				<span class="label" >Mail</span>
+			</a>
+		</li>
+		<li id="twitter">
+			<a target="_blank" href="https://twitter.com/harsha_kokel" title="twitter" class="icon brands fa-twitter" >
+				<span class="label" title="Twitter">Twitter</span>
+			</a>
+		</li>
+	</ul>
+</header>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax '})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	  
+<div class="page__section">
+  <nav class="breadcrumb breadcrumb_type5" aria-label="Breadcrumb">
+<ol  class="breadcrumb__list r-list">
+  
+
+
+
+<li class="breadcrumb__group" >
+  <a href="https://harshakokel.com/" class="breadcrumb__point r-link">Home</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+
+<li class="breadcrumb__group"  class="active">
+  <a href="https://harshakokel.com/post/" class="breadcrumb__point r-link">Posts</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+  <li class="breadcrumb__group">
+    Sep 22, 2020
+  </li> 
+  <li class="tags">  Tagged with:
+      <a href="https://harshakokel.com/tags/neurosymbolic/" class="button">neurosymbolic</a>  <a href="https://harshakokel.com/tags/course/" class="button">course</a>
+  </li>
+</ol> 
+
+
+
+</nav>
+</div>
+
+  <header class="main">
+    <h2>Augmenting Neural Networks with First-order Logic</h2>
+  </header>
+
+
+  
+  
+
+  <p><strong></strong></p>
+
+  <p><h4 id="tao-li-vivek-srikumar-acl-2019httpswwwaclweborganthologyp19-1028v2pdf">Tao Li, Vivek Srikumar, <a href="https://www.aclweb.org/anthology/P19-1028v2.pdf">ACL 2019</a></h4>
+<p>This paper addresses the problem of incorporating declarative  knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.</p>
+<p>To convert the FOL rules to a network, each predicate in the rule is mapped to a named neuron. For example, given a rule $A_1 \wedge A_2 \rightarrow B_1$, the network will have 3 named neurons: $a_1, a_2,$ and $b_1$ with arrow from $a_1$ and $a_2$ to $b_1$. The Łukasiewicz T-norm and T-conorm are used as functions for the logical operators, inspired by probabilistic soft logic literature. Auxiliary variables and auxiliary named neurons are included as needed to compute logical operations. For example, $(\lnot A \vee B) \wedge (C \vee D)$ is converted to $P \wedge Q$ with $(\lnot A \vee B) \leftrightarrow P$ and $(C \vee D) \leftrightarrow Q$. The benefit of using Łukasiewicz functions is that they are differentiable. This network doesn&rsquo;t have any parameters hence do not require any learning.</p>
+<p>To ensure that the network is acyclic, the authors recommend using contrapositive statements when needed. For example, if the rule $B_1 \rightarrow A_1$ is introducing cycle in the network, then use its contrapositive equivalent $\lnot A_1 \rightarrow \lnot B_1$ instead.</p>
+<p>This rule network is added as constraint to some layer $y=g(\mathbf{Wx})$ of the original neural network. The <em>constrained neural layer</em> is defined as follows with hyperparameter $\rho$ handling the importance factor.</p>
+<p>$$y = g(\mathbf{Wx} + \rho \underbrace{d(\mathbf{z})}_{knowledge})$$</p>
+<p>Authors empirically evaluate their proposed augmented NN for three tasks: machine comprehension, natural language inference, and text chunking. In each of these tasks the augmentation is performed at different layers. In machine comprehension task, where the use BiDAF as the base neural network, the constrained augmentation is done for attention nodes. In natural language inference task, they use L-DAtt as the base method and augment attention node as well as label nodes. In the text chunking task, they augment the label layer. These experiments confirm their hypothesis that using the knowledge improve the performance, but only when the data is less. With more data, the augmented knowledge does not improve performance significantly.</p>
+<h3 id="critique">Critique</h3>
+<ul>
+<li>The framework of augmenting NN proposed is very general and hence can be potentially used in any task where deep neural networks are used.</li>
+<li>I haven&rsquo;t quite understood the emphasis on the differentiability of the augmented network since there are no parameters to be learnt there. The hyperparameter $\rho$ is tuned.</li>
+<li>The right hand side of the rule looks pretty limited. The rules used in the experiments are also very simple.</li>
+<li>In the text chunking task we would assume that the bidirectional LSTM would be able to learn rules $C_{1:4}$. It is not clear from experiments which rule improves the results in this task.</li>
+</ul>
+</p>
+
+
+<div id="comments">
+
+  <script>
+  var id =  24 ;
+
+  if (id)
+  {
+    let url = "https://github.com/YOUR-ACCOUNT/YOUR-REPOSITORY/issues/".concat(id);
+    let api_url = "https://api.github.com/repos/YOUR-ACCOUNT/YOUR-REPOSITORY/issues/".concat(id, "/comments");
+    
+    var commentsDiv = document.getElementById("comments");
+
+    let xhr = new XMLHttpRequest();
+    xhr.responseType = "json";
+    xhr.open("GET", api_url);
+    xhr.setRequestHeader("Accept", "application/vnd.github.v3.html+json");
+    xhr.send();
+
+    xhr.onload = function()
+    {
+      if (xhr.status != 200)
+      {
+        let errorText = document.createElement("p");
+        errorText.innerHTML = "<i>Comments for this post yet are not opened yet (or you have GitHub scripts disabled).</i>";
+        commentsDiv.appendChild(errorText);
+      }
+      else
+      {
+        let comments = xhr.response;
+
+        let mainHeader = document.createElement("h2");
+        mainHeader.innerHTML = "Comments: ".concat(comments.length);
+        commentsDiv.appendChild(mainHeader);
+
+        let issueLink = document.createElement("p");
+        issueLink.innerHTML = "<i>You can leave a comment using this <a href='".concat(url, "'>GitHub issue</a>.</i>");
+        commentsDiv.appendChild(issueLink);
+        
+        comments.forEach(function(comment)
+        {
+            let commentContent = document.createElement("div");
+            commentContent.setAttribute('class', 'gh-comment')
+            commentContent.innerHTML = "".concat(
+                "<div class='gh-header'>",
+                  "<img src='", comment.user.avatar_url, "' />",
+                  "<div style='margin:auto 0;'>",
+                    "<b><a class='gh-username' href='", comment.user.html_url, "'>", comment.user.login, "</a></b>",
+                    " commented at <em>", new Date(comment.created_at), "</em>",
+                  "</div>",
+                "</div>",
+                "<div class='gh-body'>",
+                  comment.body_html,
+                "</div>"
+            );
+            commentsDiv.appendChild(commentContent);
+        });
+      }
+    };
+
+    xhr.onerror = function()
+    {
+      let errorText = document.createElement("p");
+      errorText.innerHTML = "<i>Some error loading comments.</i>";
+      commentsDiv.appendChild(errorText);
+    };
+  }
+</script>
+
+</div>
+
+
+
+	</div>
+      </div>
+
+      
+<div id="sidebar">
+  <div class="inner">
+
+    
+
+    
+<nav id="menu">
+  <header class="major">
+    <h2>Menu</h2>
+  </header>
+  <ul>
+    
+    
+    
+    <li><a href="/">Homepage</a></li>
+    
+    
+    
+    <li><a href="/cv/">cv</a></li>
+    
+    
+    
+    <li><a href="/projects/">projects</a></li>
+    
+    
+    
+    <li><a href="/post/">BLOG POSTS</a></li>
+    
+    
+  </ul>
+</nav>
+
+
+    
+<footer id="footer">
+  <p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+
+
+  </div>
+</div>
+
+
+    </div>
+    
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    
+    <script src="/js/main.js"></script>
+    
+  </body>
+</html>

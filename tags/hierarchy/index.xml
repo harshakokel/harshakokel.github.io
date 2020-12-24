@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hierarchy on Home</title>
+    <link>https://harshakokel.com/tags/hierarchy/</link>
+    <description>Recent content in hierarchy on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
+    <lastBuildDate>Wed, 21 Oct 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/hierarchy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automatically Generating Abstractions for Planning</title>
+      <link>https://harshakokel.com/post/abstraction-for-planning/</link>
+      <pubDate>Wed, 21 Oct 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/post/abstraction-for-planning/</guid>
+      <description>Craig Knoblock, AIJ 1994  This paper highlights a heuristic property called ordered monotonicity propery of hierarchical domains and provides a way to learn the hierarchy using the sufficient condition for that property.
+A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of $L$ is set of first-order literals, $S$ is the set of finite states (described using literals), and $O$ is the set of operators in the domain.</description>
+    </item>
+    
+    <item>
+      <title>Hierarchical Reinforcement Learning</title>
+      <link>https://harshakokel.com/post/hierarchical-rl/</link>
+      <pubDate>Mon, 28 Oct 2019 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/post/hierarchical-rl/</guid>
+      <description>Standard RL planning suffers from the curse of dimensionality when the action space is too large and/or state space is infeasible to enumerate. Humans simplify the problem of planning in such complex conditions by abstracting away details which are not relevant at a given time and decomposing actions into hierarchies. Several researchers have proposed to model the temporal-abstraction in RL by composing some form of hierarchy over actions space (Dietterich 1998, Sutton et al 1998, Parr and Russell 1998).</description>
+    </item>
+    
+  </channel>
+</rss>

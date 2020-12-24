@@ -1,0 +1,599 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Graph Convolutional Networks</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="referrer" content="no-referrer">
+    
+    
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    
+    
+    <link rel="stylesheet" href="/css/academicons.min.css"/>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Graph Convolutional Networks"/>
+<meta name="twitter:description" content="Thomas N Kipf and Max Welling, ICLR 2017 Introduction Kipf et al. 2017 introduces Graph Convolutional Networks (GCN) which uses features of each node and leverages edges of the graph to derive class similarity between nodes in semi-supervised setting.
+Traditionally semi-supervised learning in a graph-structured data heavily relied on the assumption that the edges in the graph represent class similarities (i.e. nodes with similar classes have edge between them). For example, in an image segmentation task, an image can be thought as a grid (Graph with node for every pixel and edges between neighboring pixels as shown in figure below)."/>
+
+    <meta property="og:title" content="Graph Convolutional Networks" />
+<meta property="og:description" content="Thomas N Kipf and Max Welling, ICLR 2017 Introduction Kipf et al. 2017 introduces Graph Convolutional Networks (GCN) which uses features of each node and leverages edges of the graph to derive class similarity between nodes in semi-supervised setting.
+Traditionally semi-supervised learning in a graph-structured data heavily relied on the assumption that the edges in the graph represent class similarities (i.e. nodes with similar classes have edge between them). For example, in an image segmentation task, an image can be thought as a grid (Graph with node for every pixel and edges between neighboring pixels as shown in figure below)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://harshakokel.com/post/gcn/" />
+<meta property="article:published_time" content="2020-02-05T16:40:08+02:00" />
+<meta property="article:modified_time" content="2020-02-05T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+
+    <meta itemprop="name" content="Graph Convolutional Networks">
+<meta itemprop="description" content="Thomas N Kipf and Max Welling, ICLR 2017 Introduction Kipf et al. 2017 introduces Graph Convolutional Networks (GCN) which uses features of each node and leverages edges of the graph to derive class similarity between nodes in semi-supervised setting.
+Traditionally semi-supervised learning in a graph-structured data heavily relied on the assumption that the edges in the graph represent class similarities (i.e. nodes with similar classes have edge between them). For example, in an image segmentation task, an image can be thought as a grid (Graph with node for every pixel and edges between neighboring pixels as shown in figure below).">
+<meta itemprop="datePublished" content="2020-02-05T16:40:08+02:00" />
+<meta itemprop="dateModified" content="2020-02-05T16:40:08+02:00" />
+<meta itemprop="wordCount" content="2527">
+
+
+
+<meta itemprop="keywords" content="GNN,course," />
+
+    
+  </head>
+  <body>
+
+    
+    <div id="wrapper">
+
+      
+      <div id="main">
+	<div class="inner">
+
+	  
+	  
+<header id="header">
+	<h3><a href="#">Harsha Kokel</a></h3>
+	<ul class="icons">
+		<li id="linkedin">
+			<a target="_blank" href="http://linkedin.com/in/harshakokel" title="linkedin" class="icon brands fa-linkedin">
+				<span class="label" >Linked in</span>
+			</a>
+		</li>
+		<li id="github">
+			<a target="_blank" href="https://github.com/harshakokel" title="github" class="icon brands fa-github">
+				<span class="label" >Github</span>
+			</a>
+		</li>
+		<li id="email">
+			<a  href="mailto:hkokel@utdallas.edu" title="mail" class="icon solid fa-envelope" >
+				<span class="label" >Mail</span>
+			</a>
+		</li>
+		<li id="twitter">
+			<a target="_blank" href="https://twitter.com/harsha_kokel" title="twitter" class="icon brands fa-twitter" >
+				<span class="label" title="Twitter">Twitter</span>
+			</a>
+		</li>
+	</ul>
+</header>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax '})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	  
+<div class="page__section">
+  <nav class="breadcrumb breadcrumb_type5" aria-label="Breadcrumb">
+<ol  class="breadcrumb__list r-list">
+  
+
+
+
+<li class="breadcrumb__group" >
+  <a href="https://harshakokel.com/" class="breadcrumb__point r-link">Home</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+
+<li class="breadcrumb__group"  class="active">
+  <a href="https://harshakokel.com/post/" class="breadcrumb__point r-link">Posts</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+  <li class="breadcrumb__group">
+    Feb 5, 2020
+  </li> 
+  <li class="tags">  Tagged with:
+      <a href="https://harshakokel.com/tags/gnn/" class="button">gnn</a>  <a href="https://harshakokel.com/tags/course/" class="button">course</a>
+  </li>
+</ol> 
+
+
+
+</nav>
+</div>
+
+  <header class="main">
+    <h2>Graph Convolutional Networks</h2>
+  </header>
+
+
+  
+  
+
+  <p><strong></strong></p>
+
+  <p><h4 id="thomas-n-kipf-and-max-welling-iclr-2017">Thomas N Kipf and Max Welling, ICLR 2017</h4>
+<h3 id="introduction">Introduction</h3>
+<p>Kipf et al. 2017 introduces Graph Convolutional Networks (GCN) which uses features of each node and leverages edges of the graph to derive class similarity between nodes in semi-supervised setting.</p>
+<p>Traditionally semi-supervised learning in a graph-structured data heavily relied on the assumption that the edges in the graph represent class similarities (i.e. nodes with similar classes have edge between them). For example, in an image segmentation task, an image can be thought as a grid (Graph with node for every pixel and edges between neighboring pixels as shown in figure below). Such representation of an image represents the assumption that the neighboring pixels belong to the same class (hence an edge between them).</p>
+<div align="center">
+<img align="center" width="200"  src="/images/grid.png">
+<p>src: <a href="https://medium.com/@BorisAKnyazev/tutorial-on-graph-neural-networks-for-computer-vision-and-beyond-part-1-3d9fada3b80d">https://medium.com/@BorisAKnyazev/...</a></p>
+</div>
+<p>With this assumption, semi-supervised learning task is then posed as an optimization problem with following loss function:</p>
+<p>\[
+\mathcal{L}=\mathcal{L}_{0}+\lambda \mathcal{L}_{\mathrm{reg}}, \quad \text { with } \quad \mathcal{L}_{\mathrm{reg}}=\sum_{i, j} A_{i j}\left|f\left(X_{i}\right)-f\left(X_{j}\right)\right|^{2}
+\]</p>
+<p>Here $\mathcal{L}_{0}$ is some form of cross-entropy loss for the supervised examples and the $\mathcal{L}_{\mathrm{reg}}$ is a regularizing function which tries to reduce difference in labels of connected nodes.  $\mathcal{L}_{\mathrm{reg}}$ is laplacian quadratic form.</p>
+<p>\[
+\begin{aligned}
+f\left(X\right)^{\top} \Delta  f\left(X\right) &amp;= f\left(X\right)^{\top}(D-A) f\left(X\right) \\<br>
+&amp;=f\left(X\right)^{\top} D f\left(X\right)-f\left(X\right)^{\top} A f\left(X\right) \\<br>
+&amp;=\sum_{i=1}^{n} D_{ii} f\left(X_{i}\right)^{2}-\sum_{i=1}^{n} \sum_{j=1}^{n} A_{ij} f\left(X_{i}\right)f\left(X_{j}\right) \\<br>
+&amp;=\sum_{i=1}^{n} \sum_{j=1}^{n} A_{ij} f\left(X_{i}\right)^{2}-\sum_{i=1}^{n} \sum_{j=1}^{n} A_{ij} f\left(X_{i}\right) f\left(X_{j}\right) \\<br>
+&amp;=\sum_{i=1}^{n} \sum_{j=1}^{n} A_{ij}\left(f\left(X_{i}\right)^{2}-f\left(X_{i}\right) f\left(X_{j}\right)\right) \\<br>
+&amp;=\sum_{{i, j} \in E}\left(f\left(X_{i}\right)-f\left(X_{j}\right)\right)^{2} \\<br>
+&amp;= \sum_{i \leq j} A_{i j}\left|f\left(X_{i}\right)-f\left(X_{j}\right)\right|^{2}
+\end{aligned}
+\]</p>
+<h3 id="graph-convolutional-networks">Graph Convolutional networks</h3>
+<p>GCN proposes a way to do graph convolutions by using the following layer wise propagation rule:</p>
+<p>\[
+\begin{align}
+H^{(l+1)} &amp; =\sigma\left( \hat{A}  H^{(l)} W^{(l)}\right), \\<br>
+\quad \text { with } \quad\hat{A} &amp; = \tilde{D}^{-\frac{1}{2}}\tilde{A}\tilde{D}^{-\frac{1}{2}}, \\<br>
+\tilde{A} &amp; = (A + I_{N}), \\<br>
+\end{align}
+\]</p>
+<p>\[
+\tilde{D_{ij}}=\left\{\begin{array}{ll}{\sum_{k=1}\tilde{A}_{ik},} &amp; {\text { if } i = j} \\ {
+0,} &amp; {\text { otherwise }}\end{array}\right.
+\]</p>
+<p>The paper proposes a two layer Graph Convolutional Network which amounts to following model:</p>
+<p>\[
+Z=f(X, A)=\operatorname{softmax}\left(\hat{A} \operatorname{ReLU}\left(\hat{A} X W^{(0)}\right) W^{(1)}\right)
+\]</p>
+<ul>
+<li>ReLU activation function is used in the first layer because the gradient of ReLU is $0/1$, so with multiple iterations, the gradient values do not vanish (tends to zero), which is the case with other non-linear functions. Softmax is used in the top layer, because the final output expected are class probabilities.</li>
+</ul>
+<p>GCN uses gradient descent to learn weight matrices &ndash; $W^{(0)}$ and $W^{(1)}$ that minimizes the following cross-entropy error for all the supervised nodes ($\mathcal{Y}_{L}$):</p>
+<p>\[
+\mathcal{L}=-\sum_{l \in \mathcal{Y}_{L}} \sum_{f=1}^{F} Y_{l f} \ln Z_{l f}
+\]</p>
+<p>Loss function is then a combination of cross-entropy loss for the supervised labels and some regularization.</p>
+<p>\[
+{Loss}=\mathcal{L} + \mathcal{L}_{reg}, \\<br>
+\begin{align}
+\text{with } \mathcal{L}_{reg} = &amp;  \frac{\lambda}{2} * \sum|W|^{2} \quad \text{ for L2-regularization} \\<br>
+&amp; \frac{\lambda}{2} * \sum|W| \quad \text{ for L1-regularization}
+\end{align}
+\]</p>
+<p>In the paper, authors observe that L2-regularization of weight matrix at the first layers alone is sufficient.</p>
+<ul>
+<li>Regularization is used to avoid overfitting by penalizing the weight matrices of hidden layers. L2-regularization in particular uses 2-norm of weight matrix for penalty. This pushes the weight matrix close to zero. <a name="a14">(Answers Q-14)</a></li>
+</ul>
+<p>Experiments</p>
+<h3 id="connection-between-cnn-and-gcn">Connection between CNN and GCN</h3>
+<p>In CNN, input feature map (blue grid in below image) is convolved with discrete kernel ($W$) to produce output feature map (green grid). This can be seen as a message passing algorithm where the messages from the neighboring nodes ($h_i, i = 1 \text{ to } 8$ in the example below) and the node itself ($h_0$) are multiplied with weight $W_i$ and the output feature map is obtained by summing up these messages.</p>
+<div align="center" >
+    <div style="float:left;">
+        <img src="/images/CNN.gif"  width="320"  />
+        <p style="text-align:center;">src: <a href="https://github.com/vdumoulin/conv_arithmetic">https://github.com/vdumoulin/conv_arithmetic</a></p>
+    </div>
+    <div style="margin-right:5px;">
+        <img class="middle-img" src="/images/CNN-mp.png" width="200" />
+        <p style="text-align:center;"></p>
+    </div>
+</div>  
+<p>GCN similarly generates output feature map ($H^{(l+1)}$) by convolving the input feature map ($H^{(l)}$) with weight matrix ($W^{(l)}$).</p>
+<p>\[
+\begin{align}
+H^{(l+1)} &amp; =\sigma\left( \hat{A}  H^{(l)} W^{(l)}\right), \\<br>
+\text{ with } \quad \hat{A} &amp; :  n \times n \text{(# nodes)}, \\<br>
+H^{(l)} &amp; : n \times f^{i} \text{(# input feature map)}, \\<br>
+W^{(l)} &amp; : f^{i} \times f^{o} \text{(# output feature map)}, \\<br>
+\end{align}
+\]</p>
+<p>This can be seen as a message passing algorithm where messages or input features ($H_{ik}$) of each node in the graph are multiplied by weights ($W_{jk}$) and summation is stored in $B$ and finally, the output feature map ($M$) is generated by summing the weighted messages of all the neighboring nodes along with the message from the node itself (Note: $\tilde{A} = A + I_N$ takes care of message from node itself).</p>
+<p>\[
+\begin{align}
+M &amp; = \hat{A}  H^{(l)} W^{(l)} \\<br>
+&amp; = \hat{A} B, \\<br>
+\text{ with } B_{ij} &amp; = \sum_{k=1}^{f^{i}} H_{ik}W_{jk} \\<br>
+M_{ij} &amp; = \sum_{k=1}^{n} \hat{A}_{ik} B_{kj}
+\end{align}
+\]</p>
+<ul>
+<li>
+<p>In CNN the number of neighbors for each node are fixed ($8$ in above example), so the number of messages received by all the nodes in the output later are same. In GCN, since the structure of graph is dictated by the adjacency matrix, the number of messages received at each node ($M_{ij}$) is not the same. Hence, the need for normalizing $\tilde{A}$ (i.e, $\hat{A} = \tilde{D}^{-\frac{1}{2}}\tilde{A}\tilde{D}^{-\frac{1}{2}}$) arises in GCN but not in CNN.</p>
+</li>
+<li>
+<p>Although theoretically there are no limitations on number of convolution layers, GCN paper proposes two layered network. Since every layer convolves the neighboring node, $k$ layers effectively convolves $k^{th}$ order neighbors. GCN convolve only upto $2^{nd}$ order neighbors. Their empirical evaluations suggest 2nd order neighbor is enough for most of the domains. <a name="a13">(Answers Q-13)</a></p>
+</li>
+<li>
+<p>In traditional approach, since we use $\mathcal{L}_{reg}$, which is a function of adjacency matrix, the nodes with dense neighborhood will have high penalty and hence the model will overfit on the local neighborhoods of such nodes (consequently it will under-fit the nodes with sparse neighborhood). Normalization of adjacency matrix helps us alleviate this problem.</p>
+</li>
+</ul>
+<h3 id="extending-gcn-to-graph-classification-and-supervised-learning-task">Extending GCN to graph classification and supervised learning task</h3>
+<p><a name="a11"><strong>Answers Q-11</strong></a></p>
+<p>GCN formulation can be leveraged for graph classification problem, where the task is to predict a single variable for the whole graph. Adjacency matrix of each graph ($Q, V, W$ in the figure below) is concatenated into a sparse block-diagonal matrix ($A$) as shown in the figure below. This adjacency matrix and the feature matrix ($X: n \times c$, n = total number of nodes in all the graphs and c = # input features) can be used to train GCN and the output matrix Z can then be pooled to obtain class labels for each graph.</p>
+<div align="center" >
+<img src="/images/GCN-extention.png"  width="500"  />
+<p>src: <a href="https://github.com/tkipf/gcn">https://github.com/tkipf/gcn</a></p>
+</div>
+<p>For supervised learning task, two graphs can be created from training set (labeled nodes) and the testing set (unlabeled nodes). Adjacency matrix of two graphs can again be concatenated as block-diagonal matrix and GCN can be trained on it. The output matrix Z will have the class probabilities for test set as well.</p>
+<h3 id="spectral-graph-convolutions">Spectral Graph Convolutions</h3>
+<p><a href="https://en.wikipedia.org/wiki/Convolution_theorem">Convolution theorem</a> states that convolution of two matrices is equivalent to point-wise multiplication in the fourier domain i.e. $\mathcal{F}(x \ast y) =  \mathcal{F}(x) \odot \mathcal{F}(y)$ when $\mathcal{F}(\ \ )$ denotes fourier transform operator. In signal processing, the spectral transformation usually refers to transformation from time to frequency dimension (fourier domain), but in graph theory spectral transformation usually refers transformation to eigen-vector dimension ($U^{\top}$). So, the convolution theorem in graphs represents following equation:</p>
+<p>\[
+\begin{align}
+\text {with } L &amp; = U \Lambda U^{\top}, \\<br>
+\hat{\mathrm{x}} &amp; = U^{\top}\mathrm{x}, \\<br>
+\hat{\mathrm{y}} &amp; = U^{\top}\mathrm{y}, \\<br>
+U^{\top} (\mathrm{x} \ast \mathrm{y}) &amp; =  \hat{\mathrm{x}} \odot \hat{\mathrm{y}} \\<br>
+\mathrm{x} \ast \mathrm{y} = U ( \hat{\mathrm{x}}  &amp; \odot \hat{\mathrm{y}}) = U ({ \mathrm{diag}(\hat{\mathrm{y}})\hat{x}} ) \\<br>
+\mathrm{y} \ast \mathrm{x}  = \mathrm{x} \ast \mathrm{y} = &amp; U \ \mathrm{diag}(\hat{\mathrm{y}})\ U^{\top} \ \mathrm{x}
+\end{align}
+\]</p>
+<blockquote>
+<ul>
+<li>$\text {with } L = U \Lambda U^{\top}$ is eigen-decomposition of graph laplacian matrix. Complexity of finding eigen-decomposition if $\mathcal{O}(n^3)$  <a name="a2">(Answers Q-2)</a></li>
+<li>Remember, matrix-vector multiplication ($A \mathrm{b}$) is effectively transformation of the vector ($b$) to another dimension dictated by the matrix ($A$).</li>
+<li>Since, L is a square matrix, $U^T = U^{-1}$.</li>
+</ul>
+</blockquote>
+<p>For spectral graph convolution, we directly estimate the convolution filter in the eigen-vector dimension as some function of eigen-vectors ($\Lambda$). With filter $g_{\theta}(\Lambda) = \mathrm{diag}(\theta(\Lambda))$ spectral convolution on graph is defined as follows:</p>
+<p>\[
+g_{\theta}(\Lambda) \ \star \  \mathrm{x} = U g_{\theta}(\Lambda) U^{\top} \mathrm{x}
+\]</p>
+<blockquote>
+<p>Note the difference between convolution symbol ($\ast$) and the spectral convolution symbol used in paper ($\star$) signifies that the $g_{\theta}$ is already in eigen-vector dimension.</p>
+</blockquote>
+<p>$g_{\theta}$ can be approximated by truncated expansion in terms of Chebyshev polynomials $T_{k}(x)$ as:</p>
+<p>\[
+\begin{align}
+g_{\theta^{\prime}}(\Lambda) \approx \sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{\Lambda}) \\<br>
+\text{ with } \quad \tilde{\Lambda}=\frac{2}{\lambda_{\max }} \Lambda-I_{N}, \\<br>
+T_{k}(x) = 2 x T_{k-1}(x)-T_{k-2}(x), \\<br>
+T_{0}(x)=1
+\text { and } \quad T_{1}(x) =x \\<br>
+\end{align}
+\]</p>
+<p>Chebyshev polynomial $T_{k}(\tilde{\Lambda})$ is a matrix with dimensions same as $\tilde{\Lambda}$ (i.e. $n \times n$, where n = # nodes ). Elements of matrix $T_{k}(\tilde{\Lambda})$ are obtained by applying Chebyshev polynomial definition element wise. <a name="a1">(Answers Q-1)</a></p>
+<p>So,</p>
+<p>\[
+\begin{align}
+T_0(\tilde{\Lambda}) &amp; = \left[\begin{array}{cccc}{T_{0}\left(\frac{2}{\lambda_{\max }}\left(\lambda_{1}-1\right)\right)} &amp; {} &amp; {} &amp; {} \ {} &amp; {T_{0}\left(\frac{2}{\lambda_{\max }}\left(\lambda_{2}-1\right)\right)} &amp; {} &amp; {} \ {} &amp; {} &amp; {\ddots} &amp; {} \ {} &amp; {} &amp; {} &amp; {T_{0}\left(\frac{2}{T_{\max }}\left(\lambda_{N}\right)\right)}\end{array}\right] \\<br>
+&amp; = \left[ \begin{array}{cccc}{1} &amp; {} &amp; {} &amp; {} \\<br>
+{} &amp; {1} &amp; {} &amp; {} \\<br>
+{} &amp; {} &amp; {\ddots} &amp; {} \ {} &amp; {} &amp; {} &amp; {1}\end{array} \right] \\<br>
+&amp; = I_N
+\\<br>
+\\<br>
+&amp; \therefore\boxed{ \quad T_{0}(\tilde{\Lambda})= I_N \text{ and } T_{1}(\tilde{\Lambda}) =\tilde{\Lambda} }
+\end{align}
+\]</p>
+<p>Observe that $\left(U \Lambda U^{\top}\right)^{k}=U \Lambda^{k} U^{\top}$ and $U T_{k}(\tilde{\Lambda}) U^{\top} = T_{k}(\tilde{L})$.</p>
+<p>Proofs <a name="a4"><strong>(Answers Q-4)</strong></a>:
+\[
+\begin{align}
+(U \Lambda U^{\top})^{2} &amp; = ( U \Lambda U^{\top} )( U \Lambda U^{\top} ) \\<br>
+&amp; =  U \Lambda ( U^{\top}  U ) \Lambda U^{\top} \\<br>
+&amp; =  U \Lambda I \Lambda U^{\top} \\<br>
+&amp; =  U \Lambda ^{2} U^{\top} \\<br>
+\end{align}
+\]
+\[
+\text{ Similarly, } \boxed{ \left(U \Lambda U^{\top}\right)^{k}=U \Lambda^{k} U^{\top} }
+\]</p>
+<p>and</p>
+<p>\[
+\begin{align}
+{U T_{0}(\tilde{\Lambda}) U^{\top}=U I_{N} U^{\top}=I_{N}=T_{0}(\tilde{L})}, \\<br>
+{U T_{1}(\tilde{\Lambda}) U^{\top}=U \tilde{\Lambda} U=\tilde{L}=T_{1}(\tilde{L})}, \\<br>
+\end{align}
+\]
+\[
+\begin{align}
+U T_{2}(\tilde{\Lambda}) U^{\top} &amp; = U \Big(2 \tilde{\Lambda} T_{1}(\tilde{\Lambda})- T_{0}(\tilde{\Lambda}) \Big) U^{\top} \\<br>
+&amp; = 2 U \tilde{\Lambda} T_{1}(\tilde{\Lambda}) U^{\top}- U T_{0}(\tilde{\Lambda}) U^{\top} \\<br>
+&amp; = 2 U \tilde{\Lambda} U^{\top} U T_{1}(\tilde{\Lambda}) U^{\top}- U T_{0}(\tilde{\Lambda}) U^{\top} \\<br>
+&amp; = 2 \tilde{L} T_{1}(\tilde{L}) - T_{0}(\tilde{L})\\<br>
+&amp; = T_2(\tilde{L}) \\<br>
+\end{align}
+\]
+\[
+\text{ Similarly, } \boxed { U T_{k}(\tilde{\Lambda}) U^{\top} = T_{k}(\tilde{L}) } \\<br>
+\]</p>
+<p>Using the above two results, we can approximate the convolution without needing eigen-decomposition, directly using graph laplacian,</p>
+<p>\[
+\begin{align}
+g_{\theta^{\prime}}(\Lambda) \star x  &amp; \approx U \sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{\Lambda}) U^{\top} \mathrm{x} \\<br>
+&amp; = \sum_{k=0}^{K} \theta_{k}^{\prime} U T_{k}(\tilde{\Lambda}) U^{\top} \mathrm{x} \\<br>
+&amp; = \sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{L}) \mathrm{x}
+\end{align}
+\]</p>
+<p>So, we effectively reduced the complexity of convolution from $\mathcal{O}(n^3)$ to $\mathcal{O}(|\mathcal{E}|)$, i.e. from cube of # nodes ($n$)  to  linear in # edges ($\mathcal{E}$).
+Since $T_i(\tilde{L})$ has $2\mathcal{E}$ non-zero elements, multiplication $\underbrace{\theta_k^{\prime}}_{scalar} \underbrace{T_i(\tilde{L})}_{n \times n} \underbrace{\mathrm{x}}_{n \times 1}$ is a <strong>sparse matrix multiplication</strong> which can be done in $\mathcal{O}(|\mathcal{E}|)$. <a name="a5">(<strong>Answers Q-5</strong>)<a>:</p>
+<h3 id="connection-between-gcn-and-spectral-convolutions">Connection between GCN and spectral convolutions</h3>
+<p><a name="a3"><strong>Answers Q-3</strong></a></p>
+<p>GCN can be seen as approximation of spectral convolution with $K = 1$, $\lambda_{max}=2$ and $\theta = \theta_0^{\prime} = - \theta_1^{\prime}$ (<a name="a8">Answers Q-8</a>)</p>
+<p>\[
+\begin{align}
+g_{\theta^{\prime}}(\Lambda) \star x  &amp; \approx  \sum_{k=0}^{1} \theta_{k}^{\prime} T_{k}(\tilde{L}) x \\<br>
+&amp; = \theta_{0}^{\prime} T_{0}(\tilde{L}) x+\theta_{1}^{\prime} T_{1}(\tilde{L}) x\\<br>
+&amp; = \theta_{0}^{\prime} I_{N} x+\theta_{1}^{\prime}\left(\frac{2}{\lambda_{\max }} L-I_{N}\right) \\<br>
+&amp; =\theta_{0}^{\prime} x+\theta_{1}^{\prime}\left(L-I_{N}\right) \quad   \boxed{\because \lambda_{max}=2}  \\<br>
+&amp; =\theta_{0}^{\prime} x-\theta_{1}^{\prime} D^{-\frac{1}{2}} A D^{-\frac{1}{2}} \quad   \boxed{\because L=I_{N}-D^{-\frac{1}{2}} A D^{-\frac{1}{2}}} \\<br>
+&amp; = \theta \left(I_{N}+D^{-\frac{1}{2}} A D^{-\frac{1}{2}}\right) x  \quad \boxed{\because \theta = \theta_0^{\prime} = - \theta_1^{\prime}} \\<br>
+&amp; =  \theta \left(\tilde{D}^{-\frac{1}{2}} \tilde{A} \tilde{D}^{-\frac{1}{2}}\right) x \quad \boxed{ \because \underbrace{I_{N}+D^{-\frac{1}{2}} A D^{-\frac{1}{2}} \rightarrow \tilde{D}^{-\frac{1}{2}} \tilde{A} \tilde{D}^{-\frac{1}{2}}}_{\text{renormalization trick }}, \text { with } \tilde{A}=A+I_{N} } \\<br>
+&amp; =  \theta \hat{A} x
+\end{align}
+\]</p>
+<blockquote>
+<p>If we use convolution formula $g_{\theta} \star x \approx \theta\left(I_{N}+D^{-\frac{1}{2}} A D^{-\frac{1}{2}}\right) x$ repeatedly over multiple layers, values keep increasing in every layer since we have $I_N$. Renormalization trick is used to avoid this.  <a name="a9">(Answers Q-9 and 10)</a></p>
+</blockquote>
+<blockquote>
+<p>Since GCN uses $K =1$ and approximates $\theta = \theta_0^{\prime} = - \theta_1^{\prime}$, which reduces the number of parameters we intuitively determine that GCN will not overfit the graphs. <a name="a6">(Answers Q-6)</a></p>
+</blockquote>
+<blockquote>
+<p>When we use $\theta = \theta_0^{\prime} = - \theta_1^{\prime}$ we are assigning same weights to all the 1st and 2nd order neighbors. If we used different $\theta$, we will assign different weights to different hop neighbors.</p>
+</blockquote>
+<blockquote>
+<p><strong>Renormalization Trick</strong>: With $I_{N}+D^{-\frac{1}{2}} A D^{-\frac{1}{2}}$, the eigen values are in range [0,2]. When the largest eigenvalue is less than $1$
+the vanishing problem may occur even in case of two layers. With the renormalization trick, we can ensure that the eigen values are between [0,1] and the maximum eigenvalue is $1$. So, we avoid vanishing problem.</p>
+</blockquote>
+<p>So,
+\[
+\begin{align}
+g_{\theta^{\prime}}(\Lambda) \star x   &amp; = diag(\theta)  T_{k}(\tilde{L}) X \\<br>
+&amp; = T_{k}(\tilde{L}) \  X \ diag(\theta)
+\end{align}
+\]</p>
+<p>Since this will still give us $n \times f^{i}$ matrix, we add a weight matrix ($W^{\prime}_{f^{i} \times f^{o}}$) to linearly transform the result to $n \times f^{o}$</p>
+<p>So,
+\[
+\begin{align}
+g_{\theta^{\prime}}(\Lambda) \star x
+&amp; = T_{k}(\tilde{L}) \ X \ diag(\theta) \ W^{\prime} \\
+&amp; = \hat{A}  X   W
+\end{align}
+\]</p>
+<p>With $X \in \mathbb{R}^{n \times f^{i}}$, we have $\underbrace{Z}_{n \times f^{o}} = \underbrace{\hat{A}}_{n \times n}  \underbrace{X}_{n \times f^{i}}  \underbrace{W}_{f^{i} \times f^{o}}$ which is graph convolution.
+Complexity of matrix multiplication is $\mathcal{O}(n f^{i}f^{o})$ since $\hat{A}$ is a sparse matrix with $\mathcal{E}$ non-zero elements &ndash; Not sure how paper gets $\mathcal{O}(|\mathcal{E}| f^{i}f^{o})$ <a name="a12">(Answers Q-12)</a></p>
+<!-- Need to explain theta to W -->
+<h3 id="limitations">Limitations</h3>
+<ol>
+<li>
+<p>GCN provides equal importance to self node as well as the neighboring introduces. It also does not allow to different weights for different neighbors, which is allowed in CCN.</p>
+</li>
+<li>
+<p>GCN being a graph convolution in the spectral domain, the Graph structure if fixed. Spatial domain convolutions on other hand allow for graph modifications.</p>
+</li>
+<li>
+<p>Although GCN considers node features, it still heavily rely on the node locality.</p>
+</li>
+</ol>
+<h3 id="questions">Questions</h3>
+<ol>
+<li>
+<p>What is the dimensionality of $T_{k}(\tilde{\Lambda})$, how to calculate $i^{th}$ row and $j^{th}$ column of matrix $T_{k}(\tilde{\Lambda})$?  <a href="#a1">Link to Answer</a></p>
+</li>
+<li>
+<p>What is the time complexity to compute the eigen-decomposition <a href="#a2">Link to Answer</a></p>
+</li>
+<li>
+<p>What is the relation between $g \star x$ and GCN? <a href="#a3">Link to Answer</a></p>
+</li>
+<li>
+<p>Prove $\left(U \Lambda U^{\top}\right)^{k}=U \Lambda^{k} U^{\top}$.  <a href="#a4">Link to Answer</a></p>
+</li>
+<li>
+<p>Prove complexity of $\sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{L}) x$ is $\mathcal{O}(|\mathcal{E}|)$. <a href="#a5">Link to Answer</a></p>
+</li>
+<li>
+<p>Describe the intuition, why GCN can alleviate the problem of overfitting on
+local neighborhood structures for graphs with very wide node degree distributions? <a href="#a6">Link to Answer</a></p>
+</li>
+<li>
+<p>Why is $\lambda_{max} = 2$ a valid approximation?</p>
+</li>
+</ol>
+<blockquote>
+<p>Probably because eigen values of A $\in$ [0,1] and $\lambda_{max}$ is the eigen value of $A + I_N$, so the eigen values are in range [0,2]. We need this rescaloing because the Chebyshev polynomial needs input in range [-1,1]</p>
+</blockquote>
+<ol start="8">
+<li>
+<p>Prove $g_{\theta^{\prime}} \star x \approx \theta_{0}^{\prime} x+\theta_{1}^{\prime}\left(L-I_{N}\right) x$.  <a href="#a8">Link to Answer</a></p>
+</li>
+<li>
+<p>Why does repeated application of  $g_{\theta} \star x \approx \theta\left(I_{N}+D^{-\frac{1}{2}} A D^{-\frac{1}{2}}\right) {x}$ result in numerical instability? <a href="#a9">Link to Answer</a></p>
+</li>
+<li>
+<p>Why does renormalization trick help? <a href="#a9">Link to Answer</a></p>
+</li>
+<li>
+<p>Show in detail how to apply GCN for graph classification and supervised learning problem?
+<a href="#a11">Link to Answer</a></p>
+</li>
+<li>
+<p>Derive time and memory complexity of $Z=\tilde{D}^{-\frac{1}{2}} \tilde{A} \tilde{D}^{-\frac{1}{2}} X \Theta$ <a href="#a12">Link to Answer</a></p>
+</li>
+<li>
+<p>Why use 2 layers in GCN? <a href="#a12">Link to Answer</a></p>
+</li>
+<li>
+<p>Explain L-2 regularization. <a href="#a14">Link to Answer</a></p>
+</li>
+</ol>
+<h3 id="references">References</h3>
+<ol>
+<li>Thomas N Kipf and Max Welling, <em>Semi-supervised classification with Graph Convolutional Networks</em>, ICLR 2017</li>
+<li><a href="https://personal.utdallas.edu/~fxc190007/courses/20S-7301/GCN-notes.pdf">Notes by Prof. Feng Chen</a></li>
+<li><a href="https://tkipf.github.io/graph-convolutional-networks/">https://tkipf.github.io/graph-convolutional-networks/</a></li>
+<li><a href="https://www.inference.vc/how-powerful-are-graph-convolutions-review-of-kipf-welling-2016-2/">Ferenc Huszár&rsquo;s GCN post</a></li>
+<li><a href="https://dtsbourg.me/thoughts/posts/semi-supervised-classification-gcn">https://dtsbourg.me/thoughts/posts/semi-supervised-classification-gcn</a></li>
+<li><a href="https://medium.com/@BorisAKnyazev">https://medium.com/@BorisAKnyazev</a></li>
+</ol>
+</p>
+
+
+<div id="comments">
+
+  <script>
+  var id =  8 ;
+
+  if (id)
+  {
+    let url = "https://github.com/YOUR-ACCOUNT/YOUR-REPOSITORY/issues/".concat(id);
+    let api_url = "https://api.github.com/repos/YOUR-ACCOUNT/YOUR-REPOSITORY/issues/".concat(id, "/comments");
+    
+    var commentsDiv = document.getElementById("comments");
+
+    let xhr = new XMLHttpRequest();
+    xhr.responseType = "json";
+    xhr.open("GET", api_url);
+    xhr.setRequestHeader("Accept", "application/vnd.github.v3.html+json");
+    xhr.send();
+
+    xhr.onload = function()
+    {
+      if (xhr.status != 200)
+      {
+        let errorText = document.createElement("p");
+        errorText.innerHTML = "<i>Comments for this post yet are not opened yet (or you have GitHub scripts disabled).</i>";
+        commentsDiv.appendChild(errorText);
+      }
+      else
+      {
+        let comments = xhr.response;
+
+        let mainHeader = document.createElement("h2");
+        mainHeader.innerHTML = "Comments: ".concat(comments.length);
+        commentsDiv.appendChild(mainHeader);
+
+        let issueLink = document.createElement("p");
+        issueLink.innerHTML = "<i>You can leave a comment using this <a href='".concat(url, "'>GitHub issue</a>.</i>");
+        commentsDiv.appendChild(issueLink);
+        
+        comments.forEach(function(comment)
+        {
+            let commentContent = document.createElement("div");
+            commentContent.setAttribute('class', 'gh-comment')
+            commentContent.innerHTML = "".concat(
+                "<div class='gh-header'>",
+                  "<img src='", comment.user.avatar_url, "' />",
+                  "<div style='margin:auto 0;'>",
+                    "<b><a class='gh-username' href='", comment.user.html_url, "'>", comment.user.login, "</a></b>",
+                    " commented at <em>", new Date(comment.created_at), "</em>",
+                  "</div>",
+                "</div>",
+                "<div class='gh-body'>",
+                  comment.body_html,
+                "</div>"
+            );
+            commentsDiv.appendChild(commentContent);
+        });
+      }
+    };
+
+    xhr.onerror = function()
+    {
+      let errorText = document.createElement("p");
+      errorText.innerHTML = "<i>Some error loading comments.</i>";
+      commentsDiv.appendChild(errorText);
+    };
+  }
+</script>
+
+</div>
+
+
+
+	</div>
+      </div>
+
+      
+<div id="sidebar">
+  <div class="inner">
+
+    
+
+    
+<nav id="menu">
+  <header class="major">
+    <h2>Menu</h2>
+  </header>
+  <ul>
+    
+    
+    
+    <li><a href="/">Homepage</a></li>
+    
+    
+    
+    <li><a href="/cv/">cv</a></li>
+    
+    
+    
+    <li><a href="/projects/">projects</a></li>
+    
+    
+    
+    <li><a href="/post/">BLOG POSTS</a></li>
+    
+    
+  </ul>
+</nav>
+
+
+    
+<footer id="footer">
+  <p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+
+
+  </div>
+</div>
+
+
+    </div>
+    
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    
+    <script src="/js/main.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>offline on Home</title>
+    <link>https://harshakokel.com/tags/offline/</link>
+    <description>Recent content in offline on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
+    <lastBuildDate>Fri, 06 Dec 2019 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/offline/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fitted Q and Batch Reinforcement Learning</title>
+      <link>https://harshakokel.com/post/batch-rl/</link>
+      <pubDate>Fri, 06 Dec 2019 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/post/batch-rl/</guid>
+      <description>Terminologies Offline Planning Problem (MDP) We are given the full MDP model and the problem is solved using all the components of the MDP
+Online Planning Problem (RL) We have limited knowledge of the MDP. We can discover it by interacting with the system
+Model-based RL Approaches to solving Online planning problem (RL) by first estimating (when missing) or accessing the full MDP Model i.e. transition and reward function and then finding policy $\pi$ is called Model-based RL</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>advice on Home</title>
+    <link>https://harshakokel.com/tags/advice/</link>
+    <description>Recent content in advice on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
+    <lastBuildDate>Sat, 05 Oct 2019 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/advice/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Active Advice Seeking for Inverse Reinforcement Learning</title>
+      <link>https://harshakokel.com/post/active-advice-seeking/</link>
+      <pubDate>Sat, 05 Oct 2019 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/post/active-advice-seeking/</guid>
+      <description>Phillip Odom and Sriraam Natarajan, AAMAS 2017 In Kunapali et al 2013, authors present a way of incorporating advice in Inverse Reinforcement Learning (IRL) by extending IRL formulation to include constraints based on the expert&amp;rsquo;s advice of preferred and avoided actions, state and reward. Odom et al 2017 expands on Kunapali et al (2013)&amp;rsquo;s formulation of preferred and avoided actions by seeking the advice in active learning setting. The paper proposes a active advice-seeking framework, where instead of seeking mere-label from the expert for selected example as done in active learning, they seek advice (set of preferred and avoided labels) over set of examples.</description>
+    </item>
+    
+    <item>
+      <title>Advice based relational learning</title>
+      <link>https://harshakokel.com/post/advice-based-learning/</link>
+      <pubDate>Sun, 04 Nov 2018 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/post/advice-based-learning/</guid>
+      <description>Artificial Intelligence (AI) is rapidly becoming one of the most popular tool for solving various problems of humankind. Ranging from trivial day-to-day activity of switching on/off lights, to severe life-changing decision of detecting tumors in scans, all the problems have been tackled with this tool and hence it is no longer acceptable to have a black-box algorithm making calls. AI Community has realized this and hence has put lot of significance on Explainable AI (XAI) in recent years.</description>
+    </item>
+    
+  </channel>
+</rss>

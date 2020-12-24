@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Deep Reinforcement Learning With Relational Inductive Biases</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="referrer" content="no-referrer">
+    
+    
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    
+    
+    <link rel="stylesheet" href="/css/academicons.min.css"/>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Deep Reinforcement Learning With Relational Inductive Biases"/>
+<meta name="twitter:description" content="Vinicius Zambaldi, David Raposo, Adam Santoro et al. ICLR 2019. Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects."/>
+
+    <meta property="og:title" content="Deep Reinforcement Learning With Relational Inductive Biases" />
+<meta property="og:description" content="Vinicius Zambaldi, David Raposo, Adam Santoro et al. ICLR 2019. Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://harshakokel.com/post/drrl/" />
+<meta property="article:published_time" content="2020-04-15T16:40:08+02:00" />
+<meta property="article:modified_time" content="2020-04-15T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+
+    <meta itemprop="name" content="Deep Reinforcement Learning With Relational Inductive Biases">
+<meta itemprop="description" content="Vinicius Zambaldi, David Raposo, Adam Santoro et al. ICLR 2019. Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects.">
+<meta itemprop="datePublished" content="2020-04-15T16:40:08+02:00" />
+<meta itemprop="dateModified" content="2020-04-15T16:40:08+02:00" />
+<meta itemprop="wordCount" content="451">
+
+
+
+<meta itemprop="keywords" content="RL,GNN,neurosymbolic," />
+
+    
+  </head>
+  <body>
+
+    
+    <div id="wrapper">
+
+      
+      <div id="main">
+	<div class="inner">
+
+	  
+	  
+<header id="header">
+	<h3><a href="#">Harsha Kokel</a></h3>
+	<ul class="icons">
+		<li id="linkedin">
+			<a target="_blank" href="http://linkedin.com/in/harshakokel" title="linkedin" class="icon brands fa-linkedin">
+				<span class="label" >Linked in</span>
+			</a>
+		</li>
+		<li id="github">
+			<a target="_blank" href="https://github.com/harshakokel" title="github" class="icon brands fa-github">
+				<span class="label" >Github</span>
+			</a>
+		</li>
+		<li id="email">
+			<a  href="mailto:hkokel@utdallas.edu" title="mail" class="icon solid fa-envelope" >
+				<span class="label" >Mail</span>
+			</a>
+		</li>
+		<li id="twitter">
+			<a target="_blank" href="https://twitter.com/harsha_kokel" title="twitter" class="icon brands fa-twitter" >
+				<span class="label" title="Twitter">Twitter</span>
+			</a>
+		</li>
+	</ul>
+</header>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax '})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	  
+<div class="page__section">
+  <nav class="breadcrumb breadcrumb_type5" aria-label="Breadcrumb">
+<ol  class="breadcrumb__list r-list">
+  
+
+
+
+<li class="breadcrumb__group" >
+  <a href="https://harshakokel.com/" class="breadcrumb__point r-link">Home</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+
+<li class="breadcrumb__group"  class="active">
+  <a href="https://harshakokel.com/post/" class="breadcrumb__point r-link">Posts</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+  <li class="breadcrumb__group">
+    Apr 15, 2020
+  </li> 
+  <li class="tags">  Tagged with:
+      <a href="https://harshakokel.com/tags/rl/" class="button">rl</a>  <a href="https://harshakokel.com/tags/gnn/" class="button">gnn</a>  <a href="https://harshakokel.com/tags/neurosymbolic/" class="button">neurosymbolic</a>
+  </li>
+</ol> 
+
+
+
+</nav>
+</div>
+
+  <header class="main">
+    <h2>Deep Reinforcement Learning With Relational Inductive Biases</h2>
+  </header>
+
+
+  
+  
+
+  <p><strong></strong></p>
+
+  <p><h3 id="vinicius-zambaldi-david-raposo-adam-santoro-et-al-iclr-2019">Vinicius Zambaldi, David Raposo, Adam Santoro et al. ICLR 2019.</h3>
+<p>Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects.</p>
+<p>In this paper, authors introduce how multi-headed dot product attention can be used to perform relational reasoning in model-free deep RL and hence achieve combinatorial generalization.</p>
+<h3 id="multi-head-dot-product-attention-mhdpa">Multi-Head Dot Product Attention (MHDPA)</h3>
+<p>This is the self attention mechanism proposed in the paper Vaswani et al. NeurIPS 2017, Attention is all you need. In that paper, the MHDPA was used on an input of word embeddings but in general it can be any form of entities. Check out the neat explanation of MHDPA by Jay Alammar <a href="https://jalammar.github.io/illustrated-transformer/">here</a></p>
+<p>On a very high level, attention mechanism</p>
+<ol>
+<li>converts these entities ($X$) to Queries ($Q$), Keys ($K$) and Values ($V$) <sup><a href="#stack-ref">1</a></sup>,</li>
+<li>computes the similarity score between each query and key $QK^{T}$,</li>
+<li>scales and normalizes it to a distribution: $\operatorname{Softmax}(\frac{Q.K^{T}}{\sqrt{d}})$.</li>
+<li>outputs the weighted values based on this distribution: $Z = \operatorname{Softmax}(\frac{Q.K^{T}}{\sqrt{d}})\cdot V$</li>
+</ol>
+<p>Multi headed version of attention does two additional steps</p>
+<ol>
+<li>Concatenates all the attention outputs $(\mathbin\Vert_i Z_i)$</li>
+<li>Transform it original $X$ dimension by multiplying it with weight matrix $W$</li>
+</ol>
+<div align="center">
+<img align="center" width="800"  src="/images/MHDPA.png">
+<p>src: <a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer by Jay Alammar</a>
+</div>
+<h3 id="summary">Summary</h3>
+<p>Zambaldi et al. proposes to use the MHDPA (with image embeddings as entities) to perform relational-reasoning while training a network for distributed A2C model. First the images from the box-world domain are processed through a convolutional neural network in the &ldquo;input module&rdquo;. The spatial representation learnt from the CNN is then used as embedding after concatenating $x$ and $y$ co-ordinate as additional features. MHDPA is used to perform manipulations between this entities a.k.a. relational-reasoning. Finally the multiple attention heads are aggregated by another multi-layered-perceptron $g_\theta$ (instead of the weight matrix $W$ used in Vaswani et al. 2017). Then in output module max-pooling is performed and a FC layer converts it to actor policy $\pi$ and critic&rsquo;s state-value (or advantage value) $B$.</p>
+<div align="center">
+<img align="center" width="1000"  src="/images/DRRL-architecture.png">
+</div>
+<blockquote>
+<p>Authors mention that the use of a $g_\theta$, a non-linear MLP, in the final stage is aligned with the use of MLP in relational-network paper where a MLP is used to manipulate the relation embeddings.</p>
+</blockquote>
+<p>Qualitative Analysis of the attention heads show that they infact learn lock-key relationship and also a relationship between agent and entities.</p>
+<div align="center">
+<img align="center" width="1000"  src="/images/DRRL-attention.png">
+</div>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="https://jalammar.github.io/illustrated-transformer/">Illustrated Transformer</a></li>
+<li><sup><a name="stack-ref">1</a></sup><a href="https://stats.stackexchange.com/questions/421935/what-exactly-are-keys-queries-and-values-in-attention-mechanisms">What exactly are keys, queries, and values in attention mechanisms?
+</a></li>
+<li><a href="https://theaisummer.com/Actor_critics/">The idea behind Actor-Critics and how A2C and A3C improve them</a></li>
+</ul>
+</p>
+
+
+<div id="comments">
+
+  <script>
+  var id =  18 ;
+
+  if (id)
+  {
+    let url = "https://github.com/YOUR-ACCOUNT/YOUR-REPOSITORY/issues/".concat(id);
+    let api_url = "https://api.github.com/repos/YOUR-ACCOUNT/YOUR-REPOSITORY/issues/".concat(id, "/comments");
+    
+    var commentsDiv = document.getElementById("comments");
+
+    let xhr = new XMLHttpRequest();
+    xhr.responseType = "json";
+    xhr.open("GET", api_url);
+    xhr.setRequestHeader("Accept", "application/vnd.github.v3.html+json");
+    xhr.send();
+
+    xhr.onload = function()
+    {
+      if (xhr.status != 200)
+      {
+        let errorText = document.createElement("p");
+        errorText.innerHTML = "<i>Comments for this post yet are not opened yet (or you have GitHub scripts disabled).</i>";
+        commentsDiv.appendChild(errorText);
+      }
+      else
+      {
+        let comments = xhr.response;
+
+        let mainHeader = document.createElement("h2");
+        mainHeader.innerHTML = "Comments: ".concat(comments.length);
+        commentsDiv.appendChild(mainHeader);
+
+        let issueLink = document.createElement("p");
+        issueLink.innerHTML = "<i>You can leave a comment using this <a href='".concat(url, "'>GitHub issue</a>.</i>");
+        commentsDiv.appendChild(issueLink);
+        
+        comments.forEach(function(comment)
+        {
+            let commentContent = document.createElement("div");
+            commentContent.setAttribute('class', 'gh-comment')
+            commentContent.innerHTML = "".concat(
+                "<div class='gh-header'>",
+                  "<img src='", comment.user.avatar_url, "' />",
+                  "<div style='margin:auto 0;'>",
+                    "<b><a class='gh-username' href='", comment.user.html_url, "'>", comment.user.login, "</a></b>",
+                    " commented at <em>", new Date(comment.created_at), "</em>",
+                  "</div>",
+                "</div>",
+                "<div class='gh-body'>",
+                  comment.body_html,
+                "</div>"
+            );
+            commentsDiv.appendChild(commentContent);
+        });
+      }
+    };
+
+    xhr.onerror = function()
+    {
+      let errorText = document.createElement("p");
+      errorText.innerHTML = "<i>Some error loading comments.</i>";
+      commentsDiv.appendChild(errorText);
+    };
+  }
+</script>
+
+</div>
+
+
+
+	</div>
+      </div>
+
+      
+<div id="sidebar">
+  <div class="inner">
+
+    
+
+    
+<nav id="menu">
+  <header class="major">
+    <h2>Menu</h2>
+  </header>
+  <ul>
+    
+    
+    
+    <li><a href="/">Homepage</a></li>
+    
+    
+    
+    <li><a href="/cv/">cv</a></li>
+    
+    
+    
+    <li><a href="/projects/">projects</a></li>
+    
+    
+    
+    <li><a href="/post/">BLOG POSTS</a></li>
+    
+    
+  </ul>
+</nav>
+
+
+    
+<footer id="footer">
+  <p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+
+
+  </div>
+</div>
+
+
+    </div>
+    
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    
+    <script src="/js/main.js"></script>
+    
+  </body>
+</html>

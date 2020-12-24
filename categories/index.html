@@ -22,7 +22,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://harshakokel.com/categories/" />
-<meta property="og:site_name" content="Harsha Kokel" />
+<meta property="og:site_name" content="Home" />
 
     <meta itemprop="name" content="Categories">
 <meta itemprop="description" content="">
@@ -65,18 +65,45 @@
 		</li>
 	</ul>
 </header>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax '})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 	  
-<section>
+<section id="publications" >
   <header class="major">
-    <h2>All posts</h2>
+    <h2>Blog posts</h2>
   </header>
-  <div class="posts">
+  <div class="blogs ">
+    <ul class="alt">
     
+    </ul>
   </div>
   
 
 
+  <div>
+  
+</div>
 </section>
 
 
@@ -109,6 +136,10 @@
     <li><a href="/projects/">projects</a></li>
     
     
+    
+    <li><a href="/post/">BLOG POSTS</a></li>
+    
+    
   </ul>
 </nav>
 
@@ -124,7 +155,8 @@
 
 
     </div>
-
+    
+    
     
     <script src="/js/jquery.min.js"></script>
     <script src="/js/skel.min.js"></script>

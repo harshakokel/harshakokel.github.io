@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>adversary on Home</title>
+    <link>https://harshakokel.com/tags/adversary/</link>
+    <description>Recent content in adversary on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
+    <lastBuildDate>Wed, 29 Apr 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/adversary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adversarial Attacks on Graph Neural Networks via Meta Learning</title>
+      <link>https://harshakokel.com/post/meta-attack-gnn/</link>
+      <pubDate>Wed, 29 Apr 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/post/meta-attack-gnn/</guid>
+      <description>Daniel Zügner and Stephan Günnemann, ICLR 2019 Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Tools for Causal Inference</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="referrer" content="no-referrer">
+    
+    
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    
+    
+    <link rel="stylesheet" href="/css/academicons.min.css"/>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tools for Causal Inference"/>
+<meta name="twitter:description" content="There is enough motivation now showing the necessity of learning models that have a correct causal structure. The famous &ldquo;Correlation is not causation&rdquo; quote should ring a bell. Although the research on learning causal structure from observed data has not yet shown its potential. There are certain tasks from causal literature which can still be solved by just using observed data. Specifically, interventional and counterfactual queries can still be answered if we know the causal structure."/>
+
+    <meta property="og:title" content="Tools for Causal Inference" />
+<meta property="og:description" content="There is enough motivation now showing the necessity of learning models that have a correct causal structure. The famous &ldquo;Correlation is not causation&rdquo; quote should ring a bell. Although the research on learning causal structure from observed data has not yet shown its potential. There are certain tasks from causal literature which can still be solved by just using observed data. Specifically, interventional and counterfactual queries can still be answered if we know the causal structure." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://harshakokel.com/post/causal-tools/" />
+<meta property="article:published_time" content="2020-05-24T16:40:08+02:00" />
+<meta property="article:modified_time" content="2020-05-24T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+
+    <meta itemprop="name" content="Tools for Causal Inference">
+<meta itemprop="description" content="There is enough motivation now showing the necessity of learning models that have a correct causal structure. The famous &ldquo;Correlation is not causation&rdquo; quote should ring a bell. Although the research on learning causal structure from observed data has not yet shown its potential. There are certain tasks from causal literature which can still be solved by just using observed data. Specifically, interventional and counterfactual queries can still be answered if we know the causal structure.">
+<meta itemprop="datePublished" content="2020-05-24T16:40:08+02:00" />
+<meta itemprop="dateModified" content="2020-05-24T16:40:08+02:00" />
+<meta itemprop="wordCount" content="1847">
+
+
+
+<meta itemprop="keywords" content="causal,summary," />
+
+    
+  </head>
+  <body>
+
+    
+    <div id="wrapper">
+
+      
+      <div id="main">
+	<div class="inner">
+
+	  
+	  
+<header id="header">
+	<h3><a href="#">Harsha Kokel</a></h3>
+	<ul class="icons">
+		<li id="linkedin">
+			<a target="_blank" href="http://linkedin.com/in/harshakokel" title="linkedin" class="icon brands fa-linkedin">
+				<span class="label" >Linked in</span>
+			</a>
+		</li>
+		<li id="github">
+			<a target="_blank" href="https://github.com/harshakokel" title="github" class="icon brands fa-github">
+				<span class="label" >Github</span>
+			</a>
+		</li>
+		<li id="email">
+			<a  href="mailto:hkokel@utdallas.edu" title="mail" class="icon solid fa-envelope" >
+				<span class="label" >Mail</span>
+			</a>
+		</li>
+		<li id="twitter">
+			<a target="_blank" href="https://twitter.com/harsha_kokel" title="twitter" class="icon brands fa-twitter" >
+				<span class="label" title="Twitter">Twitter</span>
+			</a>
+		</li>
+	</ul>
+</header>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax '})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	  
+<div class="page__section">
+  <nav class="breadcrumb breadcrumb_type5" aria-label="Breadcrumb">
+<ol  class="breadcrumb__list r-list">
+  
+
+
+
+<li class="breadcrumb__group" >
+  <a href="https://harshakokel.com/" class="breadcrumb__point r-link">Home</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+
+<li class="breadcrumb__group"  class="active">
+  <a href="https://harshakokel.com/post/" class="breadcrumb__point r-link">Posts</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+  <li class="breadcrumb__group">
+    May 24, 2020
+  </li> 
+  <li class="tags">  Tagged with:
+      <a href="https://harshakokel.com/tags/causal/" class="button">causal</a>  <a href="https://harshakokel.com/tags/summary/" class="button">summary</a>
+  </li>
+</ol> 
+
+
+
+</nav>
+</div>
+
+  <header class="main">
+    <h2>Tools for Causal Inference</h2>
+  </header>
+
+
+  
+  
+
+  <p><strong></strong></p>
+
+  <p><p>There is enough motivation now showing the necessity of learning models that have a correct causal structure. The famous &ldquo;Correlation is not causation&rdquo; quote should ring a bell. Although the research on learning causal structure from observed data has not yet shown its potential. There are certain tasks from causal literature which can still be solved by just using observed data. Specifically, interventional and counterfactual queries can still be answered if we know the causal structure.
+And, to do that we need the following tools of causal inference popularized by Prof. Pearl.</p>
+<h3 id="tool-1-encoding-causal-assumptions-transparency-and-testability">Tool 1. Encoding causal assumptions: Transparency and testability.</h3>
+<p>Tool 1 emphasize the importance of graphical representation of causality using a Bayesian Network. By representing the causal influences using BN, we can leverage the three rules of conditional independences for inference.</p>
+<div align="center">
+<img align="center" width="400"  src="/images/BN-CI-rules.png">
+</div>
+<p>Although very powerful, the BN representation is limited. Only with graphical representation we will not be able to differentiate between $P(y|X=3)$ and $P(y|do(X=3))$. Ferenc Huszár gives a beautiful explanation of the difference between the two in his post on causal inference <sup><a href="ref1">1</a></sup>.
+Given different causal BN and data generated from different distributions as shown in the figure below, we can see that the joint distribution of $x$ any $y$ is identical. Even the conditional probability $P(y|X=3)$ is identical.</p>
+<div align="center">
+<img align="center" width="600"  src="/images/Causal-intervention1.png">
+<br>
+<img align="center" width="300"  src="/images/Causal-intervention5.png">
+<p>src: <a href="https://www.inference.vc/causal-inference-2-illustrating-interventions-in-a-toy-example/
+">Causal Inference by Ferenc Husz&aacute;r</a></p>
+</div>
+<p>But, what if we force the variable $x$ to take a fixed value $3$ in each of these cases, i.e. intervene on variable $x$? Should we still expect the distribution of y to be same? No. As expected the impact of intervening on variable $x$ has different impact on values of $y$. This is evident in the two distribution plotted below.</p>
+<div align="center">
+<img align="center" width="600"  src="/images/Causal-intervention3.png">
+<br>
+<img align="center" width="300"  src="/images/Causal-intervention4.png">
+<p>src: <a href="https://www.inference.vc/causal-inference-2-illustrating-interventions-in-a-toy-example/
+">Causal Inference by Ferenc Husz&aacute;r</a></p>
+</div>
+<p>Above values of $p(y|do(X=3))$ is computed by generating the data after forcing $x=3$. In machine learning, we want to learn the impact of assigning value $x=3$ without re-generating the data. So, how do we compute $p(y|do(X=3))$ without generating the data? We need more advanced tools for that.</p>
+<h3 id="tool-2-do-calculus-and-the-control-of-confounding">Tool 2. Do-calculus and the control of confounding.</h3>
+<p>In the above example, intervening on variable $x$ and fixing it to $3$ is like making $x$ independent of all its ancestor. So, we remove all the incoming edges to $X$. Now, Computing $P(y|X=3)$ of the resulting graph will give us $P(y|do(X=3))$ of the original graph.</p>
+<div align="center">
+<img align="center" width="600"  src="/images/Causal-intervention2.png">
+<p>src: <a href="https://www.inference.vc/causal-inference-2-illustrating-interventions-in-a-toy-example/
+">Causal Inference by Ferenc Husz&aacute;r</a></p>
+</div>
+<p>This is what <strong>do-calculus</strong> is. <strong>The process of mapping the do-expressions to the standard conditional probability equations using the three rules</strong>. The probability equations we get at the end are called <em>estimand</em> and the the value obtained after computing the estimand on the observed data is called <em>estimate</em>.</p>
+<div align="center">
+<img align="center" width="600"  src="/images/causal-dorules.png">
+</div>
+<p>One of the most common adjustment in the causal inference is de-confounding i.e. adjusting for all the common causes (confounders) of two variables. This is the famous <strong>backdoor criterion</strong>. Back-door path for  $X \rightarrow Y$ is any path that ends in $Y$ and has arrow pointing into $X$. To de-confound $X$ and $Y$, we have to block all the back-door path by adjusting for (i.e. conditioning on) variables which either follow chain-rule or common ancestor rule. We have to be very careful to <strong>not</strong> condition on any common descendent in the back-door path.</p>
+<div align="center">
+<img align="center" width="300"  src="/images/causal-backdoor.png">
+</div>
+<p>For graphs where we are unable to block the back-door path (say, because of unobservable variable), do-calculus gives us a work-around. This is commonly called the <strong>front-door criterion</strong>.</p>
+<div align="center">
+<img align="center" width="300"  src="/images/causal-frontdoor.png">
+</div>
+<p>For graph given above, the front-door formula is derived as follows:</p>
+<p>$$
+\begin{align}
+P(Y |do(X= \tilde{x})) &amp; = \sum_z P(Y|do(X = \tilde{x}), Z=z) P(Z=z|do(X = \tilde{x})) \\<br>
+&amp; \quad  \quad \quad  \quad \quad  \quad \quad \quad \quad  \quad \quad \quad \rhd \text{probability axiom} \\<br>
+&amp; = \sum_z P(Y|do(X= \tilde{x}),do(Z=z)) P(Z=z|do(X= \tilde{x})) \\<br>
+&amp;  \quad \quad  \quad \quad  \quad \rhd \text{ back door-path between X and Y is blocked by X,}\\<br>
+&amp; \quad  \quad \quad  \quad \quad  \quad \quad  \quad \text{so we apply exchange do-rule } \\<br>
+&amp; = \sum_z P(Y|do(X= \tilde{x}),do(Z=z)) P(Z=z|X= \tilde{x}) \\<br>
+&amp;  \quad \quad  \quad \quad  \quad \rhd \text{exchange do-rule,  back door-path between X and Z }\\<br>
+&amp; \quad  \quad \quad  \quad \quad  \quad \quad  \quad \text{ is blocked by common descendent Y} \\<br>
+&amp; = \sum_z P(Y|do(Z=z)) P(Z=z|X= \tilde{x}) \\<br>
+&amp;  \quad \quad  \quad \quad  \quad \rhd \text{action rule, No forward path from X to Y }\\<br>
+&amp; \quad  \quad \quad  \quad \quad  \quad \quad  \quad \text{ as do(Z) blocks it.} \\<br>
+&amp; = \sum_z  \left( \sum_x P(Y|X=x, Z=z) P(X=x) \right) P(Z=z|X= \tilde{x}) \\<br>
+&amp;  \quad \quad  \quad \quad  \quad \quad  \quad \quad  \quad  \quad  \quad \quad  \quad  \rhd \text{using back-door adjustment }\\<br>
+&amp; = \sum_z   P(Z=z|X= \tilde{x}) \sum_x P(Y|X=x, Z=z) P(X=x) \\<br>
+&amp;  \quad \quad  \quad \quad  \quad \quad  \quad \quad  \quad  \quad  \quad \quad  \quad  \rhd \text{same as front-door criterion }\\<br>
+\end{align}
+$$</p>
+<p>Its amazing, to compute the $P(Y | do(X= \tilde{x}))$, we have to sum over all the possible assignments of $x$. With only Tool 1, I would have mostly computed probability by only looking at data points where $X = \tilde{x}$.</p>
+<!--
+The Book of Why mentions the following napkin problem where we cannot use make the front-door or back-door adjustments directly. However, we can still use do-calculus.
+
+
+
+<div align="center">
+<img align="center" width="300"  src="/images/causal-napkinproblem.jpg">
+</div>
+
+$$
+P(Y|do(X)) = \sum_w \sum_z P(y |do(X),W=w,Z=z)P(Z=z|do(X), W=w) P(W=w |do(X))
+$$
+
+Since, W and Z blocks backdoor between X & Y
+
+
+Since, W blocks the backdoor between X & Z, using exchange do-rule we see
+
+$$
+P(Z=z|do(X),W=w) = P (Z=z|X,W=w)
+$$
+
+Since, back-door for $X \rightarrow W$ us blocked by Z, exchange do-rule gives
+
+$$
+P(W=w|do(X)) = \sum_{z^{\prime}} P(W=w|X, Z=z^{\prime}) P(Z=z^{\prime})
+$$ -->
+<h3 id="tool-3-the-algorithmitization-of-counterfactuals">Tool 3. The algorithmitization of counterfactuals.</h3>
+<div style="background-color:#5ADDD7;padding:0.5px 10px">
+<h3>Thumb rule of counterfactual</h3>
+<h3 style="font-weight:400">counterfactuals talks about a specific individual/event/scenario.</h3>
+</div>
+<p><br> <br></p>
+<p>Counterfactual queries are questions about a parallel universe where one(or few) feature(s) is(are) different for a <strong>specific example</strong>, not on the whole population. It is a question always asked in retrospection for a specific instance. For example, An interventional question to analyze importance of wearing mask during current pandemic can be asked as &ldquo;What would be the total number of COVID-19 positive patients, if we banned mask in public?&rdquo; i.e $P($ COVID_Pos $| , do($ wear_mask $= 0) )$. But a counterfactual question would be &ldquo;Given that I had worn mask when I went to buy grocery last week and I do not have COVID-19 today, what would have happened if I had not worn mask?&rdquo; This question is about me, and about a specific instance of not wearing mask. This counterfactual question has to account for every variable which is not a descendent of wear_mask staying exactly the same. So, the fact that I drove to the TomThumb or the cart which I used should stay the same, because in my <em>assumed</em> causal graph, they are not descendants of wear_mask variable. But on the other hand the fact that I washed my hands and face for exactly 12 secs after coming home, and that I entered the spice aisle might change. Because in my causal assumption these are descendent of wearing mask. Hey! I would have washed hands and face for 20 secs if I was not wearing mask and I would have definitely not entered the spice aisle which had like 3 people in there. I would have maintained six feet distance.</p>
+<p>So, mathematically the counterfactual query is $P(h_c^*=1|h_m^\ast=0,h_c=0, h_m=1,..)$, where, $h_c$ is Harsha has COVID-19, $h_m$ is Harsha wore mask, and \ast indicates counterfactual universe. So, all the variable that are not descendants of $h_m$ will stay same i.e $h_i = h_i^\ast, \forall i \notin Des(h_m)$. To compute the probability of the counterfactual query, we need more than the do-calculus from Tool-2.  We need structural equation models (SEMs) and an algorithm.</p>
+<blockquote>
+<p>I strongly recommend <a href="https://www.inference.vc/causal-inference-3-counterfactuals/">Ferenc Huszár&rsquo;s post on counterfactuals</a> for more clarity on how the interventional probability $P(Y| do(X))$ is the computation on population, but counterfactuals is for individuals.</p>
+</blockquote>
+<p>Let&rsquo;s see how we use tool 3 to answer the counterfactual query, &ldquo;What would Alice’s salary be if she had a college degree?&rdquo;. This query is from the fictitious employee data reproduced below from The Book of Why. Here, the experience is mentioned in number of years and three levels of education are : 0 = high school degree, 1 = college degree, 2 = graduate degree. The assumed causal graph is also shown below.</p>
+<div align="center">
+<img align="center" width="400"  src="/images/causal-employee.png">
+<img align="center" width="250"  src="/images/causal-employeegraph.png">
+<p>src: The Book of Why</p>
+</div>
+<p>The SEM for this graph will be:</p>
+<p>$$
+f_0(Ed) = , U_{0} \<br>
+f_1(Ex) = b_1 , + , a_1 Ed , + , U_{1} \<br>
+f_2(S) = b_2 , + , a_2 Ed , + a_2 Ex , +  , U_{2}
+$$</p>
+<p>Here, U are unobserved idiosyncratic variables which capture the peculiarity of the individual in question. So, these values are different for each user. For instance, We can think of $U_2$ accounting for difference in salary as some artifact of individuals unobserved characteristics which is independent of level of education and experience (say, time management). In terms of graphical model, we can think of these variables as parents of the variable on the left side of the equation. Note that these idiosyncratic variables do not have incoming arrows. So, given the counterfactual explanation above, these values should remain unchanged in the parallel universe. If we were to do linear regression we would have an $\varepsilon$ instead of $U$ to adjust for the noise. However, the noise is then a random parameter which is not necessarily kept constant across universe. This is where the SEM differ from linear regression.</p>
+<p>The SEM coefficients can be estimated from the observed data, much like linear regression.</p>
+<p>$$
+f_1(Ex) = 10 – 4 Ed + U_1 \<br>
+f_2(S) = $65,000 + 5,000 Ed +  2,500 Ex +  U_2
+$$</p>
+<p>Now, the algorithm to compute the counterfactual query is these three steps:</p>
+<br>
+<div align="center">
+<img align="center" width="500"  src="/images/causal-counterfactualalgo.png">
+</div>
+<br>
+<p>Following these steps for Alice here, in <strong>step 1</strong> we find that $U_1(Alice) = , –4$ and $U_2(Alice) = $1,000$. We do not actually care for $U_0(Alice)$ because in <strong>step 2</strong> we set $f_0(Ed(Alice)) = 1$. 1 for college degree, and remove all incoming arrows to $Ed$ and perform do-calculus adjustments. Here, since there are no causal parents of $Ed$, our SEM model equations $f_1$ and $f_2$ do not change.
+Then, in <strong>step 3</strong>, we estimate the counterfactual parameters, $Ex^\ast(Alice) = 2$ and $Ed^\ast(Alice) =  76000$.</p>
+<p>Rest of the tools&hellip;. to be added later.</p>
+<h3 id="critique">Critique</h3>
+<p>I certainly believe that the advent of ML and AI necessitates the task of learning the causal structure from observed data. The three tools mentioned above do not do that. They assume the causal structure is provided. These tools provide us the correct way of <strong>utilizing</strong> the causal structure in machine learning. I believe most of the machine learning models build for classification/regression tasks assume some form of causal structure already. What is not clear is, if those models correctly leverage the causal structure that they are assuming. These tools help us answer that. The question about whether or not the causal structure assumed is correct or not can be subjective and task specific. The three tools mentioned above certainly do not answer that.</p>
+<h3 id="references">References</h3>
+<ol>
+<li>The Book of Why: The New Science of Cause and Effect by Judea Pearl and Dana Mackenzie</li>
+<li>The Seven Tools of Causal Inference, with Reflections on Machine Learning by Judea Pearl</li>
+<li><sup><a id="ref1" name="ref1">1</a></sup><a href="https://www.inference.vc/causal-inference-2-illustrating-interventions-in-a-toy-example/">https://www.inference.vc/causal-inference-2-illustrating-interventions-in-a-toy-example/</a></li>
+<li>Causality: Models, Reasoning and Inference by Judea Pearl</li>
+</ol>
+</p>
+
+
+<div id="comments">
+
+  <script>
+  var id =  22 ;
+
+  if (id)
+  {
+    let url = "https://github.com/YOUR-ACCOUNT/YOUR-REPOSITORY/issues/".concat(id);
+    let api_url = "https://api.github.com/repos/YOUR-ACCOUNT/YOUR-REPOSITORY/issues/".concat(id, "/comments");
+    
+    var commentsDiv = document.getElementById("comments");
+
+    let xhr = new XMLHttpRequest();
+    xhr.responseType = "json";
+    xhr.open("GET", api_url);
+    xhr.setRequestHeader("Accept", "application/vnd.github.v3.html+json");
+    xhr.send();
+
+    xhr.onload = function()
+    {
+      if (xhr.status != 200)
+      {
+        let errorText = document.createElement("p");
+        errorText.innerHTML = "<i>Comments for this post yet are not opened yet (or you have GitHub scripts disabled).</i>";
+        commentsDiv.appendChild(errorText);
+      }
+      else
+      {
+        let comments = xhr.response;
+
+        let mainHeader = document.createElement("h2");
+        mainHeader.innerHTML = "Comments: ".concat(comments.length);
+        commentsDiv.appendChild(mainHeader);
+
+        let issueLink = document.createElement("p");
+        issueLink.innerHTML = "<i>You can leave a comment using this <a href='".concat(url, "'>GitHub issue</a>.</i>");
+        commentsDiv.appendChild(issueLink);
+        
+        comments.forEach(function(comment)
+        {
+            let commentContent = document.createElement("div");
+            commentContent.setAttribute('class', 'gh-comment')
+            commentContent.innerHTML = "".concat(
+                "<div class='gh-header'>",
+                  "<img src='", comment.user.avatar_url, "' />",
+                  "<div style='margin:auto 0;'>",
+                    "<b><a class='gh-username' href='", comment.user.html_url, "'>", comment.user.login, "</a></b>",
+                    " commented at <em>", new Date(comment.created_at), "</em>",
+                  "</div>",
+                "</div>",
+                "<div class='gh-body'>",
+                  comment.body_html,
+                "</div>"
+            );
+            commentsDiv.appendChild(commentContent);
+        });
+      }
+    };
+
+    xhr.onerror = function()
+    {
+      let errorText = document.createElement("p");
+      errorText.innerHTML = "<i>Some error loading comments.</i>";
+      commentsDiv.appendChild(errorText);
+    };
+  }
+</script>
+
+</div>
+
+
+
+	</div>
+      </div>
+
+      
+<div id="sidebar">
+  <div class="inner">
+
+    
+
+    
+<nav id="menu">
+  <header class="major">
+    <h2>Menu</h2>
+  </header>
+  <ul>
+    
+    
+    
+    <li><a href="/">Homepage</a></li>
+    
+    
+    
+    <li><a href="/cv/">cv</a></li>
+    
+    
+    
+    <li><a href="/projects/">projects</a></li>
+    
+    
+    
+    <li><a href="/post/">BLOG POSTS</a></li>
+    
+    
+  </ul>
+</nav>
+
+
+    
+<footer id="footer">
+  <p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+
+
+  </div>
+</div>
+
+
+    </div>
+    
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    
+    <script src="/js/main.js"></script>
+    
+  </body>
+</html>

@@ -1,10 +1,236 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Harsha Kokel</title>
+    <title>Tags on Home</title>
     <link>https://harshakokel.com/tags/</link>
-    <description>Recent content in Tags on Harsha Kokel</description>
+    <description>Recent content in Tags on Home</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright><atom:link href="https://harshakokel.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
+    <lastBuildDate>Wed, 21 Oct 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>abstractions</title>
+      <link>https://harshakokel.com/tags/abstractions/</link>
+      <pubDate>Wed, 21 Oct 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/abstractions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hierarchy</title>
+      <link>https://harshakokel.com/tags/hierarchy/</link>
+      <pubDate>Wed, 21 Oct 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/hierarchy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>planning</title>
+      <link>https://harshakokel.com/tags/planning/</link>
+      <pubDate>Wed, 21 Oct 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/planning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>course</title>
+      <link>https://harshakokel.com/tags/course/</link>
+      <pubDate>Fri, 25 Sep 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/course/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>neurosymbolic</title>
+      <link>https://harshakokel.com/tags/neurosymbolic/</link>
+      <pubDate>Fri, 25 Sep 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/neurosymbolic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>summary</title>
+      <link>https://harshakokel.com/tags/summary/</link>
+      <pubDate>Tue, 09 Jun 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/summary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>causal</title>
+      <link>https://harshakokel.com/tags/causal/</link>
+      <pubDate>Sun, 24 May 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/causal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>active-learning</title>
+      <link>https://harshakokel.com/tags/active-learning/</link>
+      <pubDate>Fri, 08 May 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/active-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>healthcare</title>
+      <link>https://harshakokel.com/tags/healthcare/</link>
+      <pubDate>Fri, 08 May 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/healthcare/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>starling</title>
+      <link>https://harshakokel.com/tags/starling/</link>
+      <pubDate>Fri, 08 May 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/starling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>adversary</title>
+      <link>https://harshakokel.com/tags/adversary/</link>
+      <pubDate>Wed, 29 Apr 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/adversary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GNN</title>
+      <link>https://harshakokel.com/tags/gnn/</link>
+      <pubDate>Wed, 29 Apr 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/gnn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RL</title>
+      <link>https://harshakokel.com/tags/rl/</link>
+      <pubDate>Wed, 22 Apr 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/rl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>relational</title>
+      <link>https://harshakokel.com/tags/relational/</link>
+      <pubDate>Mon, 13 Apr 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/relational/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VQA</title>
+      <link>https://harshakokel.com/tags/vqa/</link>
+      <pubDate>Mon, 13 Apr 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/vqa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SRL</title>
+      <link>https://harshakokel.com/tags/srl/</link>
+      <pubDate>Sun, 12 Apr 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/srl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>few-shot</title>
+      <link>https://harshakokel.com/tags/few-shot/</link>
+      <pubDate>Sat, 04 Apr 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/few-shot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ILP</title>
+      <link>https://harshakokel.com/tags/ilp/</link>
+      <pubDate>Mon, 30 Mar 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/ilp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metalearning</title>
+      <link>https://harshakokel.com/tags/metalearning/</link>
+      <pubDate>Fri, 27 Mar 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/metalearning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>generalization</title>
+      <link>https://harshakokel.com/tags/generalization/</link>
+      <pubDate>Wed, 18 Mar 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/generalization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>imitation</title>
+      <link>https://harshakokel.com/tags/imitation/</link>
+      <pubDate>Wed, 18 Mar 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/imitation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>offline</title>
+      <link>https://harshakokel.com/tags/offline/</link>
+      <pubDate>Fri, 06 Dec 2019 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/offline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>advice</title>
+      <link>https://harshakokel.com/tags/advice/</link>
+      <pubDate>Sat, 05 Oct 2019 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/advice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>XAI</title>
+      <link>https://harshakokel.com/tags/xai/</link>
+      <pubDate>Tue, 03 Sep 2019 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/xai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>survey</title>
+      <link>https://harshakokel.com/tags/survey/</link>
+      <pubDate>Sun, 04 Nov 2018 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/tags/survey/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
