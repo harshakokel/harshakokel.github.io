@@ -3495,3 +3495,7 @@ mjx-math, mjx-mtr, mjx-mtd{
   margin-right: 10px;
   vertical-align: middle;
 }
+
+.utterances {
+  max-width: 100% !important;
+}
