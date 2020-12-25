@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title> The 6 Types of Neuro-Symbolic Systems</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="referrer" content="no-referrer">
+    
+    
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    
+    
+    <link rel="stylesheet" href="/css/academicons.min.css"/>
+    <link rel="stylesheet" href="/css/ocs-ui.min.css">
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=" The 6 Types of Neuro-Symbolic Systems"/>
+<meta name="twitter:description" content="As introduced by Henry Kautz in his talk The Third AI Summer at AAAI 2020. Prof. Henry Kautz, in his Robert S. Engelmore Memorial Lecture at AAAI 2020^, talked about the past and present of AI and highlighted that the future of AI is in the combination of the Neural and Symbolic approaches, alluding to the famous and heated AI debate between Prof. Gary Marcus and Prof. Yoshua Benjio. In this regard, he brings forth a taxonomy of Neuro-Symbolic Systems that I aim to elaborate upon."/>
+
+    <meta property="og:title" content=" The 6 Types of Neuro-Symbolic Systems" />
+<meta property="og:description" content="As introduced by Henry Kautz in his talk The Third AI Summer at AAAI 2020. Prof. Henry Kautz, in his Robert S. Engelmore Memorial Lecture at AAAI 2020^, talked about the past and present of AI and highlighted that the future of AI is in the combination of the Neural and Symbolic approaches, alluding to the famous and heated AI debate between Prof. Gary Marcus and Prof. Yoshua Benjio. In this regard, he brings forth a taxonomy of Neuro-Symbolic Systems that I aim to elaborate upon." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://harshakokel.com/posts/neurosymbolic-systems/" />
+<meta property="article:published_time" content="2020-06-09T16:40:08+02:00" />
+<meta property="article:modified_time" content="2020-06-09T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+
+    <meta itemprop="name" content=" The 6 Types of Neuro-Symbolic Systems">
+<meta itemprop="description" content="As introduced by Henry Kautz in his talk The Third AI Summer at AAAI 2020. Prof. Henry Kautz, in his Robert S. Engelmore Memorial Lecture at AAAI 2020^, talked about the past and present of AI and highlighted that the future of AI is in the combination of the Neural and Symbolic approaches, alluding to the famous and heated AI debate between Prof. Gary Marcus and Prof. Yoshua Benjio. In this regard, he brings forth a taxonomy of Neuro-Symbolic Systems that I aim to elaborate upon.">
+<meta itemprop="datePublished" content="2020-06-09T16:40:08+02:00" />
+<meta itemprop="dateModified" content="2020-06-09T16:40:08+02:00" />
+<meta itemprop="wordCount" content="835">
+
+
+
+<meta itemprop="keywords" content="neurosymbolic,summary," />
+
+    
+  </head>
+  <body>
+
+    
+    <div id="wrapper">
+
+      
+      <div id="main">
+	<div class="inner">
+
+	  
+	  
+<header id="header">
+	<h3><a href="/" style="color:inherit">Harsha Kokel</a></h3>
+	<ul class="icons">
+		<li id="linkedin">
+			<a target="_blank" href="http://linkedin.com/in/harshakokel" title="linkedin" class="icon brands fa-linkedin">
+				<span class="label" >Linked in</span>
+			</a>
+		</li>
+		<li id="github">
+			<a target="_blank" href="https://github.com/harshakokel" title="github" class="icon brands fa-github">
+				<span class="label" >Github</span>
+			</a>
+		</li>
+		<li id="email">
+			<a  href="mailto:hkokel@utdallas.edu" title="mail" class="icon solid fa-envelope" >
+				<span class="label" >Mail</span>
+			</a>
+		</li>
+		<li id="twitter">
+			<a target="_blank" href="https://twitter.com/harsha_kokel" title="twitter" class="icon brands fa-twitter" >
+				<span class="label" title="Twitter">Twitter</span>
+			</a>
+		</li>
+	</ul>
+</header>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax '})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	  
+<div class="page__section">
+  <nav class="breadcrumb breadcrumb_type5" aria-label="Breadcrumb">
+<ol  class="breadcrumb__list r-list">
+  
+
+
+
+<li class="breadcrumb__group" >
+  <a href="https://harshakokel.com/" class="breadcrumb__point r-link">Home</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+
+<li class="breadcrumb__group"  class="active">
+  <a href="https://harshakokel.com/posts/" class="breadcrumb__point r-link">Posts</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+  <li class="breadcrumb__group">
+    Jun 9, 2020
+  </li> 
+  <li class="tags">  Tagged with:
+      <a href="https://harshakokel.com/tags/neurosymbolic/" class="button">neurosymbolic</a>  <a href="https://harshakokel.com/tags/summary/" class="button">summary</a>
+  </li>
+</ol> 
+
+
+
+</nav>
+</div>
+
+  <header class="main">
+    <h2> The 6 Types of Neuro-Symbolic Systems</h2>
+  </header>
+
+
+  
+  
+
+  <p><strong></strong></p>
+
+  <p><h3 id="as-introduced-by-henry-kautz-in-his-talk-the-third-ai-summer-at-aaai-2020">As introduced by Henry Kautz in his talk <em>The Third AI Summer</em> at AAAI 2020.</h3>
+<p>Prof. Henry Kautz, in his Robert S. Engelmore Memorial Lecture at AAAI 2020<a href="#references">^</a>, talked about the past and present of AI and highlighted that the future of AI is in the combination of the Neural and Symbolic approaches, alluding to the famous and heated <a href="https://montrealartificialintelligence.com/aidebate/">AI debate</a> between Prof. Gary Marcus and Prof. Yoshua Benjio. In this regard, he brings forth a taxonomy of Neuro-Symbolic Systems that I aim to elaborate upon.</p>
+<h3 id="1-symbolic-neuro-symbolic">1. symbolic Neuro symbolic</h3>
+<p>This is the current standard operating procedure of deep learning, where any/all the symbols in the problem are converted to vector embeddings. Vectors are then processed by neural models, which spits out another vector which is then converted to the required symbol.</p>
+<div align="center">
+<img align="center" width="500"  src="/images/symbolicNeurosymbolic.png">
+<p>symbolic Neuro symbolic</p>
+</div>
+<p>Most of the NLP systems fall under this category since words are converted to vectors before the neural manipulations are conducted. Personally, I would not call this a Neuro-Symbolic integration.</p>
+<h3 id="2-symbolicneuro">2. Symbolic[Neuro]</h3>
+<p>This is an over all symbolic solver which uses Neural model internally as subroutine for one or more function.</p>
+<div align="center">
+<img align="center" width="300"  src="/images/Symbolic[Neuro].png">
+<p>Symbolic[Neuro]</p>
+</div>
+<p>The example provided by Prof. Kautz includes Alpha Go system which uses a symbolic Monte-Carlo Tree search algorithm while using a neural state estimator.</p>
+<h3 id="3-neurosymbolic">3. Neuro;Symbolic</h3>
+<p>This is a more refined integration of Neural and Symbolic approaches where the Neural and Symbolic systems are leveraged for different tasks in a big pipeline. Both systems communicate with each other either to extract information or to improve the individual/collective systems performance.</p>
+<div align="center">
+<img align="center" width="300"  src="/images/Neuro;Symbolic.png">  
+<br>
+<br>
+<p>Neuro;Symbolic</p>
+</div>
+<p>The Neuro Symbolic Concept Learner by Mao et al.<a href="#references">^</a> is presented as an example of this type of Neuro-Symbolic integrations since the Neural model does object detection and the symbolic reasoner (which is a GNN) does the relational reasoning. I am not quite comfortable with categorizing the GNN as symbolic systems. So, I would not consider the Mao et al. as Type 3.</p>
+<p>I believe the Illanes et al. ICAPS 2020<a href="#references">^</a> and other related work are a better candidate for Type 3 Neuro-Symbolic integration. Illanes et al. integrate the symbolic planner with the neural RL agent and both systems feed off of each other.</p>
+<h3 id="4-neurosymbolic-rightarrow-neuro">4. Neuro:Symbolic $\rightarrow$ Neuro</h3>
+<p>This type is categorized as Neuro-Symbolic systems where the symbolic knowledge is compiled into the structure of Neural models. Kautz and Lamb et al. both provide example of Lample and Charton 2020, but I fail to understand how Lample et al. is compiling the symbolic knowledge into the neural model. However, the other examples provided by Lamb et al. are quite easy to follow. Arabshahi et al. compiles the symbolic expression tree to tree LSTMs. Other works like Hitzler et al. 2004<a href="#references">^</a> and Garcez et al. 2015<a href="#references">^</a> compiled the logic program or <em>if..then..</em> rules to a Neural Network architecture.</p>
+<div align="center">
+<img align="center" width="300"  src="/images/Neurosymbolic->neuro.png">  
+<br><br>
+<p>Neuro:Symbolic $\rightarrow$ Neuro</p>
+</div>
+<h3 id="5-neurosubsymbolicsub">5. Neuro<sub>Symbolic</sub></h3>
+<p>This category was not listed during the AAAI 2020 Lecture, but added in Prof. Kautz' slides later<a href="#references">^</a>. This category covers all the approached where the first-order logic language is tensorized and neural methods are used to perform reasoning over this tensorized first-order logic representation. The research in this category include Logic Tensor Network [Serafini et al. 2016<a href="#references">^</a>], Tensor Product Representation [Smolensky et al. 2016<a href="#references">^</a>], Neural Tensor Network [Socher et al. 2013<a href="#references">^</a>], relational embeddings etc.</p>
+<div align="center">
+<img align="center" width="400"  src="/images/Neuro_symbolic.png">  
+<br><br>
+Neuro<sub>Symbolic</sub>
+</div>
+<br>
+<p>The difference between this and type 1 is that in type 1 only the objects are represented as vector embeddings. Here  complete first-order language is represented by tensor embedding, including object, relation, clauses/rules, functions, predicates.</p>
+<h3 id="6-neurosymbolic">6. Neuro[Symbolic]</h3>
+<p>Finally, the last one is the transpose of Type 2. Here, the overall Neural model performs symbolic reasoning by either learning the relations between the symbols or paying attention to selected symbols at certain point. This is exactly what the Graph Neural Network do. So I think GNN is synonymous to Type 6 neuro-symbolic integration. This is also the argument made by Lamb et al. 2020<a href="#references">^</a>.</p>
+<div align="center">
+<img align="center" width="400"  src="/images/Neuro[Symbolic].png">  
+<br><br>
+Neuro[Symbolic]
+</div>
+<br>
+<p>I prefer calling the GNN as type 6 Neuro-Symbolic integration then calling GNN as symbolic reasoners. I believe symbolic reasoners, in general, have more reasoning capability than GNN. So, calling GNN as symbolic reasoner in my opinion is a stretch.</p>
+<h2 id="a-namereferecesreferencesa"><a name="refereces">References</a></h2>
+<ul>
+<li>Robert S. Engelmore Memorial Lecture at AAAI 2020 by Henry Kautz. <a href="https://roc-hci.com/announcements/the-third-ai-summer/">The Third AI Summer</a></li>
+<li>Lamb et al. <a href="https://arxiv.org/abs/2003.00330">Graph Neural Networks Meet Neural-Symbolic Computing: A Survey and Perspective.</a> IJCAI, 2020</li>
+<li>Arabshahi et al. <a href="https://arxiv.org/abs/1801.04342">Combining Symbolic Expressions and Black-box Function Evaluations in Neural Programs.</a>	ICLR, 2018</li>
+<li>Hitzler et al. <a href="https://www.sciencedirect.com/science/article/pii/S1570868304000151">Logic programs and connectionist networks.</a> Journal of Applied Logic, 2004</li>
+<li>Garcez et al. <a href="https://www.aaai.org/ocs/index.php/SSS/SSS15/paper/viewFile/10281/10029">Neural-symbolic learning and reasoning: contributions and challenges.</a> AAAI Spring Symposium Series. 2015</li>
+<li>Smolensky et al. <a href="https://arxiv.org/abs/1601.02745">Basic Reasoning with Tensor Product Representations.</a> arXiv:1601.02745, 2016</li>
+<li>Serafini et al. <a href="https://arxiv.org/abs/1606.04422">Logic Tensor Networks: Deep Learning and Logical Reasoning from Data and Knowledge.</a> arXiv:1606.04422, 2016</li>
+<li>Socher et al. <a href="https://papers.nips.cc/paper/5028-reasoning-with-neural-tensor-networks-for-knowledge-base-completion">Reasoning With Neural Tensor Networks For Knowledge Base Completion.</a> NeurIPS, 2013</li>
+<li>Illanes et al. <a href="http://www.cs.toronto.edu/~lillanes/papers/IllanesYTM-icaps2020-symbolic-preprint.pdf">Symbolic Plans as High-Level Instructions for Reinforcement Learning.</a> ICAPS 2020</li>
+<li>Mao et al. <a href="http://nscl.csail.mit.edu/data/papers/2019ICLR-NSCL.pdf">The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences From Natural Supervision.</a> ICLR 2019</li>
+</ul>
+<!-- * https://www.digitaltrends.com/cool-tech/neuro-symbolic-ai-the-future/ -->
+</p>
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="harshakokel/harshakokel.github.io"
+        issue-number=23
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<div class="postpagination">
+  
+    <a class="postpagination__item" href="https://harshakokel.com/posts/causal-tools/">
+        <span class="postpagination__label">Previous Post</span>
+        <span class="postpagination__title">Tools for Causal Inference</span>
+    </a>
+  
+
+  
+    <a class="postpagination__item" href="https://harshakokel.com/posts/nn-with-fol/">
+      <span class="postpagination__label">Next Post</span>
+      <span class="postpagination__title" >Augmenting Neural Networks with First-order Logic</span>
+    </a>
+  
+</div>
+<br>
+
+
+
+	</div>
+      </div>
+
+      
+<div id="sidebar">
+  <div class="inner">
+
+    
+
+    
+<nav id="menu">
+  <header class="major">
+    <h2>Menu</h2>
+  </header>
+  <ul>
+    
+    
+    
+    <li><a href="/">Homepage</a></li>
+    
+    
+    
+    <li><a href="/cv/">cv</a></li>
+    
+    
+    
+    <li><a href="/projects/">projects</a></li>
+    
+    
+    
+    <li><a href="/posts/">BLOG POSTS</a></li>
+    
+    
+  </ul>
+</nav>
+
+
+    
+<footer id="footer">
+  <p class="copyright">Powered by <a href="https://gohugo.io">Hugo</a> and design by <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+
+
+  </div>
+</div>
+
+
+    </div>
+    
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    
+    <script src="/js/main.js"></script>
+    
+      
+
+  </body>
+</html>

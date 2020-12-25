@@ -9,38 +9,38 @@
     <lastBuildDate>Fri, 25 Sep 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/neurosymbolic/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Logical Neural Network</title>
-      <link>https://harshakokel.com/post/logical-nn/</link>
+      <link>https://harshakokel.com/posts/logical-nn/</link>
       <pubDate>Fri, 25 Sep 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/logical-nn/</guid>
+      <guid>https://harshakokel.com/posts/logical-nn/</guid>
       <description>Ryan Riegel, et al. arxiv 2020  This article is written jointly with Siwen Yan
  This paper proposes Logical Neural Network (LNN), a neural framework to perform logical inference. They propose to build a neural network with 1-to-1 correspondence with logical formulae. So, every neuron in the LNN is either a logical literal or logical gate. Given set of logical formulae, a LNN is a graph with one neuron for every unique proposition occurring in any formula and one neuron for each logical operation occurring in each formula, as shown in the figure below.</description>
     </item>
     
     <item>
       <title>Augmenting Neural Networks with First-order Logic</title>
-      <link>https://harshakokel.com/post/nn-with-fol/</link>
+      <link>https://harshakokel.com/posts/nn-with-fol/</link>
       <pubDate>Tue, 22 Sep 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/nn-with-fol/</guid>
+      <guid>https://harshakokel.com/posts/nn-with-fol/</guid>
       <description>Tao Li, Vivek Srikumar, ACL 2019 This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.</description>
     </item>
     
     <item>
       <title> The 6 Types of Neuro-Symbolic Systems</title>
-      <link>https://harshakokel.com/post/neurosymbolic-systems/</link>
+      <link>https://harshakokel.com/posts/neurosymbolic-systems/</link>
       <pubDate>Tue, 09 Jun 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/neurosymbolic-systems/</guid>
+      <guid>https://harshakokel.com/posts/neurosymbolic-systems/</guid>
       <description>As introduced by Henry Kautz in his talk The Third AI Summer at AAAI 2020. Prof. Henry Kautz, in his Robert S. Engelmore Memorial Lecture at AAAI 2020^, talked about the past and present of AI and highlighted that the future of AI is in the combination of the Neural and Symbolic approaches, alluding to the famous and heated AI debate between Prof. Gary Marcus and Prof. Yoshua Benjio. In this regard, he brings forth a taxonomy of Neuro-Symbolic Systems that I aim to elaborate upon.</description>
     </item>
     
     <item>
       <title>Deep Reinforcement Learning With Relational Inductive Biases</title>
-      <link>https://harshakokel.com/post/drrl/</link>
+      <link>https://harshakokel.com/posts/drrl/</link>
       <pubDate>Wed, 15 Apr 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/drrl/</guid>
+      <guid>https://harshakokel.com/posts/drrl/</guid>
       <description>Vinicius Zambaldi, David Raposo, Adam Santoro et al. ICLR 2019. Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects.</description>
     </item>
     

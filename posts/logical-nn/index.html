@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Logical Neural Network</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="referrer" content="no-referrer">
+    
+    
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    
+    
+    <link rel="stylesheet" href="/css/academicons.min.css"/>
+    <link rel="stylesheet" href="/css/ocs-ui.min.css">
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Logical Neural Network"/>
+<meta name="twitter:description" content="Ryan Riegel, et al. arxiv 2020  This article is written jointly with Siwen Yan
+ This paper proposes Logical Neural Network (LNN), a neural framework to perform logical inference. They propose to build a neural network with 1-to-1 correspondence with logical formulae. So, every neuron in the LNN is either a logical literal or logical gate. Given set of logical formulae, a LNN is a graph with one neuron for every unique proposition occurring in any formula and one neuron for each logical operation occurring in each formula, as shown in the figure below."/>
+
+    <meta property="og:title" content="Logical Neural Network" />
+<meta property="og:description" content="Ryan Riegel, et al. arxiv 2020  This article is written jointly with Siwen Yan
+ This paper proposes Logical Neural Network (LNN), a neural framework to perform logical inference. They propose to build a neural network with 1-to-1 correspondence with logical formulae. So, every neuron in the LNN is either a logical literal or logical gate. Given set of logical formulae, a LNN is a graph with one neuron for every unique proposition occurring in any formula and one neuron for each logical operation occurring in each formula, as shown in the figure below." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://harshakokel.com/posts/logical-nn/" />
+<meta property="article:published_time" content="2020-09-25T16:40:08+02:00" />
+<meta property="article:modified_time" content="2020-09-25T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+
+    <meta itemprop="name" content="Logical Neural Network">
+<meta itemprop="description" content="Ryan Riegel, et al. arxiv 2020  This article is written jointly with Siwen Yan
+ This paper proposes Logical Neural Network (LNN), a neural framework to perform logical inference. They propose to build a neural network with 1-to-1 correspondence with logical formulae. So, every neuron in the LNN is either a logical literal or logical gate. Given set of logical formulae, a LNN is a graph with one neuron for every unique proposition occurring in any formula and one neuron for each logical operation occurring in each formula, as shown in the figure below.">
+<meta itemprop="datePublished" content="2020-09-25T16:40:08+02:00" />
+<meta itemprop="dateModified" content="2020-09-25T16:40:08+02:00" />
+<meta itemprop="wordCount" content="774">
+
+
+
+<meta itemprop="keywords" content="neurosymbolic,course," />
+
+    
+  </head>
+  <body>
+
+    
+    <div id="wrapper">
+
+      
+      <div id="main">
+	<div class="inner">
+
+	  
+	  
+<header id="header">
+	<h3><a href="/" style="color:inherit">Harsha Kokel</a></h3>
+	<ul class="icons">
+		<li id="linkedin">
+			<a target="_blank" href="http://linkedin.com/in/harshakokel" title="linkedin" class="icon brands fa-linkedin">
+				<span class="label" >Linked in</span>
+			</a>
+		</li>
+		<li id="github">
+			<a target="_blank" href="https://github.com/harshakokel" title="github" class="icon brands fa-github">
+				<span class="label" >Github</span>
+			</a>
+		</li>
+		<li id="email">
+			<a  href="mailto:hkokel@utdallas.edu" title="mail" class="icon solid fa-envelope" >
+				<span class="label" >Mail</span>
+			</a>
+		</li>
+		<li id="twitter">
+			<a target="_blank" href="https://twitter.com/harsha_kokel" title="twitter" class="icon brands fa-twitter" >
+				<span class="label" title="Twitter">Twitter</span>
+			</a>
+		</li>
+	</ul>
+</header>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax '})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	  
+<div class="page__section">
+  <nav class="breadcrumb breadcrumb_type5" aria-label="Breadcrumb">
+<ol  class="breadcrumb__list r-list">
+  
+
+
+
+<li class="breadcrumb__group" >
+  <a href="https://harshakokel.com/" class="breadcrumb__point r-link">Home</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+
+<li class="breadcrumb__group"  class="active">
+  <a href="https://harshakokel.com/posts/" class="breadcrumb__point r-link">Posts</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+  <li class="breadcrumb__group">
+    Sep 25, 2020
+  </li> 
+  <li class="tags">  Tagged with:
+      <a href="https://harshakokel.com/tags/neurosymbolic/" class="button">neurosymbolic</a>  <a href="https://harshakokel.com/tags/course/" class="button">course</a>
+  </li>
+</ol> 
+
+
+
+</nav>
+</div>
+
+  <header class="main">
+    <h2>Logical Neural Network</h2>
+  </header>
+
+
+  
+  
+
+  <p><strong></strong></p>
+
+  <p><h4 id="ryan-riegel-et-al-arxiv-2020httpsarxivorgabs200613155">Ryan Riegel, et al. <a href="https://arxiv.org/abs/2006.13155">arxiv 2020</a></h4>
+<blockquote>
+<p>This article is written jointly with <a href="https://dtrycode.github.io">Siwen Yan</a></p>
+</blockquote>
+<p>This paper proposes Logical Neural Network (LNN), a neural framework to perform logical inference. They propose to build a neural network with 1-to-1 correspondence with logical formulae. So, every neuron in the LNN is either a logical literal or logical gate. Given set of logical formulae, a LNN is a graph with one neuron for every unique proposition occurring in any formula and one neuron for each logical operation occurring in each formula, as shown in the figure below. Each neuron outputs a lower and upper bound on the truth values of the corresponding sub-formulae or proposition.  A logical neural accepts the output of their corresponding neurons and propositional neurons accepts the bound on propositions' truth value.</p>
+<div align="center">
+<img align="center" width="400"  src="../../images/LNN.png">
+</div>
+<p>For purpose of demonstrating the contributions authors use proposition formulae in the paper and extend it to FOL in the appendix. Hence, the class presentation focused on propositional formulae only.  It is long known that a neuron can be treated as logical gate and hence a neural network can approximate any boolean formula. Authors claim that although this fact is known, it has not been explored much. For example, KBANN<sup><a href="#ref1">1</a></sup> uses the symbolic knowledge to create an initial neural network but then the parameters of the neural network are learned from examples, so the notion of neuron being the logical gate is lost. Literature from differential ILP like Tensor Log<sup><a href="#ref2">2</a></sup>, which also uses symbolic knowledge/clauses to build the structure of neural network, do not use neurons as logical gates. Perhaps one exception is the CIL2P<sup><a href="#ref3">3</a></sup> work of Garcez.</p>
+<p>Since the truth values can be any value between [0,1], the choice of activation function for the logical operators must implement real-valued logic. There can be multiple ways of achieving that using importance weighting, this paper proposes weighted nonlinear logic using Ñukasiewicz-like logic. Other types of real-valued logic functions can be used and the framework is able to accommodate that. The activation function defined using the weighted generalization of the Ñukasiewicz logic still follows the logic properties and the DeMorgan&rsquo;s laws. Augmenting NN with FOL paper<sup><a href="#ref4">4</a></sup> also uses  Łukasiewicz logic as activation function in the augmented network. The difference is that paper does not consider real-valued logic and hence does not have upper or lower bounds. It also does not use weighted generalization. This weighted generalization of logic is the main contribution of the paper.</p>
+<p>Inference is performed using the iterative upward and downward pass of the network and learning is strictly restricted to the parameter learning since the structure is built using formulae. Hence the LNN model retains the interpretability of the original logical formulae in the network.</p>
+<p>LNN is empirically evaluated on 3 benchmark datasets: Smokers and friends, Lehigh University Benchmark (LUBM), and Thousands of Problems for Theorem Proving (TPTP). These experiments show that the LNN performs comparative to the LTNs (Logic Tensor Networks) and better than MLNs (Markov Logic Networks). LNN is better able to handle the contradictions and is the only neural model that was able to solve any common sense reasoning problem of TPTP. This clearly demonstrates the power of LNN as neural theorem prover.</p>
+<p>The use of many-valued logic in AI or ML has been scarce. It has mainly been used in the philosophical studies and its usefulness in the field of AI is unexplored, except for the use in fuzzy logic. Perhaps this paper opens door for use of many valued logic in neuro-symbolic studies.</p>
+<h3 id="strengths">Strengths</h3>
+<ul>
+<li>The differentiable way of using weighted nonlinear logic for activation function has huge potential.</li>
+<li>First neural theorem prover which doesn&rsquo;t need vector embeddings</li>
+<li>The learnt model remains interpretable since representation is disentangled from neural parameters, as against Neural Theorem Prover<sup><a href="#ref5">5</a></sup>.</li>
+<li>The compositionality or modularity of the network structure can potentially enable transfer</li>
+<li>Opens door for use of many-valued logic in neural setting.</li>
+<li>It enables the open-world assumption by probabilistic bounds, yielding resilience to incomplete knowledge</li>
+</ul>
+<h3 id="drawbacks">Drawbacks</h3>
+<ul>
+<li>Needs handcrafting of all the rules upfront, no structure learning</li>
+<li>Does not support equality and functions</li>
+<li>Still needs grounding</li>
+<li>LNN should be compared with Neural Theorem Prover<sup><a href="#ref5">5</a></sup>, since they both are theorem provers.</li>
+<li>Paper is dense and difficult to read</li>
+</ul>
+<h3 id="potential-improvements">Potential improvements</h3>
+<ul>
+<li>Enhance LNN with structure learning ability (rule induction)</li>
+</ul>
+<h3 id="references">References</h3>
+<ol>
+<li><sup><a name="ref1">^</a></sup>G. G. Towell and J. W. Shavlik. Knowledge-based artificial neural networks. Artificial intelligence, 70(1-2):119–165, 1994.</li>
+<li><sup><a name="ref2">^</a></sup>W. W. Cohen. Tensorlog: A differentiable deductive database, 2016.</li>
+<li><sup><a name="ref3">^</a></sup>A. S. d. Garcez and G. Zaverucha. The connectionist inductive learning and logic programming system. Applied Intelligence, 11(1):59–77, 1999.</li>
+<li><sup><a name="ref4">^</a></sup>Tao Li, Vivek Srikumar, Augmenting Neural Networks with First-order Logic, ACL 2019</li>
+<li><sup><a name="ref5">^</a></sup>Tim Rocktäschel and Sebastian Riedel. End-to-end differentiable proving. NeurIPS, 2017.</li>
+</ol>
+</p>
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="harshakokel/harshakokel.github.io"
+        issue-number=25
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<div class="postpagination">
+  
+    <a class="postpagination__item" href="https://harshakokel.com/posts/nn-with-fol/">
+        <span class="postpagination__label">Previous Post</span>
+        <span class="postpagination__title">Augmenting Neural Networks with First-order Logic</span>
+    </a>
+  
+
+  
+    <a class="postpagination__item" href="https://harshakokel.com/posts/abstraction-for-planning/">
+      <span class="postpagination__label">Next Post</span>
+      <span class="postpagination__title" >Automatically Generating Abstractions for Planning</span>
+    </a>
+  
+</div>
+<br>
+
+
+
+	</div>
+      </div>
+
+      
+<div id="sidebar">
+  <div class="inner">
+
+    
+
+    
+<nav id="menu">
+  <header class="major">
+    <h2>Menu</h2>
+  </header>
+  <ul>
+    
+    
+    
+    <li><a href="/">Homepage</a></li>
+    
+    
+    
+    <li><a href="/cv/">cv</a></li>
+    
+    
+    
+    <li><a href="/projects/">projects</a></li>
+    
+    
+    
+    <li><a href="/posts/">BLOG POSTS</a></li>
+    
+    
+  </ul>
+</nav>
+
+
+    
+<footer id="footer">
+  <p class="copyright">Powered by <a href="https://gohugo.io">Hugo</a> and design by <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+
+
+  </div>
+</div>
+
+
+    </div>
+    
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    
+    <script src="/js/main.js"></script>
+    
+      
+
+  </body>
+</html>

@@ -9,29 +9,29 @@
     <lastBuildDate>Wed, 21 Oct 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/planning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automatically Generating Abstractions for Planning</title>
-      <link>https://harshakokel.com/post/abstraction-for-planning/</link>
+      <link>https://harshakokel.com/posts/abstraction-for-planning/</link>
       <pubDate>Wed, 21 Oct 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/abstraction-for-planning/</guid>
+      <guid>https://harshakokel.com/posts/abstraction-for-planning/</guid>
       <description>Craig Knoblock, AIJ 1994  This paper highlights a heuristic property called ordered monotonicity propery of hierarchical domains and provides a way to learn the hierarchy using the sufficient condition for that property.
 A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of $L$ is set of first-order literals, $S$ is the set of finite states (described using literals), and $O$ is the set of operators in the domain.</description>
     </item>
     
     <item>
       <title>From Skills to Symbols:Learning Symbolic Representations for Abstract High-Level Planning</title>
-      <link>https://harshakokel.com/post/skills-to-symbols/</link>
+      <link>https://harshakokel.com/posts/skills-to-symbols/</link>
       <pubDate>Wed, 22 Apr 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/skills-to-symbols/</guid>
+      <guid>https://harshakokel.com/posts/skills-to-symbols/</guid>
       <description>George Konidaris, Leslie Pack Kaelbling, Tomas Lozano-Perez, JAIR 2018 This paper learns abstract symbolic representations from lower level trajectories for planning at a high-level. Big Idea of this paper is that given different domains of increasing difficulty at lower level but similar high level tasks, if we are able to segregate the low-level and high-level tasks, the tasks can be considered equivalent at higher level and hence can be solved in a uniform manner.</description>
     </item>
     
     <item>
       <title>Minimal Sufficient Explanations for Factored Markov Decision Processes</title>
-      <link>https://harshakokel.com/post/minimal-sufficient-explanation/</link>
+      <link>https://harshakokel.com/posts/minimal-sufficient-explanation/</link>
       <pubDate>Tue, 03 Sep 2019 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/minimal-sufficient-explanation/</guid>
+      <guid>https://harshakokel.com/posts/minimal-sufficient-explanation/</guid>
       <description>Omar Zia Khan, Pascal Poupart, and James P Black. ICAPS 2009 Automated planning problems have long been attempted using Markov Decision Processes (MDPs). MDPs are capable of handling the probabilistic and sequential nature of planning problem. They solve the problem by providing a policy which is a mapping from states to actions. However, to use this policy in the real-world, we first need users to trust the policy. The issue of trust can be ameliorated if the policy provides an explanation for its recommeded actions.</description>
     </item>
     

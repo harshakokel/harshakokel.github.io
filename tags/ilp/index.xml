@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 30 Mar 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/ilp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Relational Inductive Bias</title>
-      <link>https://harshakokel.com/post/relational-inductive-bias/</link>
+      <link>https://harshakokel.com/posts/relational-inductive-bias/</link>
       <pubDate>Mon, 30 Mar 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/relational-inductive-bias/</guid>
+      <guid>https://harshakokel.com/posts/relational-inductive-bias/</guid>
       <description>There is a recent surge in papers which are using Relational Inductive Bias with Deep Reinforcement Learning. So here is my investigation on what is it and how is this connected to the inductive biases used in Logic.
 (Inductive) Bias refers to any basis for choosing one generalization over another, other than strict consistency with the observed training instances [Mitchell 80]. Relational inductive bias refers to biases which impose constraints on relationships and interactions among entities.</description>
     </item>

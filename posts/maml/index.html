@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="referrer" content="no-referrer">
+    
+    
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    
+    
+    <link rel="stylesheet" href="/css/academicons.min.css"/>
+    <link rel="stylesheet" href="/css/ocs-ui.min.css">
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks"/>
+<meta name="twitter:description" content="Chelsea Finn, Pieter Abbeel, Sergey Levine, ICML 2017. Meta-Learning a.k.a the &lsquo;&lsquo;Learning to Learn&rsquo;&rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model."/>
+
+    <meta property="og:title" content="Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks" />
+<meta property="og:description" content="Chelsea Finn, Pieter Abbeel, Sergey Levine, ICML 2017. Meta-Learning a.k.a the &lsquo;&lsquo;Learning to Learn&rsquo;&rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://harshakokel.com/posts/maml/" />
+<meta property="article:published_time" content="2020-03-27T16:40:08+02:00" />
+<meta property="article:modified_time" content="2020-03-27T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+
+    <meta itemprop="name" content="Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks">
+<meta itemprop="description" content="Chelsea Finn, Pieter Abbeel, Sergey Levine, ICML 2017. Meta-Learning a.k.a the &lsquo;&lsquo;Learning to Learn&rsquo;&rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model.">
+<meta itemprop="datePublished" content="2020-03-27T16:40:08+02:00" />
+<meta itemprop="dateModified" content="2020-03-27T16:40:08+02:00" />
+<meta itemprop="wordCount" content="1323">
+
+
+
+<meta itemprop="keywords" content="metalearning,course," />
+
+    
+  </head>
+  <body>
+
+    
+    <div id="wrapper">
+
+      
+      <div id="main">
+	<div class="inner">
+
+	  
+	  
+<header id="header">
+	<h3><a href="/" style="color:inherit">Harsha Kokel</a></h3>
+	<ul class="icons">
+		<li id="linkedin">
+			<a target="_blank" href="http://linkedin.com/in/harshakokel" title="linkedin" class="icon brands fa-linkedin">
+				<span class="label" >Linked in</span>
+			</a>
+		</li>
+		<li id="github">
+			<a target="_blank" href="https://github.com/harshakokel" title="github" class="icon brands fa-github">
+				<span class="label" >Github</span>
+			</a>
+		</li>
+		<li id="email">
+			<a  href="mailto:hkokel@utdallas.edu" title="mail" class="icon solid fa-envelope" >
+				<span class="label" >Mail</span>
+			</a>
+		</li>
+		<li id="twitter">
+			<a target="_blank" href="https://twitter.com/harsha_kokel" title="twitter" class="icon brands fa-twitter" >
+				<span class="label" title="Twitter">Twitter</span>
+			</a>
+		</li>
+	</ul>
+</header>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax '})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	  
+<div class="page__section">
+  <nav class="breadcrumb breadcrumb_type5" aria-label="Breadcrumb">
+<ol  class="breadcrumb__list r-list">
+  
+
+
+
+<li class="breadcrumb__group" >
+  <a href="https://harshakokel.com/" class="breadcrumb__point r-link">Home</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+
+<li class="breadcrumb__group"  class="active">
+  <a href="https://harshakokel.com/posts/" class="breadcrumb__point r-link">Posts</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+  <li class="breadcrumb__group">
+    Mar 27, 2020
+  </li> 
+  <li class="tags">  Tagged with:
+      <a href="https://harshakokel.com/tags/metalearning/" class="button">metalearning</a>  <a href="https://harshakokel.com/tags/course/" class="button">course</a>
+  </li>
+</ol> 
+
+
+
+</nav>
+</div>
+
+  <header class="main">
+    <h2>Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks</h2>
+  </header>
+
+
+  
+  
+
+  <p><strong></strong></p>
+
+  <p><h3 id="chelsea-finn-pieter-abbeel-sergey-levine-icml-2017">Chelsea Finn, Pieter Abbeel, Sergey Levine, ICML 2017.</h3>
+<p>Meta-Learning a.k.a the &lsquo;&lsquo;Learning to Learn&rsquo;&rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model. In the figure below, for a standard gradient based machine learning model meta-information like network structure, initialization parameters ($\theta^0$), update method etc are all decided manually.</p>
+<p>Meta-learning research aims to learn a model which can help decide such meta-information (all or subset) for any new task.</p>
+<div align="center">
+<img align="center" width="400"  src="/images/MAML-stdlearning.png">
+<p>src: <a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html">Prof. Hung-yi Lee's slides</a></p>
+</div>
+<p><a name="a4"><i class="fa fa-bolt"></i></a> One of the use-case of <strong>meta-learning</strong> is in a field called few-shot learning. In <strong>few-shot learning</strong>, machine learning algorithm is supposed to learn a model for a task from few supervised examples. Meta-Learning can help in few-shot learning by providing a better initialization parameters. <strong>Few-shot learning is the problem of learning a model from few examples, meta learning is the problem of learning a model that can easily adapt to the new task from few examples</strong>.</p>
+<p>This is also the premise of the Model-Agnostic Meta-Learning (MAML) paper by Finn et al 2017.</p>
+<p><a name="a5"><i class="fa fa-bolt"></i></a> <strong>Transfer-Learning</strong> is a research problem in machine learning (ML) that focuses on storing knowledge gained while solving one problem and applying it to a different but related problem<sup><a href="#myfootnote1">1</a></sup>. For Deep Neural Network models, one of the the popular approaches to transfer-learning is by using a <strong>pre-trained model</strong>. Pre-trained model essentially transfers the knowledge of network parameters between different tasks. This is essentially equivalent to providing initialization parameters for the new task. <strong>Transfer-learning via pre-trained model as well as meta-learning use the network parameters of one model as initialization parameters for another model. The difference is in the optimization of the network parameters. While pre-trained model are optimize for some predefined task, meta-learning model are optimized so that they can adapt to new tasks quickly.</strong></p>
+<p>The key idea of Model-Agnostic Meta-Learning (MAML) algorithm is to <strong>optimize model which can adapt to new task</strong> quickly. Consider (pretty similar) tasks ${\mathcal{T}_i , | , i \in { 1,2,3,4}}$ with optimal parameters ${ \theta^{\star}_i , | , i \in {1,2,3,4} }$. Say, for $\mathcal{T}_4$ we have only $k$ supervised examples but we have large number of supervised examples for rest of the tasks i.e. $\mathcal{T}_1, \mathcal{T}_2$ and $\mathcal{T}_3$.</p>
+<p>A <strong>transfer learning</strong> approach will train $3$ different models (with parameters $\theta_1, \theta_2$ and $\theta_3$). Try all three as pretrained model for $\mathcal{T}_4$, compare the performance and pick one that works the best i.e. closest to $\theta_4^{\star}$.</p>
+<p><strong>MAML</strong> on the other hand uses tasks $\mathcal{T}_1, \mathcal{T}_2$ and $\mathcal{T}_3$ for meta-training and treats them same as task $\mathcal{T}_4$ i.e. only uses $k$ example from each task. MAML learns a single model with parameter $\theta$ in meta-training such that for each task $\mathcal{T}_i$ the gradient step using $k$ examples from that parameter $\theta$ in the direction of $\theta_i^{\star}$ reaches a $\theta^{\prime}_i$. The meta-training objective to bring $\theta^{\prime}_i$ close to $\theta_i^{\star}$. So, the next update of the parameter $\theta$ is a gradient step in a direction calculated as a linear combination of gradient step from $\theta_i^{\prime}$ to $\theta_i^{*}$. This is represented in the figure below, albeit not visibly.</p>
+<div align="center">
+<img align="center" width="400"  src="/images/MAML-gradient.png">
+<p><a name="a1">Finn et al. 2017 ICLR, Figure 1.</a></p>
+</div>
+<p>Meta-learning (bold line: <strong>—</strong>) is performing a search in parameter space such that a gradient step (gray line: →) for any of the training tasks $\mathcal{T}_i, i\in {1,2,3}$ is close to optimal parameters $\theta_i^{\star}$. The parameter $\theta$ is then used as initialization value and fine-tuned for a specific task, this is called <strong>learning</strong> or <strong>adaptation</strong> (broken line: - - -).</p>
+<p>During meta-training, MAML adapts the parameter $\theta$ for training tasks $\mathcal{T}_i, i\in { 1,2,3}$ to compute the $\theta$ update. In meta-testing, MAML adapts the parameter $\theta$ for test task $\mathcal{T}_4$. We obtain  $\theta_4^{\prime}$ by taking gradient step using the $k$ examples.</p>
+<p>Parameter $\theta_i^{\prime}$ is computed for any task $\mathcal{T}_i$ using following fine-tuning/learning/adaptation equation.</p>
+<p>$$
+\theta_{i}^{\prime}=\theta-\alpha \nabla_{\theta} \mathcal{L}_{\mathcal{T}_{i}}\left(f_{\theta}\right)
+$$</p>
+<p>Meta-learning aims to reduce the distance between $\theta_i^{\prime}$ and $\theta_i^{\star}$. Since, $\theta_i^{\star}$ is unknown it instead tries to minimize $\mathcal{L}_{\mathcal{T}_{i}}\left(f_{\theta_{i}^{\prime}}\right)$ for all the tasks. So, meta-objective is:</p>
+<p>$$
+\min _{\theta} \sum_{\mathcal{T}_{i} \sim p(\mathcal{T})} \mathcal{L}_{\mathcal{T}_{i}}\left(f_{\theta_{i}^{\prime}}\right)=\sum_{\mathcal{T}_{i} \sim p(\mathcal{T})} \mathcal{L}_{\mathcal{T}_{i}}\left(f_{\theta-\alpha \nabla_{\theta} \mathcal{L}_{\mathcal{T}_{i}}\left(f_{\theta}\right)}\right)
+$$</p>
+<blockquote>
+<p>Note that we restrict our model to minimize the objective of tasks from a distribution $p(\mathcal{T})$.</p>
+</blockquote>
+<p>Meta-optimization is hence done with following update equation:</p>
+<p>$$
+\theta \leftarrow \theta-\beta \nabla_{\theta} \sum_{\mathcal{T}_{i} \sim p(\mathcal{T})} \mathcal{L}_{\mathcal{T}_{i}}\left(f_{\theta_{i}^{\prime}}\right)
+$$</p>
+<p>Notice that the update equation above depends on the gradient of loss function $\mathcal{L}_{\mathcal{T}_i}\left(f_{\theta_i^{\prime}}\right)$, but $\theta_i^{\prime}$ depends on the gradient of loss function $\mathcal{L}_{\mathcal{T}_{i}}\left(f_{\theta}\right)$. So evidently MAML involves second level gradients.</p>
+<p>Full algorithm of MAML is quite easy to follow from the above three equations.</p>
+<div align="center">
+<img align="center" width="500"  src="/images/MAML-algo.png">
+<p><a name="a2">Finn et al. 2017 ICLR, Algorithm 1.</a></p>
+</div>
+<p>Instead of doing the search of $\theta$ for all the tasks in training, like we did in the example above. MAML samples tasks from distribution $p(\mathcal{T})$. <a name="a3"><i class="fa fa-bolt"></i></a> In theory, this might just be a distribution of task based on available sample size of each task or distribution based on the similarity to the test task. In practice, they randomly sampled label set from images corpus and then sampled few examples for training and few for testing. To update the parameters $\theta$ in line 8, <a href="https://github.com/cbfinn/maml/blob/a7f45f1bcd7457fe97b227a21e89b8a82cc5fa49/maml.py#L133">code</a> computes the second gradient using <a href="https://www.tensorflow.org/api_docs/python/tf/compat/v1/train/AdamOptimizer">tensor flow optimizers</a>.</p>
+<p>Below figure  explains the MAML update equation used in practice. The first arrow for each task is the gradient from fine-tuning equation and the second arrow is from the meta-optimization equation.</p>
+<div align="center">
+<img align="center" width="200"  src="/images/MAML-update.png">
+<p><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html">Adapted from slides of Prof. Hung-yi Lee.</a></p>
+</div>
+<h4 id="maml-vs-pretrained">MAML vs Pretrained</h4>
+<div align="center">
+<img align="center" width="700"  src="/images/MAML-fig4.png">
+<p><a name="a7">Finn et al, ICLR 2017 Figure 4.</a></p>
+</div>
+<p>The above image highlights the difference between MAML and pretrained models for the MAML-RL in 2D Navigation task. While the MAML model can adapt to the new task quickly, the pre-trained models take longer.</p>
+<h3 id="first-order-maml">First-order MAML</h3>
+<p>Since the MAML involves second-order derivative, it can be computationally expensive. Authors propose a first-order approximation for such scenarios, by omitting the second order derivatives.</p>
+<p>Since,</p>
+<p>$$
+\nabla_{\theta} \sum_{\mathcal{T}_{i} \sim p(\mathcal{T})} \mathcal{L}_{\mathcal{T}_{i}}\left(f_{\theta_{i}^{\prime}}\right)  =   \sum_{\mathcal{T}_{i} \sim p(\mathcal{T})} \nabla_{\theta} \mathcal{L}_{\mathcal{T}_{i}}\left(f_{\theta_{i}^{\prime}}\right) \\<br>
+= \sum_{\mathcal{T}_{i} \sim p(\mathcal{T})} \nabla_{\theta_i^{\prime}} \mathcal{L}_{\mathcal{T}_{i}}\left(f_{\theta_{i}^{\prime}}\right) \cdot \nabla_{\theta} (\theta_i^{\prime}) $$</p>
+<p>In <strong>first-order MAML</strong>, authors use $\nabla_{\theta} (\theta_i^{\prime}) \approx 1$</p>
+<!-- $$
+\nabla\_{\theta} \mathcal{L}\_{\mathcal{T}\_{i}}\left(f\_{\theta\_{i}^{\prime}}\right)  = \left[\begin{array}{c}\partial \mathcal{L}_\mathcal{T_i}({\theta^{\prime}_i}) / \partial \phi\_{1} \\ \partial \mathcal{L}_\mathcal{T_i}({\theta^{\prime}_i}) / \partial \phi\_{2} \\ \vdots \\ \partial \mathcal{L}_\mathcal{T_i}({\theta^{\prime}_i}) / \partial \phi\_{i} \\ \vdots\end{array}\right]
+$$ -->
+<h3 id="reptile">Reptile</h3>
+<p>Reptile further simplifies the gradient computation of MAML by proposing following algorithm.</p>
+<div align="center">
+<img align="center" width="500"  src="/images/reptile-algo.png">
+<p><a name="a2">Nichol et al. 2018, Algorithm 1.</a></p>
+</div>
+<blockquote>
+<p>Notice that the initial parameter $\theta$ used in MAML is equivalent to $\phi$ in the reptile algorithm.</p>
+</blockquote>
+<p><a name="a6"><i class="fa fa-bolt"></i></a> Instead of computing the $\theta^{\prime}_i$ for each task with one step gradient, Reptile computes parameter $W$ by running stochastic gradient descent for $k$ steps. Then instead of computing the gradient w.r.t the task for updating the initial parameter $theta$ (as done in line 8 of MAML), Reptile recommend to just shift the initial parameter in the direction of $W$ by using $(W - \phi)$ as gradient. Below figure explains the Reptile update process.</p>
+<div align="center">
+<img align="center" width="300"  src="/images/Reptile-update.png">
+<p><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html">Adapted from slides of Prof. Hung-yi Lee.</a></p>
+</div>
+<!--
+### 2D Navigation domain
+
+<a name="a8"><i class="fa fa-bolt"></i></a>
+
+The task in 2D Navigation domain is to direct the agent in the 2D space to a particular goal point. These goal points are randomly sampled for each task. So, for each task $\mathcal{T}_i$ in 2D domain, the MDP  $<S, A, T, R, \gamma>$ is defined by $S \in \mathbb{R}^2$, $A \in \mathbb{R}^2$ is velocity in range $[-0.1, 0.1]$, $R$ is the negative squared distance to the goal, and $T$ is deterministic movement between states.
+
+> MDP is a set of $<S, A, T, R, \gamma>$,  States, Actions, Transition function, Reward function, discount factor resp. It can also have initial distribution of state.   -->
+<!-- ## Questions
+
+1. Explain Fig 1. What is meta learning and what is adaptation? [Link to Answer](#a1)
+1. Explain how gradient is calculated in the code? [Link to Answer](#a2)
+1. How is $p(\mathcal{T})$ : distribution of task decided in practice for supervised learning and reinforcement learning setting? [Link to Answer](#a3)
+1. What is few-shot learning and what is the relation-ship between meta-learning and few-shot learning. [Link to Answer](#a4)
+1. Difference between meta-learning and model pre-training. [Link to Answer](#a5)
+1. Difference between MAML and reptile. [Link to Answer](#a6)
+1. Explain two subfigures in Fig-4. [Link to Answer](#a7)
+<!-- 1. Use the example of 2D Navigation to define all the components of MDP and explain algorithm 3 step by step , particularly the steps related to MAML. [Link to Answer](#a8) -->
+<h3 id="references">References</h3>
+<ol>
+<li><a name="myfootnote1">Definition of transfer learning from Wikipedia</a></li>
+<li><a href="https://sites.google.com/view/icml19metalearning">ICML 2019 Meta leraning tutorial</a></li>
+<li><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html">Prof. Hung-yi Lee&rsquo;s slides on meta learning</a></li>
+<li>Alex Nichol, Joshua Achiam, John Schulman <a href="https://arxiv.org/abs/1803.02999"><em>On First-Order Meta-Learning Algorithms</em></a> 2018 &ndash; Reptile paper</li>
+<li><a href="https://openai.com/blog/reptile/">Reptile Blog</a></li>
+<li><a href="https://github.com/AdrienLE/ANIML/blob/master/ANIML.ipynb">Paper repro: Deep Metalearning using “MAML” and “Reptile”</a></li>
+</ol>
+<h3 id="further-resources">Further resources</h3>
+<ol>
+<li><a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html">Tutorial on Meta-Learning by Dr. Lilian Weng</a></li>
+<li><a href="https://github.com/sudharsan13296/Awesome-Meta-Learning">Awesome meta learning lists</a></li>
+</ol>
+</p>
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="harshakokel/harshakokel.github.io"
+        issue-number=13
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<div class="postpagination">
+  
+    <a class="postpagination__item" href="https://harshakokel.com/posts/her/">
+        <span class="postpagination__label">Previous Post</span>
+        <span class="postpagination__title">Hindsight Experience Replay</span>
+    </a>
+  
+
+  
+    <a class="postpagination__item" href="https://harshakokel.com/posts/relational-inductive-bias/">
+      <span class="postpagination__label">Next Post</span>
+      <span class="postpagination__title" >Relational Inductive Bias</span>
+    </a>
+  
+</div>
+<br>
+
+
+
+	</div>
+      </div>
+
+      
+<div id="sidebar">
+  <div class="inner">
+
+    
+
+    
+<nav id="menu">
+  <header class="major">
+    <h2>Menu</h2>
+  </header>
+  <ul>
+    
+    
+    
+    <li><a href="/">Homepage</a></li>
+    
+    
+    
+    <li><a href="/cv/">cv</a></li>
+    
+    
+    
+    <li><a href="/projects/">projects</a></li>
+    
+    
+    
+    <li><a href="/posts/">BLOG POSTS</a></li>
+    
+    
+  </ul>
+</nav>
+
+
+    
+<footer id="footer">
+  <p class="copyright">Powered by <a href="https://gohugo.io">Hugo</a> and design by <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+
+
+  </div>
+</div>
+
+
+    </div>
+    
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    
+    <script src="/js/main.js"></script>
+    
+      
+
+  </body>
+</html>

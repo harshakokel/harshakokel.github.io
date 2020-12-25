@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Adversarial Attacks on Graph Neural Networks via Meta Learning</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="referrer" content="no-referrer">
+    
+    
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    
+    
+    <link rel="stylesheet" href="/css/academicons.min.css"/>
+    <link rel="stylesheet" href="/css/ocs-ui.min.css">
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Adversarial Attacks on Graph Neural Networks via Meta Learning"/>
+<meta name="twitter:description" content="Daniel Zügner and Stephan Günnemann, ICLR 2019 Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes."/>
+
+    <meta property="og:title" content="Adversarial Attacks on Graph Neural Networks via Meta Learning" />
+<meta property="og:description" content="Daniel Zügner and Stephan Günnemann, ICLR 2019 Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://harshakokel.com/posts/meta-attack-gnn/" />
+<meta property="article:published_time" content="2020-04-29T16:40:08+02:00" />
+<meta property="article:modified_time" content="2020-04-29T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+
+    <meta itemprop="name" content="Adversarial Attacks on Graph Neural Networks via Meta Learning">
+<meta itemprop="description" content="Daniel Zügner and Stephan Günnemann, ICLR 2019 Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes.">
+<meta itemprop="datePublished" content="2020-04-29T16:40:08+02:00" />
+<meta itemprop="dateModified" content="2020-04-29T16:40:08+02:00" />
+<meta itemprop="wordCount" content="1412">
+
+
+
+<meta itemprop="keywords" content="GNN,adversary,course," />
+
+    
+  </head>
+  <body>
+
+    
+    <div id="wrapper">
+
+      
+      <div id="main">
+	<div class="inner">
+
+	  
+	  
+<header id="header">
+	<h3><a href="/" style="color:inherit">Harsha Kokel</a></h3>
+	<ul class="icons">
+		<li id="linkedin">
+			<a target="_blank" href="http://linkedin.com/in/harshakokel" title="linkedin" class="icon brands fa-linkedin">
+				<span class="label" >Linked in</span>
+			</a>
+		</li>
+		<li id="github">
+			<a target="_blank" href="https://github.com/harshakokel" title="github" class="icon brands fa-github">
+				<span class="label" >Github</span>
+			</a>
+		</li>
+		<li id="email">
+			<a  href="mailto:hkokel@utdallas.edu" title="mail" class="icon solid fa-envelope" >
+				<span class="label" >Mail</span>
+			</a>
+		</li>
+		<li id="twitter">
+			<a target="_blank" href="https://twitter.com/harsha_kokel" title="twitter" class="icon brands fa-twitter" >
+				<span class="label" title="Twitter">Twitter</span>
+			</a>
+		</li>
+	</ul>
+</header>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax '})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	  
+<div class="page__section">
+  <nav class="breadcrumb breadcrumb_type5" aria-label="Breadcrumb">
+<ol  class="breadcrumb__list r-list">
+  
+
+
+
+<li class="breadcrumb__group" >
+  <a href="https://harshakokel.com/" class="breadcrumb__point r-link">Home</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+
+<li class="breadcrumb__group"  class="active">
+  <a href="https://harshakokel.com/posts/" class="breadcrumb__point r-link">Posts</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+  <li class="breadcrumb__group">
+    Apr 29, 2020
+  </li> 
+  <li class="tags">  Tagged with:
+      <a href="https://harshakokel.com/tags/gnn/" class="button">gnn</a>  <a href="https://harshakokel.com/tags/adversary/" class="button">adversary</a>  <a href="https://harshakokel.com/tags/course/" class="button">course</a>
+  </li>
+</ol> 
+
+
+
+</nav>
+</div>
+
+  <header class="main">
+    <h2>Adversarial Attacks on Graph Neural Networks via Meta Learning</h2>
+  </header>
+
+
+  
+  
+
+  <p><strong></strong></p>
+
+  <p><h3 id="daniel-zuumlgner-and-stephan-guumlnnemann-iclr-2019">Daniel Zügner and Stephan Günnemann, ICLR 2019</h3>
+<p>Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes. The objective of the adversarial attack is to reduce the overall performance of the model by modifying the training data. So the objective can be formulated as a max-min problem where the attacker wants modify the graph to maximize the loss while the training agent will learn parameters to minimize the loss.</p>
+<p>$$
+\underset{{G}}{\arg\max } \  \  \underset{\theta}{\arg\min} \  \mathcal{L}_{\text{train}} \left(f_{\theta}({G})\right) ,
+$$</p>
+<p>This can be reformulated as following optimization function:</p>
+<p>$$
+\underset{\hat{G} \in \Phi(G)}{\arg \min} \  {\mathcal{L}_{\mathrm{atk}}}\left(f_{\theta^{\ast}}(\hat{G})\right) \quad \text { s.t. } \quad \theta^{\ast}=\underset{\theta}{\arg \min } \quad \mathcal{L}_{\operatorname{train}}\left(f_{\theta}(\hat{G})\right)
+$$</p>
+<p>Ideally $\mathcal{L}_{\mathrm{atk}} = - \mathcal{L}_{\mathrm{train}}$ but authors also use another option $\mathcal{L}_{\mathrm{atk}} = - \mathcal{L}_{\mathrm{self}}$ where they learn a model to predict the labels of the unlabeled dataset and then try to maximize the prediction error for those nodes. Since the above mentioned objective is a bilevel optimization problem it is a difficult to solve and hence authors propose a meta-learning approach.</p>
+<h3 id="meta-learning">Meta-Learning</h3>
+<p>Recall that in MAML we saw a similar objective where we wanted to optimize parameter $\theta$ such that the loss on individual tasks $\mathcal{T}_i$ is also minimum when adapted from parameter $\theta$:</p>
+<p>$$
+\underset{\theta}{\arg \min} \sum_{\mathcal{T}_{i} \sim p(\mathcal{T})} \mathcal{L}_{\mathcal{T}_{i}}\left(f_{\theta_{i}^{\prime}}\right)  \quad \text { s.t. } \theta_{i}^{\prime}  = \underset{\theta_{i}^{\prime} }{\arg \min } \quad \mathcal{L}_{\operatorname{\mathcal{T}_{i}}}\left(f_{\theta}\right)
+$$</p>
+<p>Below is a quick review of MAML equations. Map the colors with the image visualize to the equations.</p>
+<div align="center">
+<img align="center" width="600"  src="../../images/meta-attack-maml.jpeg">
+</div>
+<p>simulated adaptation / learning / training $(\nabla_{\theta}\mathcal{L}_{T_{i}})$ update performed by the meta-learner is as follows:</p>
+<div style="color:#B92D5D">
+<p>$$\theta_{i}^{\prime}=\theta-\alpha \nabla_{\theta} \mathcal{L}_{T_{i}}\left(f_{\theta}\right)$$</p>
+</div>
+<p>meta objective is $\theta_{i}^{\prime}$ should be close to $\theta_i^{\ast}$</p>
+<div style="color:#1200F4">
+<p>$$\underset{\theta}{\arg \min} \  \sum_{T_{i}} \mathcal{L}_{T_{i}}\left(f_{\theta_{i}^{\prime}}\right)$$</p>
+</div>
+<p>$\therefore$ meta update $\left(\nabla \mathcal{L}_{\text {meta }}\right)$  is:</p>
+<div style="color:#1200F4">
+<p>$$
+\begin{align}
+\theta &amp; =\theta-\beta \sum_{T_{i}} \nabla_{\theta} \mathcal{L}_{T_{i}}\left(f_{\theta_{i}^{\prime}}\right)\<br>
+&amp;=\theta- \beta\sum_{T_{i}} \nabla_{\theta_{i}^{\prime}} \mathcal{L}_{T_{i}}\left(f_{\theta_{i}^{\prime}}\right) \cdot \nabla_{\theta} \theta_{i}^{\prime}
+\end{align}
+$$</p>
+</div>
+<p>first  order approximation assumes  $\nabla_{\theta} \theta_{i}^{\prime}=1$</p>
+<div style="color:#1200F4">
+<p>$$=\theta-\beta \sum_{T_{i}} \mathbin{\color{#EA6B2D}{\nabla_{\theta_{i}^{\prime}}\mathcal{L}_{T_{i}}\left(f_{\theta_{i}^{\prime}}\right)}}$$</p>
+</div>
+<h3 id="adversarial-meta-learning">Adversarial Meta-Learning</h3>
+<p>In MAML both the meta objective and the adaptation/learning phase optimized over the same parameters. In this paper, the adaptation/learning phase optimizes model parameters but the meta-objective optimizes the graph $G$. So the equations look quite similar with meta objective optimizing $G$ instead of $\theta$.</p>
+<p>Adversarial objective is</p>
+<p>$$\underset{\hat{G}}{\arg\min }  \  \mathcal{L}_{\text{atk}}\left(f_{\theta^{\ast}}(\hat{G})\right) \quad \text { s.t. } \quad \theta^{\ast}=\underset{\theta}{\arg\min} \  \mathcal{L}_{\text {train }}\left(f_{\theta}(\hat{G})\right)$$</p>
+<p>simulated adaptation / learning / training update by the attacker is</p>
+<div style="color:#B92D5D">
+<p>$$
+\theta =\theta-\alpha \nabla_{\theta} \mathcal{L}_{\text{train}} f_{\theta}(G)
+$$</p>
+</div>
+<p>meta update:</p>
+<div style="color:#1200F4">  
+<p>$$
+\begin{align}
+G &amp; = G -\beta \nabla_{G} \mathcal{L}_{\text{atk}}\left(f_{\theta}(G)\right)\<br>
+&amp; =G-\beta \nabla_{f} \mathcal{L}_{\text{atk}}\left(f_{\theta}(G)\right) \bigg[ \nabla_{G} f_{\theta}(G)+\nabla_{\theta} f_{\theta}(G) \nabla_{G} \theta \bigg]
+\end{align}
+$$</p>
+</div>
+<p>first order approximation $\theta \approx \tilde{\theta}$ where $\left(\nabla_{G} \tilde{\theta}=0\right)$</p>
+<div style="color:#1200F4">
+<p>$$
+=G-\beta \nabla_{f} \mathcal{L}_{\text{atk}}\left(f_{\tilde{\theta}}(G)\right) \nabla_{G} f_{\tilde{\theta}}(G)
+$$</p>
+</div>
+<p>Another major difference between MAML and this paper is the assumption in the first order approximation of the meta-gradients. In MAML, the first order approximations assumes $\nabla_{\theta}\theta_i^{\prime} = 1$ i.e. it assumes the parameters $\theta$ and $\theta^{\prime}$ are essentially the same. Here, in the first order approximation, authors assume that the $\nabla_{\tilde{\theta}}G= 0$ i.e. the graph $G$ is constant  (i.e.  independent of $\tilde{\theta}$).</p>
+<p>In the exact meta-attack version, the graph $G$ used in the simulated learning/adaptation/training phase is constantly optimized by the attacker w.r.t parameters and hence the $\nabla_{{\theta}}G \neq 0$. But for the approximate version, the graph $G$ is optimized only after $t$ steps of simulated adaptation/training/learning iterations. So, the for most of the $\tilde{\theta}$ updates the graph $G$ is gonna be constant. Hence, the parameter $\nabla_{\tilde{\theta}}G = 0$.</p>
+<p>Since, the graph modifications are limited to edge manipulations, the optimization objective replaces graph $G$ with adjacency matrix $A$. And since the gradient direction is the direction of maximizing the function and we want to maximize the $L_\text{train/self}$, we use +ve sign for gradient update.</p>
+<p>$$
+A = A - \beta \  \nabla_{A}\mathcal{L}_\text{atk}(f_\theta(A)) \<br>
+= A + \beta \  \nabla_{A}\mathcal{L}_\text{train/self}(f_\theta(A)) \<br>
+$$</p>
+<h4 id="graph-admissibility--phig">Graph admissibility:  $\Phi(G)$</h4>
+<p>Since the inherent objective of an attack is be unnoticeable there are certain constraints on modifications that the attacker can do on the graph $\hat{G} \in \Phi(G)$</p>
+<ol>
+<li>There is a budget on the number of perturbations allowed. So, $||A−\hat{A}||_0 \leq \Delta$, where $\Delta$ is a budget and $A$ and $\hat{A}$ are adjacency matrix of original and modified graph $G$</li>
+<li>Nodes which was initially connected should remain connected, so no singleton node created as a result of perturbations</li>
+<li>Degree distribution of the graph remains the same.</li>
+</ol>
+<h4 id="extension-to-graph-attributes">Extension to graph attributes</h4>
+<p>To extend the meta learning formulation to modify the graph attributes we can treat the node feature matrix of the graph $X$ as hyper-parameter and reformulate the attack objective as below.</p>
+<p>$$
+\underset{{X}}{\arg \min} \  {\mathcal{L}_{\mathrm{atk}}}\left(f_{\theta^{\ast}}({X}, A)\right) \quad \text { s.t. } \quad \theta^{\ast}=\underset{\theta}{\arg \min } \quad \mathcal{L}_{\operatorname{train}}\left(f_{\theta}({X}, A)\right)
+$$</p>
+<p>So, the meta gradient equation will be as follows:</p>
+<p>$$
+X = X + \beta \  \nabla_{X}\mathcal{L}_\text{train/self}(f_\theta(X, A)) \<br>
+$$</p>
+<h3 id="empirical-evaluations">Empirical evaluations</h3>
+<p>Experiments show that the proposed method is indeed able to reduce the classification accuracy of the model from around 82% to 60% by making change in 15% of the edges (Fig 1). Interesting insight is in table 3 is that if parameters $W$ trained with a clean graph $A$ are used on the modified graph $\hat{A}$, it is still able to achieve 83% accuracy on the perturbed graph. But, if the parameters $\hat{W}$ are trained on the perturbed graph $\hat{A}$ the accuracy on the clean as well as perturbed graph is reduced significantly.</p>
+<div align="center">
+<img align="center" width="700"  src="../../images/meta-attack-t3.png">
+</div>
+<p>The analysis of perturbed graphs reveals that the majority of the perturbations in the graph are edge insertions (table 5). Yet, the mean shortest path of the adversarial graph is higher than the original graph. This might mean that the edges which are removed in the perturbations were some of the key connections.</p>
+<div align="center">
+<img align="center" width="700"  src="../../images/meta-attack-f2.png">
+</div>
+<h3 id="critique">Critique</h3>
+<p>The paper brings forth a novel application of meta-learning in the bilevel optimization problems and demonstrates a successfully use case of adversarial attacks. They show both the exact and approximate formulations and their results. The approach was successful in reducing the classification accuracy.</p>
+<p>The attacker here is making an assumption about the learning algorithm that will be used for classification, which might not be true in general. In meta-learning since the parameters are shared between the meta-learning and the actual classification model, the assumption on the learning algorithm is valid. However, here the attacker is modifying the training data before the classifier is learned and a different entity is gonna learn classifier. I feel the assumption of the attacker is not justified.</p>
+<p>It would be interesting to see the classification accuracy of different GNN models on the $A$ and $\hat{A}$, other than the ones which were used while attacking.</p>
+<h3 id="questions">Questions</h3>
+<h4 id="q1-how-is-min-max-problem-operatornamemax_xoperatornamemin_theta-fx-theta-solved-by-this-approach">Q1. How is min max problem $\operatorname{max}_x\operatorname{min}_\theta f(x, \theta)$ solved by this approach?</h4>
+<p>The problem $\operatorname{max}_x\operatorname{min}_\theta f(x, \theta)$ is solved using meta-gradients by replacing the $\operatorname{min}_\theta$ with meta optimization step, $\theta^\ast$.</p>
+<h4 id="q2-list-types-of-attacks-and-summarize-it-one-line-and-discuss-differences">Q2. List types of attacks and summarize it one line and discuss differences</h4>
+<ol>
+<li><strong>Targeted Attacks</strong>: Attacks that are aimed to change prediction of a single example</li>
+<li><strong>Global Attack</strong>: Attacks which aim at changing the overall performance of the model</li>
+<li><strong>Evasion Attacks</strong>: Exploratory attacks done during test time for e.g. to understand the thresholds of a classifier.</li>
+<li><strong>Poisoning Attacks</strong>: Causative attacks done during training to mess up the learning process.</li>
+</ol>
+<h4 id="q3-how-is-the-linear-surrogate-model-obtained-from-two-layer-gcn">Q3. How is the linear surrogate model obtained from two layer GCN?</h4>
+<p>Replacing the $\sigma$ activation function with an Identity function $I$, the non-linearity is removed and we can achieve a linear function.</p>
+<p>$$
+\begin{align}
+f_{\theta}(A, X) &amp; =\sigma\left(\hat{A} \sigma \left(\hat{A} X W_1 \right) W_2 \right)\\<br>
+&amp; = \mathbf{I}\left(\hat{A} \mathbf{I} \left(\hat{A} X W_1 \right) W_2 \right) \\<br>
+&amp; = \left(\hat{A}^2 X W \right) \\<br>
+\text{where, } W &amp; = W_1W_2
+\end{align}
+$$</p>
+<h4 id="q4-how-is-the-following-equation-derived-from-the--maml-paper">Q4. How is the following equation derived from the  MAML paper?</h4>
+<p>$$\nabla_{A}^{\text {meta }}= \nabla_{f} \mathcal{L}_{\text {atk }}\left(f_{\tilde{\theta}_{T}}(A)\right) \cdot \nabla_{A} f_{\tilde{\theta}_{T}}(A)$$</p>
+<p>This equation is derived using the first order approximations discussed above.</p>
+<h4 id="q5-what-is-the-difference-between-theta_t-and-tildetheta_t">Q5. What is the difference between $\theta_t$ and $\tilde{\theta}_t$?</h4>
+<p>The difference between $\theta_t$ and $\tilde{\theta}_t$ is the notion of constant $G$ vs dynamic $G$ as explained above.</p>
+<h4 id="q6-how-can-meta-gradient-problem-formulation-be-modified-to-attack-node-features">Q6. How can meta-gradient problem formulation be modified to attack node features.</h4>
+<p>Mentioned above in extension to graph attributes section</p>
+<h4 id="q78-summarize-the-impact-and-analysis-of-the-attack">Q7/8. Summarize the impact and analysis of the attack</h4>
+<p>Mentioned above in Emprical evaluations section</p>
+<h4 id="q9">Q9.</h4>
+</p>
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="harshakokel/harshakokel.github.io"
+        issue-number=20
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<div class="postpagination">
+  
+    <a class="postpagination__item" href="https://harshakokel.com/posts/skills-to-symbols/">
+        <span class="postpagination__label">Previous Post</span>
+        <span class="postpagination__title">Learning Symbolic Representations for planning</span>
+    </a>
+  
+
+  
+    <a class="postpagination__item" href="https://harshakokel.com/posts/afe/">
+      <span class="postpagination__label">Next Post</span>
+      <span class="postpagination__title" >Active Feature Elicitation</span>
+    </a>
+  
+</div>
+<br>
+
+
+
+	</div>
+      </div>
+
+      
+<div id="sidebar">
+  <div class="inner">
+
+    
+
+    
+<nav id="menu">
+  <header class="major">
+    <h2>Menu</h2>
+  </header>
+  <ul>
+    
+    
+    
+    <li><a href="/">Homepage</a></li>
+    
+    
+    
+    <li><a href="/cv/">cv</a></li>
+    
+    
+    
+    <li><a href="/projects/">projects</a></li>
+    
+    
+    
+    <li><a href="/posts/">BLOG POSTS</a></li>
+    
+    
+  </ul>
+</nav>
+
+
+    
+<footer id="footer">
+  <p class="copyright">Powered by <a href="https://gohugo.io">Hugo</a> and design by <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+
+
+  </div>
+</div>
+
+
+    </div>
+    
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    
+    <script src="/js/main.js"></script>
+    
+      
+
+  </body>
+</html>

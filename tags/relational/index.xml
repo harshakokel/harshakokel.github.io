@@ -9,19 +9,19 @@
     <lastBuildDate>Mon, 13 Apr 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/relational/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A simple neural network module for relational reasoning</title>
-      <link>https://harshakokel.com/post/relational-network/</link>
+      <link>https://harshakokel.com/posts/relational-network/</link>
       <pubDate>Mon, 13 Apr 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/relational-network/</guid>
+      <guid>https://harshakokel.com/posts/relational-network/</guid>
       <description>Adam Santoro, David Raposo, David G.T. Barrett, Mateusz Malinowski, Razvan Pascanu, Peter Battaglia, and Timothy Lillicrap, NeurIPS 2017 Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&amp;rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: a) the graph or relation between entities is not provided rather learned and b) the edges between entities can be of different types.</description>
     </item>
     
     <item>
       <title>Relational Reinforcement Learning</title>
-      <link>https://harshakokel.com/post/rrl/</link>
+      <link>https://harshakokel.com/posts/rrl/</link>
       <pubDate>Sun, 12 Apr 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/rrl/</guid>
+      <guid>https://harshakokel.com/posts/rrl/</guid>
       <description>Džeroski, Sašo, Luc De Raedt, and Kurt Driessens, Machine Learning 2001 The paper came before the goal-conditioned RL, Multi-task RL or Graph Neural Network literature. Major motivation of this paper is to learn a generalizable policy. Generalization in terms of varying number of objects in the domain (for example, in blocks-world number of blocks can change) or change in the goal state (for example, stack red block on blue block instead if green on yellow).</description>
     </item>
     

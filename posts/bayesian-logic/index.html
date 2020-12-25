@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>BLOG: Relational Modeling with Unknown Objects</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="referrer" content="no-referrer">
+    
+    
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    
+    
+    <link rel="stylesheet" href="/css/academicons.min.css"/>
+    <link rel="stylesheet" href="/css/ocs-ui.min.css">
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="BLOG: Relational Modeling with Unknown Objects"/>
+<meta name="twitter:description" content="Bayesian Logic (BLOG) by Milch et al. provides a language which help us model random functions and probabilistic properties of unknown objects. Going beyong Herbrand Universe."/>
+
+    <meta property="og:title" content="BLOG: Relational Modeling with Unknown Objects" />
+<meta property="og:description" content="Bayesian Logic (BLOG) by Milch et al. provides a language which help us model random functions and probabilistic properties of unknown objects. Going beyong Herbrand Universe." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://harshakokel.com/posts/bayesian-logic/" />
+<meta property="article:published_time" content="2018-01-31T16:40:08+02:00" />
+<meta property="article:modified_time" content="2018-01-31T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+
+    <meta itemprop="name" content="BLOG: Relational Modeling with Unknown Objects">
+<meta itemprop="description" content="Bayesian Logic (BLOG) by Milch et al. provides a language which help us model random functions and probabilistic properties of unknown objects. Going beyong Herbrand Universe.">
+<meta itemprop="datePublished" content="2018-01-31T16:40:08+02:00" />
+<meta itemprop="dateModified" content="2018-01-31T16:40:08+02:00" />
+<meta itemprop="wordCount" content="1060">
+
+
+
+<meta itemprop="keywords" content="SRL,course," />
+
+    
+  </head>
+  <body>
+
+    
+    <div id="wrapper">
+
+      
+      <div id="main">
+	<div class="inner">
+
+	  
+	  
+<header id="header">
+	<h3><a href="/" style="color:inherit">Harsha Kokel</a></h3>
+	<ul class="icons">
+		<li id="linkedin">
+			<a target="_blank" href="http://linkedin.com/in/harshakokel" title="linkedin" class="icon brands fa-linkedin">
+				<span class="label" >Linked in</span>
+			</a>
+		</li>
+		<li id="github">
+			<a target="_blank" href="https://github.com/harshakokel" title="github" class="icon brands fa-github">
+				<span class="label" >Github</span>
+			</a>
+		</li>
+		<li id="email">
+			<a  href="mailto:hkokel@utdallas.edu" title="mail" class="icon solid fa-envelope" >
+				<span class="label" >Mail</span>
+			</a>
+		</li>
+		<li id="twitter">
+			<a target="_blank" href="https://twitter.com/harsha_kokel" title="twitter" class="icon brands fa-twitter" >
+				<span class="label" title="Twitter">Twitter</span>
+			</a>
+		</li>
+	</ul>
+</header>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax '})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	  
+<div class="page__section">
+  <nav class="breadcrumb breadcrumb_type5" aria-label="Breadcrumb">
+<ol  class="breadcrumb__list r-list">
+  
+
+
+
+<li class="breadcrumb__group" >
+  <a href="https://harshakokel.com/" class="breadcrumb__point r-link">Home</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+
+<li class="breadcrumb__group"  class="active">
+  <a href="https://harshakokel.com/posts/" class="breadcrumb__point r-link">Posts</a>
+  <span class="breadcrumb__divider" aria-hidden="true">&raquo;</span>
+</li>
+
+  <li class="breadcrumb__group">
+    Jan 31, 2018
+  </li> 
+  <li class="tags">  Tagged with:
+      <a href="https://harshakokel.com/tags/srl/" class="button">srl</a>  <a href="https://harshakokel.com/tags/course/" class="button">course</a>
+  </li>
+</ol> 
+
+
+
+</nav>
+</div>
+
+  <header class="main">
+    <h2>BLOG: Relational Modeling with Unknown Objects</h2>
+  </header>
+
+
+  
+  
+
+  <p><strong></strong></p>
+
+  <p><h3 id="brian-milch-bhaskara-marthi-stuart-russell-david-sontag-daniel-l-ong-and-andrey-kolobov-ijcai-2005">Brian Milch, Bhaskara Marthi, Stuart Russell, David Sontag, Daniel L. Ong and Andrey Kolobov, IJCAI 2005</h3>
+<p>Most of the First-Order Logic Models we have seen till now like Bayesian Logic Programs or MLNs works with an assumption that we are given a fixed set of objects, a Herbrand Universe and we have a possible world, Herbrand Interpretation on which we build our BLP model or MLN Network. However, in many practical problems we do not have a fixed Herbrand Universe, or we do not know how many objects are there in the universe. This paper introduces BLOG (Bayesian LOGic) which can perform inference even when the objects are unknown. BLOG is a representation language which can generate objects for such an unknown universe and create a Bayesian network which can then be used for inference. BLOG model describes a stochastic process which creates a world by generating objects in an order. The existence of a generated object is governed by the unknown number of objects in the universe and by the random functions defined in the model. The key idea here is that any property of the newly created object depends only on the objects that are already created. Using this and the concept of context specific independence, BLOG generates a countably infinite Bayesian network in which each node has finite set of parents. The finite set of parents and prior knowledge about the distribution makes the inference possible.</p>
+<h2 id="key-contribution">Key contribution</h2>
+<p>According to me, the key contribution of this paper is the representation language. This language helps us model random functions and probabilistic properties of unknown objects. Consider the Balls in Urn example provided in the paper. We  do not know the number of balls in the urn and we randomly draw balls and put it in.  We  have no way  to identify if the same ball was drawn twice. We can only detect the color of the ball and that too has false detection probability of 0.2. With this information, we are supposed to find out number of balls in the urn. Most other models will give up at the first step itself. BLOG provides a simple language which can model such a stochastic scenario by using just 6 kinds of statements: Type Declarations, Random Function Declarations, Non-random Function Definitions, Guaranteed Object Statements, Dependency Statements, Generating Functions, and Number Statements. Once we have the model, we can represent any possible instantiation of the world.</p>
+<h2 id="limitations">Limitations</h2>
+<p>As BLOG creates a Random Variable for every function and object type, we potentially get a Bayesian Network with exponential number of Random Variables. Although context specific independence assumption helps us do the inference, it is computationally impossible to work with a such huge Bayesian Network. This makes the whole development less viable in practical scenarios as the purpose of the model was to provide inference over unknown or non-finite universe.</p>
+<p>Representation can have unnecessary variables. For example, if we have the evidence that balls drawn in Draw1 and Draw2 are equal, model creates a new constant for that. Also, we would still have all random variables for both <code>Draw1</code> &amp; <code>Draw2</code> like <code>ObsColor[Draw1]</code>, <code>ObsColor[Draw2]</code>. So, there will be 2n extra random variables where n is the number of functions for Draw object.</p>
+<p>To make the Bayesian network inferable, BLOG makes the context specific independence assumption. But this assumption is not straight forward. For instance, in the aircraft example, a blip at time t is dependent on the state of all the aircraft at time t. To make it dependent only on its source aircraft, we would need evidence or prior knowledge about the source of the blip.</p>
+<p>As the BLOG assumes that any newly created object depends only on the already existing object, it is assuming the universe to be acyclic and objects have topological order.</p>
+<p>The model cannot learn any prior distributions. It assumes that it has all the prior distributions from the domain expert.</p>
+<p>As each object is stored as a tuple, they can expand to considerable size. For example, in the aircraft model each blip is represented as (Blip, (Source, (Aircraft, 2)), (Time, 8), 1), if the object blip had k properties the tuple size would increase further.</p>
+<h2 id="critique">Critique</h2>
+<p>Pros:</p>
+<ul>
+<li>The examples of the stochastic world taken are motivating.
+The paper provides a beautiful explanation on the difference between conditioning on the constant versus conditioning on the existence.</li>
+<li>These new constants resemble Skolem constants, but conditioning on assertions about the new constants is not the same as conditioning on an existential sentence. For example, suppose you go into a new wine shop, pick up a bottle at random, and observe that it costs USD 40. This scenario is correctly modeled by introducing a new constant Bottle1 with a Uniform CPD. Then observing that Bottle1 costs over USD 40 suggests that this is a fancy wine shop. On the other hand, the mere existence of a USD 40+ bottle does not suggest this, because almost every shop has some bottle at over USD 40.”</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>The paper represents the model, functions, worlds, etc,. in mathematical expressions but doesn’t provide strong mathematical proof/explanation for the unique joint distribution.</li>
+<li>There is inconsistency in the models. For instance, Aircraft example has a number function for creating the blip which assigns the source and time simultaneously. However, in the Ball example, true color of balls is not assigned when it is created using number function. Similarly, the number function of Publication assigns Author but the generating function for author is missing. Hence, it appears that there can be multiple models to represent the same scenario. However, there is no explanation if different representation would result in same joint distribution.</li>
+<li>Paper doesn’t put forward enough experimental evidence. The experiment conducted asserts that 10 balls were drawn and all appeared blue. The query was made about number of balls in the urn. Results showed that when the prior for the number of balls is uniform over 1, . . . , 8, the posterior puts more weight on small numbers of balls. And this experiment was validated by saying ”this makes sense because the more balls there are in the urn, the less likely it is that they are all blue”. Few more experiments would have helped.</li>
+</ul>
+<h4 id="references">References</h4>
+<ul>
+<li>GETOOR, LISE and TASKAR, BEN Introduction to Statistical Relational Learning (Adaptive Computa- tion and Machine Learning), The MIT Press.</li>
+</ul>
+</p>
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="harshakokel/harshakokel.github.io"
+        issue-number=1
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<div class="postpagination">
+  
+
+  
+    <a class="postpagination__item" href="https://harshakokel.com/posts/srl-for-myocardialinfarction/">
+      <span class="postpagination__label">Next Post</span>
+      <span class="postpagination__title" >SRL for Myocardial Infarction</span>
+    </a>
+  
+</div>
+<br>
+
+
+
+	</div>
+      </div>
+
+      
+<div id="sidebar">
+  <div class="inner">
+
+    
+
+    
+<nav id="menu">
+  <header class="major">
+    <h2>Menu</h2>
+  </header>
+  <ul>
+    
+    
+    
+    <li><a href="/">Homepage</a></li>
+    
+    
+    
+    <li><a href="/cv/">cv</a></li>
+    
+    
+    
+    <li><a href="/projects/">projects</a></li>
+    
+    
+    
+    <li><a href="/posts/">BLOG POSTS</a></li>
+    
+    
+  </ul>
+</nav>
+
+
+    
+<footer id="footer">
+  <p class="copyright">Powered by <a href="https://gohugo.io">Hugo</a> and design by <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+
+
+  </div>
+</div>
+
+
+    </div>
+    
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    
+    <script src="/js/main.js"></script>
+    
+      
+
+  </body>
+</html>

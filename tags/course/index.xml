@@ -9,56 +9,56 @@
     <lastBuildDate>Fri, 25 Sep 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/course/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Logical Neural Network</title>
-      <link>https://harshakokel.com/post/logical-nn/</link>
+      <link>https://harshakokel.com/posts/logical-nn/</link>
       <pubDate>Fri, 25 Sep 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/logical-nn/</guid>
+      <guid>https://harshakokel.com/posts/logical-nn/</guid>
       <description>Ryan Riegel, et al. arxiv 2020  This article is written jointly with Siwen Yan
  This paper proposes Logical Neural Network (LNN), a neural framework to perform logical inference. They propose to build a neural network with 1-to-1 correspondence with logical formulae. So, every neuron in the LNN is either a logical literal or logical gate. Given set of logical formulae, a LNN is a graph with one neuron for every unique proposition occurring in any formula and one neuron for each logical operation occurring in each formula, as shown in the figure below.</description>
     </item>
     
     <item>
       <title>Augmenting Neural Networks with First-order Logic</title>
-      <link>https://harshakokel.com/post/nn-with-fol/</link>
+      <link>https://harshakokel.com/posts/nn-with-fol/</link>
       <pubDate>Tue, 22 Sep 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/nn-with-fol/</guid>
+      <guid>https://harshakokel.com/posts/nn-with-fol/</guid>
       <description>Tao Li, Vivek Srikumar, ACL 2019 This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.</description>
     </item>
     
     <item>
       <title>Adversarial Attacks on Graph Neural Networks via Meta Learning</title>
-      <link>https://harshakokel.com/post/meta-attack-gnn/</link>
+      <link>https://harshakokel.com/posts/meta-attack-gnn/</link>
       <pubDate>Wed, 29 Apr 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/meta-attack-gnn/</guid>
+      <guid>https://harshakokel.com/posts/meta-attack-gnn/</guid>
       <description>Daniel Zügner and Stephan Günnemann, ICLR 2019 Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes.</description>
     </item>
     
     <item>
       <title>Few-Shot Learning with GNN</title>
-      <link>https://harshakokel.com/post/few-shot-learning-gnn/</link>
+      <link>https://harshakokel.com/posts/few-shot-learning-gnn/</link>
       <pubDate>Sat, 04 Apr 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/few-shot-learning-gnn/</guid>
+      <guid>https://harshakokel.com/posts/few-shot-learning-gnn/</guid>
       <description>Victor Garcia, Joan Bruna, ICLR 2018 This paper focuses on $q$-shot $K$-way classification problem &amp;ndash; where we have $K$ class labels and for each class label we have $q$ example images, so totally we have $s=qK$ training images. Authors propose to leverage the progress in Graph Convolutional Networks by formulating this problem as a node classification problem in graph $(G=(V,E))$, where nodes are images and an edge between two nodes indicate those two images are similar and may have same labels.</description>
     </item>
     
     <item>
       <title>Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks</title>
-      <link>https://harshakokel.com/post/maml/</link>
+      <link>https://harshakokel.com/posts/maml/</link>
       <pubDate>Fri, 27 Mar 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/maml/</guid>
+      <guid>https://harshakokel.com/posts/maml/</guid>
       <description>Chelsea Finn, Pieter Abbeel, Sergey Levine, ICML 2017. Meta-Learning a.k.a the &amp;lsquo;&amp;lsquo;Learning to Learn&amp;rsquo;&amp;rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model.</description>
     </item>
     
     <item>
       <title>Understanding Attention and Generalization in Graph Neural Networks</title>
-      <link>https://harshakokel.com/post/understanding-node-attention/</link>
+      <link>https://harshakokel.com/posts/understanding-node-attention/</link>
       <pubDate>Wed, 26 Feb 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/understanding-node-attention/</guid>
+      <guid>https://harshakokel.com/posts/understanding-node-attention/</guid>
       <description>Report on Boris Knyazev, Graham W. Taylor, and Mohamed R. Amer, NeurIPS 2019 Attention in CNNs (Answer Q-1)
 Attention in CNNs is reweighting the feature map $X \in \mathbb{R}^{N \times C}$, to provide attention to some nodes.
 $$ \begin{align} Z &amp;amp; =\alpha \odot X \quad (Z_{i}=\alpha_{i} X_{i}) \\
@@ -69,39 +69,39 @@ $$ \begin{align} Z &amp;amp; =\alpha \odot X \quad (Z_{i}=\alpha_{i} X_{i}) \\
     
     <item>
       <title>Graph Attention Networks</title>
-      <link>https://harshakokel.com/post/gat/</link>
+      <link>https://harshakokel.com/posts/gat/</link>
       <pubDate>Mon, 17 Feb 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/gat/</guid>
+      <guid>https://harshakokel.com/posts/gat/</guid>
       <description>Veličković, Petar, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro Lio, and Yoshua Bengio, ICLR 2018 Introduction Convolutional Neural Networks (CNNs) can effectively transform grid-like structures and have been used for various image segmentation/classification tasks. Various approaches have not been proposed to extended CNNs graph structures. These approaches are broadly divided into two categories:
   Spectral appraoch leverages the spectral representations of graph and defines convolution in the Fourier domain. However, because such convolutions require eigen-decomposition of graph laplacian, they can not be directly generalized to different graph structures.</description>
     </item>
     
     <item>
       <title>Graph Convolutional Networks</title>
-      <link>https://harshakokel.com/post/gcn/</link>
+      <link>https://harshakokel.com/posts/gcn/</link>
       <pubDate>Wed, 05 Feb 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/gcn/</guid>
+      <guid>https://harshakokel.com/posts/gcn/</guid>
       <description>Thomas N Kipf and Max Welling, ICLR 2017 Introduction Kipf et al. 2017 introduces Graph Convolutional Networks (GCN) which uses features of each node and leverages edges of the graph to derive class similarity between nodes in semi-supervised setting.
 Traditionally semi-supervised learning in a graph-structured data heavily relied on the assumption that the edges in the graph represent class similarities (i.e. nodes with similar classes have edge between them). For example, in an image segmentation task, an image can be thought as a grid (Graph with node for every pixel and edges between neighboring pixels as shown in figure below).</description>
     </item>
     
     <item>
       <title>Advice based relational learning</title>
-      <link>https://harshakokel.com/post/advice-based-learning/</link>
+      <link>https://harshakokel.com/posts/advice-based-learning/</link>
       <pubDate>Sun, 04 Nov 2018 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/advice-based-learning/</guid>
+      <guid>https://harshakokel.com/posts/advice-based-learning/</guid>
       <description>Artificial Intelligence (AI) is rapidly becoming one of the most popular tool for solving various problems of humankind. Ranging from trivial day-to-day activity of switching on/off lights, to severe life-changing decision of detecting tumors in scans, all the problems have been tackled with this tool and hence it is no longer acceptable to have a black-box algorithm making calls. AI Community has realized this and hence has put lot of significance on Explainable AI (XAI) in recent years.</description>
     </item>
     
     <item>
       <title>BLOG: Relational Modeling with Unknown Objects</title>
-      <link>https://harshakokel.com/post/bayesian-logic/</link>
+      <link>https://harshakokel.com/posts/bayesian-logic/</link>
       <pubDate>Wed, 31 Jan 2018 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/bayesian-logic/</guid>
+      <guid>https://harshakokel.com/posts/bayesian-logic/</guid>
       <description>Bayesian Logic (BLOG) by Milch et al. provides a language which help us model random functions and probabilistic properties of unknown objects. Going beyong Herbrand Universe.</description>
     </item>
     

@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 04 Apr 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/few-shot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Few-Shot Learning with GNN</title>
-      <link>https://harshakokel.com/post/few-shot-learning-gnn/</link>
+      <link>https://harshakokel.com/posts/few-shot-learning-gnn/</link>
       <pubDate>Sat, 04 Apr 2020 16:40:08 +0200</pubDate>
       
-      <guid>https://harshakokel.com/post/few-shot-learning-gnn/</guid>
+      <guid>https://harshakokel.com/posts/few-shot-learning-gnn/</guid>
       <description>Victor Garcia, Joan Bruna, ICLR 2018 This paper focuses on $q$-shot $K$-way classification problem &amp;ndash; where we have $K$ class labels and for each class label we have $q$ example images, so totally we have $s=qK$ training images. Authors propose to leverage the progress in Graph Convolutional Networks by formulating this problem as a node classification problem in graph $(G=(V,E))$, where nodes are images and an edge between two nodes indicate those two images are similar and may have same labels.</description>
     </item>
     
