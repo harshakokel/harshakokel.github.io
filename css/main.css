@@ -3435,7 +3435,6 @@ body blockquote > :last-child {
   
 mjx-container[display="true"], mjx-assistive-mml[display="block"] {
 	    overflow-x: auto !important;
-	    overflow-y: hidden !important;
 	}
 mjx-container[display="true"] > :first-child {
   height: 2;
@@ -3467,7 +3466,7 @@ mjx-math, mjx-mtr, mjx-mtd{
 }
 
 .postpagination__item {
-  max-width: 200px;
+  max-width: 300px;
   text-decoration: none;
   display: flex;
   border: solid 1px var(--main-theme-color);
@@ -3483,10 +3482,10 @@ mjx-math, mjx-mtr, mjx-mtd{
     border-radius: 4px;
   }}
   
-.postpagination__item:first-of-type {
+.postpagination__item.prev {
       padding-right: 15px;
     }
-.postpagination__item:last-of-type {
+.postpagination__item.next {
       margin-top: 0;
       text-align: right;
   }
@@ -3544,7 +3543,7 @@ ul.browse-tags{
 }
 
 @media screen and (max-width: 600px) {
-.postpagination__item:first-of-type {
+.postpagination__item.prev {
         margin-bottom: 20px;
 }
 .postpagination__item{
