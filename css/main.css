@@ -3467,6 +3467,7 @@ mjx-math, mjx-mtr, mjx-mtd{
 }
 
 .postpagination__item {
+  max-width: 200px;
   text-decoration: none;
   display: flex;
   border: solid 1px var(--main-theme-color);
@@ -3478,7 +3479,6 @@ mjx-math, mjx-mtr, mjx-mtd{
 
 @media screen and (min-width: 600px) {
 .postpagination__item {    
-    width: 275px;
     padding: 15px;
     border-radius: 4px;
   }}
@@ -3488,6 +3488,7 @@ mjx-math, mjx-mtr, mjx-mtd{
     }
 .postpagination__item:last-of-type {
       margin-top: 0;
+      text-align: right;
   }
 .postpagination__item:hover {
       background-color: #f6f9fc;
@@ -3497,7 +3498,7 @@ mjx-math, mjx-mtr, mjx-mtd{
 
 .postpagination__label {
   color: gray;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .postpagination__title {
@@ -3543,6 +3544,13 @@ ul.browse-tags{
 }
 
 @media screen and (max-width: 600px) {
+.postpagination__item:first-of-type {
+        margin-bottom: 20px;
+}
+.postpagination__item{
+  padding: 10px;
+  max-width: 100%
+}
 .tags__list {
   columns: 1;
   -webkit-columns: 1;
@@ -3554,8 +3562,3 @@ ul.browse-tags{
 }
 
 }
-
-/* 
-.tag__link:hover {
-    color: darkGrey;
-  } */
