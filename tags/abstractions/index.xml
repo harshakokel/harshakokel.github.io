@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>abstractions on Home</title>
+    <title>abstractions on Harsha Kokel</title>
     <link>https://harshakokel.com/tags/abstractions/</link>
-    <description>Recent content in abstractions on Home</description>
+    <description>Recent content in abstractions on Harsha Kokel</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
     <lastBuildDate>Wed, 21 Oct 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/abstractions/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,8 @@
       <pubDate>Wed, 21 Oct 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/abstraction-for-planning/</guid>
-      <description>Craig Knoblock, AIJ 1994  This paper highlights a heuristic property called ordered monotonicity propery of hierarchical domains and provides a way to learn the hierarchy using the sufficient condition for that property.
-A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of $L$ is set of first-order literals, $S$ is the set of finite states (described using literals), and $O$ is the set of operators in the domain.</description>
+      <description>This paper highlights a heuristic property called ordered monotonicity propery of hierarchical domains and provides a way to learn the hierarchy using the sufficient condition for that property.
+A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of $L$ is set of first-order literals, $S$ is the set of finite states (described using literals), and $O$ is the set of operators in the domain. The authors propose to assign a $Level(l), \forall l \in L$, which indicates the hierarchy-level of the literal.</description>
     </item>
     
     <item>
@@ -23,7 +23,8 @@ A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of 
       <pubDate>Wed, 22 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/skills-to-symbols/</guid>
-      <description>George Konidaris, Leslie Pack Kaelbling, Tomas Lozano-Perez, JAIR 2018 This paper learns abstract symbolic representations from lower level trajectories for planning at a high-level. Big Idea of this paper is that given different domains of increasing difficulty at lower level but similar high level tasks, if we are able to segregate the low-level and high-level tasks, the tasks can be considered equivalent at higher level and hence can be solved in a uniform manner.</description>
+      <description>This paper learns abstract symbolic representations from lower level trajectories for planning at a high-level. Big Idea of this paper is that given different domains of increasing difficulty at lower level but similar high level tasks, if we are able to segregate the low-level and high-level tasks, the tasks can be considered equivalent at higher level and hence can be solved in a uniform manner.
+ For example, given three tasks as shown above:</description>
     </item>
     
   </channel>

@@ -4,6 +4,9 @@
   <head>
     <title>Active Advice Seeking for Inverse Reinforcement Learning</title>
     
+    
+    <meta name="description" content="This website is the home of Harsha Kokel. A Ph.D. student working with Prof. Sriraam Natarajan at The University of Texas at Dallas" />
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="referrer" content="no-referrer">
@@ -17,20 +20,20 @@
     <link rel="stylesheet" href="/css/ocs-ui.min.css">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Active Advice Seeking for Inverse Reinforcement Learning"/>
-<meta name="twitter:description" content="Phillip Odom and Sriraam Natarajan, AAMAS 2017 In Kunapali et al 2013, authors present a way of incorporating advice in Inverse Reinforcement Learning (IRL) by extending IRL formulation to include constraints based on the expert&rsquo;s advice of preferred and avoided actions, state and reward. Odom et al 2017 expands on Kunapali et al (2013)&rsquo;s formulation of preferred and avoided actions by seeking the advice in active learning setting. The paper proposes a active advice-seeking framework, where instead of seeking mere-label from the expert for selected example as done in active learning, they seek advice (set of preferred and avoided labels) over set of examples."/>
+<meta name="twitter:description" content="In Kunapali et al 2013, authors present a way of incorporating advice in Inverse Reinforcement Learning (IRL) by extending IRL formulation to include constraints based on the expert&rsquo;s advice of preferred and avoided actions, state and reward. Odom et al 2017 expands on Kunapali et al (2013)&rsquo;s formulation of preferred and avoided actions by seeking the advice in active learning setting. The paper proposes a active advice-seeking framework, where instead of seeking mere-label from the expert for selected example as done in active learning, they seek advice (set of preferred and avoided labels) over set of examples."/>
 
     <meta property="og:title" content="Active Advice Seeking for Inverse Reinforcement Learning" />
-<meta property="og:description" content="Phillip Odom and Sriraam Natarajan, AAMAS 2017 In Kunapali et al 2013, authors present a way of incorporating advice in Inverse Reinforcement Learning (IRL) by extending IRL formulation to include constraints based on the expert&rsquo;s advice of preferred and avoided actions, state and reward. Odom et al 2017 expands on Kunapali et al (2013)&rsquo;s formulation of preferred and avoided actions by seeking the advice in active learning setting. The paper proposes a active advice-seeking framework, where instead of seeking mere-label from the expert for selected example as done in active learning, they seek advice (set of preferred and avoided labels) over set of examples." />
+<meta property="og:description" content="In Kunapali et al 2013, authors present a way of incorporating advice in Inverse Reinforcement Learning (IRL) by extending IRL formulation to include constraints based on the expert&rsquo;s advice of preferred and avoided actions, state and reward. Odom et al 2017 expands on Kunapali et al (2013)&rsquo;s formulation of preferred and avoided actions by seeking the advice in active learning setting. The paper proposes a active advice-seeking framework, where instead of seeking mere-label from the expert for selected example as done in active learning, they seek advice (set of preferred and avoided labels) over set of examples." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/active-advice-seeking/" />
 <meta property="article:published_time" content="2019-10-05T16:40:08+02:00" />
-<meta property="article:modified_time" content="2019-10-05T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+<meta property="article:modified_time" content="2019-10-05T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="Active Advice Seeking for Inverse Reinforcement Learning">
-<meta itemprop="description" content="Phillip Odom and Sriraam Natarajan, AAMAS 2017 In Kunapali et al 2013, authors present a way of incorporating advice in Inverse Reinforcement Learning (IRL) by extending IRL formulation to include constraints based on the expert&rsquo;s advice of preferred and avoided actions, state and reward. Odom et al 2017 expands on Kunapali et al (2013)&rsquo;s formulation of preferred and avoided actions by seeking the advice in active learning setting. The paper proposes a active advice-seeking framework, where instead of seeking mere-label from the expert for selected example as done in active learning, they seek advice (set of preferred and avoided labels) over set of examples.">
+<meta itemprop="description" content="In Kunapali et al 2013, authors present a way of incorporating advice in Inverse Reinforcement Learning (IRL) by extending IRL formulation to include constraints based on the expert&rsquo;s advice of preferred and avoided actions, state and reward. Odom et al 2017 expands on Kunapali et al (2013)&rsquo;s formulation of preferred and avoided actions by seeking the advice in active learning setting. The paper proposes a active advice-seeking framework, where instead of seeking mere-label from the expert for selected example as done in active learning, they seek advice (set of preferred and avoided labels) over set of examples.">
 <meta itemprop="datePublished" content="2019-10-05T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2019-10-05T16:40:08+02:00" />
-<meta itemprop="wordCount" content="648">
+<meta itemprop="wordCount" content="641">
 
 
 
@@ -138,9 +141,10 @@
   
 
   <p><strong></strong></p>
-
-  <p><h4 id="phillip-odom-and-sriraam-natarajan-aamas-2017">Phillip Odom and Sriraam Natarajan, AAMAS 2017</h4>
-<p>In Kunapali et al 2013, authors present a way of incorporating advice in Inverse Reinforcement Learning (IRL) by extending IRL formulation to include constraints based on the expert&rsquo;s advice of preferred and avoided actions, state and reward. Odom et al 2017 expands on  Kunapali et al (2013)&rsquo;s formulation of preferred and avoided actions by seeking the advice in active learning setting. The paper proposes a <em>active advice-seeking</em> framework, where instead of seeking mere-label from the expert for selected example as done in <em>active learning</em>, they seek advice (set of preferred and avoided labels) over set of examples. Two clear advantages of active advice-seeking framework over the traditional active learning setting is that expert can provide multiple advice and that advice is generalized over set of states.</p>
+  
+    <blockquote>My notes on <strong>Phillip Odom and Sriraam Natarajan, AAMAS 2017</strong></blockquote>
+  
+  <p><p>In Kunapali et al 2013, authors present a way of incorporating advice in Inverse Reinforcement Learning (IRL) by extending IRL formulation to include constraints based on the expert&rsquo;s advice of preferred and avoided actions, state and reward. Odom et al 2017 expands on  Kunapali et al (2013)&rsquo;s formulation of preferred and avoided actions by seeking the advice in active learning setting. The paper proposes a <em>active advice-seeking</em> framework, where instead of seeking mere-label from the expert for selected example as done in <em>active learning</em>, they seek advice (set of preferred and avoided labels) over set of examples. Two clear advantages of active advice-seeking framework over the traditional active learning setting is that expert can provide multiple advice and that advice is generalized over set of states.</p>
 <img src="/images/workflow_activeadvice.png" width="400" alt="">
 <p>The workflow of the paper is shown in the figure above. First the states are clustered together, heuristic proposed is to cluster the states which has similar action distribution, and authors use the action distribution of the demonstrations as a proxy. Then, a policy is learnt only from the demonstrations. Next, query is generated by selecting the state cluster with the maximum uncertainty measure (equation below). This uncertainty measure is an artifact of the entropy of the distribution of actions in <strong>demonstration</strong> and the entropy of the <strong>policy</strong></p>
 <p>\[

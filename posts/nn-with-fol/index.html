@@ -4,6 +4,9 @@
   <head>
     <title>Augmenting Neural Networks with First-order Logic</title>
     
+    
+    <meta name="description" content="This website is the home of Harsha Kokel. A Ph.D. student working with Prof. Sriraam Natarajan at The University of Texas at Dallas" />
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="referrer" content="no-referrer">
@@ -17,20 +20,23 @@
     <link rel="stylesheet" href="/css/ocs-ui.min.css">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Augmenting Neural Networks with First-order Logic"/>
-<meta name="twitter:description" content="Tao Li, Vivek Srikumar, ACL 2019 This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples."/>
+<meta name="twitter:description" content="This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.
+To convert the FOL rules to a network, each predicate in the rule is mapped to a named neuron."/>
 
     <meta property="og:title" content="Augmenting Neural Networks with First-order Logic" />
-<meta property="og:description" content="Tao Li, Vivek Srikumar, ACL 2019 This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples." />
+<meta property="og:description" content="This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.
+To convert the FOL rules to a network, each predicate in the rule is mapped to a named neuron." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/nn-with-fol/" />
 <meta property="article:published_time" content="2020-09-22T16:40:08+02:00" />
-<meta property="article:modified_time" content="2020-09-22T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+<meta property="article:modified_time" content="2020-09-22T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="Augmenting Neural Networks with First-order Logic">
-<meta itemprop="description" content="Tao Li, Vivek Srikumar, ACL 2019 This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.">
+<meta itemprop="description" content="This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.
+To convert the FOL rules to a network, each predicate in the rule is mapped to a named neuron.">
 <meta itemprop="datePublished" content="2020-09-22T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2020-09-22T16:40:08+02:00" />
-<meta itemprop="wordCount" content="502">
+<meta itemprop="wordCount" content="496">
 
 
 
@@ -138,9 +144,10 @@
   
 
   <p><strong></strong></p>
-
-  <p><h4 id="tao-li-vivek-srikumar-acl-2019httpswwwaclweborganthologyp19-1028v2pdf">Tao Li, Vivek Srikumar, <a href="https://www.aclweb.org/anthology/P19-1028v2.pdf">ACL 2019</a></h4>
-<p>This paper addresses the problem of incorporating declarative  knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.</p>
+  
+    <blockquote>My notes on <strong>Tao Li, Vivek Srikumar, <a href='https://www.aclweb.org/anthology/P19-1028v2.pdf'>ACL 2019</a></strong></blockquote>
+  
+  <p><p>This paper addresses the problem of incorporating declarative  knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.</p>
 <p>To convert the FOL rules to a network, each predicate in the rule is mapped to a named neuron. For example, given a rule $A_1 \wedge A_2 \rightarrow B_1$, the network will have 3 named neurons: $a_1, a_2,$ and $b_1$ with arrow from $a_1$ and $a_2$ to $b_1$. The Łukasiewicz T-norm and T-conorm are used as functions for the logical operators, inspired by probabilistic soft logic literature. Auxiliary variables and auxiliary named neurons are included as needed to compute logical operations. For example, $(\lnot A \vee B) \wedge (C \vee D)$ is converted to $P \wedge Q$ with $(\lnot A \vee B) \leftrightarrow P$ and $(C \vee D) \leftrightarrow Q$. The benefit of using Łukasiewicz functions is that they are differentiable. This network doesn&rsquo;t have any parameters hence do not require any learning.</p>
 <p>To ensure that the network is acyclic, the authors recommend using contrapositive statements when needed. For example, if the rule $B_1 \rightarrow A_1$ is introducing cycle in the network, then use its contrapositive equivalent $\lnot A_1 \rightarrow \lnot B_1$ instead.</p>
 <p>This rule network is added as constraint to some layer $y=g(\mathbf{Wx})$ of the original neural network. The <em>constrained neural layer</em> is defined as follows with hyperparameter $\rho$ handling the importance factor.</p>

@@ -4,6 +4,9 @@
   <head>
     <title>A simple neural network module for relational reasoning</title>
     
+    
+    <meta name="description" content="This website is the home of Harsha Kokel. A Ph.D. student working with Prof. Sriraam Natarajan at The University of Texas at Dallas" />
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="referrer" content="no-referrer">
@@ -17,20 +20,20 @@
     <link rel="stylesheet" href="/css/ocs-ui.min.css">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="A simple neural network module for relational reasoning"/>
-<meta name="twitter:description" content="Adam Santoro, David Raposo, David G.T. Barrett, Mateusz Malinowski, Razvan Pascanu, Peter Battaglia, and Timothy Lillicrap, NeurIPS 2017 Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: a) the graph or relation between entities is not provided rather learned and b) the edges between entities can be of different types."/>
+<meta name="twitter:description" content="Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: a) the graph or relation between entities is not provided rather learned and b) the edges between entities can be of different types."/>
 
     <meta property="og:title" content="A simple neural network module for relational reasoning" />
-<meta property="og:description" content="Adam Santoro, David Raposo, David G.T. Barrett, Mateusz Malinowski, Razvan Pascanu, Peter Battaglia, and Timothy Lillicrap, NeurIPS 2017 Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: a) the graph or relation between entities is not provided rather learned and b) the edges between entities can be of different types." />
+<meta property="og:description" content="Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: a) the graph or relation between entities is not provided rather learned and b) the edges between entities can be of different types." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/relational-network/" />
 <meta property="article:published_time" content="2020-04-13T16:40:08+02:00" />
-<meta property="article:modified_time" content="2020-04-13T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+<meta property="article:modified_time" content="2020-04-13T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="A simple neural network module for relational reasoning">
-<meta itemprop="description" content="Adam Santoro, David Raposo, David G.T. Barrett, Mateusz Malinowski, Razvan Pascanu, Peter Battaglia, and Timothy Lillicrap, NeurIPS 2017 Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: a) the graph or relation between entities is not provided rather learned and b) the edges between entities can be of different types.">
+<meta itemprop="description" content="Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: a) the graph or relation between entities is not provided rather learned and b) the edges between entities can be of different types.">
 <meta itemprop="datePublished" content="2020-04-13T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2020-04-13T16:40:08+02:00" />
-<meta itemprop="wordCount" content="591">
+<meta itemprop="wordCount" content="573">
 
 
 
@@ -130,7 +133,7 @@
 </div>
 
   <header class="main">
-    <h2>A simple neural network module for relational reasoning</h2>
+    <h2>Relational Network</h2>
   </header>
 
 
@@ -138,9 +141,10 @@
   
 
   <p><strong></strong></p>
-
-  <p><h3 id="adam-santoro-david-raposo-david-gt-barrett-mateusz-malinowski-razvan-pascanu-peter-battaglia-and-timothy-lillicrap-neurips-2017">Adam Santoro, David Raposo, David G.T. Barrett, Mateusz Malinowski, Razvan Pascanu, Peter Battaglia, and Timothy Lillicrap, NeurIPS 2017</h3>
-<p>Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: <strong>a)</strong> the graph or relation between entities is not provided rather learned and  <strong>b)</strong> the edges between entities can be of different types. Most graph network papers that learn edges focus on approximating a  distance metric between entities. This paper instead focuses on learning relations between entities.</p>
+  
+    <blockquote>My notes on <strong>Adam Santoro, David Raposo, David G.T. Barrett, Mateusz Malinowski, Razvan Pascanu, Peter Battaglia, and Timothy Lillicrap, NeurIPS 2017</strong></blockquote>
+  
+  <p><p>Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: <strong>a)</strong> the graph or relation between entities is not provided rather learned and  <strong>b)</strong> the edges between entities can be of different types. Most graph network papers that learn edges focus on approximating a  distance metric between entities. This paper instead focuses on learning relations between entities.</p>
 <h3 id="summary">Summary</h3>
 <p>The paper proposes a computational block which they call <strong>relational network</strong> (RN), which takes a set of object ($O$) as input and outputs a vector. The main computational unit in RN are functions: $f_\phi$ and $g_\theta$, which are both Multi Layered Perceptrons. $g_\theta$  approximates the relation between each pair of object and $f_\phi$ performs the reasoning over these entities.</p>
 <p>$$

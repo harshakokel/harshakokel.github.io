@@ -4,6 +4,9 @@
   <head>
     <title>Hierarchical Reinforcement Learning</title>
     
+    
+    <meta name="description" content="This website is the home of Harsha Kokel. A Ph.D. student working with Prof. Sriraam Natarajan at The University of Texas at Dallas" />
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="referrer" content="no-referrer">
@@ -24,7 +27,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/hierarchical-rl/" />
 <meta property="article:published_time" content="2019-10-28T16:40:08+02:00" />
-<meta property="article:modified_time" content="2019-10-28T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+<meta property="article:modified_time" content="2019-10-28T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="Hierarchical Reinforcement Learning">
 <meta itemprop="description" content="Standard RL planning suffers from the curse of dimensionality when the action space is too large and/or state space is infeasible to enumerate. Humans simplify the problem of planning in such complex conditions by abstracting away details which are not relevant at a given time and decomposing actions into hierarchies. Several researchers have proposed to model the temporal-abstraction in RL by composing some form of hierarchy over actions space (Dietterich 1998, Sutton et al 1998, Parr and Russell 1998).">
@@ -138,7 +141,7 @@
   
 
   <p><strong></strong></p>
-
+  
   <p><p>Standard RL planning suffers from the curse of dimensionality when the action space is too large and/or state space is infeasible to enumerate. Humans simplify the problem of planning in such complex conditions by abstracting away details which are not relevant at a given time and decomposing actions into hierarchies. Several researchers have proposed to model the <strong>temporal-abstraction</strong> in RL by composing some form of hierarchy over actions space (<a href="#Dietterich-1998%22">Dietterich 1998</a>, <a href="#sutton-1998%22">Sutton et al 1998</a>, <a href="#parr-1998%22">Parr and Russell 1998</a>). By modeling actions as hierarchies, researchers extended the primitive action space by adding abstract actions. Options framework (<a href="#sutton-1998%22">Sutton et al 1998</a>), refer the abstract actions as <em>options</em>, MAXQ (<a href="#Dietterich-1998%22">Dietterich 1998</a>) refer to them as <em>tasks</em> and Hierarchical Abstract Machines (HAM) (<a href="#parr-1998%22">Parr and Russell 1998</a>) refers to them as <em>choices</em>.</p>
 <p>Common theme among these papers is to extend the Markov Decision Process (MDP) to <em>Semi-Markov Decision Process</em> (SMDP), where actions can take multiple time steps. As compared to MDP, which only allow actions of a discrete time-steps, SMDP allows modeling temporally abstract actions of varying length over a continuous time. As represented in first two trajectories of figure below. By constraining/extending the action space of the MDP over primitive and abstract actions, hierarchical RL approaches superimpose MDPs and SMDPs as shown in last trajectory.</p>
 <div align="center">
@@ -159,24 +162,12 @@
 <p>Max-Q framework has a clear hierarchical decomposition of tasks, while the options-framework do not have clear hierarchy. Options framework achieves temporal abstraction of actions, Max-Q framework additionally also achieves <strong>state abstractions</strong>. While there has been an attempt on discovering and transferring the Max-Q hierarchies (<a href="#mehta-2008">Mehta et al. 2008</a>), learning Max-Q hierarchies directly from the trajectories is still an open problem. For large and complex problem it might be a challenge to provide the task hierarchy or options and their termination conditions.</p>
 <h3 id="references">References</h3>
 <ul>
-<li>
-<p><a name="Dietterich-1998">[Dietterich 1998]</a>  Dietterich, T. G.  1998.  The maxq methodfor hierarchical reinforcement learning. In <em>ICML</em>.</p>
-</li>
-<li>
-<p><a name="sutton-1998">[Sutton, Precup, and Singh 1998]</a>  Sutton, R. S.; Precup, D.;and Singh, S. P.  1998.  Intra-option learning about tempo-rally abstract actions. In <em>ICML</em>.</p>
-</li>
-<li>
-<p><a name="parr-1998">[Parr and Russell 1998]</a>   Parr,  R.,  and  Russell,  S.  J. 1998. Reinforcement  learning  with  hierarchies  of  machines.   In <em>NeurIPS</em></p>
-</li>
-<li>
-<p><a name="mehta-2008">[Mehta et al. 2008]</a>  Mehta, N.; Ray, S.; Tadepalli, P.; and Di-etterich, T. 2008. Automatic discovery and transfer of maxq hierarchies. In <em>ICML</em>.</p>
-</li>
-<li>
-<p>The Promise of Hierarchical Reinforcement Learning by Yannis Flet-Berlia in <a href="https://thegradient.pub/the-promise-of-hierarchical-reinforcement-learning/">The Gradient</a></p>
-</li>
-<li>
-<p>Hierarchical Reinforcement Learning lecture by Doina Precup on <a href="https://www.youtube.com/watch?v=e8b0yC6COJ8">YouTube</a></p>
-</li>
+<li><a name="Dietterich-1998">[Dietterich 1998]</a>  Dietterich, T. G.  1998.  The maxq methodfor hierarchical reinforcement learning. In <em>ICML</em>.</li>
+<li><a name="sutton-1998">[Sutton, Precup, and Singh 1998]</a>  Sutton, R. S.; Precup, D.;and Singh, S. P.  1998.  Intra-option learning about tempo-rally abstract actions. In <em>ICML</em>.</li>
+<li><a name="parr-1998">[Parr and Russell 1998]</a>   Parr,  R.,  and  Russell,  S.  J. 1998. Reinforcement  learning  with  hierarchies  of  machines.   In <em>NeurIPS</em></li>
+<li><a name="mehta-2008">[Mehta et al. 2008]</a>  Mehta, N.; Ray, S.; Tadepalli, P.; and Di-etterich, T. 2008. Automatic discovery and transfer of maxq hierarchies. In <em>ICML</em>.</li>
+<li>The Promise of Hierarchical Reinforcement Learning by Yannis Flet-Berlia in <a href="https://thegradient.pub/the-promise-of-hierarchical-reinforcement-learning/">The Gradient</a></li>
+<li>Hierarchical Reinforcement Learning lecture by Doina Precup on <a href="https://www.youtube.com/watch?v=e8b0yC6COJ8">YouTube</a></li>
 </ul>
 </p>
 

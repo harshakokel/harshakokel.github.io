@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>active-learning on Home</title>
+    <title>active-learning on Harsha Kokel</title>
     <link>https://harshakokel.com/tags/active-learning/</link>
-    <description>Recent content in active-learning on Home</description>
+    <description>Recent content in active-learning on Harsha Kokel</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
     <lastBuildDate>Fri, 08 May 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/active-learning/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,7 @@
       <pubDate>Fri, 08 May 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/afe/</guid>
-      <description>Sriraam Natarajan, Srijita Das, Nandini Ramanan, Gautam Kunapuli, Predrag Radivojac, IJCAI 2018
-Motivation For the success of clinical studies, it is important to recruit people with diverse features. Not all the features are readily available when the decision about recruitment is done. Some features such as demographic details are available at no additional cost while other details like the MRI Image which are costly can be elicitated if the patient is recruited.</description>
+      <description>Motivation For the success of clinical studies, it is important to recruit people with diverse features. Not all the features are readily available when the decision about recruitment is done. Some features such as demographic details are available at no additional cost while other details like the MRI Image which are costly can be elicitated if the patient is recruited. But since these costly features are not already available during the decision of recruitment, we need a principled approach to make the decision of recruitment in the absence of costly features.</description>
     </item>
     
   </channel>

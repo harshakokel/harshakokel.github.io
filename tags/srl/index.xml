@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SRL on Home</title>
+    <title>SRL on Harsha Kokel</title>
     <link>https://harshakokel.com/tags/srl/</link>
-    <description>Recent content in SRL on Home</description>
+    <description>Recent content in SRL on Harsha Kokel</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
     <lastBuildDate>Sun, 12 Apr 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/srl/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,8 @@
       <pubDate>Sun, 12 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/rrl/</guid>
-      <description>Džeroski, Sašo, Luc De Raedt, and Kurt Driessens, Machine Learning 2001 The paper came before the goal-conditioned RL, Multi-task RL or Graph Neural Network literature. Major motivation of this paper is to learn a generalizable policy. Generalization in terms of varying number of objects in the domain (for example, in blocks-world number of blocks can change) or change in the goal state (for example, stack red block on blue block instead if green on yellow).</description>
+      <description>The paper came before the goal-conditioned RL, Multi-task RL or Graph Neural Network literature. Major motivation of this paper is to learn a generalizable policy. Generalization in terms of varying number of objects in the domain (for example, in blocks-world number of blocks can change) or change in the goal state (for example, stack red block on blue block instead if green on yellow).
+Authors demonstrate that by using approaches from inductive logic programming literature, first-order policy can be learnt which naturally supports both the generalization discussed above.</description>
     </item>
     
     <item>
@@ -22,7 +23,7 @@
       <pubDate>Wed, 28 Feb 2018 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/srl-for-myocardialinfarction/</guid>
-      <description>Jeremy C. Weiss, Sriraam Natarajan, Peggy L. Peissig, Catherine McCarty, and David Page, IAAI 2012 Myocardial Infarctions (generally known as heart attacks) causes one in three deaths in the United States and unsurprisingly have the most mysterious trajectory. It has been established that the prediction of future MIs is a challenging task and hence there have been extensive studies to identify and/or quantify the risk factors that contribute to MIs. Few common risk factors that have been identified are age, gender, blood pressure, low-density lipoprotein (LDL) cholesterol, diabetes, obesity, inactivity, alcohol and smoking.</description>
+      <description>Myocardial Infarctions (generally known as heart attacks) causes one in three deaths in the United States and unsurprisingly have the most mysterious trajectory. It has been established that the prediction of future MIs is a challenging task and hence there have been extensive studies to identify and/or quantify the risk factors that contribute to MIs. Few common risk factors that have been identified are age, gender, blood pressure, low-density lipoprotein (LDL) cholesterol, diabetes, obesity, inactivity, alcohol and smoking.</description>
     </item>
     
     <item>

@@ -4,6 +4,9 @@
   <head>
     <title>BLOG: Relational Modeling with Unknown Objects</title>
     
+    
+    <meta name="description" content="This website is the home of Harsha Kokel. A Ph.D. student working with Prof. Sriraam Natarajan at The University of Texas at Dallas" />
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="referrer" content="no-referrer">
@@ -24,13 +27,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/bayesian-logic/" />
 <meta property="article:published_time" content="2018-01-31T16:40:08+02:00" />
-<meta property="article:modified_time" content="2018-01-31T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+<meta property="article:modified_time" content="2018-01-31T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="BLOG: Relational Modeling with Unknown Objects">
 <meta itemprop="description" content="Bayesian Logic (BLOG) by Milch et al. provides a language which help us model random functions and probabilistic properties of unknown objects. Going beyong Herbrand Universe.">
 <meta itemprop="datePublished" content="2018-01-31T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2018-01-31T16:40:08+02:00" />
-<meta itemprop="wordCount" content="1060">
+<meta itemprop="wordCount" content="1044">
 
 
 
@@ -138,9 +141,10 @@
   
 
   <p><strong></strong></p>
-
-  <p><h3 id="brian-milch-bhaskara-marthi-stuart-russell-david-sontag-daniel-l-ong-and-andrey-kolobov-ijcai-2005">Brian Milch, Bhaskara Marthi, Stuart Russell, David Sontag, Daniel L. Ong and Andrey Kolobov, IJCAI 2005</h3>
-<p>Most of the First-Order Logic Models we have seen till now like Bayesian Logic Programs or MLNs works with an assumption that we are given a fixed set of objects, a Herbrand Universe and we have a possible world, Herbrand Interpretation on which we build our BLP model or MLN Network. However, in many practical problems we do not have a fixed Herbrand Universe, or we do not know how many objects are there in the universe. This paper introduces BLOG (Bayesian LOGic) which can perform inference even when the objects are unknown. BLOG is a representation language which can generate objects for such an unknown universe and create a Bayesian network which can then be used for inference. BLOG model describes a stochastic process which creates a world by generating objects in an order. The existence of a generated object is governed by the unknown number of objects in the universe and by the random functions defined in the model. The key idea here is that any property of the newly created object depends only on the objects that are already created. Using this and the concept of context specific independence, BLOG generates a countably infinite Bayesian network in which each node has finite set of parents. The finite set of parents and prior knowledge about the distribution makes the inference possible.</p>
+  
+    <blockquote>My notes on <strong>Brian Milch, Bhaskara Marthi, Stuart Russell, David Sontag, Daniel L. Ong and Andrey Kolobov, IJCAI 2005</strong></blockquote>
+  
+  <p><p>Most of the First-Order Logic Models we have seen till now like Bayesian Logic Programs or MLNs works with an assumption that we are given a fixed set of objects, a Herbrand Universe and we have a possible world, Herbrand Interpretation on which we build our BLP model or MLN Network. However, in many practical problems we do not have a fixed Herbrand Universe, or we do not know how many objects are there in the universe. This paper introduces BLOG (Bayesian LOGic) which can perform inference even when the objects are unknown. BLOG is a representation language which can generate objects for such an unknown universe and create a Bayesian network which can then be used for inference. BLOG model describes a stochastic process which creates a world by generating objects in an order. The existence of a generated object is governed by the unknown number of objects in the universe and by the random functions defined in the model. The key idea here is that any property of the newly created object depends only on the objects that are already created. Using this and the concept of context specific independence, BLOG generates a countably infinite Bayesian network in which each node has finite set of parents. The finite set of parents and prior knowledge about the distribution makes the inference possible.</p>
 <h2 id="key-contribution">Key contribution</h2>
 <p>According to me, the key contribution of this paper is the representation language. This language helps us model random functions and probabilistic properties of unknown objects. Consider the Balls in Urn example provided in the paper. We  do not know the number of balls in the urn and we randomly draw balls and put it in.  We  have no way  to identify if the same ball was drawn twice. We can only detect the color of the ball and that too has false detection probability of 0.2. With this information, we are supposed to find out number of balls in the urn. Most other models will give up at the first step itself. BLOG provides a simple language which can model such a stochastic scenario by using just 6 kinds of statements: Type Declarations, Random Function Declarations, Non-random Function Definitions, Guaranteed Object Statements, Dependency Statements, Generating Functions, and Number Statements. Once we have the model, we can represent any possible instantiation of the world.</p>
 <h2 id="limitations">Limitations</h2>

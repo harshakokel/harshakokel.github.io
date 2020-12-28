@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>metalearning on Home</title>
+    <title>metalearning on Harsha Kokel</title>
     <link>https://harshakokel.com/tags/metalearning/</link>
-    <description>Recent content in metalearning on Home</description>
+    <description>Recent content in metalearning on Harsha Kokel</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
     <lastBuildDate>Fri, 27 Mar 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/metalearning/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Fri, 27 Mar 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/maml/</guid>
-      <description>Chelsea Finn, Pieter Abbeel, Sergey Levine, ICML 2017. Meta-Learning a.k.a the &amp;lsquo;&amp;lsquo;Learning to Learn&amp;rsquo;&amp;rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model.</description>
+      <description>Meta-Learning a.k.a the &amp;lsquo;&amp;lsquo;Learning to Learn&amp;rsquo;&amp;rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model.</description>
     </item>
     
   </channel>

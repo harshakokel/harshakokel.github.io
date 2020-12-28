@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>summary on Home</title>
+    <title>summary on Harsha Kokel</title>
     <link>https://harshakokel.com/tags/summary/</link>
-    <description>Recent content in summary on Home</description>
+    <description>Recent content in summary on Harsha Kokel</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
     <lastBuildDate>Tue, 09 Jun 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/summary/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Tue, 09 Jun 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/neurosymbolic-systems/</guid>
-      <description>As introduced by Henry Kautz in his talk The Third AI Summer at AAAI 2020. Prof. Henry Kautz, in his Robert S. Engelmore Memorial Lecture at AAAI 2020^, talked about the past and present of AI and highlighted that the future of AI is in the combination of the Neural and Symbolic approaches, alluding to the famous and heated AI debate between Prof. Gary Marcus and Prof. Yoshua Benjio. In this regard, he brings forth a taxonomy of Neuro-Symbolic Systems that I aim to elaborate upon.</description>
+      <description>Prof. Henry Kautz, in his Robert S. Engelmore Memorial Lecture at AAAI 2020^, talked about the past and present of AI and highlighted that the future of AI is in the combination of the Neural and Symbolic approaches, alluding to the famous and heated AI debate between Prof. Gary Marcus and Prof. Yoshua Benjio. In this regard, he brings forth a taxonomy of Neuro-Symbolic Systems that I aim to elaborate upon.</description>
     </item>
     
     <item>

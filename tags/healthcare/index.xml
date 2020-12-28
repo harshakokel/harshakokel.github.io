@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>healthcare on Home</title>
+    <title>healthcare on Harsha Kokel</title>
     <link>https://harshakokel.com/tags/healthcare/</link>
-    <description>Recent content in healthcare on Home</description>
+    <description>Recent content in healthcare on Harsha Kokel</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
     <lastBuildDate>Fri, 08 May 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/healthcare/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,7 @@
       <pubDate>Fri, 08 May 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/afe/</guid>
-      <description>Sriraam Natarajan, Srijita Das, Nandini Ramanan, Gautam Kunapuli, Predrag Radivojac, IJCAI 2018
-Motivation For the success of clinical studies, it is important to recruit people with diverse features. Not all the features are readily available when the decision about recruitment is done. Some features such as demographic details are available at no additional cost while other details like the MRI Image which are costly can be elicitated if the patient is recruited.</description>
+      <description>Motivation For the success of clinical studies, it is important to recruit people with diverse features. Not all the features are readily available when the decision about recruitment is done. Some features such as demographic details are available at no additional cost while other details like the MRI Image which are costly can be elicitated if the patient is recruited. But since these costly features are not already available during the decision of recruitment, we need a principled approach to make the decision of recruitment in the absence of costly features.</description>
     </item>
     
     <item>
@@ -23,7 +22,7 @@ Motivation For the success of clinical studies, it is important to recruit peopl
       <pubDate>Wed, 28 Feb 2018 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/srl-for-myocardialinfarction/</guid>
-      <description>Jeremy C. Weiss, Sriraam Natarajan, Peggy L. Peissig, Catherine McCarty, and David Page, IAAI 2012 Myocardial Infarctions (generally known as heart attacks) causes one in three deaths in the United States and unsurprisingly have the most mysterious trajectory. It has been established that the prediction of future MIs is a challenging task and hence there have been extensive studies to identify and/or quantify the risk factors that contribute to MIs. Few common risk factors that have been identified are age, gender, blood pressure, low-density lipoprotein (LDL) cholesterol, diabetes, obesity, inactivity, alcohol and smoking.</description>
+      <description>Myocardial Infarctions (generally known as heart attacks) causes one in three deaths in the United States and unsurprisingly have the most mysterious trajectory. It has been established that the prediction of future MIs is a challenging task and hence there have been extensive studies to identify and/or quantify the risk factors that contribute to MIs. Few common risk factors that have been identified are age, gender, blood pressure, low-density lipoprotein (LDL) cholesterol, diabetes, obesity, inactivity, alcohol and smoking.</description>
     </item>
     
   </channel>

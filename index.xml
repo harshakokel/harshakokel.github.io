@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home</title>
+    <title>Harsha Kokel</title>
     <link>https://harshakokel.com/</link>
-    <description>Recent content on Home</description>
+    <description>Recent content on Harsha Kokel</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
     <lastBuildDate>Wed, 21 Oct 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,8 @@
       <pubDate>Wed, 21 Oct 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/abstraction-for-planning/</guid>
-      <description>Craig Knoblock, AIJ 1994  This paper highlights a heuristic property called ordered monotonicity propery of hierarchical domains and provides a way to learn the hierarchy using the sufficient condition for that property.
-A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of $L$ is set of first-order literals, $S$ is the set of finite states (described using literals), and $O$ is the set of operators in the domain.</description>
+      <description>This paper highlights a heuristic property called ordered monotonicity propery of hierarchical domains and provides a way to learn the hierarchy using the sufficient condition for that property.
+A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of $L$ is set of first-order literals, $S$ is the set of finite states (described using literals), and $O$ is the set of operators in the domain. The authors propose to assign a $Level(l), \forall l \in L$, which indicates the hierarchy-level of the literal.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@ A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of 
       <pubDate>Fri, 25 Sep 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/logical-nn/</guid>
-      <description>Ryan Riegel, et al. arxiv 2020  This article is written jointly with Siwen Yan
+      <description>This article summarizies Ryan Riegel, et al. arxiv 2020 and is written jointly with Siwen Yan
  This paper proposes Logical Neural Network (LNN), a neural framework to perform logical inference. They propose to build a neural network with 1-to-1 correspondence with logical formulae. So, every neuron in the LNN is either a logical literal or logical gate. Given set of logical formulae, a LNN is a graph with one neuron for every unique proposition occurring in any formula and one neuron for each logical operation occurring in each formula, as shown in the figure below.</description>
     </item>
     
@@ -33,7 +33,8 @@ A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of 
       <pubDate>Tue, 22 Sep 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/nn-with-fol/</guid>
-      <description>Tao Li, Vivek Srikumar, ACL 2019 This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.</description>
+      <description>This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.
+To convert the FOL rules to a network, each predicate in the rule is mapped to a named neuron.</description>
     </item>
     
     <item>
@@ -42,7 +43,7 @@ A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of 
       <pubDate>Tue, 09 Jun 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/neurosymbolic-systems/</guid>
-      <description>As introduced by Henry Kautz in his talk The Third AI Summer at AAAI 2020. Prof. Henry Kautz, in his Robert S. Engelmore Memorial Lecture at AAAI 2020^, talked about the past and present of AI and highlighted that the future of AI is in the combination of the Neural and Symbolic approaches, alluding to the famous and heated AI debate between Prof. Gary Marcus and Prof. Yoshua Benjio. In this regard, he brings forth a taxonomy of Neuro-Symbolic Systems that I aim to elaborate upon.</description>
+      <description>Prof. Henry Kautz, in his Robert S. Engelmore Memorial Lecture at AAAI 2020^, talked about the past and present of AI and highlighted that the future of AI is in the combination of the Neural and Symbolic approaches, alluding to the famous and heated AI debate between Prof. Gary Marcus and Prof. Yoshua Benjio. In this regard, he brings forth a taxonomy of Neuro-Symbolic Systems that I aim to elaborate upon.</description>
     </item>
     
     <item>
@@ -60,8 +61,7 @@ A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of 
       <pubDate>Fri, 08 May 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/afe/</guid>
-      <description>Sriraam Natarajan, Srijita Das, Nandini Ramanan, Gautam Kunapuli, Predrag Radivojac, IJCAI 2018
-Motivation For the success of clinical studies, it is important to recruit people with diverse features. Not all the features are readily available when the decision about recruitment is done. Some features such as demographic details are available at no additional cost while other details like the MRI Image which are costly can be elicitated if the patient is recruited.</description>
+      <description>Motivation For the success of clinical studies, it is important to recruit people with diverse features. Not all the features are readily available when the decision about recruitment is done. Some features such as demographic details are available at no additional cost while other details like the MRI Image which are costly can be elicitated if the patient is recruited. But since these costly features are not already available during the decision of recruitment, we need a principled approach to make the decision of recruitment in the absence of costly features.</description>
     </item>
     
     <item>
@@ -70,7 +70,7 @@ Motivation For the success of clinical studies, it is important to recruit peopl
       <pubDate>Wed, 29 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/meta-attack-gnn/</guid>
-      <description>Daniel Zügner and Stephan Günnemann, ICLR 2019 Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes.</description>
+      <description>Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes.</description>
     </item>
     
     <item>
@@ -79,7 +79,8 @@ Motivation For the success of clinical studies, it is important to recruit peopl
       <pubDate>Wed, 22 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/skills-to-symbols/</guid>
-      <description>George Konidaris, Leslie Pack Kaelbling, Tomas Lozano-Perez, JAIR 2018 This paper learns abstract symbolic representations from lower level trajectories for planning at a high-level. Big Idea of this paper is that given different domains of increasing difficulty at lower level but similar high level tasks, if we are able to segregate the low-level and high-level tasks, the tasks can be considered equivalent at higher level and hence can be solved in a uniform manner.</description>
+      <description>This paper learns abstract symbolic representations from lower level trajectories for planning at a high-level. Big Idea of this paper is that given different domains of increasing difficulty at lower level but similar high level tasks, if we are able to segregate the low-level and high-level tasks, the tasks can be considered equivalent at higher level and hence can be solved in a uniform manner.
+ For example, given three tasks as shown above:</description>
     </item>
     
     <item>
@@ -88,7 +89,8 @@ Motivation For the success of clinical studies, it is important to recruit peopl
       <pubDate>Wed, 15 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/drrl/</guid>
-      <description>Vinicius Zambaldi, David Raposo, Adam Santoro et al. ICLR 2019. Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects.</description>
+      <description>Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects.
+In this paper, authors introduce how multi-headed dot product attention can be used to perform relational reasoning in model-free deep RL and hence achieve combinatorial generalization.</description>
     </item>
     
     <item>
@@ -97,7 +99,7 @@ Motivation For the success of clinical studies, it is important to recruit peopl
       <pubDate>Mon, 13 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/relational-network/</guid>
-      <description>Adam Santoro, David Raposo, David G.T. Barrett, Mateusz Malinowski, Razvan Pascanu, Peter Battaglia, and Timothy Lillicrap, NeurIPS 2017 Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&amp;rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: a) the graph or relation between entities is not provided rather learned and b) the edges between entities can be of different types.</description>
+      <description>Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&amp;rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: a) the graph or relation between entities is not provided rather learned and b) the edges between entities can be of different types.</description>
     </item>
     
     <item>
@@ -106,7 +108,8 @@ Motivation For the success of clinical studies, it is important to recruit peopl
       <pubDate>Sun, 12 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/rrl/</guid>
-      <description>Džeroski, Sašo, Luc De Raedt, and Kurt Driessens, Machine Learning 2001 The paper came before the goal-conditioned RL, Multi-task RL or Graph Neural Network literature. Major motivation of this paper is to learn a generalizable policy. Generalization in terms of varying number of objects in the domain (for example, in blocks-world number of blocks can change) or change in the goal state (for example, stack red block on blue block instead if green on yellow).</description>
+      <description>The paper came before the goal-conditioned RL, Multi-task RL or Graph Neural Network literature. Major motivation of this paper is to learn a generalizable policy. Generalization in terms of varying number of objects in the domain (for example, in blocks-world number of blocks can change) or change in the goal state (for example, stack red block on blue block instead if green on yellow).
+Authors demonstrate that by using approaches from inductive logic programming literature, first-order policy can be learnt which naturally supports both the generalization discussed above.</description>
     </item>
     
     <item>
@@ -115,7 +118,7 @@ Motivation For the success of clinical studies, it is important to recruit peopl
       <pubDate>Sat, 04 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/few-shot-learning-gnn/</guid>
-      <description>Victor Garcia, Joan Bruna, ICLR 2018 This paper focuses on $q$-shot $K$-way classification problem &amp;ndash; where we have $K$ class labels and for each class label we have $q$ example images, so totally we have $s=qK$ training images. Authors propose to leverage the progress in Graph Convolutional Networks by formulating this problem as a node classification problem in graph $(G=(V,E))$, where nodes are images and an edge between two nodes indicate those two images are similar and may have same labels.</description>
+      <description>This paper focuses on $q$-shot $K$-way classification problem &amp;ndash; where we have $K$ class labels and for each class label we have $q$ example images, so totally we have $s=qK$ training images. Authors propose to leverage the progress in Graph Convolutional Networks by formulating this problem as a node classification problem in graph $(G=(V,E))$, where nodes are images and an edge between two nodes indicate those two images are similar and may have same labels.</description>
     </item>
     
     <item>
@@ -134,7 +137,7 @@ Motivation For the success of clinical studies, it is important to recruit peopl
       <pubDate>Fri, 27 Mar 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/maml/</guid>
-      <description>Chelsea Finn, Pieter Abbeel, Sergey Levine, ICML 2017. Meta-Learning a.k.a the &amp;lsquo;&amp;lsquo;Learning to Learn&amp;rsquo;&amp;rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model.</description>
+      <description>Meta-Learning a.k.a the &amp;lsquo;&amp;lsquo;Learning to Learn&amp;rsquo;&amp;rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model.</description>
     </item>
     
     <item>
@@ -143,7 +146,7 @@ Motivation For the success of clinical studies, it is important to recruit peopl
       <pubDate>Fri, 20 Mar 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/her/</guid>
-      <description>Marcin Andrychowicz, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, Pieter Abbeel, Wojciech Zaremba, NeurIPS 2017 Remember the sampling approaches used for approximate inference in Bayesian Networks, how the rejection sampling is super expensive since it wastes lot of samples and we try to capitalize on those samples by providing weights in importance sampling. This paper proposes something similar.
+      <description>Remember the sampling approaches used for approximate inference in Bayesian Networks, how the rejection sampling is super expensive since it wastes lot of samples and we try to capitalize on those samples by providing weights in importance sampling. This paper proposes something similar.
 In standard RL setting, with sparse reward there can be a long time before the Q-values propagate from the goal state to individual states and even when they do because of sparsity they might not be adequate to differentiate between different states.</description>
     </item>
     
@@ -153,8 +156,8 @@ In standard RL setting, with sparse reward there can be a long time before the Q
       <pubDate>Wed, 18 Mar 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/logic-program-policies/</guid>
-      <description>Tom Silver, Kelsey R. Allen, Alex K. Lew, Leslie Kaelbling, and Josh Tenenbaum, AAAI 2020 This paper introduces a bayesian imitation learning approach to learn policies from few demonstrations. They call these policies Logical Program Policies (LPP) which are essentially policies learnt as combination of logical and programmatic policies. Logical because these are relational and programmatic because they are features are automatically learned.
-The bayesian prior used here is the prior probability distribution over the Probablistic Context Free Grammer (P-CFG).</description>
+      <description>This paper introduces a bayesian imitation learning approach to learn policies from few demonstrations. They call these policies Logical Program Policies (LPP) which are essentially policies learnt as combination of logical and programmatic policies. Logical because these are relational and programmatic because they are features are automatically learned.
+The bayesian prior used here is the prior probability distribution over the Probablistic Context Free Grammer (P-CFG). Paper proposes to generate a dataset ($\mathcal{D}$) where each state action pair $(s,a)$ is an example.</description>
     </item>
     
     <item>
@@ -163,12 +166,12 @@ The bayesian prior used here is the prior probability distribution over the Prob
       <pubDate>Wed, 26 Feb 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/understanding-node-attention/</guid>
-      <description>Report on Boris Knyazev, Graham W. Taylor, and Mohamed R. Amer, NeurIPS 2019 Attention in CNNs (Answer Q-1)
+      <description>Attention in CNNs (Answer Q-1)
 Attention in CNNs is reweighting the feature map $X \in \mathbb{R}^{N \times C}$, to provide attention to some nodes.
 $$ \begin{align} Z &amp;amp; =\alpha \odot X \quad (Z_{i}=\alpha_{i} X_{i}) \\
 \text{such that,} \quad \quad &amp;amp; \sum_{i}^{N} \alpha_{i} = 1 \\
 \odot &amp;amp; \text{ is element-wise multiplication} \end{align} $$
- Note: $\alpha_i$ is a scalar and $X_i$ is vector of size C.</description>
+ Note: $\alpha_i$ is a scalar and $X_i$ is vector of size C. So, $Z_i$ is also a vector of size C.</description>
     </item>
     
     <item>
@@ -177,7 +180,7 @@ $$ \begin{align} Z &amp;amp; =\alpha \odot X \quad (Z_{i}=\alpha_{i} X_{i}) \\
       <pubDate>Mon, 17 Feb 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/gat/</guid>
-      <description>Veličković, Petar, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro Lio, and Yoshua Bengio, ICLR 2018 Introduction Convolutional Neural Networks (CNNs) can effectively transform grid-like structures and have been used for various image segmentation/classification tasks. Various approaches have not been proposed to extended CNNs graph structures. These approaches are broadly divided into two categories:
+      <description>Introduction Convolutional Neural Networks (CNNs) can effectively transform grid-like structures and have been used for various image segmentation/classification tasks. Various approaches have not been proposed to extended CNNs graph structures. These approaches are broadly divided into two categories:
   Spectral appraoch leverages the spectral representations of graph and defines convolution in the Fourier domain. However, because such convolutions require eigen-decomposition of graph laplacian, they can not be directly generalized to different graph structures.</description>
     </item>
     
@@ -187,7 +190,7 @@ $$ \begin{align} Z &amp;amp; =\alpha \odot X \quad (Z_{i}=\alpha_{i} X_{i}) \\
       <pubDate>Wed, 05 Feb 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/gcn/</guid>
-      <description>Thomas N Kipf and Max Welling, ICLR 2017 Introduction Kipf et al. 2017 introduces Graph Convolutional Networks (GCN) which uses features of each node and leverages edges of the graph to derive class similarity between nodes in semi-supervised setting.
+      <description>Introduction Kipf et al. 2017 introduces Graph Convolutional Networks (GCN) which uses features of each node and leverages edges of the graph to derive class similarity between nodes in semi-supervised setting.
 Traditionally semi-supervised learning in a graph-structured data heavily relied on the assumption that the edges in the graph represent class similarities (i.e. nodes with similar classes have edge between them). For example, in an image segmentation task, an image can be thought as a grid (Graph with node for every pixel and edges between neighboring pixels as shown in figure below).</description>
     </item>
     
@@ -217,7 +220,7 @@ Model-based RL Approaches to solving Online planning problem (RL) by first estim
       <pubDate>Sat, 05 Oct 2019 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/active-advice-seeking/</guid>
-      <description>Phillip Odom and Sriraam Natarajan, AAMAS 2017 In Kunapali et al 2013, authors present a way of incorporating advice in Inverse Reinforcement Learning (IRL) by extending IRL formulation to include constraints based on the expert&amp;rsquo;s advice of preferred and avoided actions, state and reward. Odom et al 2017 expands on Kunapali et al (2013)&amp;rsquo;s formulation of preferred and avoided actions by seeking the advice in active learning setting. The paper proposes a active advice-seeking framework, where instead of seeking mere-label from the expert for selected example as done in active learning, they seek advice (set of preferred and avoided labels) over set of examples.</description>
+      <description>In Kunapali et al 2013, authors present a way of incorporating advice in Inverse Reinforcement Learning (IRL) by extending IRL formulation to include constraints based on the expert&amp;rsquo;s advice of preferred and avoided actions, state and reward. Odom et al 2017 expands on Kunapali et al (2013)&amp;rsquo;s formulation of preferred and avoided actions by seeking the advice in active learning setting. The paper proposes a active advice-seeking framework, where instead of seeking mere-label from the expert for selected example as done in active learning, they seek advice (set of preferred and avoided labels) over set of examples.</description>
     </item>
     
     <item>
@@ -226,7 +229,7 @@ Model-based RL Approaches to solving Online planning problem (RL) by first estim
       <pubDate>Tue, 03 Sep 2019 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/minimal-sufficient-explanation/</guid>
-      <description>Omar Zia Khan, Pascal Poupart, and James P Black. ICAPS 2009 Automated planning problems have long been attempted using Markov Decision Processes (MDPs). MDPs are capable of handling the probabilistic and sequential nature of planning problem. They solve the problem by providing a policy which is a mapping from states to actions. However, to use this policy in the real-world, we first need users to trust the policy. The issue of trust can be ameliorated if the policy provides an explanation for its recommeded actions.</description>
+      <description>Automated planning problems have long been attempted using Markov Decision Processes (MDPs). MDPs are capable of handling the probabilistic and sequential nature of planning problem. They solve the problem by providing a policy which is a mapping from states to actions. However, to use this policy in the real-world, we first need users to trust the policy. The issue of trust can be ameliorated if the policy provides an explanation for its recommeded actions.</description>
     </item>
     
     <item>
@@ -244,7 +247,7 @@ Model-based RL Approaches to solving Online planning problem (RL) by first estim
       <pubDate>Wed, 28 Feb 2018 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/srl-for-myocardialinfarction/</guid>
-      <description>Jeremy C. Weiss, Sriraam Natarajan, Peggy L. Peissig, Catherine McCarty, and David Page, IAAI 2012 Myocardial Infarctions (generally known as heart attacks) causes one in three deaths in the United States and unsurprisingly have the most mysterious trajectory. It has been established that the prediction of future MIs is a challenging task and hence there have been extensive studies to identify and/or quantify the risk factors that contribute to MIs. Few common risk factors that have been identified are age, gender, blood pressure, low-density lipoprotein (LDL) cholesterol, diabetes, obesity, inactivity, alcohol and smoking.</description>
+      <description>Myocardial Infarctions (generally known as heart attacks) causes one in three deaths in the United States and unsurprisingly have the most mysterious trajectory. It has been established that the prediction of future MIs is a challenging task and hence there have been extensive studies to identify and/or quantify the risk factors that contribute to MIs. Few common risk factors that have been identified are age, gender, blood pressure, low-density lipoprotein (LDL) cholesterol, diabetes, obesity, inactivity, alcohol and smoking.</description>
     </item>
     
     <item>

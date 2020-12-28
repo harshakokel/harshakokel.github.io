@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>imitation on Home</title>
+    <title>imitation on Harsha Kokel</title>
     <link>https://harshakokel.com/tags/imitation/</link>
-    <description>Recent content in imitation on Home</description>
+    <description>Recent content in imitation on Harsha Kokel</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
     <lastBuildDate>Wed, 18 Mar 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/imitation/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,8 @@
       <pubDate>Wed, 18 Mar 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/logic-program-policies/</guid>
-      <description>Tom Silver, Kelsey R. Allen, Alex K. Lew, Leslie Kaelbling, and Josh Tenenbaum, AAAI 2020 This paper introduces a bayesian imitation learning approach to learn policies from few demonstrations. They call these policies Logical Program Policies (LPP) which are essentially policies learnt as combination of logical and programmatic policies. Logical because these are relational and programmatic because they are features are automatically learned.
-The bayesian prior used here is the prior probability distribution over the Probablistic Context Free Grammer (P-CFG).</description>
+      <description>This paper introduces a bayesian imitation learning approach to learn policies from few demonstrations. They call these policies Logical Program Policies (LPP) which are essentially policies learnt as combination of logical and programmatic policies. Logical because these are relational and programmatic because they are features are automatically learned.
+The bayesian prior used here is the prior probability distribution over the Probablistic Context Free Grammer (P-CFG). Paper proposes to generate a dataset ($\mathcal{D}$) where each state action pair $(s,a)$ is an example.</description>
     </item>
     
   </channel>

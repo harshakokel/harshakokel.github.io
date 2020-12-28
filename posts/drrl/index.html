@@ -4,6 +4,9 @@
   <head>
     <title>Deep Reinforcement Learning With Relational Inductive Biases</title>
     
+    
+    <meta name="description" content="This website is the home of Harsha Kokel. A Ph.D. student working with Prof. Sriraam Natarajan at The University of Texas at Dallas" />
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="referrer" content="no-referrer">
@@ -17,20 +20,23 @@
     <link rel="stylesheet" href="/css/ocs-ui.min.css">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Deep Reinforcement Learning With Relational Inductive Biases"/>
-<meta name="twitter:description" content="Vinicius Zambaldi, David Raposo, Adam Santoro et al. ICLR 2019. Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects."/>
+<meta name="twitter:description" content="Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects.
+In this paper, authors introduce how multi-headed dot product attention can be used to perform relational reasoning in model-free deep RL and hence achieve combinatorial generalization."/>
 
     <meta property="og:title" content="Deep Reinforcement Learning With Relational Inductive Biases" />
-<meta property="og:description" content="Vinicius Zambaldi, David Raposo, Adam Santoro et al. ICLR 2019. Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects." />
+<meta property="og:description" content="Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects.
+In this paper, authors introduce how multi-headed dot product attention can be used to perform relational reasoning in model-free deep RL and hence achieve combinatorial generalization." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/drrl/" />
 <meta property="article:published_time" content="2020-04-15T16:40:08+02:00" />
-<meta property="article:modified_time" content="2020-04-15T16:40:08+02:00" /><meta property="og:site_name" content="Home" />
+<meta property="article:modified_time" content="2020-04-15T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="Deep Reinforcement Learning With Relational Inductive Biases">
-<meta itemprop="description" content="Vinicius Zambaldi, David Raposo, Adam Santoro et al. ICLR 2019. Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects.">
+<meta itemprop="description" content="Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects.
+In this paper, authors introduce how multi-headed dot product attention can be used to perform relational reasoning in model-free deep RL and hence achieve combinatorial generalization.">
 <meta itemprop="datePublished" content="2020-04-15T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2020-04-15T16:40:08+02:00" />
-<meta itemprop="wordCount" content="451">
+<meta itemprop="wordCount" content="441">
 
 
 
@@ -130,7 +136,7 @@
 </div>
 
   <header class="main">
-    <h2>Deep Reinforcement Learning With Relational Inductive Biases</h2>
+    <h2>Deep Relational RL</h2>
   </header>
 
 
@@ -138,9 +144,10 @@
   
 
   <p><strong></strong></p>
-
-  <p><h3 id="vinicius-zambaldi-david-raposo-adam-santoro-et-al-iclr-2019">Vinicius Zambaldi, David Raposo, Adam Santoro et al. ICLR 2019.</h3>
-<p>Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects.</p>
+  
+    <blockquote>My notes on <strong>Vinicius Zambaldi, David Raposo, Adam Santoro et al. ICLR 2019.</strong></blockquote>
+  
+  <p><p>Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects.</p>
 <p>In this paper, authors introduce how multi-headed dot product attention can be used to perform relational reasoning in model-free deep RL and hence achieve combinatorial generalization.</p>
 <h3 id="multi-head-dot-product-attention-mhdpa">Multi-Head Dot Product Attention (MHDPA)</h3>
 <p>This is the self attention mechanism proposed in the paper Vaswani et al. NeurIPS 2017, Attention is all you need. In that paper, the MHDPA was used on an input of word embeddings but in general it can be any form of entities. Check out the neat explanation of MHDPA by Jay Alammar <a href="https://jalammar.github.io/illustrated-transformer/">here</a></p>
