@@ -1,0 +1,3432 @@
+:root 
+	-main-theme-color: #09c5ab
+	-sidebar-bg-color: #f5f6f7
+	-sidebar-highlight-color: #bedcd8
+	-main-highlight-color: #02a59c
+	-default-text-color: #3d4449
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section 
+	display: block
+
+body 
+	line-height: 1
+	&.is-loading *, &.is-loading *:before, &.is-loading *:after, &.is-resizing *, &.is-resizing *:before, &.is-resizing *:after 
+		-moz-animation: none 
+		-webkit-animation: none 
+		-ms-animation: none 
+		animation: none 
+		-moz-transition: none 
+		-webkit-transition: none 
+		-ms-transition: none 
+		transition: none 
+	
+	&.is-loading #sidebar 
+		display: none
+	
+	img 
+		max-width: 100%
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+	
+	> :first-child 
+		margin-top: 0
+	
+	> :last-child 
+		margin-bottom: 0
+	
+
+ol, ul 
+	list-style: none
+
+blockquote, q 
+	quotes: none
+	&:before, &:after 
+		content: ''
+		content: none
+	
+
+table 
+	border-collapse: collapse
+	border-spacing: 0
+	tbody tr 
+		border: solid 1px rgba(210, 215, 217, 0.75)
+		border-left: 0
+		border-right: 0
+		&:nth-child(2n + 1) 
+			background-color: rgba(230, 235, 237, 0.25)
+		
+	
+	td 
+		padding: 0.75em 0.75em
+	
+	th 
+		color: #3d4449
+		font-size: 0.9em
+		font-weight: 600
+		padding: 0 0.75em 0.75em 0.75em
+		text-align: left
+	
+	thead 
+		border-bottom: solid 2px rgba(210, 215, 217, 0.75)
+	
+	tfoot 
+		border-top: solid 2px rgba(210, 215, 217, 0.75)
+	
+	&.alt 
+		border-collapse: separate
+		tbody tr td 
+			border: solid 1px rgba(210, 215, 217, 0.75)
+			border-left-width: 0
+			border-top-width: 0
+			&:first-child 
+				border-left-width: 1px
+			
+		
+		tbody tr:first-child td 
+			border-top-width: 1px
+		
+		thead 
+			border-bottom: 0
+		
+		tfoot 
+			border-top: 0
+		
+	
+
+body 
+	-webkit-text-size-adjust: none
+
+*, *:before, *:after 
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+
+.row 
+	border-bottom: solid 1px transparent
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	> * 
+		float: left
+		-moz-box-sizing: border-box
+		-webkit-box-sizing: border-box
+		box-sizing: border-box
+	
+	&:after, &:before 
+		content: ''
+		display: block
+		clear: both
+		height: 0
+	
+	&.uniform > * > :first-child 
+		margin-top: 0
+	
+	&.uniform > * > :last-child 
+		margin-bottom: 0
+	
+	> * 
+		padding: 0 0 0 1.5em
+	
+	&.uniform > * 
+		padding: 1.5em 0 0 1.5em
+	
+	&.uniform 
+		margin: -1.5em 0 -1px -1.5em
+		> * 
+			padding: 1.5em 0 0 1.5em
+		
+		> * 
+			padding: 1.5em 0 0 1.5em
+		
+		> * 
+			padding: 1.5em 0 0 1.5em
+		
+		> * 
+			padding: 1.5em 0 0 1.5em
+		
+		> * 
+			padding: 1.5em 0 0 1.5em
+		
+		> * 
+			padding: 1.5em 0 0 1.5em
+		
+		> * 
+			padding: 1.5em 0 0 1.5em
+		
+		> * 
+			padding: 1.5em 0 0 1.5em
+		
+	
+	&.uniform 
+		margin: -1.5em 0 -1px -1.5em
+	
+	&.uniform 
+		margin: -1.5em 0 -1px -1.5em
+	
+	&.uniform 
+		margin: -1.5em 0 -1px -1.5em
+	
+	&.uniform 
+		margin: -1.5em 0 -1px -1.5em
+	
+	&.uniform 
+		margin: -1.5em 0 -1px -1.5em
+	
+	&.uniform 
+		margin: -1.5em 0 -1px -1.5em
+	
+	&.uniform 
+		margin: -1.5em 0 -1px -1.5em
+	
+	&.uniform 
+		margin: -1.5em 0 -1px -1.5em
+	
+
+25  > * 
+	padding: 0 0 0 0em
+
+25 
+	margin: 0 0 -1px 0em
+	> * 
+		padding: 0em 0 0 0em
+	
+	> * 
+		padding: 0 0 0 3em
+	
+	> * 
+		padding: 3em 0 0 3em
+	
+	> * 
+		padding: 0 0 0 2.25em
+	
+	> * 
+		padding: 2.25em 0 0 2.25em
+	
+	> * 
+		padding: 0 0 0 0.75em
+	
+	> * 
+		padding: 0.75em 0 0 0.75em
+	
+	> * 
+		padding: 0 0 0 0.375em
+	
+	> * 
+		padding: 0.375em 0 0 0.375em
+	
+	> * 
+		padding: 0 0 0 3em
+	
+	> * 
+		padding: 3em 0 0 3em
+	
+	> * 
+		padding: 0 0 0 2.25em
+	
+	> * 
+		padding: 2.25em 0 0 2.25em
+	
+	> * 
+		padding: 0 0 0 0.75em
+	
+	> * 
+		padding: 0.75em 0 0 0.75em
+	
+	> * 
+		padding: 0 0 0 0.375em
+	
+	> * 
+		padding: 0.375em 0 0 0.375em
+	
+	> * 
+		padding: 0 0 0 3em
+	
+	> * 
+		padding: 3em 0 0 3em
+	
+	> * 
+		padding: 0 0 0 2.25em
+	
+	> * 
+		padding: 2.25em 0 0 2.25em
+	
+	> * 
+		padding: 0 0 0 0.75em
+	
+	> * 
+		padding: 0.75em 0 0 0.75em
+	
+	> * 
+		padding: 0 0 0 0.375em
+	
+	> * 
+		padding: 0.375em 0 0 0.375em
+	
+	> * 
+		padding: 0 0 0 3em
+	
+	> * 
+		padding: 3em 0 0 3em
+	
+	> * 
+		padding: 0 0 0 2.25em
+	
+	> * 
+		padding: 2.25em 0 0 2.25em
+	
+	> * 
+		padding: 0 0 0 0.75em
+	
+	> * 
+		padding: 0.75em 0 0 0.75em
+	
+	> * 
+		padding: 0 0 0 0.375em
+	
+	> * 
+		padding: 0.375em 0 0 0.375em
+	
+	> * 
+		padding: 0 0 0 3em
+	
+	> * 
+		padding: 3em 0 0 3em
+	
+	> * 
+		padding: 0 0 0 2.25em
+	
+	> * 
+		padding: 2.25em 0 0 2.25em
+	
+	> * 
+		padding: 0 0 0 0.75em
+	
+	> * 
+		padding: 0.75em 0 0 0.75em
+	
+	> * 
+		padding: 0 0 0 0.375em
+	
+	> * 
+		padding: 0.375em 0 0 0.375em
+	
+	> * 
+		padding: 0 0 0 3em
+	
+	> * 
+		padding: 3em 0 0 3em
+	
+	> * 
+		padding: 0 0 0 2.25em
+	
+	> * 
+		padding: 2.25em 0 0 2.25em
+	
+	> * 
+		padding: 0 0 0 0.75em
+	
+	> * 
+		padding: 0.75em 0 0 0.75em
+	
+	> * 
+		padding: 0 0 0 0.375em
+	
+	> * 
+		padding: 0.375em 0 0 0.375em
+	
+	> * 
+		padding: 0 0 0 3em
+	
+	> * 
+		padding: 3em 0 0 3em
+	
+	> * 
+		padding: 0 0 0 2.25em
+	
+	> * 
+		padding: 2.25em 0 0 2.25em
+	
+	> * 
+		padding: 0 0 0 0.75em
+	
+	> * 
+		padding: 0.75em 0 0 0.75em
+	
+	> * 
+		padding: 0 0 0 0.375em
+	
+	> * 
+		padding: 0.375em 0 0 0.375em
+	
+	> * 
+		padding: 0 0 0 3em
+	
+	> * 
+		padding: 3em 0 0 3em
+	
+	> * 
+		padding: 0 0 0 2.25em
+	
+	> * 
+		padding: 2.25em 0 0 2.25em
+	
+	> * 
+		padding: 0 0 0 0.75em
+	
+	> * 
+		padding: 0.75em 0 0 0.75em
+	
+	> * 
+		padding: 0 0 0 0.375em
+	
+	> * 
+		padding: 0.375em 0 0 0.375em
+	
+	> * 
+		padding: 0 0 0 3em
+	
+	> * 
+		padding: 3em 0 0 3em
+	
+	> * 
+		padding: 0 0 0 2.25em
+	
+	> * 
+		padding: 2.25em 0 0 2.25em
+	
+	> * 
+		padding: 0 0 0 0.75em
+	
+	> * 
+		padding: 0.75em 0 0 0.75em
+	
+	> * 
+		padding: 0 0 0 0.375em
+	
+	> * 
+		padding: 0.375em 0 0 0.375em
+	
+
+25 
+	margin: 0em 0 -1px 0em
+
+.row 
+	margin: 0 0 -1px -1.5em
+
+25 
+	margin: 0 0 -1px -3em
+
+25 
+	margin: -3em 0 -1px -3em
+
+25 
+	margin: 0 0 -1px -2.25em
+
+25 
+	margin: -2.25em 0 -1px -2.25em
+
+25 
+	margin: 0 0 -1px -0.75em
+
+25 
+	margin: -0.75em 0 -1px -0.75em
+
+25 
+	margin: 0 0 -1px -0.375em
+
+25 
+	margin: -0.375em 0 -1px -0.375em
+
+24 
+	width: 100%
+	clear: none
+	margin-left: 0
+	+ * 
+		clear: left
+	
+
+24 
+	width: 91.6666666667%
+	clear: none
+	margin-left: 0
+
+24 
+	width: 83.3333333333%
+	clear: none
+	margin-left: 0
+
+24 
+	width: 75%
+	clear: none
+	margin-left: 0
+
+24 
+	width: 66.6666666667%
+	clear: none
+	margin-left: 0
+
+24 
+	width: 58.3333333333%
+	clear: none
+	margin-left: 0
+
+24 
+	width: 50%
+	clear: none
+	margin-left: 0
+
+24 
+	width: 41.6666666667%
+	clear: none
+	margin-left: 0
+
+24 
+	width: 33.3333333333%
+	clear: none
+	margin-left: 0
+
+24 
+	width: 25%
+	clear: none
+	margin-left: 0
+
+24 
+	width: 16.6666666667%
+	clear: none
+	margin-left: 0
+
+24 
+	width: 8.3333333333%
+	clear: none
+	margin-left: 0
+
+-11u 
+	margin-left: 91.66667%
+
+-10u 
+	margin-left: 83.33333%
+
+-9u 
+	margin-left: 75%
+
+-8u 
+	margin-left: 66.66667%
+
+-7u 
+	margin-left: 58.33333%
+
+-6u 
+	margin-left: 50%
+
+-5u 
+	margin-left: 41.66667%
+
+-4u 
+	margin-left: 33.33333%
+
+-3u 
+	margin-left: 25%
+
+-2u 
+	margin-left: 16.66667%
+
+-1u 
+	margin-left: 8.33333%
+
+media screen and (max-width: 1680px) 
+	padding: 0 0 0 1.5em
+
+.row 
+	margin: 0 0 -1px -1.5em
+
+25 
+	margin: 0 0 -1px -3em
+
+25 
+	margin: -3em 0 -1px -3em
+
+25 
+	margin: 0 0 -1px -2.25em
+
+25 
+	margin: -2.25em 0 -1px -2.25em
+
+25 
+	margin: 0 0 -1px -0.75em
+
+25 
+	margin: -0.75em 0 -1px -0.75em
+
+25 
+	margin: 0 0 -1px -0.375em
+
+25 
+	margin: -0.375em 0 -1px -0.375em
+
+29 
+	width: 100%
+	clear: none
+	margin-left: 0
+	+ * 
+		clear: left
+	
+	+ * 
+		clear: left
+	
+	+ * 
+		clear: left
+	
+	+ * 
+		clear: left
+	
+	+ * 
+		clear: left
+	
+	+ * 
+		clear: left
+	
+	+ * 
+		clear: left
+	
+	+ * 
+		clear: left
+	
+
+29 
+	width: 91.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 83.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 75%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 66.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 58.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 50%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 41.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 33.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 25%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 16.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 8.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	margin-left: 91.66667%
+
+29 
+	margin-left: 83.33333%
+
+29 
+	margin-left: 75%
+
+29 
+	margin-left: 66.66667%
+
+29 
+	margin-left: 58.33333%
+
+29 
+	margin-left: 50%
+
+29 
+	margin-left: 41.66667%
+
+29 
+	margin-left: 33.33333%
+
+29 
+	margin-left: 25%
+
+29 
+	margin-left: 16.66667%
+
+29 
+	margin-left: 8.33333%
+
+media screen and (max-width: 1280px) 
+	padding: 0 0 0 1.5em
+
+.row 
+	margin: 0 0 -1px -1.5em
+
+25 
+	margin: 0 0 -1px -3em
+
+25 
+	margin: -3em 0 -1px -3em
+
+25 
+	margin: 0 0 -1px -2.25em
+
+25 
+	margin: -2.25em 0 -1px -2.25em
+
+25 
+	margin: 0 0 -1px -0.75em
+
+25 
+	margin: -0.75em 0 -1px -0.75em
+
+25 
+	margin: 0 0 -1px -0.375em
+
+25 
+	margin: -0.375em 0 -1px -0.375em
+
+29 
+	width: 100%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 91.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 83.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 75%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 66.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 58.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 50%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 41.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 33.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 25%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 16.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 8.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	margin-left: 91.66667%
+
+29 
+	margin-left: 83.33333%
+
+29 
+	margin-left: 75%
+
+29 
+	margin-left: 66.66667%
+
+29 
+	margin-left: 58.33333%
+
+29 
+	margin-left: 50%
+
+29 
+	margin-left: 41.66667%
+
+29 
+	margin-left: 33.33333%
+
+29 
+	margin-left: 25%
+
+29 
+	margin-left: 16.66667%
+
+29 
+	margin-left: 8.33333%
+
+media screen and (max-width: 980px) 
+	padding: 0 0 0 1.5em
+
+.row 
+	margin: 0 0 -1px -1.5em
+
+25 
+	margin: 0 0 -1px -3em
+
+25 
+	margin: -3em 0 -1px -3em
+
+25 
+	margin: 0 0 -1px -2.25em
+
+25 
+	margin: -2.25em 0 -1px -2.25em
+
+25 
+	margin: 0 0 -1px -0.75em
+
+25 
+	margin: -0.75em 0 -1px -0.75em
+
+25 
+	margin: 0 0 -1px -0.375em
+
+25 
+	margin: -0.375em 0 -1px -0.375em
+
+29 
+	width: 100%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 91.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 83.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 75%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 66.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 58.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 50%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 41.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 33.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 25%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 16.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 8.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	margin-left: 91.66667%
+
+29 
+	margin-left: 83.33333%
+
+29 
+	margin-left: 75%
+
+29 
+	margin-left: 66.66667%
+
+29 
+	margin-left: 58.33333%
+
+29 
+	margin-left: 50%
+
+29 
+	margin-left: 41.66667%
+
+29 
+	margin-left: 33.33333%
+
+29 
+	margin-left: 25%
+
+29 
+	margin-left: 16.66667%
+
+29 
+	margin-left: 8.33333%
+
+media screen and (max-width: 736px) 
+	padding: 0 0 0 1.5em
+
+.row 
+	margin: 0 0 -1px -1.5em
+
+25 
+	margin: 0 0 -1px -3em
+
+25 
+	margin: -3em 0 -1px -3em
+
+25 
+	margin: 0 0 -1px -2.25em
+
+25 
+	margin: -2.25em 0 -1px -2.25em
+
+25 
+	margin: 0 0 -1px -0.75em
+
+25 
+	margin: -0.75em 0 -1px -0.75em
+
+25 
+	margin: 0 0 -1px -0.375em
+
+25 
+	margin: -0.375em 0 -1px -0.375em
+
+29 
+	width: 100%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 91.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 83.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 75%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 66.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 58.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 50%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 41.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 33.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 25%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 16.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 8.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	margin-left: 91.66667%
+
+29 
+	margin-left: 83.33333%
+
+29 
+	margin-left: 75%
+
+29 
+	margin-left: 66.66667%
+
+29 
+	margin-left: 58.33333%
+
+29 
+	margin-left: 50%
+
+29 
+	margin-left: 41.66667%
+
+29 
+	margin-left: 33.33333%
+
+29 
+	margin-left: 25%
+
+29 
+	margin-left: 16.66667%
+
+29 
+	margin-left: 8.33333%
+
+media screen and (max-width: 480px) 
+	padding: 0 0 0 1.5em
+
+.row 
+	margin: 0 0 -1px -1.5em
+
+25 
+	margin: 0 0 -1px -3em
+
+25 
+	margin: -3em 0 -1px -3em
+
+25 
+	margin: 0 0 -1px -2.25em
+
+25 
+	margin: -2.25em 0 -1px -2.25em
+
+25 
+	margin: 0 0 -1px -0.75em
+
+25 
+	margin: -0.75em 0 -1px -0.75em
+
+25 
+	margin: 0 0 -1px -0.375em
+
+25 
+	margin: -0.375em 0 -1px -0.375em
+
+29 
+	width: 100%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 91.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 83.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 75%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 66.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 58.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 50%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 41.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 33.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 25%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 16.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 8.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	margin-left: 91.66667%
+
+29 
+	margin-left: 83.33333%
+
+29 
+	margin-left: 75%
+
+29 
+	margin-left: 66.66667%
+
+29 
+	margin-left: 58.33333%
+
+29 
+	margin-left: 50%
+
+29 
+	margin-left: 41.66667%
+
+29 
+	margin-left: 33.33333%
+
+29 
+	margin-left: 25%
+
+29 
+	margin-left: 16.66667%
+
+29 
+	margin-left: 8.33333%
+
+media screen and (max-width: 360px) 
+	padding: 0 0 0 1.5em
+
+.row 
+	margin: 0 0 -1px -1.5em
+
+25 
+	margin: 0 0 -1px -3em
+
+25 
+	margin: -3em 0 -1px -3em
+
+25 
+	margin: 0 0 -1px -2.25em
+
+25 
+	margin: -2.25em 0 -1px -2.25em
+
+25 
+	margin: 0 0 -1px -0.75em
+
+25 
+	margin: -0.75em 0 -1px -0.75em
+
+25 
+	margin: 0 0 -1px -0.375em
+
+25 
+	margin: -0.375em 0 -1px -0.375em
+
+29 
+	width: 100%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 91.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 83.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 75%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 66.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 58.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 50%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 41.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 33.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 25%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 16.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 8.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	margin-left: 91.66667%
+
+29 
+	margin-left: 83.33333%
+
+29 
+	margin-left: 75%
+
+29 
+	margin-left: 66.66667%
+
+29 
+	margin-left: 58.33333%
+
+29 
+	margin-left: 50%
+
+29 
+	margin-left: 41.66667%
+
+29 
+	margin-left: 33.33333%
+
+29 
+	margin-left: 25%
+
+29 
+	margin-left: 16.66667%
+
+29 
+	margin-left: 8.33333%
+
+media screen and (min-width: 1681px) 
+	padding: 0 0 0 1.5em
+
+.row 
+	margin: 0 0 -1px -1.5em
+
+25 
+	margin: 0 0 -1px -3em
+
+25 
+	margin: -3em 0 -1px -3em
+
+25 
+	margin: 0 0 -1px -2.25em
+
+25 
+	margin: -2.25em 0 -1px -2.25em
+
+25 
+	margin: 0 0 -1px -0.75em
+
+25 
+	margin: -0.75em 0 -1px -0.75em
+
+25 
+	margin: 0 0 -1px -0.375em
+
+25 
+	margin: -0.375em 0 -1px -0.375em
+
+29 
+	width: 100%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 91.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 83.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 75%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 66.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 58.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 50%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 41.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 33.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 25%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 16.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 8.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	margin-left: 91.66667%
+
+29 
+	margin-left: 83.33333%
+
+29 
+	margin-left: 75%
+
+29 
+	margin-left: 66.66667%
+
+29 
+	margin-left: 58.33333%
+
+29 
+	margin-left: 50%
+
+29 
+	margin-left: 41.66667%
+
+29 
+	margin-left: 33.33333%
+
+29 
+	margin-left: 25%
+
+29 
+	margin-left: 16.66667%
+
+29 
+	margin-left: 8.33333%
+
+media screen and (min-width: 481px) and (max-width: 1680px) 
+	padding: 0 0 0 1.5em
+
+.row 
+	margin: 0 0 -1px -1.5em
+
+25 
+	margin: 0 0 -1px -3em
+
+25 
+	margin: -3em 0 -1px -3em
+
+25 
+	margin: 0 0 -1px -2.25em
+
+25 
+	margin: -2.25em 0 -1px -2.25em
+
+25 
+	margin: 0 0 -1px -0.75em
+
+25 
+	margin: -0.75em 0 -1px -0.75em
+
+25 
+	margin: 0 0 -1px -0.375em
+
+25 
+	margin: -0.375em 0 -1px -0.375em
+
+29 
+	width: 100%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 91.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 83.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 75%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 66.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 58.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 50%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 41.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 33.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 25%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 16.6666666667%
+	clear: none
+	margin-left: 0
+
+29 
+	width: 8.3333333333%
+	clear: none
+	margin-left: 0
+
+29 
+	margin-left: 91.66667%
+
+29 
+	margin-left: 83.33333%
+
+29 
+	margin-left: 75%
+
+29 
+	margin-left: 66.66667%
+
+29 
+	margin-left: 58.33333%
+
+29 
+	margin-left: 50%
+
+29 
+	margin-left: 41.66667%
+
+29 
+	margin-left: 33.33333%
+
+29 
+	margin-left: 25%
+
+29 
+	margin-left: 16.66667%
+
+29 
+	margin-left: 8.33333%
+
+-ms-viewport 
+	width: device-width
+
+body 
+	-ms-overflow-style: scrollbar
+
+media screen and (max-width: 480px) 
+	min-width: 320px
+
+body 
+	background: #ffffff
+
+body, input, select, textarea 
+	color: var(--default-text-color)
+	font-family: "Open Sans", sans-serif
+	font-size: 13pt
+	font-weight: 400
+	line-height: 1.65
+	&[type="text"]:invalid, &[type="password"]:invalid, &[type="email"]:invalid, &[type="tel"]:invalid, &:invalid 
+		box-shadow: none
+	
+	&[type="text"]:focus, &[type="password"]:focus, &[type="email"]:focus, &[type="tel"]:focus, &:focus 
+		border-color: var(--main-theme-color)
+		box-shadow: 0 0 0 1px var(--main-theme-color)
+	
+
+media screen and (max-width: 1680px) 
+	font-size: 11pt
+
+media screen and (max-width: 1280px) 
+	font-size: 10pt
+
+media screen and (max-width: 360px) 
+	font-size: 9pt
+
+a 
+	-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out
+	-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out
+	-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out
+	transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out
+	border-bottom: dotted 1px
+	color: var(--main-highlight-color)
+	text-decoration: none
+	font-weight: 600
+	&:hover 
+		border-bottom-color: var(--main-theme-color)
+		color: var(--main-highlight-color) 
+		strong 
+			color: inherit
+		
+	
+	&.image 
+		overflow: hidden
+		img 
+			-moz-transition: -moz-transform 0.2s ease
+			-webkit-transition: -webkit-transform 0.2s ease
+			-ms-transition: -ms-transform 0.2s ease
+			transition: transform 0.2s ease
+		
+		&:hover img 
+			-moz-transform: scale(1.075)
+			-webkit-transform: scale(1.075)
+			-ms-transform: scale(1.075)
+			transform: scale(1.075)
+		
+	
+	&.hb 
+		background-color: #10a79f 
+		color: #ffffff 
+		box-shadow: inset 0 0 0 2px #10a79f 
+		font-size: 0.87em
+		&:hover 
+			background-color: #21c3bb  
+			box-shadow: inset 0 0 0 2px #21c3bb 
+		
+		&.gradient 
+			border-radius: 5.375em
+			display: block
+			z-index:  
+			color: #3d4449 
+			&::before 
+				content: ''
+				border-radius: 5.375em
+				display: block
+				background: white
+				z-index: -1
+				position: absolute
+				transform: translate3d(0, 0, 0)
+				top: 4px
+				width: calc(100% - 8px)
+				height: calc(100% - 9px)
+				left: 4px
+				transition: background .4s ease-in-out
+			
+			&:hover::before 
+				background: transparent
+			
+			&::after 
+				content: ''
+				width: 100%
+				border-radius: 5.375em
+				height: 100%
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				transform: translate3d(0, 0, 0)
+				backface-visibility: hidden
+				z-index: -3
+				background: linear-gradient(264.51deg, #FFE580 4.38%, #FF7571 11.51%, #FF7270 25.06%, #EA5DAD 36.04%, #C2A0FD 47.63%, #9867F0 59.03%, #3BF0E4 69.96%, #33CE43 83.74%, #B2F4B6 95.62%)
+				background-position: 29% 50%
+				background-size: 500%
+				animation: gradient-shift 30s ease infinite
+			
+		
+	
+	&.skip-highlight 
+		color: var(--default-text-color)
+	
+
+strong, b 
+	color: #3d4449
+	font-weight: 600
+
+em, i 
+	font-style: italic
+
+p 
+	margin: 0 0 2em 0
+
+h1, h2, h3, h4, h5, h6 
+	color: #3d4449
+	font-family: "Roboto Slab", serif
+	font-weight: 700
+	line-height: 1.5
+	margin: 0 0 1em 0
+	a 
+		color: inherit
+		text-decoration: none
+		color: var(--main-highlight-color)
+		border-bottom: 0
+	
+
+h1 
+	font-size: 4em
+	margin: 0 0 0.5em 0
+	line-height: 1.3
+	&.not-found 
+		align-items: center
+		text-align: center
+		font-size: 16em
+	
+
+h2 
+	font-size: 1.75em
+
+h3 
+	font-size: 1.25em
+
+h4 
+	font-size: 1.1em
+
+h5 
+	font-size: 0.9em
+
+h6 
+	font-size: 0.7em
+
+media screen and (max-width: 1680px) 
+	font-size: 3.5em
+
+media screen and (max-width: 980px) 
+	font-size: 3.25em
+
+media screen and (max-width: 736px) 
+	font-size: 2em
+	line-height: 1.4
+
+h2 
+	font-size: 1.5em
+
+sub 
+	font-size: 0.8em
+	position: relative
+	top: 0.5em
+
+sup 
+	font-size: 0.8em
+	position: relative
+	top: -0.5em
+
+blockquote 
+	border-left: solid 3px rgba(210, 215, 217, 0.75)
+	font-style: italic
+	margin: 0 0 2em 0
+	padding: 0.5em 0 0.5em 2em
+	> :first-child 
+		margin-top: 0
+	
+	> :last-child 
+		margin-bottom: 0
+	
+
+code 
+	background: rgba(230, 235, 237, 0.25)
+	border-radius: 0.375em
+	border: solid 1px rgba(210, 215, 217, 0.75)
+	font-family: "Courier New", monospace
+	font-size: 0.9em
+	margin: 0 0.25em
+	padding: 0.25em 0.65em
+	&.has-jax 
+		-webkit-font-smoothing: antialiased
+		background: inherit 
+		border: none 
+		font-size: 100%
+	
+
+pre 
+	-webkit-overflow-scrolling: touch
+	font-family: "Courier New", monospace
+	font-size: 0.9em
+	margin: 0 0 2em 0
+	code 
+		display: block
+		line-height: 1.75
+		padding: 1em 1.5em
+		overflow-x: auto
+	
+
+hr 
+	border: 0
+	border-bottom: solid 1px rgba(210, 215, 217, 0.75)
+	margin: 2em 0
+	&.major 
+		margin: 3em 0
+	
+
+.align-left 
+	text-align: left
+
+.align-center 
+	text-align: center
+
+.align-right 
+	text-align: right
+
+section.special, article.special 
+	text-align: center
+
+header p 
+	font-family: "Roboto Slab", serif
+	font-size: 1em
+	font-weight: 400
+	letter-spacing: 0.075em
+	margin-top: -0.5em
+	text-transform: uppercase
+
+header.major > :last-child 
+	border-bottom: solid 3px var(--main-theme-color)
+	display: inline-block
+	margin: 0 0 2em 0
+	padding: 0 0.75em 0.5em 0
+
+header.main > :last-child 
+	margin: 0 0 1em 0
+
+form 
+	margin: 0 0 2em 0
+
+label 
+	color: #3d4449
+	display: block
+	font-size: 0.9em
+	font-weight: 600
+	margin: 0 0 1em 0
+
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], select, textarea 
+	-moz-appearance: none
+	-webkit-appearance: none
+	-ms-appearance: none
+	appearance: none
+	background: #ffffff
+	border-radius: 0.375em
+	border: none
+	border: solid 1px rgba(210, 215, 217, 0.75)
+	color: inherit
+	display: block
+	outline: 0
+	padding: 0 1em
+	text-decoration: none
+	width: 100%
+
+.select-wrapper 
+	text-decoration: none
+	display: block
+	position: relative
+	&:before 
+		-moz-osx-font-smoothing: grayscale
+		-webkit-font-smoothing: antialiased
+		font-family: FontAwesome
+		font-style: normal
+		font-weight: normal
+		text-transform: none 
+	
+	&:before 
+		color: rgba(210, 215, 217, 0.75)
+		content: '
+		display: block
+		height: 2.75em
+		line-height: 2.75em
+		pointer-events: none
+		position: absolute
+		right: 0
+		text-align: center
+		top: 0
+		width: 2.75em
+	
+	select::-ms-expand 
+		display: none
+	
+
+input[type="text"], input[type="password"], input[type="email"], select 
+	height: 2.75em
+
+textarea 
+	padding: 0.75em 1em
+
+input[type="checkbox"], input[type="radio"] 
+	-moz-appearance: none
+	-webkit-appearance: none
+	-ms-appearance: none
+	appearance: none
+	display: block
+	float: left
+	margin-right: -2em
+	opacity: 0
+	width: 1em
+	z-index: -1
+	+ label 
+		text-decoration: none
+		color: var(--default-text-color)
+		cursor: pointer
+		display: inline-block
+		font-size: 1em
+		font-weight: 400
+		padding-left: 2.4em
+		padding-right: 0.75em
+		position: relative
+		&:before 
+			-moz-osx-font-smoothing: grayscale
+			display: inline-block
+			font-family: FontAwesome
+			font-variant: normal
+			text-rendering: auto
+			line-height: 1
+			text-transform: none 
+			font-family: 'Font Awesome 5 Free'
+			font-weight: 900
+		
+		&:before 
+			font-size: 0.8em
+			border-radius: 0.375em
+			border: solid 1px rgba(210, 215, 217, 0.75)
+			content: ''
+			display: inline-block
+			height: 2.0625em
+			left: 0
+			line-height: 2.0625em
+			position: absolute
+			text-align: center
+			top: 0
+			width: 2.0625em
+		
+	
+	&:checked + label:before 
+		background: #3d4449
+		border-color: #3d4449
+		color: #ffffff
+		content: '
+	
+	&:focus + label:before 
+		border-color: var(--main-theme-color)
+		box-shadow: 0 0 0 1px var(--main-theme-color)
+	
+
+input[type="checkbox"] + label:before 
+	border-radius: 0.375em
+
+input[type="radio"] + label:before 
+	border-radius: 100%
+
+::-webkit-input-placeholder 
+	color: #9fa3a6 
+	opacity: 1.0
+
+:-moz-placeholder 
+	color: #9fa3a6 
+	opacity: 1.0
+
+::-moz-placeholder 
+	color: #9fa3a6 
+	opacity: 1.0
+
+:-ms-input-placeholder 
+	color: #9fa3a6 
+	opacity: 1.0
+
+.formerize-placeholder 
+	color: #9fa3a6 
+	opacity: 1.0
+
+.box 
+	border-radius: 0.375em
+	border: solid 1px rgba(210, 215, 217, 0.75)
+	margin-bottom: 2em
+	padding: 1.5em
+	> :last-child, > :last-child > :last-child, > :last-child > :last-child > :last-child 
+		margin-bottom: 0
+	
+	&.alt 
+		border: 0
+		border-radius: 0
+		padding: 0
+	
+
+.icon 
+	text-decoration: none
+	border-bottom: none
+	position: relative
+	&:before 
+		-moz-osx-font-smoothing: grayscale
+		-webkit-font-smoothing: antialiased
+		display: inline-block
+		font-style: normal
+		font-variant: normal
+		text-rendering: auto
+		line-height: 1
+		text-transform: none 
+		font-family: 'Font Awesome 5 Free'
+		font-weight: 400
+	
+	> .label 
+		display: none
+	
+	&:before 
+		line-height: inherit
+	
+	&.solid:before 
+		font-weight: 900
+	
+	&.brands:before 
+		font-family: 'Font Awesome 5 Brands'
+	
+
+.image 
+	border-radius: 0.375em
+	border: 0
+	display: inline-block
+	position: relative
+	img 
+		border-radius: 0.375em
+		display: block
+	
+	&.left, &.right 
+		max-width: 40%
+		img 
+			width: 100%
+		
+	
+	&.left 
+		float: left
+		padding: 0 1.5em 1em 0
+		top: 0.25em
+	
+	&.right 
+		float: right
+		padding: 0 0 1em 1.5em
+		top: 0.25em
+	
+	&.fit 
+		display: block
+		margin: 0 0 2em 0
+		width: 100%
+		img 
+			width: 100%
+		
+	
+	&.main 
+		display: block
+		margin: 0 0 3em 0
+		width: 100%
+		img 
+			width: 100%
+		
+	
+
+ol 
+	list-style: decimal
+	margin: 0 0 2em 0
+	padding-left: 1.25em
+	overflow-x: scroll
+	li 
+		padding-left: 0.25em
+	
+
+ul 
+	list-style: disc
+	margin: 0 0 2em 0
+	padding-left: 1em
+	li 
+		padding-left: 0.5em
+	
+	&.alt 
+		list-style: none
+		padding-left: 0
+		li 
+			border-top: solid 1px rgba(210, 215, 217, 0.75)
+			padding: 0.5em 0
+			&:first-child 
+				border-top: 0
+				padding-top: 0
+			
+		
+	
+	&.icons 
+		cursor: default
+		list-style: none
+		padding-left: 0
+		li 
+			display: inline-block
+			padding: 0 1em 0 0
+			&:last-child 
+				padding-right: 0
+			
+			.icon 
+				color: inherit
+				&:before 
+					font-size: 1.25em
+				
+			
+		
+	
+	&.contact 
+		list-style: none
+		padding: 0
+		li 
+			text-decoration: none
+			border-top: solid 1px rgba(210, 215, 217, 0.75)
+			margin: 1.5em 0 0 0
+			position: relative
+			&:before 
+				display: inline-block
+				-moz-osx-font-smoothing: grayscale
+				-webkit-font-smoothing: antialiased
+				font-style: normal
+				font-variant: normal
+				text-rendering: auto
+				line-height: 1
+				text-transform: none 
+				font-family: 'Font Awesome 5 Free'
+				font-weight: 400
+			
+			&:before 
+				color: var(--main-theme-color)
+				display: inline-block
+				font-size: 1.5em
+				height: 1.125em
+				left: 0
+				line-height: 1.125em
+				position: absolute
+				text-align: center
+				top: 1em
+				width: 1.5em
+			
+			&:first-child 
+				border-top: 0
+				margin-top: 0
+				padding-top: 0
+				&:before 
+					top: 0
+				
+			
+			a 
+				color: inherit
+			
+		
+	
+	&.actions 
+		cursor: default
+		list-style: none
+		padding-left: 0
+		li 
+			display: inline-block
+			padding: 0 1em 0 0
+			vertical-align: middle
+			&:last-child 
+				padding-right: 0
+			
+		
+		&.small li 
+			padding: 0 0.5em 0 0
+		
+		&.vertical li 
+			display: block
+			padding: 1em 0 0 0
+			&:first-child 
+				padding-top: 0
+			
+			> * 
+				margin-bottom: 0
+			
+		
+		&.vertical.small li 
+			padding: 0.5em 0 0 0
+			&:first-child 
+				padding-top: 0
+			
+		
+		&.fit 
+			display: table
+			margin-left: -1em
+			padding: 0
+			table-layout: fixed
+			width: calc(100% 
+			li 
+				display: table-cell
+				padding: 0 0 0 1em
+				> * 
+					margin-bottom: 0
+				
+			
+			&.small 
+				margin-left: -0.5em
+				width: calc(100% 
+				li 
+					padding: 0 0 0 0.5em
+				
+			
+		
+	
+	&.browse-tags 
+		cursor: default
+		list-style: none
+		padding-left: 0
+		flex: 1
+		text-align: right
+	
+	&.browse-tags 
+		font-size: 1.5em
+	
+
+dl 
+	margin: 0 0 2em 0
+	dt 
+		display: block
+		font-weight: 600
+		margin: 0 0 1em 0
+	
+	dd 
+		margin-left: 2em
+	
+
+.table-wrapper 
+	-webkit-overflow-scrolling: touch
+	overflow-x: auto
+
+table 
+	margin: 0 0 2em 0
+	width: 100%
+
+input[type="submit"], input[type="reset"], input[type="button"], button, .button 
+	-moz-appearance: none
+	-webkit-appearance: none
+	-ms-appearance: none
+	appearance: none
+	-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+	-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+	-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+	background-color: transparent
+	border-radius: 0.375em
+	border: 0
+	box-shadow: inset 0 0 0 2px var(--main-highlight-color)
+	color: var(--main-highlight-color) 
+	cursor: pointer
+	display: inline-block
+	font-family: "Roboto Slab", serif
+	font-size: 0.8em
+	font-weight: 700
+	height: 3.5em
+	letter-spacing: 0.075em
+	line-height: 3.5em
+	padding: 0 2.25em
+	text-align: center
+	text-decoration: none
+	text-transform: uppercase
+	white-space: nowrap
+	&:hover 
+		background-color: var(--sidebar-bg-color)
+	
+	&:active 
+		background-color: rgba(248, 161, 26, 0.15)
+	
+	&.icon:before 
+		margin-right: 0.5em
+	
+	&.fit 
+		display: block
+		margin: 0 0 1em 0
+		width: 100%
+	
+	&.small 
+		font-size: 0.6em
+	
+	&.big 
+		font-size: 1em
+		height: 3.65em
+		line-height: 3.65em
+	
+	&.special 
+		background-color: var(--main-theme-color)
+		box-shadow: none
+		color: #ffffff 
+		&:hover 
+			background-color: #f8a729
+		
+		&:active 
+			background-color: #f89b0b
+		
+	
+	&.disabled, &:disabled 
+		-moz-pointer-events: none
+		-webkit-pointer-events: none
+		-ms-pointer-events: none
+		pointer-events: none
+		opacity: 0.25
+	
+
+.mini-posts article 
+	border-top: solid 1px rgba(210, 215, 217, 0.75)
+	margin-top: 2em
+	padding-top: 2em
+	.image 
+		display: block
+		margin: 0 0 1.5em 0
+		img 
+			display: block
+			width: 100%
+		
+	
+	&:first-child 
+		border-top: 0
+		margin-top: 0
+		padding-top: 0
+	
+
+.features 
+	display: -moz-flex
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	-moz-flex-wrap: wrap
+	-webkit-flex-wrap: wrap
+	-ms-flex-wrap: wrap
+	flex-wrap: wrap
+	margin: 0 0 2em -3em
+	width: calc(100% 
+	article 
+		-moz-align-items: center
+		-webkit-align-items: center
+		-ms-align-items: center
+		align-items: center
+		display: -moz-flex
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		margin: 0 0 3em 3em
+		position: relative
+		width: calc(50% - 3em)
+		&:nth-child(2n - 1) 
+			margin-right: 1.5em
+		
+		&:nth-child(2n) 
+			margin-left: 1.5em
+		
+		&:nth-last-child(1), &:nth-last-child(2) 
+			margin-bottom: 0
+		
+		.icon:before 
+			color: var(--main-theme-color)
+			font-size: 2.75rem
+			position: relative
+			top: 0.05em
+		
+		.icon:after 
+			-moz-transform: rotate(45deg)
+			-webkit-transform: rotate(45deg)
+			-ms-transform: rotate(45deg)
+			transform: rotate(45deg)
+			border-radius: 0.25rem
+			border: solid 2px rgba(210, 215, 217, 0.75)
+			content: ''
+			display: block
+			height: 7em
+			left: 50%
+			margin: -3.5em 0 0 -3.5em
+			position: absolute
+			top: 50%
+			width: 7em
+		
+		.content 
+			-moz-flex-grow: 1
+			-webkit-flex-grow: 1
+			-ms-flex-grow: 1
+			flex-grow: 1
+			-moz-flex-shrink: 1
+			-webkit-flex-shrink: 1
+			-ms-flex-shrink: 1
+			flex-shrink: 1
+			width: 100%
+			> :last-child 
+				margin-bottom: 0
+			
+		
+		&:nth-child(2n - 1) 
+			margin-right: 0
+		
+		&:nth-child(2n) 
+			margin-left: 0
+		
+		&:nth-last-child(1), &:nth-last-child(2) 
+			margin-bottom: 3em
+		
+		&:last-child 
+			margin-bottom: 0
+		
+		.icon:before 
+			font-size: 2.25rem
+		
+		.icon:after 
+			height: 6em
+			margin: -3em 0 0 -3em
+			width: 6em
+		
+		.icon:before 
+			font-size: 1.5rem
+		
+		.icon:after 
+			height: 4em
+			margin: -2em 0 0 -2em
+			width: 4em
+		
+	
+	article 
+		margin: 0 0 3em 0
+		width: 100%
+	
+
+* .features article .icon 
+	-moz-flex-grow: 0
+	-webkit-flex-grow: 0
+	-ms-flex-grow: 0
+	flex-grow: 0
+	-moz-flex-shrink: 0
+	-webkit-flex-shrink: 0
+	-ms-flex-shrink: 0
+	flex-shrink: 0
+	display: block
+	height: 10em
+	line-height: 10em
+	margin: 0 2em 0 0
+	text-align: center
+	width: 10em
+
+media screen and (max-width: 980px) 
+	margin: 0 0 2em 0
+	width: 100%
+
+* .features article .icon 
+	height: 8em
+	line-height: 8em
+	width: 8em
+
+media screen and (max-width: 480px) 
+	-moz-flex-direction: column
+	-webkit-flex-direction: column
+	-ms-flex-direction: column
+	flex-direction: column
+	-moz-align-items: -moz-flex-start
+	-webkit-align-items: -webkit-flex-start
+	-ms-align-items: -ms-flex-start
+	align-items: flex-start
+
+* .features article .icon 
+	height: 6em
+	line-height: 6em
+	margin: 0 0 1.5em 0
+	width: 6em
+
+media screen and (max-width: 480px) 
+	icon: before 
+	font-size: 1.25rem
+
+.posts 
+	display: -moz-flex
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	-moz-flex-wrap: wrap
+	-webkit-flex-wrap: wrap
+	-ms-flex-wrap: wrap
+	flex-wrap: wrap
+	margin: 0 0 2em -6em
+	width: calc(100% 
+	article 
+		-moz-flex-grow: 0
+		-webkit-flex-grow: 0
+		-ms-flex-grow: 0
+		flex-grow: 0
+		-moz-flex-shrink: 1
+		-webkit-flex-shrink: 1
+		-ms-flex-shrink: 1
+		flex-shrink: 1
+		margin: 0 0 6em 6em
+		position: relative
+		width: calc(33.33333% - 6em)
+		&:before 
+			background: rgba(210, 215, 217, 0.75)
+			content: ''
+			display: block
+			height: calc(100% 
+			left: -3em
+			position: absolute
+			top: 0
+			width: 1px
+		
+		&:after 
+			background: rgba(210, 215, 217, 0.75)
+			bottom: -3em
+			content: ''
+			display: block
+			height: 1px
+			position: absolute
+			right: 0
+			width: calc(100% 
+		
+		> :last-child 
+			margin-bottom: 0
+		
+		.image 
+			display: block
+			margin: 0 0 2em 0
+			img 
+				display: block
+				width: 100%
+			
+		
+		&:nth-child(3n + 1):after 
+			width: 100%
+		
+		&:nth-last-child(1), &:nth-last-child(2), &:nth-last-child(3) 
+			margin-bottom: 0
+			&:before 
+				height: 100%
+			
+			&:after 
+				display: none
+			
+		
+		&:nth-last-child(3) 
+			margin-bottom: 6em
+		
+		&:nth-child(2n + 1):after 
+			width: 100%
+		
+		&:nth-last-child(1), &:nth-last-child(2) 
+			margin-bottom: 0
+			&:before 
+				height: 100%
+			
+			&:after 
+				display: none
+			
+		
+		&:before 
+			height: calc(100% 
+			left: -2.25em
+		
+		&:after 
+			bottom: -2.25em
+			width: calc(100% 
+		
+		&:nth-last-child(3) 
+			margin-bottom: 4.5em
+		
+		&:before 
+			display: none
+		
+		&:after 
+			width: 100%
+		
+		&:last-child 
+			margin-bottom: 0
+			&:after 
+				display: none
+			
+		
+	
+	article 
+		margin: 0 0 4.5em 4.5em
+		width: calc(50% - 4.5em)
+	
+	article 
+		margin: 0 0 4.5em 0
+		width: 100%
+	
+
+media screen and (min-width: 1681px) 
+	article: nth-child(3n 
+	display: none
+
+media screen and (max-width: 1680px) 
+	width: calc(50% - 6em)
+
+media screen and (min-width: 481px) and (max-width: 1680px) 
+	article: nth-child(2n 
+	display: none
+
+media screen and (max-width: 736px) 
+	margin: 0 0 2em -4.5em
+	width: calc(100% 
+
+media screen and (max-width: 480px) 
+	margin: 0 0 2em 0
+	width: 100%
+
+#wrapper 
+	display: -moz-flex
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	-moz-flex-direction: row-reverse
+	-webkit-flex-direction: row-reverse
+	-ms-flex-direction: row-reverse
+	flex-direction: row-reverse
+	min-height: 100vh
+
+#main 
+	-moz-flex-grow: 1
+	-webkit-flex-grow: 1
+	-ms-flex-grow: 1
+	flex-grow: 1
+	-moz-flex-shrink: 1
+	-webkit-flex-shrink: 1
+	-ms-flex-shrink: 1
+	flex-shrink: 1
+	width: 100%
+	> .inner 
+		padding: 0 6em 0.1em 6em 
+		margin: 0 auto
+		max-width: 110em
+		> section 
+			padding: 2em 0 4em 0 
+			border-top: solid 2px rgba(210, 215, 217, 0.75)
+			&:first-of-type 
+				border-top: 0 
+			
+		
+		> section 
+			padding: 2em 0 3em 0 
+		
+		> section 
+			padding: 4em 0 2em 0 
+		
+		> section 
+			padding: 3em 0 1em 0 
+		
+	
+
+media screen and (max-width: 1680px) 
+	padding: 0 5em 0.1em 5em 
+
+media screen and (max-width: 1280px) 
+	padding: 0 4em 0.1em 4em 
+
+media screen and (max-width: 736px) 
+	padding: 0 2em 0.1em 2em 
+
+#search form 
+	text-decoration: none
+	position: relative
+	&:before 
+		-moz-osx-font-smoothing: grayscale
+		-webkit-font-smoothing: antialiased
+		display: inline-block
+		font-style: normal
+		font-variant: normal
+		text-rendering: auto
+		line-height: 1
+		text-transform: none 
+		font-family: 'Font Awesome 5 Free'
+		font-weight: 900
+	
+	&:before 
+		-moz-transform: scaleX(-1)
+		-webkit-transform: scaleX(-1)
+		-ms-transform: scaleX(-1)
+		transform: scaleX(-1)
+		color: var(--default-text-color)
+		content: '
+		cursor: default
+		display: block
+		font-size: 1.5em
+		height: 2em
+		line-height: 2em
+		opacity: 0.325
+		position: absolute
+		right: 0
+		text-align: center
+		top: 0
+		width: 2em
+	
+	input[type="text"] 
+		padding-right: 2.75em
+	
+
+#sidebar 
+	-moz-flex-grow: 0
+	-webkit-flex-grow: 0
+	-ms-flex-grow: 0
+	flex-grow: 0
+	-moz-flex-shrink: 0
+	-webkit-flex-shrink: 0
+	-ms-flex-shrink: 0
+	flex-shrink: 0
+	-moz-transition: margin-left 0.5s ease, box-shadow 0.5s ease
+	-webkit-transition: margin-left 0.5s ease, box-shadow 0.5s ease
+	-ms-transition: margin-left 0.5s ease, box-shadow 0.5s ease
+	transition: margin-left 0.5s ease, box-shadow 0.5s ease
+	background-color: var(--sidebar-bg-color)
+	font-size: 0.9em
+	position: relative
+	width: 26em
+	h2 
+		font-size: 1.38889em
+	
+	> .inner 
+		padding: 2.22222em 2.22222em 2.44444em 2.22222em 
+		position: relative
+		width: 26em
+		> * 
+			border-bottom: solid 2px rgba(210, 215, 217, 0.75)
+			margin: 0 0 3.5em 0
+			padding: 0 0 3.5em 0
+			> :last-child 
+				margin-bottom: 0
+			
+			&:last-child 
+				border-bottom: 0
+				margin-bottom: 0
+				padding-bottom: 0
+			
+		
+		> .alt 
+			background-color: #eff1f2
+			border-bottom: 0
+			margin: -2.22222em 0 4.44444em -2.22222em
+			padding: 2.22222em
+			width: calc(100% 
+		
+		> .alt 
+			margin: -1.66667em 0 3.33333em -1.66667em
+			padding: 1.66667em
+			width: calc(100% 
+		
+		&:after 
+			content: ''
+			display: block
+			height: 4em
+			width: 100%
+		
+	
+	.toggle 
+		text-decoration: none
+		-moz-transition: left 0.5s ease
+		-webkit-transition: left 0.5s ease
+		-ms-transition: left 0.5s ease
+		transition: left 0.5s ease
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+		border: 0
+		display: block
+		height: 7.5em
+		left: 26em
+		line-height: 7.5em
+		outline: 0
+		overflow: hidden
+		position: absolute
+		text-align: center
+		text-indent: -15em
+		white-space: nowrap
+		top: 0
+		width: 6em
+		z-index: 10000
+		&:before 
+			-moz-osx-font-smoothing: grayscale
+			-webkit-font-smoothing: antialiased
+			display: inline-block
+			font-style: normal
+			font-variant: normal
+			text-rendering: auto
+			line-height: 1
+			text-transform: none 
+			font-family: 'Font Awesome 5 Free'
+			font-weight: 900
+		
+		&:before 
+			content: '
+			font-size: 2rem
+			height: inherit
+			left: 0
+			line-height: inherit
+			position: absolute
+			text-indent: 0
+			top: 0
+			width: inherit
+		
+		&:before 
+			font-size: 1.5rem
+		
+		&:before 
+			font-size: 1.5rem
+			margin-left: -0.4375em
+		
+		&:before 
+			color: var(--default-text-color)
+			margin-left: -0.0625em
+			margin-top: -0.25em
+			font-size: 1.1rem
+			z-index: 1
+		
+		&:after 
+			background: rgba(189, 193, 196, 0.75)
+			border-radius: 0.375em
+			content: ''
+			height: 3.5em
+			left: 1em
+			position: absolute
+			top: 1em
+			width: 5em
+		
+	
+	&.inactive 
+		margin-left: -26em
+	
+	> .inner 
+		padding: 1.66667em 1.66667em 1.33333em 1.66667em 
+		width: 24em
+	
+	.toggle 
+		height: 6.25em
+		left: 24em
+		line-height: 6.25em
+		text-indent: 5em
+		width: 5em
+	
+	&.inactive 
+		margin-left: -24em
+	
+	&.inactive 
+		box-shadow: none
+	
+	> .inner 
+		-webkit-overflow-scrolling: touch
+		height: 100%
+		left: 0
+		overflow-x: hidden
+		overflow-y: auto
+		position: absolute
+		top: 0
+	
+	.toggle 
+		text-indent: 6em
+		width: 6em
+	
+
+media screen and (max-width: 1680px) 
+	width: 24em
+
+media screen and (max-width: 1280px) 
+	box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175)
+	height: 100%
+	left: 0
+	position: fixed
+	top: 0
+	z-index: 10000
+
+media screen and (max-width: 736px) 
+	text-indent: 7.25em
+	width: 7.25em
+
+#header 
+	display: -moz-flex
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	border-bottom: solid 5px var(--main-theme-color)
+	padding: 2em 0 1em 0
+	position: relative
+	> * 
+		-moz-flex: 1
+		-webkit-flex: 1
+		-ms-flex: 1
+		flex: 1
+		margin-bottom: 0
+	
+	.logo 
+		border-bottom: 0
+		color: inherit
+		font-family: "Roboto Slab", serif
+		font-size: 1.125em
+	
+	.icons 
+		text-align: right
+	
+	.logo 
+		font-size: 1.25em
+		margin: 0
+	
+	.icons 
+		height: 5em
+		line-height: 5em
+		position: absolute
+		right: -0.5em
+		top: 0
+	
+
+media screen and (max-width: 1680px) 
+	padding-top: 2em
+
+media screen and (max-width: 736px) 
+	padding-top: 6.5em
+
+#banner 
+	padding: 6em 0 4em 0 
+	display: -moz-flex
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	h1 
+		margin-top: -0.125em
+		br 
+			display: none
+		
+	
+	.content 
+		-moz-flex-grow: 1
+		-webkit-flex-grow: 1
+		-ms-flex-grow: 1
+		flex-grow: 1
+		-moz-flex-shrink: 1
+		-webkit-flex-shrink: 1
+		-ms-flex-shrink: 1
+		flex-shrink: 1
+		width: 50%
+	
+	.image 
+		-moz-flex-grow: 0
+		-webkit-flex-grow: 0
+		-ms-flex-grow: 0
+		flex-grow: 0
+		-moz-flex-shrink: 0
+		-webkit-flex-shrink: 0
+		-ms-flex-shrink: 0
+		flex-shrink: 0
+		display: block
+		margin: 0 0 2em 4em
+		height: 220px
+		img 
+			height: 100%
+			-moz-object-fit: cover
+			-webkit-object-fit: cover
+			-ms-object-fit: cover
+			object-fit: cover
+			-moz-object-position: center
+			-webkit-object-position: center
+			-ms-object-position: center
+			object-position: center
+			width: 100%
+		
+	
+	.content 
+		-moz-flex-grow: 0
+		-webkit-flex-grow: 0
+		-ms-flex-grow: 0
+		flex-grow: 0
+		-moz-flex-shrink: 0
+		-webkit-flex-shrink: 0
+		-ms-flex-shrink: 0
+		flex-shrink: 0
+		width: 100%
+	
+	.image 
+		-moz-flex-grow: 0
+		-webkit-flex-grow: 0
+		-ms-flex-grow: 0
+		flex-grow: 0
+		-moz-flex-shrink: 0
+		-webkit-flex-shrink: 0
+		-ms-flex-shrink: 0
+		flex-shrink: 0
+		margin: 0 0 4em 0
+		height: 25em
+		max-height: 50vh
+		min-height: 18em
+		width: 100%
+	
+	.content 
+		width: 100%
+		flex-shrink: 0
+		flex-grow: 0
+	
+	.image 
+		max-height: 35vh
+		-moz-flex-grow: 0
+		-webkit-flex-grow: 0
+		-ms-flex-grow: 0
+		flex-grow: 0
+		-moz-flex-shrink: 0
+		-webkit-flex-shrink: 0
+		-ms-flex-shrink: 0
+		flex-shrink: 0
+		margin: 0 0 4em 0
+		height: 25em
+		min-height: 18em
+		width: 100%
+	
+
+media screen and (orientation: portrait) 
+	-moz-flex-direction: column-reverse
+	-webkit-flex-direction: column-reverse
+	-ms-flex-direction: column-reverse
+	flex-direction: column-reverse
+	and (max-width: 480px) 
+		max-height: 35vh
+	
+
+media screen and (max-width: 480px) 
+	flex-direction: column-reverse
+
+#footer 
+	position: fixed
+	bottom: 0
+	margin-bottom: 20px 
+	.copyright 
+		color: #9fa3a6
+		font-size: 0.9em
+		a 
+			color: inherit
+		
+	
+
+#menu ul 
+	-moz-user-select: none
+	-webkit-user-select: none
+	-ms-user-select: none
+	user-select: none
+	color: #3d4449
+	font-family: "Roboto Slab", serif
+	font-weight: 400
+	letter-spacing: 0.075em
+	list-style: none
+	margin-bottom: 0
+	padding: 0
+	text-transform: uppercase
+	a, span 
+		border-bottom: 0
+		color: inherit
+		cursor: pointer
+		display: block
+		font-size: 0.9em
+		padding: 0.625em 0
+		&:hover 
+			color: var(--main-highlight-color)
+		
+		&.opener 
+			-moz-transition: color 0.2s ease-in-out
+			-webkit-transition: color 0.2s ease-in-out
+			-ms-transition: color 0.2s ease-in-out
+			transition: color 0.2s ease-in-out
+			text-decoration: none
+			-webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+			position: relative
+			&:before 
+				-moz-osx-font-smoothing: grayscale
+				-webkit-font-smoothing: antialiased
+				display: inline-block
+				font-style: normal
+				font-variant: normal
+				text-rendering: auto
+				line-height: 1
+				text-transform: none 
+				font-family: 'Font Awesome 5 Free'
+				font-weight: 900
+			
+			&:before 
+				-moz-transition: color 0.2s ease-in-out, -moz-transform 0.2s ease-in-out
+				-webkit-transition: color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out
+				-ms-transition: color 0.2s ease-in-out, -ms-transform 0.2s ease-in-out
+				transition: color 0.2s ease-in-out, transform 0.2s ease-in-out
+				color: #9fa3a6
+				content: '\f078'
+				position: absolute
+				right: 0
+			
+			&:hover:before 
+				color: var(--main-theme-color)
+			
+			&.active + ul 
+				display: block
+			
+			&.active:before 
+				-moz-transform: rotate(-180deg)
+				-webkit-transform: rotate(-180deg)
+				-ms-transform: rotate(-180deg)
+				transform: rotate(-180deg)
+			
+		
+	
+
+.tooltip 
+	position: absolute
+	top: 0
+	left: 0
+	padding: 0px 5px
+	z-index: 3
+	display: none
+	text-align: center
+	border: 1px solid
+	opacity: 1
+	background-color: var(--sidebar-bg-color)
+
+#menu > ul > li 
+	border-top: solid 1px rgba(210, 215, 217, 0.75)
+	margin: 0.5em 0 0 0
+	padding: 0.5em 0 0 0
+	> ul 
+		color: #9fa3a6
+		display: none
+		margin: 0.5em 0 1.5em 0
+		padding-left: 1em
+		a, span 
+			font-size: 0.8em
+		
+		> li 
+			margin: 0.125em 0 0 0
+			padding: 0.125em 0 0 0
+		
+	
+	&:first-child 
+		border-top: 0
+		margin-top: 0
+		padding-top: 0
+	
+
+.pagination 
+	display: inline-block
+	padding-left: 0
+	margin: 20px 0
+	border-radius: 4px
+	> li 
+		display: inline
+		> a, > span 
+			position: relative
+			float: left
+			padding: 6px 12px
+			margin-left: -1px
+			line-height: 1.42857143
+			color: var(--main-theme-color)
+			text-decoration: none
+			background-color: #fff
+			border: 1px solid #ddd
+			&:hover, &:focus 
+				z-index: 2
+				color: var(--main-theme-color)
+				background-color: #eee
+				border-color: #ddd
+			
+		
+		&:first-child > a, &:first-child > span 
+			margin-left: 0
+			border-top-left-radius: 4px
+			border-bottom-left-radius: 4px
+		
+		&:last-child > a, &:last-child > span 
+			border-top-right-radius: 4px
+			border-bottom-right-radius: 4px
+		
+	
+	> .active > a, > .active > span, > .active > a:hover, > .active > span:hover, > .active > a:focus, > .active > span:focus 
+		z-index: 3
+		color: #fff
+		cursor: default
+		background-color: var(--main-theme-color)
+		border-color: var(--main-theme-color)
+	
+	> .disabled > span, > .disabled > span:hover, > .disabled > span:focus, > .disabled > a, > .disabled > a:hover, > .disabled > a:focus 
+		color: #777
+		cursor: not-allowed
+		background-color: #fff
+		border-color: #ddd
+	
+	&-lg > li > a, &-lg > li > span 
+		padding: 10px 16px
+		font-size: 18px
+		line-height: 1.3333333
+	
+	&-lg > li:first-child > a, &-lg > li:first-child > span 
+		border-top-left-radius: 6px
+		border-bottom-left-radius: 6px
+	
+	&-lg > li:last-child > a, &-lg > li:last-child > span 
+		border-top-right-radius: 6px
+		border-bottom-right-radius: 6px
+	
+	&-sm > li > a, &-sm > li > span 
+		padding: 5px 10px
+		font-size: 12px
+		line-height: 1.5
+	
+	&-sm > li:first-child > a, &-sm > li:first-child > span 
+		border-top-left-radius: 3px
+		border-bottom-left-radius: 3px
+	
+	&-sm > li:last-child > a, &-sm > li:last-child > span 
+		border-top-right-radius: 3px
+		border-bottom-right-radius: 3px
+	
+
+.r-list 
+	-uirListPaddingLeft: var(--rListPaddingLeft, 0)
+	-uirListMarginTop: var(--rListMarginTop, 0)
+	-uirListMarginBottom: var(--rListMarginBottom, 0)
+	-uirListListStyle: var(--rListListStyle, none)
+	padding-left: var(--uirListPaddingLeft) 
+	margin-top: var(--uirListMarginTop) 
+	margin-bottom: var(--uirListMarginBottom) 
+	list-style: var(--uirListListStyle) 
+
+.r-link 
+	-uirLinkDisplay: var(--rLinkDisplay, inline-flex)
+	-uirLinkTextColor: var(--rLinkTextColor)
+	-uirLinkTextDecoration: var(--rLinkTextDecoration, none)
+	display: var(--uirLinkDisplay) 
+	text-decoration: var(--uirLinkTextDecoration) 
+	color: var(--main-highlight-color) 
+	&:hover 
+		color: var(--uirLinkTextColor) 
+	
+
+.breadcrumb 
+	-uiBreadcrumbDividerColor: var(--breadcrumbDividerColor, inherit)
+	-uiBreadcrumbDividerSize: var(--breadcrumbDividerSize, 16px)
+	-uiBreadcrumbIndent: var(--breadcrumbIndent, 10px)
+	&__list 
+		display: flex
+		flex-wrap: wrap
+	
+	&__group 
+		display: inline-flex
+		align-items: center
+		&:nth-of-type(n+2) 
+			margin-left: var(--uiBreadcrumbIndent)
+		
+	
+	&__divider 
+		margin-left: var(--uiBreadcrumbIndent)
+		font-size: var(--uiBreadcrumbDividerSize)
+	
+	&__divider 
+		color: var(--uiBreadcrumbDividerColor)
+	
+	&_type2 
+		-breadcrumbDividerSize: 20px
+	
+	&_type3 
+		-breadcrumbDividerSize: 18px
+	
+	&_type4 
+		-breadcrumbDividerSize: 14px
+	
+	&_type5 
+		-breadcrumbDividerSize: 20px
+		padding: 1em 0em
+	
+	&_type6 
+		-breadcrumbDividerSize: 14px
+	
+
+.breadcrumb 
+	-uiBreadcrumbTextColor: var(--breadcrumbTextColor)
+	-uiBreadcrumbTextColorActive: var(--breadcrumbTextColorActive)
+	-breadcrumbDividerColor: var(--uiBreadcrumbTextColor)
+	-rLinkTextColor: var(--uiBreadcrumbTextColor)
+
+span.breadcrumb__point 
+	color: var(--main-highlight-color)
+	text-decoration: none
+	font-weight: 600
+
+:root 
+	-breadcrumbTextColor: #3d4449
+	-breadcrumbTextColorActive: #09c5ab
+
+div.goodreads 
+	float: right
+	width: 40%
+
+span.highlight 
+	font-size: 1.2em
+
+media screen and (max-width: 768px) 
+	float: none
+	width: 100%
+	margin-left: 0px 
+
+div.goodreads 
+	float: none
+	width: 100%
+
+li 
+	padding-bottom: 0.5em
+
+span.mobile-linebreak::before 
+	content: "\A"
+	white-space: pre
+
+.projects-img 
+	width: 17em
+	display: block
+	margin-left: auto
+	margin-right: auto
+	margin-bottom: 15px
+	> img 
+		width: 80%
+		position: relative
+		top: 1.05em
+		display: block
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 15px
+	
+
+media screen and (max-width: 480px) 
+	width: 11em
+
+.ai 
+	font-size: 1.25em
+
+#hashLink 
+	display: none
+	&:target 
+		display: block
+	
+
+.tags 
+	background-color: var(--sidebar-bg-color)
+	margin-left: auto
+	margin-right: 0px
+	display: block
+	padding: 0.3em
+	text-align: center
+	width: fit-content
+	.button 
+		height: 2.5em
+		line-height: 2.5em
+		padding: 0 0.5em
+	
+	.button 
+		height: 2em
+		line-height: 2em
+	
+	&__list 
+		list-style: none
+		margin: 0
+		padding: 0 0 0 50px
+		flex-shrink: 0
+		columns: 4
+		-webkit-columns: 4
+		-moz-columns: 4
+		text-transform: uppercase
+	
+	&__list 
+		columns: 1
+		-webkit-columns: 1
+		-moz-columns: 1
+	
+
+media screen and (max-width: 600px) 
+	box-shadow: inset 0 0 0 1px var(--main-theme-color)
+
+.tags 
+	text-align: left
+	margin-left: 0pc
+
+mjx-container[display="true"], mjx-assistive-mml[display="block"] 
+	overflow-x: auto 
+
+mjx-container[display="true"] > :first-child 
+	height: 2
+
+mjx-math, mjx-mtr, mjx-mtd 
+	max-width: 100%
+
+.utterances 
+	max-width: 100% 
+
+.btn-primary 
+	opacity: 0.7
+
+.postpagination 
+	display: flex
+	flex-direction: column
+	margin-top: 1.5rem
+	&__item 
+		max-width: 300px
+		text-decoration: none
+		display: flex
+		border: solid 1px var(--main-theme-color)
+		flex-direction: column
+		&:nth-child(2) 
+			margin-top: 1.5rem
+		
+		&.prev 
+			padding-right: 15px
+		
+		&.next 
+			margin-top: 0
+			text-align: right
+		
+		&:hover 
+			background-color: #f6f9fc
+		
+	
+	&__label 
+		color: gray
+		font-size: 1rem
+	
+	&__title 
+		color: black
+		font-weight: 700
+		margin-top: 0.25rem
+	
+	&__item 
+		padding: 10px
+		max-width: 100%
+	
+
+media screen and (min-width: 600px) 
+	flex-direction: row
+	justify-content: space-between
+
+media screen and (min-width: 600px) 
+	padding: 15px
+	border-radius: 4px
+
+.major 
+	display: -moz-flex
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+
+.tag__link 
+	box-shadow: inset 0 0 0 2px var(--main-highlight-color)
+	height: 2.5em
+	line-height: 2.5em
+	padding: 0.4em 0.5em
+	border-radius: 0.375em
+
+media screen and (max-width: 600px) 
+	margin-bottom: 20px

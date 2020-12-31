@@ -12,7 +12,8 @@
     <meta name="referrer" content="no-referrer">
     
     
-    <link rel="stylesheet" href="/css/main.css" />
+    
+    <link rel="stylesheet" href="/css/main.min.css" />
     
     
     
@@ -21,6 +22,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+     <script src="/js/jquery-3.3.1.min.js"></script>
     <link rel="manifest" href="/site.webmanifest">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hindsight Experience Replay"/>
@@ -148,7 +150,7 @@ In standard RL setting, with sparse reward there can be a long time before the Q
 
   <p><strong></strong></p>
   
-    <blockquote>My notes on <strong>Marcin Andrychowicz, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, Pieter Abbeel, Wojciech Zaremba, NeurIPS 2017</strong></blockquote>
+    <blockquote>My notes on <strong>Marcin Andrychowicz, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, Pieter Abbeel, Wojciech Zaremba, NeurIPS 2017</strong></blockquote>
   
   <p><br>
 <p>Remember the sampling approaches used for approximate inference in Bayesian Networks, how the <strong>rejection sampling</strong> is super expensive since it wastes lot of samples and we try to capitalize on those samples by providing weights in <strong>importance sampling</strong>. This paper proposes something similar.</p>
@@ -199,7 +201,23 @@ In standard RL setting, with sparse reward there can be a long time before the Q
 <div id="sidebar">
   <div class="inner">
 
+    <section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="search-by" id="search-by" type="search" placeholder="Search">
+									</form>
+</section>
+
+
+
+
+<script type="text/javascript" src="/js/lunr.js?1609395147"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1609395147"></script>
+<script type="text/javascript">
     
+        var baseurl = "https:\/\/harshakokel.com";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1609395147"></script>
 
     
 <nav id="menu">

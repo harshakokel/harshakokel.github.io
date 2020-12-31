@@ -13,7 +13,8 @@
     <meta name="referrer" content="no-referrer">
     
     
-    <link rel="stylesheet" href="/css/main.css" />
+    
+    <link rel="stylesheet" href="/css/main.min.css" />
     
     
     
@@ -22,6 +23,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+     <script src="/js/jquery-3.3.1.min.js"></script>
     <link rel="manifest" href="/site.webmanifest">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Harsha Kokel"/>
@@ -119,7 +121,7 @@
       
       <li>A Unified Framework for Knowledge Intensive Gradient Boosting: Leveraging Human Experts for Noisy Sparse Domain,<br>
                <b>Harsha Kokel</b>, Phillip Odom, Shuo Yang, Sriraam Natarajan, In <b>AAAI 2020</b>. <br>
-                <a href="https://starling.utdallas.edu/papers/KiGB/" class="icon solid fa-blog"> blog</a> | <a href="https://starling.utdallas.edu/software/KiGB/" class="icon solid fa-code"> code</a> |  <a href="https://starling.utdallas.edu/assets/pdfs/KokelAAAI20Sup.pdf" class="icon solid fa-paperclip"> supplemental</a> | <a href="/pdf/KokelAAAI2020poster.pdf" class="icon solid fa-chart-bar" > poster</a> | <a href="/pdf/KiGB.pdf" class="icon solid fa-tv"> slide</a> | <a href="https://doi.org/10.1609/aaai.v34i04.5873" target="_blank" class="icon solid fa-external-link-alt"> DOI</a> | <a href="/pdf/Kokel_AAAI20.pdf" class="icon solid fa-file-alt"> paper</a><br>
+               <a href="/pdf/Kokel_AAAI20.pdf" class="icon solid fa-file-alt"> paper</a> | <a href="https://starling.utdallas.edu/papers/KiGB/" class="icon solid fa-blog"> blog</a> | <a href="https://starling.utdallas.edu/software/KiGB/" class="icon solid fa-code"> code</a> | <a href="https://starling.utdallas.edu/assets/pdfs/KokelAAAI20Sup.pdf" class="icon solid fa-paperclip"> supplemental</a> | <a href="/pdf/KokelAAAI2020poster.pdf" class="icon solid fa-chart-bar" > poster</a> | <a href="/pdf/KiGB.pdf" class="icon solid fa-tv"> slide</a> | <a href="https://doi.org/10.1609/aaai.v34i04.5873" target="_blank" class="icon solid fa-external-link-alt"> DOI</a><br> 
         </li>
       
     </ul>
@@ -135,7 +137,23 @@
 <div id="sidebar">
   <div class="inner">
 
+    <section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="search-by" id="search-by" type="search" placeholder="Search">
+									</form>
+</section>
+
+
+
+
+<script type="text/javascript" src="/js/lunr.js?1609395147"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1609395147"></script>
+<script type="text/javascript">
     
+        var baseurl = "https:\/\/harshakokel.com";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1609395147"></script>
 
     
 <nav id="menu">
