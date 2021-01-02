@@ -2653,7 +2653,9 @@ button,
   position: relative;
   width: 26em; }
   #sidebar h2 {
-    font-size: 1.38889em; }
+    font-size: 1.38889em; 
+    border-bottom: solid 5px var(--main-theme-color)
+  }
   #sidebar > .inner {
     padding: 2.22222em 2.22222em 2.44444em 2.22222em ;
     position: relative;
