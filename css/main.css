@@ -3435,9 +3435,10 @@ body blockquote > :last-child {
 } 
 }
   
-/* mjx-container[display="true"], mjx-assistive-mml[display="block"] {
-	    overflow-x: auto !important;
-	} */
+.katex-display {
+	    overflow-x: scroll;
+	}
+  
 /* mjx-container[display="true"] > :first-child {
   height: 2;
 }
