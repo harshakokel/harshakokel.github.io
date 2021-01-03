@@ -2031,7 +2031,7 @@ ol {
   list-style: decimal;
   margin: 0 0 2em 0;
   padding-left: 1.25em;    
-  overflow-x: scroll; }
+  overflow-x: auto; }
   ol li {
     padding-left: 0.25em; }
 
@@ -2653,8 +2653,11 @@ button,
   position: relative;
   width: 26em; }
   #sidebar h2 {
-    font-size: 1.38889em; 
-    border-bottom: solid 5px var(--main-theme-color)
+     font-family: 'Dawning of a New Day', cursive;
+     font-size:3em;
+     margin: 0;
+     color: var(--main-highlight-color)
+    /*border-bottom: solid 5px var(--main-theme-color) */
   }
   #sidebar > .inner {
     padding: 2.22222em 2.22222em 2.44444em 2.22222em ;
@@ -3181,6 +3184,7 @@ COMPONENT
 .breadcrumb__list{
   display: flex;
   flex-wrap: wrap;
+  overflow-x: auto;
 }
 
 .breadcrumb__group{
@@ -3436,7 +3440,9 @@ body blockquote > :last-child {
 }
   
 .katex-display {
-	    overflow-x: scroll;
+	    overflow-x: auto;
+      overflow-y: hidden;
+      --webkit-overflow-scrolling: auto;
 	}
   
 /* mjx-container[display="true"] > :first-child {
@@ -3622,3 +3628,24 @@ ul.browse-tags{
     background: var(--sidebar-bg-color);
     padding-left: 5px;
 }
+
+
+/* always show scrollbars */
+
+::-webkit-scrollbar {
+  --webkit-appearance: none;
+  height: 7px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #3d4449a6;
+  --webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none !important;
+  background-color: #3d44493d;
+}
+
