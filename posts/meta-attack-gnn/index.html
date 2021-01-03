@@ -41,7 +41,7 @@
 <meta itemprop="description" content="Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes.">
 <meta itemprop="datePublished" content="2020-04-29T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2020-04-29T16:40:08+02:00" />
-<meta itemprop="wordCount" content="1411">
+<meta itemprop="wordCount" content="1410">
 
 
 
@@ -225,7 +225,7 @@ $$</p>
 $$</p>
 <p>So, the meta gradient equation will be as follows:</p>
 <p>$$
-X = X + \beta \  \nabla_{X}\mathcal{L}_\text{train/self}(f_\theta(X, A)) \<br>
+X = X + \beta \  \nabla_{X}\mathcal{L}_\text{train/self}(f_\theta(X, A))
 $$</p>
 <h3 id="empirical-evaluations">Empirical evaluations</h3>
 <p>Experiments show that the proposed method is indeed able to reduce the classification accuracy of the model from around 82% to 60% by making change in 15% of the edges (Fig 1). Interesting insight is in table 3 is that if parameters $W$ trained with a clean graph $A$ are used on the modified graph $\hat{A}$, it is still able to achieve 83% accuracy on the perturbed graph. But, if the parameters $\hat{W}$ are trained on the perturbed graph $\hat{A}$ the accuracy on the clean as well as perturbed graph is reduced significantly.</p>
@@ -317,14 +317,14 @@ $$</p>
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1609700197"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1609700197"></script>
+<script type="text/javascript" src="/js/lunr.js?1609700518"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1609700518"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1609700197"></script>
+<script type="text/javascript" src="/js/search.js?1609700518"></script>
 
     
 <nav id="menu">
