@@ -3385,12 +3385,12 @@ a.hb.gradient::after {
   display: block;
 }
 
-code.has-jax {
+/* code.has-jax {
     -webkit-font-smoothing: antialiased;
     background: inherit !important;
     border: none !important;
     font-size: 100%;
-}
+} */
 
 
 body img {
@@ -3435,16 +3435,16 @@ body blockquote > :last-child {
 } 
 }
   
-mjx-container[display="true"], mjx-assistive-mml[display="block"] {
+/* mjx-container[display="true"], mjx-assistive-mml[display="block"] {
 	    overflow-x: auto !important;
-	}
-mjx-container[display="true"] > :first-child {
+	} */
+/* mjx-container[display="true"] > :first-child {
   height: 2;
 }
 
 mjx-math, mjx-mtr, mjx-mtd{
   max-width: 100%;
-}
+}*/
 
 .utterances {
   max-width: 100% !important;

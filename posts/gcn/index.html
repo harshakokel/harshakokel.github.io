@@ -86,28 +86,17 @@ Traditionally semi-supervised learning in a graph-structured data heavily relied
 		</li>
 	</ul>
 </header>
-    <script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-  };
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body,{delimiters: [
+  {left: '$$', right: '$$', display: true},
+  {left: '$', right: '$', display: false},
+  {left: '\\(', right: '\\)', display: false},
+  {left: '\\[', right: '\\]', display: true}
+]});"></script>
 
-  window.addEventListener('load', (event) => {
-      document.querySelectorAll("mjx-container").forEach(function(x){
-        x.parentElement.classList += 'has-jax '})
-    });
 
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
 	  
 <div class="page__section">
@@ -166,23 +155,23 @@ Traditionally semi-supervised learning in a graph-structured data heavily relied
 <p>Here $\mathcal{L}_{0}$ is some form of cross-entropy loss for the supervised examples and the $\mathcal{L}_{\mathrm{reg}}$ is a regularizing function which tries to reduce difference in labels of connected nodes.  $\mathcal{L}_{\mathrm{reg}}$ is laplacian quadratic form.</p>
 <p>\[
 \begin{aligned}
-f\left(X\right)^{\top} \Delta  f\left(X\right) &amp;= f\left(X\right)^{\top}(D-A) f\left(X\right) \\<br>
-&amp;=f\left(X\right)^{\top} D f\left(X\right)-f\left(X\right)^{\top} A f\left(X\right) \\<br>
-&amp;=\sum_{i=1}^{n} D_{ii} f\left(X_{i}\right)^{2}-\sum_{i=1}^{n} \sum_{j=1}^{n} A_{ij} f\left(X_{i}\right)f\left(X_{j}\right) \\<br>
-&amp;=\sum_{i=1}^{n} \sum_{j=1}^{n} A_{ij} f\left(X_{i}\right)^{2}-\sum_{i=1}^{n} \sum_{j=1}^{n} A_{ij} f\left(X_{i}\right) f\left(X_{j}\right) \\<br>
-&amp;=\sum_{i=1}^{n} \sum_{j=1}^{n} A_{ij}\left(f\left(X_{i}\right)^{2}-f\left(X_{i}\right) f\left(X_{j}\right)\right) \\<br>
-&amp;=\sum_{{i, j} \in E}\left(f\left(X_{i}\right)-f\left(X_{j}\right)\right)^{2} \\<br>
+f\left(X\right)^{\top} \Delta  f\left(X\right) &amp;= f\left(X\right)^{\top}(D-A) f\left(X\right) \\
+&amp;=f\left(X\right)^{\top} D f\left(X\right)-f\left(X\right)^{\top} A f\left(X\right) \\
+&amp;=\sum_{i=1}^{n} D_{ii} f\left(X_{i}\right)^{2}-\sum_{i=1}^{n} \sum_{j=1}^{n} A_{ij} f\left(X_{i}\right)f\left(X_{j}\right) \\
+&amp;=\sum_{i=1}^{n} \sum_{j=1}^{n} A_{ij} f\left(X_{i}\right)^{2}-\sum_{i=1}^{n} \sum_{j=1}^{n} A_{ij} f\left(X_{i}\right) f\left(X_{j}\right) \\
+&amp;=\sum_{i=1}^{n} \sum_{j=1}^{n} A_{ij}\left(f\left(X_{i}\right)^{2}-f\left(X_{i}\right) f\left(X_{j}\right)\right) \\
+&amp;=\sum_{{i, j} \in E}\left(f\left(X_{i}\right)-f\left(X_{j}\right)\right)^{2} \\
 &amp;= \sum_{i \leq j} A_{i j}\left|f\left(X_{i}\right)-f\left(X_{j}\right)\right|^{2}
 \end{aligned}
 \]</p>
 <h3 id="graph-convolutional-networks">Graph Convolutional networks</h3>
 <p>GCN proposes a way to do graph convolutions by using the following layer wise propagation rule:</p>
 <p>\[
-\begin{align}
-H^{(l+1)} &amp; =\sigma\left( \hat{A}  H^{(l)} W^{(l)}\right), \\<br>
-\quad \text { with } \quad\hat{A} &amp; = \tilde{D}^{-\frac{1}{2}}\tilde{A}\tilde{D}^{-\frac{1}{2}}, \\<br>
-\tilde{A} &amp; = (A + I_{N}), \\<br>
-\end{align}
+\begin{aligned}
+H^{(l+1)} &amp; =\sigma\left( \hat{A}  H^{(l)} W^{(l)}\right), \\
+\quad \text { with } \quad\hat{A} &amp; = \tilde{D}^{-\frac{1}{2}}\tilde{A}\tilde{D}^{-\frac{1}{2}}, \\
+\tilde{A} &amp; = (A + I_{N}), \\
+\end{aligned}
 \]</p>
 <p>\[
 \tilde{D_{ij}}=\left\{\begin{array}{ll}{\sum_{k=1}\tilde{A}_{ik},} &amp; {\text { if } i = j} \\ {
@@ -201,11 +190,11 @@ Z=f(X, A)=\operatorname{softmax}\left(\hat{A} \operatorname{ReLU}\left(\hat{A} X
 \]</p>
 <p>Loss function is then a combination of cross-entropy loss for the supervised labels and some regularization.</p>
 <p>\[
-{Loss}=\mathcal{L} + \mathcal{L}_{reg}, \\<br>
-\begin{align}
-\text{with } \mathcal{L}_{reg} = &amp;  \frac{\lambda}{2} * \sum|W|^{2} \quad \text{ for L2-regularization} \\<br>
+Loss=\mathcal{L} + \mathcal{L}_{reg}, \\
+\begin{aligned}
+\text{with } \mathcal{L}_{reg} = &amp;  \frac{\lambda}{2} * \sum|W|^{2} \quad \text{ for L2-regularization} \\
 &amp; \frac{\lambda}{2} * \sum|W| \quad \text{ for L1-regularization}
-\end{align}
+\end{aligned}
 \]</p>
 <p>In the paper, authors observe that L2-regularization of weight matrix at the first layers alone is sufficient.</p>
 <ul>
@@ -226,21 +215,21 @@ Z=f(X, A)=\operatorname{softmax}\left(\hat{A} \operatorname{ReLU}\left(\hat{A} X
 </div>  
 <p>GCN similarly generates output feature map ($H^{(l+1)}$) by convolving the input feature map ($H^{(l)}$) with weight matrix ($W^{(l)}$).</p>
 <p>\[
-\begin{align}
-H^{(l+1)} &amp; =\sigma\left( \hat{A}  H^{(l)} W^{(l)}\right), \\<br>
-\text{ with } \quad \hat{A} &amp; :  n \times n \text{(# nodes)}, \\<br>
-H^{(l)} &amp; : n \times f^{i} \text{(# input feature map)}, \\<br>
-W^{(l)} &amp; : f^{i} \times f^{o} \text{(# output feature map)}, \\<br>
-\end{align}
+\begin{aligned}
+H^{(l+1)} &amp; = \sigma\left( \hat{A}  H^{(l)} W^{(l)}\right), \\
+\text{ with } \quad \hat{A} &amp; :  n \times n \text{(\# nodes)}, \\
+H^{(l)} &amp; : n \times f^{i} \text{(\# input feature map)}, \\
+W^{(l)} &amp; : f^{i} \times f^{o} \text{(\# output feature map)}, \\
+\end{aligned}
 \]</p>
 <p>This can be seen as a message passing algorithm where messages or input features ($H_{ik}$) of each node in the graph are multiplied by weights ($W_{jk}$) and summation is stored in $B$ and finally, the output feature map ($M$) is generated by summing the weighted messages of all the neighboring nodes along with the message from the node itself (Note: $\tilde{A} = A + I_N$ takes care of message from node itself).</p>
 <p>\[
-\begin{align}
-M &amp; = \hat{A}  H^{(l)} W^{(l)} \\<br>
-&amp; = \hat{A} B, \\<br>
-\text{ with } B_{ij} &amp; = \sum_{k=1}^{f^{i}} H_{ik}W_{jk} \\<br>
+\begin{aligned}
+M &amp; = \hat{A}  H^{(l)} W^{(l)} \\
+&amp; = \hat{A} B, \\
+\text{ with } B_{ij} &amp; = \sum_{k=1}^{f^{i}} H_{ik}W_{jk} \\
 M_{ij} &amp; = \sum_{k=1}^{n} \hat{A}_{ik} B_{kj}
-\end{align}
+\end{aligned}
 \]</p>
 <ul>
 <li>
@@ -264,14 +253,14 @@ M_{ij} &amp; = \sum_{k=1}^{n} \hat{A}_{ik} B_{kj}
 <h3 id="spectral-graph-convolutions">Spectral Graph Convolutions</h3>
 <p><a href="https://en.wikipedia.org/wiki/Convolution_theorem">Convolution theorem</a> states that convolution of two matrices is equivalent to point-wise multiplication in the fourier domain i.e. $\mathcal{F}(x \ast y) =  \mathcal{F}(x) \odot \mathcal{F}(y)$ when $\mathcal{F}(\ \ )$ denotes fourier transform operator. In signal processing, the spectral transformation usually refers to transformation from time to frequency dimension (fourier domain), but in graph theory spectral transformation usually refers transformation to eigen-vector dimension ($U^{\top}$). So, the convolution theorem in graphs represents following equation:</p>
 <p>\[
-\begin{align}
-\text {with } L &amp; = U \Lambda U^{\top}, \\<br>
-\hat{\mathrm{x}} &amp; = U^{\top}\mathrm{x}, \\<br>
-\hat{\mathrm{y}} &amp; = U^{\top}\mathrm{y}, \\<br>
-U^{\top} (\mathrm{x} \ast \mathrm{y}) &amp; =  \hat{\mathrm{x}} \odot \hat{\mathrm{y}} \\<br>
-\mathrm{x} \ast \mathrm{y} = U ( \hat{\mathrm{x}}  &amp; \odot \hat{\mathrm{y}}) = U ({ \mathrm{diag}(\hat{\mathrm{y}})\hat{x}} ) \\<br>
+\begin{aligned}
+\text{with } L &amp; = U \Lambda U^{\top}, \\
+\hat{\mathrm{x}} &amp; = U^{\top}\mathrm{x}, \\
+\hat{\mathrm{y}} &amp; = U^{\top}\mathrm{y}, \\
+U^{\top} (\mathrm{x} \ast \mathrm{y}) &amp; =  \hat{\mathrm{x}} \odot \hat{\mathrm{y}} \\
+\mathrm{x} \ast \mathrm{y} = U ( \hat{\mathrm{x}}  &amp; \odot \hat{\mathrm{y}}) = U ({ \mathrm{diag}(\hat{\mathrm{y}})\hat{x}} ) \\
 \mathrm{y} \ast \mathrm{x}  = \mathrm{x} \ast \mathrm{y} = &amp; U \ \mathrm{diag}(\hat{\mathrm{y}})\ U^{\top} \ \mathrm{x}
-\end{align}
+\end{aligned}
 \]</p>
 <blockquote>
 <ul>
@@ -289,67 +278,68 @@ g_{\theta}(\Lambda) \ \star \  \mathrm{x} = U g_{\theta}(\Lambda) U^{\top} \math
 </blockquote>
 <p>$g_{\theta}$ can be approximated by truncated expansion in terms of Chebyshev polynomials $T_{k}(x)$ as:</p>
 <p>\[
-\begin{align}
-g_{\theta^{\prime}}(\Lambda) \approx \sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{\Lambda}) \\<br>
-\text{ with } \quad \tilde{\Lambda}=\frac{2}{\lambda_{\max }} \Lambda-I_{N}, \\<br>
-T_{k}(x) = 2 x T_{k-1}(x)-T_{k-2}(x), \\<br>
+\begin{aligned}
+g_{\theta^{\prime}}(\Lambda) \approx \sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{\Lambda}) \\
+\text{ with } \quad \tilde{\Lambda}=\frac{2}{\lambda_{\max }} \Lambda-I_{N}, \\
+T_{k}(x) = 2 x T_{k-1}(x)-T_{k-2}(x), \\
 T_{0}(x)=1
-\text { and } \quad T_{1}(x) =x \\<br>
-\end{align}
+\text { and } \quad T_{1}(x) =x \\
+\end{aligned}
 \]</p>
 <p>Chebyshev polynomial $T_{k}(\tilde{\Lambda})$ is a matrix with dimensions same as $\tilde{\Lambda}$ (i.e. $n \times n$, where n = # nodes ). Elements of matrix $T_{k}(\tilde{\Lambda})$ are obtained by applying Chebyshev polynomial definition element wise. <a name="a1">(Answers Q-1)</a></p>
 <p>So,</p>
 <p>\[
-\begin{align}
-T_0(\tilde{\Lambda}) &amp; = \left[\begin{array}{cccc}{T_{0}\left(\frac{2}{\lambda_{\max }}\left(\lambda_{1}-1\right)\right)} &amp; {} &amp; {} &amp; {} \ {} &amp; {T_{0}\left(\frac{2}{\lambda_{\max }}\left(\lambda_{2}-1\right)\right)} &amp; {} &amp; {} \ {} &amp; {} &amp; {\ddots} &amp; {} \ {} &amp; {} &amp; {} &amp; {T_{0}\left(\frac{2}{T_{\max }}\left(\lambda_{N}\right)\right)}\end{array}\right] \\<br>
-&amp; = \left[ \begin{array}{cccc}{1} &amp; {} &amp; {} &amp; {} \\<br>
-{} &amp; {1} &amp; {} &amp; {} \\<br>
-{} &amp; {} &amp; {\ddots} &amp; {} \ {} &amp; {} &amp; {} &amp; {1}\end{array} \right] \\<br>
+\begin{aligned}
+T_0(\tilde{\Lambda}) &amp; = \left[\begin{array}{cccc}{T_{0}\left(\frac{2}{\lambda_{\max }}\left(\lambda_{1}-1\right)\right)} &amp; {} &amp; {} &amp; {} \ {} &amp; {T_{0}\left(\frac{2}{\lambda_{\max }}\left(\lambda_{2}-1\right)\right)} &amp; {} &amp; {} \ {} &amp; {} &amp; {\ddots} &amp; {} \ {} &amp; {} &amp; {} &amp; {T_{0}\left(\frac{2}{T_{\max }}\left(\lambda_{N}\right)\right)}\end{array}\right] \\
+&amp; = \left[ \begin{array}{cccc}{1} &amp; {} &amp; {} &amp; {} \\
+{} &amp; {1} &amp; {} &amp; {} \\
+{} &amp; {} &amp; {\ddots} &amp; {} \\
+{} &amp; {} &amp; {} &amp; {1}\end{array} \right] \\
 &amp; = I_N
-\\<br>
-\\<br>
+\\
+\\
 &amp; \therefore\boxed{ \quad T_{0}(\tilde{\Lambda})= I_N \text{ and } T_{1}(\tilde{\Lambda}) =\tilde{\Lambda} }
-\end{align}
+\end{aligned}
 \]</p>
 <p>Observe that $\left(U \Lambda U^{\top}\right)^{k}=U \Lambda^{k} U^{\top}$ and $U T_{k}(\tilde{\Lambda}) U^{\top} = T_{k}(\tilde{L})$.</p>
 <p>Proofs <a name="a4"><strong>(Answers Q-4)</strong></a>:
 \[
-\begin{align}
-(U \Lambda U^{\top})^{2} &amp; = ( U \Lambda U^{\top} )( U \Lambda U^{\top} ) \\<br>
-&amp; =  U \Lambda ( U^{\top}  U ) \Lambda U^{\top} \\<br>
-&amp; =  U \Lambda I \Lambda U^{\top} \\<br>
-&amp; =  U \Lambda ^{2} U^{\top} \\<br>
-\end{align}
+\begin{aligned}
+(U \Lambda U^{\top})^{2} &amp; = ( U \Lambda U^{\top} )( U \Lambda U^{\top} ) \\
+&amp; =  U \Lambda ( U^{\top}  U ) \Lambda U^{\top} \\
+&amp; =  U \Lambda I \Lambda U^{\top} \\
+&amp; =  U \Lambda ^{2} U^{\top} \\
+\end{aligned}
 \]
 \[
 \text{ Similarly, } \boxed{ \left(U \Lambda U^{\top}\right)^{k}=U \Lambda^{k} U^{\top} }
 \]</p>
 <p>and</p>
 <p>\[
-\begin{align}
-{U T_{0}(\tilde{\Lambda}) U^{\top}=U I_{N} U^{\top}=I_{N}=T_{0}(\tilde{L})}, \\<br>
-{U T_{1}(\tilde{\Lambda}) U^{\top}=U \tilde{\Lambda} U=\tilde{L}=T_{1}(\tilde{L})}, \\<br>
-\end{align}
+\begin{aligned}
+{U T_{0}(\tilde{\Lambda}) U^{\top}=U I_{N} U^{\top}=I_{N}=T_{0}(\tilde{L})}, \\
+{U T_{1}(\tilde{\Lambda}) U^{\top}=U \tilde{\Lambda} U=\tilde{L}=T_{1}(\tilde{L})}, \\
+\end{aligned}
 \]
 \[
-\begin{align}
-U T_{2}(\tilde{\Lambda}) U^{\top} &amp; = U \Big(2 \tilde{\Lambda} T_{1}(\tilde{\Lambda})- T_{0}(\tilde{\Lambda}) \Big) U^{\top} \\<br>
-&amp; = 2 U \tilde{\Lambda} T_{1}(\tilde{\Lambda}) U^{\top}- U T_{0}(\tilde{\Lambda}) U^{\top} \\<br>
-&amp; = 2 U \tilde{\Lambda} U^{\top} U T_{1}(\tilde{\Lambda}) U^{\top}- U T_{0}(\tilde{\Lambda}) U^{\top} \\<br>
-&amp; = 2 \tilde{L} T_{1}(\tilde{L}) - T_{0}(\tilde{L})\\<br>
-&amp; = T_2(\tilde{L}) \\<br>
-\end{align}
+\begin{aligned}
+U T_{2}(\tilde{\Lambda}) U^{\top} &amp; = U \Big(2 \tilde{\Lambda} T_{1}(\tilde{\Lambda})- T_{0}(\tilde{\Lambda}) \Big) U^{\top} \\
+&amp; = 2 U \tilde{\Lambda} T_{1}(\tilde{\Lambda}) U^{\top}- U T_{0}(\tilde{\Lambda}) U^{\top} \\
+&amp; = 2 U \tilde{\Lambda} U^{\top} U T_{1}(\tilde{\Lambda}) U^{\top}- U T_{0}(\tilde{\Lambda}) U^{\top} \\
+&amp; = 2 \tilde{L} T_{1}(\tilde{L}) - T_{0}(\tilde{L})\\
+&amp; = T_2(\tilde{L}) \\
+\end{aligned}
 \]
 \[
-\text{ Similarly, } \boxed { U T_{k}(\tilde{\Lambda}) U^{\top} = T_{k}(\tilde{L}) } \\<br>
+\text{ Similarly, } \boxed { U T_{k}(\tilde{\Lambda}) U^{\top} = T_{k}(\tilde{L}) } \\
 \]</p>
 <p>Using the above two results, we can approximate the convolution without needing eigen-decomposition, directly using graph laplacian,</p>
 <p>\[
-\begin{align}
-g_{\theta^{\prime}}(\Lambda) \star x  &amp; \approx U \sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{\Lambda}) U^{\top} \mathrm{x} \\<br>
-&amp; = \sum_{k=0}^{K} \theta_{k}^{\prime} U T_{k}(\tilde{\Lambda}) U^{\top} \mathrm{x} \\<br>
+\begin{aligned}
+g_{\theta^{\prime}}(\Lambda) \star x  &amp; \approx U \sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{\Lambda}) U^{\top} \mathrm{x} \\
+&amp; = \sum_{k=0}^{K} \theta_{k}^{\prime} U T_{k}(\tilde{\Lambda}) U^{\top} \mathrm{x} \\
 &amp; = \sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{L}) \mathrm{x}
-\end{align}
+\end{aligned}
 \]</p>
 <p>So, we effectively reduced the complexity of convolution from $\mathcal{O}(n^3)$ to $\mathcal{O}(|\mathcal{E}|)$, i.e. from cube of # nodes ($n$)  to  linear in # edges ($\mathcal{E}$).
 Since $T_i(\tilde{L})$ has $2\mathcal{E}$ non-zero elements, multiplication $\underbrace{\theta_k^{\prime}}_{scalar} \underbrace{T_i(\tilde{L})}_{n \times n} \underbrace{\mathrm{x}}_{n \times 1}$ is a <strong>sparse matrix multiplication</strong> which can be done in $\mathcal{O}(|\mathcal{E}|)$. <a name="a5">(<strong>Answers Q-5</strong>)<a>:</p>
@@ -357,16 +347,16 @@ Since $T_i(\tilde{L})$ has $2\mathcal{E}$ non-zero elements, multiplication $\un
 <p><a name="a3"><strong>Answers Q-3</strong></a></p>
 <p>GCN can be seen as approximation of spectral convolution with $K = 1$, $\lambda_{max}=2$ and $\theta = \theta_0^{\prime} = - \theta_1^{\prime}$ (<a name="a8">Answers Q-8</a>)</p>
 <p>\[
-\begin{align}
-g_{\theta^{\prime}}(\Lambda) \star x  &amp; \approx  \sum_{k=0}^{1} \theta_{k}^{\prime} T_{k}(\tilde{L}) x \\<br>
-&amp; = \theta_{0}^{\prime} T_{0}(\tilde{L}) x+\theta_{1}^{\prime} T_{1}(\tilde{L}) x\\<br>
-&amp; = \theta_{0}^{\prime} I_{N} x+\theta_{1}^{\prime}\left(\frac{2}{\lambda_{\max }} L-I_{N}\right) \\<br>
-&amp; =\theta_{0}^{\prime} x+\theta_{1}^{\prime}\left(L-I_{N}\right) \quad   \boxed{\because \lambda_{max}=2}  \\<br>
-&amp; =\theta_{0}^{\prime} x-\theta_{1}^{\prime} D^{-\frac{1}{2}} A D^{-\frac{1}{2}} \quad   \boxed{\because L=I_{N}-D^{-\frac{1}{2}} A D^{-\frac{1}{2}}} \\<br>
-&amp; = \theta \left(I_{N}+D^{-\frac{1}{2}} A D^{-\frac{1}{2}}\right) x  \quad \boxed{\because \theta = \theta_0^{\prime} = - \theta_1^{\prime}} \\<br>
-&amp; =  \theta \left(\tilde{D}^{-\frac{1}{2}} \tilde{A} \tilde{D}^{-\frac{1}{2}}\right) x \quad \boxed{ \because \underbrace{I_{N}+D^{-\frac{1}{2}} A D^{-\frac{1}{2}} \rightarrow \tilde{D}^{-\frac{1}{2}} \tilde{A} \tilde{D}^{-\frac{1}{2}}}_{\text{renormalization trick }}, \text { with } \tilde{A}=A+I_{N} } \\<br>
+\begin{aligned}
+g_{\theta^{\prime}}(\Lambda) \star x  &amp; \approx  \sum_{k=0}^{1} \theta_{k}^{\prime} T_{k}(\tilde{L}) x \\
+&amp; = \theta_{0}^{\prime} T_{0}(\tilde{L}) x+\theta_{1}^{\prime} T_{1}(\tilde{L}) x\\
+&amp; = \theta_{0}^{\prime} I_{N} x+\theta_{1}^{\prime}\left(\frac{2}{\lambda_{\max }} L-I_{N}\right) \\
+&amp; =\theta_{0}^{\prime} x+\theta_{1}^{\prime}\left(L-I_{N}\right) \quad   \boxed{\because \lambda_{max}=2}  \\
+&amp; =\theta_{0}^{\prime} x-\theta_{1}^{\prime} D^{-\frac{1}{2}} A D^{-\frac{1}{2}} \quad   \boxed{\because L=I_{N}-D^{-\frac{1}{2}} A D^{-\frac{1}{2}}} \\
+&amp; = \theta \left(I_{N}+D^{-\frac{1}{2}} A D^{-\frac{1}{2}}\right) x  \quad \boxed{\because \theta = \theta_0^{\prime} = - \theta_1^{\prime}} \\
+&amp; =  \theta \left(\tilde{D}^{-\frac{1}{2}} \tilde{A} \tilde{D}^{-\frac{1}{2}}\right) x \quad \boxed{ \because \underbrace{I_{N}+D^{-\frac{1}{2}} A D^{-\frac{1}{2}} \rightarrow \tilde{D}^{-\frac{1}{2}} \tilde{A} \tilde{D}^{-\frac{1}{2}}}_{\text{renormalization trick }}, \text { with } \tilde{A}=A+I_{N} } \\
 &amp; =  \theta \hat{A} x
-\end{align}
+\end{aligned}
 \]</p>
 <blockquote>
 <p>If we use convolution formula $g_{\theta} \star x \approx \theta\left(I_{N}+D^{-\frac{1}{2}} A D^{-\frac{1}{2}}\right) x$ repeatedly over multiple layers, values keep increasing in every layer since we have $I_N$. Renormalization trick is used to avoid this.  <a name="a9">(Answers Q-9 and 10)</a></p>
@@ -383,19 +373,19 @@ the vanishing problem may occur even in case of two layers. With the renormaliza
 </blockquote>
 <p>So,
 \[
-\begin{align}
-g_{\theta^{\prime}}(\Lambda) \star x   &amp; = diag(\theta)  T_{k}(\tilde{L}) X \\<br>
+\begin{aligned}
+g_{\theta^{\prime}}(\Lambda) \star x   &amp; = diag(\theta)  T_{k}(\tilde{L}) X \\
 &amp; = T_{k}(\tilde{L}) \  X \ diag(\theta)
-\end{align}
+\end{aligned}
 \]</p>
 <p>Since this will still give us $n \times f^{i}$ matrix, we add a weight matrix ($W^{\prime}_{f^{i} \times f^{o}}$) to linearly transform the result to $n \times f^{o}$</p>
 <p>So,
 \[
-\begin{align}
+\begin{aligned}
 g_{\theta^{\prime}}(\Lambda) \star x
 &amp; = T_{k}(\tilde{L}) \ X \ diag(\theta) \ W^{\prime} \\
 &amp; = \hat{A}  X   W
-\end{align}
+\end{aligned}
 \]</p>
 <p>With $X \in \mathbb{R}^{n \times f^{i}}$, we have $\underbrace{Z}_{n \times f^{o}} = \underbrace{\hat{A}}_{n \times n}  \underbrace{X}_{n \times f^{i}}  \underbrace{W}_{f^{i} \times f^{o}}$ which is graph convolution.
 Complexity of matrix multiplication is $\mathcal{O}(n f^{i}f^{o})$ since $\hat{A}$ is a sparse matrix with $\mathcal{E}$ non-zero elements &ndash; Not sure how paper gets $\mathcal{O}(|\mathcal{E}| f^{i}f^{o})$ <a name="a12">(Answers Q-12)</a></p>
@@ -521,14 +511,14 @@ local neighborhood structures for graphs with very wide node degree distribution
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1609559800"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1609559800"></script>
+<script type="text/javascript" src="/js/lunr.js?1609646837"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1609646837"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1609559800"></script>
+<script type="text/javascript" src="/js/search.js?1609646837"></script>
 
     
 <nav id="menu">

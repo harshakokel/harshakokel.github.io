@@ -39,7 +39,7 @@
 <meta itemprop="description" content="Artificial Intelligence (AI) is rapidly becoming one of the most popular tool for solving various problems of humankind. Ranging from trivial day-to-day activity of switching on/off lights, to severe life-changing decision of detecting tumors in scans, all the problems have been tackled with this tool and hence it is no longer acceptable to have a black-box algorithm making calls. AI Community has realized this and hence has put lot of significance on Explainable AI (XAI) in recent years.">
 <meta itemprop="datePublished" content="2018-11-04T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2018-11-04T16:40:08+02:00" />
-<meta itemprop="wordCount" content="1796">
+<meta itemprop="wordCount" content="1799">
 
 
 
@@ -83,28 +83,17 @@
 		</li>
 	</ul>
 </header>
-    <script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-  };
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body,{delimiters: [
+  {left: '$$', right: '$$', display: true},
+  {left: '$', right: '$', display: false},
+  {left: '\\(', right: '\\)', display: false},
+  {left: '\\[', right: '\\]', display: true}
+]});"></script>
 
-  window.addEventListener('load', (event) => {
-      document.querySelectorAll("mjx-container").forEach(function(x){
-        x.parentElement.classList += 'has-jax '})
-    });
 
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
 	  
 <div class="page__section">
@@ -193,14 +182,13 @@
 <p>Most of the real-world data is complex, attempts are made to represent them using object (as variables) and relations (as predicates) using first-order logic programs called Inductive Logic Programming (ILP). Add uncertainty to such complex data and they become convoluted. Multiple formalisms have been proposed for such  probabilistic-logic representations using statistical techniques, now popular known as field of  Statistical Relational Learning (SRL) (Getoor 2007). With power of complex representation, these model lose out on other tasks. Specifically, inference and learning (which involves inference) in SRL is NP-hard or harder. For that reason, learning SRL models have been a topic of interest among researchers for a long time and it called for advice-based learning.</p>
 <h3 id="advice-based-relational-methods">Advice-based relational methods</h3>
 <p>First-order logic unlike propositional logic or flat feature vectors have two important linguistic features, viz. variables and quantifiers. These features augment capability of providing a general high-level advice for example we can say &ldquo;Do not change lanes if there is no vehicle in front of you&rdquo; which can be easily written as</p>
-<p>$$
-\begin{align}
-lane(x, l)\ \wedge\ &amp;\neg\ \exists\ y,\ (\ lane(y, l)\ \wedge\  ahead(y, x)\ )<br>
-\<br>
-&amp;\implies \ \neg\ changelane(x) <br>
-\end{align}
-$$
-One straight forward way of  advice-based relational model is to hand-code the predicates or clauses without need of any data.  Pazzani  and  Kibler  (1992)  proposed one of the first successful algorithms for advice-based inductive learning called First Order Combined Learner (FOCL). FOCL is an extension of FOIL (Quinlan, 1990). FOCL uses both inductive as well as explanation-based component (a set of horn clauses provided by human expert) to propose an extension to a learned concept at every step. FOCL has been shown to generalize more accurately than the purely inductive FOIL algorithm. Bergadano and Giordana (1988)  had also proposed ML-SMART, to integrate explanation-based learning (EBL) and inductive techniques to construct operational concept definitions using three components: theory guided component, arbitrary component and a drop component. ML-SMART is able to handle both overly-general and overly-specific theories. The goal is to find rules that cover the positive examples of the concept and exclude the negatives. GRENDEL (Cohen, 1992) is another FOIL based system that uses advice in the form of an antecedent description grammar (ADG) to explicitly represent the inductive hypothesis space.  Mooney and Zelle (1994) reviews advice-based methods developed for ILP which integrate ILP with EBL.</p>
+<p>\[
+\begin{aligned}
+lane(x, l)\ \wedge\ &amp;\neg\ \exists\ y,\ (\ lane(y, l)\ \wedge\  ahead(y, x)\ )\ \\
+&amp;\implies \ \neg\ changelane(x)
+\end{aligned}
+\]</p>
+<p>One straight forward way of  advice-based relational model is to hand-code the predicates or clauses without need of any data.  Pazzani  and  Kibler  (1992)  proposed one of the first successful algorithms for advice-based inductive learning called First Order Combined Learner (FOCL). FOCL is an extension of FOIL (Quinlan, 1990). FOCL uses both inductive as well as explanation-based component (a set of horn clauses provided by human expert) to propose an extension to a learned concept at every step. FOCL has been shown to generalize more accurately than the purely inductive FOIL algorithm. Bergadano and Giordana (1988)  had also proposed ML-SMART, to integrate explanation-based learning (EBL) and inductive techniques to construct operational concept definitions using three components: theory guided component, arbitrary component and a drop component. ML-SMART is able to handle both overly-general and overly-specific theories. The goal is to find rules that cover the positive examples of the concept and exclude the negatives. GRENDEL (Cohen, 1992) is another FOIL based system that uses advice in the form of an antecedent description grammar (ADG) to explicitly represent the inductive hypothesis space.  Mooney and Zelle (1994) reviews advice-based methods developed for ILP which integrate ILP with EBL.</p>
 <p>SRL models have probabilities (parameters) associated with the clauses (structure). Most raw form of advice in SRL can be direct probability values. But, there has been lot of work to incorporate richer form of advice. I briefly describe a few studies:</p>
 <p>&ndash;  <strong>Yang et al. 2014</strong> proposed a cost-sensitive soft margin approach to learn from imbalanced domain. It builds up on the Relational Functional Gradient Boosting (RFGB) (Natarajan et al., 2012) approach of learning an SRL model by including a cost-augmented scoring function equation below that treats positive and negative examples differently in the objective function.</p>
 <p>$$
@@ -247,15 +235,14 @@ In relational domain advice on qualitative constraints can be viewed as providin
 This is the features that are available during training but not during testing. To handle this, they define a cost function that reduces the KL divergence between $P(y|x)$ and $P(y|x^{RP})$ where $x^{RP}$ is the set of all the features including privilege features.</li>
 </ul>
 <p>$$
-c_{R P}\left(x_{i}, \psi\right)=-\lambda \times K L\left(P_{D}\left(y_{i} | \mathbf{x}_{i}^{\mathrm{RP}}\right) | P\left(y_{i} | \mathbf{x}_{i}\right)\right)<br>
+c_{R P}\left(x_{i}, \psi\right) = -\lambda \times K L\left(P_{D}\left(y_{i} | \mathbf{x}_{i}^{\mathrm{RP}}\right) | P\left(y_{i} | \mathbf{x}_{i}\right) \right)
 $$</p>
 <p>The gradients obtained for the modified log-likelihood is as follows:</p>
 <p>$$
 \eta \Delta_{L P}\left(x_{t}\right)= \alpha \cdot \left[ I\left(y_{t}=1\right)-P\left(y_{t}=1 ; \psi\right) \right] + (1- \alpha) \cdot\left[\beta_{t} \cdot n_{t}\left(x_{t}\right)-\beta_{f} \cdot n_{f}\left(x_{t}\right)\right]
 $$</p>
 <p>$$
-\Delta_{R P}\left(x_{i}\right)=I\left(y_{t}=1\right)-P\left(y_{t}=1 ; \psi\right) \<br>
--\alpha \cdot\left(P\left(y_{t}=1 | \mathrm{x}_{l}^{\mathrm{CF}}\right)-P_{D}\left(y_{t}=1 | \mathrm{x}_{t}^{\mathrm{RP}}\right)\right)
+\Delta_{R P}\left(x_{i}\right)=I\left(y_{t}=1\right) -P\left(y_{t}=1 ; \psi\right)  -\alpha \cdot\left(P\left(y_{t}=1 | \mathrm{x}_{l}^{\mathrm{CF}}\right)-P_{D}\left(y_{t}=1 | \mathrm{x}_{t}^{\mathrm{RP}}\right)\right)
 $$</p>
 <p>&ndash; <strong>Odom  and  Natarajan  (2016)</strong> also introduced active advice seeking a framework for PLMs where model can query the human expert in the most useful areas of the feature space takes full advantage of the data as well as the expert. Advice here is a set of Queries from the model and responses from the expert. Each query is a conjunction of literals which represents set of examples and expert response is a preferred or avoid labels for that query.</p>
 <p>Key idea here is how generate the query. Model calculates the score of each example from the entropy of prediction</p>
@@ -313,14 +300,14 @@ $$</p>
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1609559800"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1609559800"></script>
+<script type="text/javascript" src="/js/lunr.js?1609646837"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1609646837"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1609559800"></script>
+<script type="text/javascript" src="/js/search.js?1609646837"></script>
 
     
 <nav id="menu">

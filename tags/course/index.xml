@@ -62,9 +62,7 @@ To convert the FOL rules to a network, each predicate in the rule is mapped to a
       <guid>https://harshakokel.com/posts/understanding-node-attention/</guid>
       <description>Attention in CNNs (Answer Q-1)
 Attention in CNNs is reweighting the feature map $X \in \mathbb{R}^{N \times C}$, to provide attention to some nodes.
-$$ \begin{align} Z &amp;amp; =\alpha \odot X \quad (Z_{i}=\alpha_{i} X_{i}) \\
-\text{such that,} \quad \quad &amp;amp; \sum_{i}^{N} \alpha_{i} = 1 \\
-\odot &amp;amp; \text{ is element-wise multiplication} \end{align} $$
+$$ \begin{aligned} Z &amp;amp; =\alpha \odot X \quad (Z_{i}=\alpha_{i} X_{i}) \\ \text{such that,} \quad \quad &amp;amp; \sum_{i}^{N} \alpha_{i} = 1 \\ \odot &amp;amp; \text{ is element-wise multiplication} \end{aligned} $$
  Note: $\alpha_i$ is a scalar and $X_i$ is vector of size C. So, $Z_i$ is also a vector of size C.</description>
     </item>
     

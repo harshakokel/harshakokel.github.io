@@ -39,7 +39,7 @@
 <meta itemprop="description" content="Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes.">
 <meta itemprop="datePublished" content="2020-04-29T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2020-04-29T16:40:08+02:00" />
-<meta itemprop="wordCount" content="1405">
+<meta itemprop="wordCount" content="1411">
 
 
 
@@ -83,28 +83,17 @@
 		</li>
 	</ul>
 </header>
-    <script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-  };
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body,{delimiters: [
+  {left: '$$', right: '$$', display: true},
+  {left: '$', right: '$', display: false},
+  {left: '\\(', right: '\\)', display: false},
+  {left: '\\[', right: '\\]', display: true}
+]});"></script>
 
-  window.addEventListener('load', (event) => {
-      document.querySelectorAll("mjx-container").forEach(function(x){
-        x.parentElement.classList += 'has-jax '})
-    });
 
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
 	  
 <div class="page__section">
@@ -178,10 +167,10 @@ $$</p>
 <p>$\therefore$ meta update $\left(\nabla \mathcal{L}_{\text {meta }}\right)$  is:</p>
 <div style="color:#1200F4">
 <p>$$
-\begin{align}
-\theta &amp; =\theta-\beta \sum_{T_{i}} \nabla_{\theta} \mathcal{L}_{T_{i}}\left(f_{\theta_{i}^{\prime}}\right)\<br>
-&amp;=\theta- \beta\sum_{T_{i}} \nabla_{\theta_{i}^{\prime}} \mathcal{L}_{T_{i}}\left(f_{\theta_{i}^{\prime}}\right) \cdot \nabla_{\theta} \theta_{i}^{\prime}
-\end{align}
+\begin{aligned}
+\theta &amp; = \theta-\beta \sum_{T_{i}} \nabla_{\theta} \mathcal{L}_{T_{i}}\left(f_{\theta_{i}^{\prime}}\right) \\
+&amp; = \theta- \beta\sum_{T_{i}} \nabla_{\theta_{i}^{\prime}} \mathcal{L}_{T_{i}}\left(f_{\theta_{i}^{\prime}}\right)  \cdot \nabla_{\theta} \theta_{i}^{\prime}
+\end{aligned}
 $$</p>
 </div>
 <p>first  order approximation assumes  $\nabla_{\theta} \theta_{i}^{\prime}=1$</p>
@@ -201,10 +190,10 @@ $$</p>
 <p>meta update:</p>
 <div style="color:#1200F4">  
 <p>$$
-\begin{align}
-G &amp; = G -\beta \nabla_{G} \mathcal{L}_{\text{atk}}\left(f_{\theta}(G)\right)\<br>
+\begin{aligned}
+G &amp; = G -\beta \nabla_{G} \mathcal{L}_{\text{atk}}\left(f_{\theta}(G)\right) \\
 &amp; =G-\beta \nabla_{f} \mathcal{L}_{\text{atk}}\left(f_{\theta}(G)\right) \bigg[ \nabla_{G} f_{\theta}(G)+\nabla_{\theta} f_{\theta}(G) \nabla_{G} \theta \bigg]
-\end{align}
+\end{aligned}
 $$</p>
 </div>
 <p>first order approximation $\theta \approx \tilde{\theta}$ where $\left(\nabla_{G} \tilde{\theta}=0\right)$</p>
@@ -217,8 +206,8 @@ $$</p>
 <p>In the exact meta-attack version, the graph $G$ used in the simulated learning/adaptation/training phase is constantly optimized by the attacker w.r.t parameters and hence the $\nabla_{{\theta}}G \neq 0$. But for the approximate version, the graph $G$ is optimized only after $t$ steps of simulated adaptation/training/learning iterations. So, the for most of the $\tilde{\theta}$ updates the graph $G$ is gonna be constant. Hence, the parameter $\nabla_{\tilde{\theta}}G = 0$.</p>
 <p>Since, the graph modifications are limited to edge manipulations, the optimization objective replaces graph $G$ with adjacency matrix $A$. And since the gradient direction is the direction of maximizing the function and we want to maximize the $L_\text{train/self}$, we use +ve sign for gradient update.</p>
 <p>$$
-A = A - \beta \  \nabla_{A}\mathcal{L}_\text{atk}(f_\theta(A)) \<br>
-= A + \beta \  \nabla_{A}\mathcal{L}_\text{train/self}(f_\theta(A)) \<br>
+A = A - \beta \  \nabla_{A}\mathcal{L}_\text{atk}(f_\theta(A)) \\
+= A + \beta \  \nabla_{A}\mathcal{L}_\text{train/self}(f_\theta(A)) \\
 $$</p>
 <h4 id="graph-admissibility--phig">Graph admissibility:  $\Phi(G)$</h4>
 <p>Since the inherent objective of an attack is be unnoticeable there are certain constraints on modifications that the attacker can do on the graph $\hat{G} \in \Phi(G)$</p>
@@ -262,12 +251,12 @@ $$</p>
 <h4 id="q3-how-is-the-linear-surrogate-model-obtained-from-two-layer-gcn">Q3. How is the linear surrogate model obtained from two layer GCN?</h4>
 <p>Replacing the $\sigma$ activation function with an Identity function $I$, the non-linearity is removed and we can achieve a linear function.</p>
 <p>$$
-\begin{align}
-f_{\theta}(A, X) &amp; =\sigma\left(\hat{A} \sigma \left(\hat{A} X W_1 \right) W_2 \right)\\<br>
-&amp; = \mathbf{I}\left(\hat{A} \mathbf{I} \left(\hat{A} X W_1 \right) W_2 \right) \\<br>
-&amp; = \left(\hat{A}^2 X W \right) \\<br>
-\text{where, } W &amp; = W_1W_2
-\end{align}
+\begin{aligned}
+f_{\theta}(A, X) &amp; =\sigma\left(\hat{A} \sigma \left(\hat{A} X W_1 \right) W_2 \right) \\
+&amp; = \mathbf{I}\left(\hat{A} \mathbf{I} \left(\hat{A} X W_1 \right) W_2 \right)  \\
+&amp; = \left(\hat{A}^2 X W \right)   \\
+\text{where, } W &amp; = W_1W_2  \\
+\end{aligned}
 $$</p>
 <h4 id="q4-how-is-the-following-equation-derived-from-the--maml-paper">Q4. How is the following equation derived from the  MAML paper?</h4>
 <p>$$\nabla_{A}^{\text {meta }}= \nabla_{f} \mathcal{L}_{\text {atk }}\left(f_{\tilde{\theta}_{T}}(A)\right) \cdot \nabla_{A} f_{\tilde{\theta}_{T}}(A)$$</p>
@@ -278,7 +267,6 @@ $$</p>
 <p>Mentioned above in extension to graph attributes section</p>
 <h4 id="q78-summarize-the-impact-and-analysis-of-the-attack">Q7/8. Summarize the impact and analysis of the attack</h4>
 <p>Mentioned above in Emprical evaluations section</p>
-<h4 id="q9">Q9.</h4>
 </p>
 
 
@@ -327,14 +315,14 @@ $$</p>
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1609559800"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1609559800"></script>
+<script type="text/javascript" src="/js/lunr.js?1609646837"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1609646837"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1609559800"></script>
+<script type="text/javascript" src="/js/search.js?1609646837"></script>
 
     
 <nav id="menu">
