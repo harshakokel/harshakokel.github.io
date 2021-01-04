@@ -24,6 +24,9 @@ function initLunr() {
                 this.field('tags', {
 		    boost: 10
                 });
+                this.field('description', {
+		    boost: 10
+                });
                 this.field("content", {
 		    boost: 5
                 });
@@ -60,7 +63,7 @@ function search(queryTerm) {
 
 // Let's get started
 initLunr();
-$(window).bind("load",function() {
+$( document ).ready(function() {
     var searchList = new autoComplete({
         /* selector for the search box element */
         selector: $("#search-by").get(0),
@@ -74,21 +77,26 @@ $(window).bind("load",function() {
             var text = item.content.match(
                 "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
                     term+"(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}");
+            if ( text == null){
+              text = item.description.match(
+                "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
+                    term+"(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}");
+            }
             item.context = text;
+            
             return '<div class="autocomplete-suggestion" ' +
                 'data-term="' + term + '" ' +
                 'data-title="' + item.title + '" ' +
                 'data-uri="'+ item.uri + '" ' +
                 'data-context="' + item.context + '">' +
-                '» ' + item.title +
+                item.title +
                 '<div class="context">' +
                 (item.context || '') +'</div>' +
                 '</div>';
         },
         /* onSelect callback fires when a search suggestion is chosen */
         onSelect: function(e, term, item) {
-            alert("onselect reached"+ item.getAttribute('data-uri'));
-            window.location = item.getAttribute('data-uri');
+            location.href = item.getAttribute('data-uri');
         }
     });
 });
