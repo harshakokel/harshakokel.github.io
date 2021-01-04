@@ -2677,7 +2677,7 @@ button,
     #sidebar > .inner > .alt {
       background-color: #eff1f2;
       border-bottom: 0;
-      margin: -2.22222em 0 4.44444em -2.22222em;
+      margin: -2.22222em 0 0 -2.22222em;
       padding: 2.22222em;
       width: calc(100% + 4.44444em); }
   #sidebar .toggle {
@@ -2731,7 +2731,7 @@ button,
         padding: 1.66667em 1.66667em 1.33333em 1.66667em ;
         width: 24em; }
         #sidebar > .inner > .alt {
-          margin: -1.66667em 0 3.33333em -1.66667em;
+          margin: -1.66667em 0 0 -1.66667em;
           padding: 1.66667em;
           width: calc(100% + 3.33333em); }
       #sidebar .toggle {

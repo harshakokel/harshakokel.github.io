@@ -99,6 +99,8 @@ var autoComplete = (function(){
                 if (hasClass(this, 'autocomplete-suggestion')) { // else outside click
                     var v = this.getAttribute('data-val');
                     that.value = v;
+                    console.log("mouseclick"+ this.getAttribute('data-uri'));
+                    console.log(this)
                     o.onSelect(e, v, this);
                     that.sc.style.display = 'none';
                 }
@@ -154,7 +156,13 @@ var autoComplete = (function(){
                 // enter
                 else if (key == 13 || key == 9) {
                     var sel = that.sc.querySelector('.autocomplete-suggestion.selected');
-                    if (sel && that.sc.style.display != 'none') { o.onSelect(e, sel.getAttribute('data-val'), sel); setTimeout(function(){ that.sc.style.display = 'none'; }, 20); }
+                    if (sel && that.sc.style.display != 'none') { 
+                      console.log("key"+ key);
+                      console.log("onkeyboard click"+ sel.getAttribute('data-uri'));
+                      console.log(sel)
+                      o.onSelect(e, sel.getAttribute('data-val'), sel);
+                      that.sc.style.display != 'none';
+                    }
                 }
             };
             addEvent(that, 'keydown', that.keydownHandler);
