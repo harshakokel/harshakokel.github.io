@@ -25,7 +25,7 @@ function initLunr() {
 		    boost: 10
                 });
                 this.field('description', {
-		    boost: 10
+		    boost: 15
                 });
                 this.field("content", {
 		    boost: 5
@@ -76,11 +76,21 @@ $( document ).ready(function() {
             var numContextWords = 2;
             var text = item.content.match(
                 "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
-                    term+"(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}");
+                    term+"(?:\\s?(?:[\\S]+)\\s?){0,"+numContextWords+"}");
+            if ( text == null){
+              text = item.content.toLowerCase().match(
+                  "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
+                      term.toLowerCase()+"(?:\\s?(?:[\\S]+)\\s?){0,"+numContextWords+"}");
+            }
             if ( text == null){
               text = item.description.match(
                 "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
-                    term+"(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}");
+                    term+"(?:\\s?(?:[\\S]+)\\s?){0,"+numContextWords+"}");
+            }
+            if ( text == null){
+              text = item.description.toLowerCase().match(
+                "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
+                    term.toLowerCase()+"(?:\\s?(?:[\\S]+)\\s?){0,"+numContextWords+"}");
             }
             item.context = text;
             
