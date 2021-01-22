@@ -73,24 +73,16 @@ $( document ).ready(function() {
         },
         /* renderItem displays individual search results */
         renderItem: function(item, term) {
+            var reg = new RegExp(term, "i")
+            var res = reg.exec(item.description+item.content);
             var numContextWords = 2;
-            var text = item.content.match(
+            var text = item.description.match(
                 "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
-                    term+"(?:\\s?(?:[\\S]+)\\s?){0,"+numContextWords+"}");
+                    res+"(?:\\s?(?:[\\S]+)\\s?){0,"+numContextWords+"}");
             if ( text == null){
-              text = item.content.toLowerCase().match(
-                  "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
-                      term.toLowerCase()+"(?:\\s?(?:[\\S]+)\\s?){0,"+numContextWords+"}");
-            }
-            if ( text == null){
-              text = item.description.match(
+              text = item.content.match(
                 "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
-                    term+"(?:\\s?(?:[\\S]+)\\s?){0,"+numContextWords+"}");
-            }
-            if ( text == null){
-              text = item.description.toLowerCase().match(
-                "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
-                    term.toLowerCase()+"(?:\\s?(?:[\\S]+)\\s?){0,"+numContextWords+"}");
+                    res+"(?:\\s?(?:[\\S]+)\\s?){0,"+numContextWords+"}");
             }
             item.context = text;
             

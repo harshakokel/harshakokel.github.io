@@ -2911,29 +2911,29 @@ button,
   @media screen and (orientation: portrait) and (max-width: 480px) {
     #banner .image {
       max-height: 35vh; } }
-      @media screen and (max-width: 480px) {
-        #banner {
-          flex-direction: column-reverse;
-        }
-        #banner .content{
-          width: 100%;
-          flex-shrink: 0;
-          flex-grow: 0;
-        }
-        #banner .image {
-          max-height: 35vh;
-          -moz-flex-grow: 0;
-          -webkit-flex-grow: 0;
-          -ms-flex-grow: 0;
-          flex-grow: 0;
-          -moz-flex-shrink: 0;
-          -webkit-flex-shrink: 0;
-          -ms-flex-shrink: 0;
-          flex-shrink: 0;
-          margin: 0 0 4em 0;
-          height: 25em;
-          min-height: 18em;
-          width: 100% } }
+  @media screen and (max-width: 520px) {
+    #banner {
+      flex-direction: column-reverse;
+    }
+    #banner .content{
+      width: 100%;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+    #banner .image {
+      max-height: 35vh;
+      -moz-flex-grow: 0;
+      -webkit-flex-grow: 0;
+      -ms-flex-grow: 0;
+      flex-grow: 0;
+      -moz-flex-shrink: 0;
+      -webkit-flex-shrink: 0;
+      -ms-flex-shrink: 0;
+      flex-shrink: 0;
+      margin: 0 0 4em 0;
+      height: 25em;
+      min-height: 18em;
+      width: 100% } }
 /* Footer */
 #footer {
     position: fixed;
