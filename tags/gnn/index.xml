@@ -13,7 +13,7 @@
       <pubDate>Wed, 29 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/meta-attack-gnn/</guid>
-      <description>Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes.</description>
+      <description>This article reviews a very exciting ICLR 2019 paper: &lt;a href=&#34;https://openreview.net/forum?id=Bylnx209YX&amp;amp;noteId=r1xNHe2tAQ&#34; target=&#34;_blank&#34;&gt;Adversarial Attacks on Graph Neural Networks via Meta Learning&lt;/a&gt;. This was originally written as part of a class assignment at UT dallas.</description>
     </item>
     
     <item>
@@ -22,8 +22,7 @@
       <pubDate>Wed, 15 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/drrl/</guid>
-      <description>Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects.
-In this paper, authors introduce how multi-headed dot product attention can be used to perform relational reasoning in model-free deep RL and hence achieve combinatorial generalization.</description>
+      <description>Relational RL has not made a lot of splashes in real-world because it is easier to write a planner than learn a relational RL agent. This might be about to change with the current achievements of the graph based relational reasoning approaches. This article summarizes my understanding of the pioneering work of Vinicius Zambaldi et al. &lt;a href=&#34;https://openreview.net/forum?id=HkxaFoC9KQ&#34; target=&#34;_blank&#34;&gt;(ICLR 2019)&lt;/a&gt; on Deep Relational RL.</description>
     </item>
     
     <item>
@@ -32,7 +31,7 @@ In this paper, authors introduce how multi-headed dot product attention can be u
       <pubDate>Mon, 13 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/relational-network/</guid>
-      <description>Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&amp;rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: a) the graph or relation between entities is not provided rather learned and b) the edges between entities can be of different types.</description>
+      <description>Overview of Adam Santoro et al. &lt;a href=&#34;https://arxiv.org/abs/1706.01427&#34; target=&#34;_blank&#34;&gt;(NeurIPS 2017)&lt;/a&gt;.</description>
     </item>
     
     <item>
@@ -41,7 +40,7 @@ In this paper, authors introduce how multi-headed dot product attention can be u
       <pubDate>Sat, 04 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/few-shot-learning-gnn/</guid>
-      <description>This paper focuses on $q$-shot $K$-way classification problem &amp;ndash; where we have $K$ class labels and for each class label we have $q$ example images, so totally we have $s=qK$ training images. Authors propose to leverage the progress in Graph Convolutional Networks by formulating this problem as a node classification problem in graph $(G=(V,E))$, where nodes are images and an edge between two nodes indicate those two images are similar and may have same labels.</description>
+      <description>My notes on Victor Garcia, Joan Bruna, &lt;a href=&#34;https://openreview.net/forum?id=BJj6qGbRW&#34; target=&#34;_blank&#34;&gt;ICLR 2018&lt;/a&gt;. Written as part of the Complex  Networks &lt;a href=&#34;https://personal.utdallas.edu/~fxc190007/courses/20S-7301/&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; by Prof. Feng Chen.</description>
     </item>
     
     <item>
@@ -50,8 +49,7 @@ In this paper, authors introduce how multi-headed dot product attention can be u
       <pubDate>Mon, 30 Mar 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/relational-inductive-bias/</guid>
-      <description>There is a recent surge in papers which are using Relational Inductive Bias with Deep Reinforcement Learning. So here is my investigation on what is it and how is this connected to the inductive biases used in Logic.
-(Inductive) Bias refers to any basis for choosing one generalization over another, other than strict consistency with the observed training instances [Mitchell 80]. Relational inductive bias refers to biases which impose constraints on relationships and interactions among entities.</description>
+      <description>There is a recent surge in papers which are using &lt;strong&gt;Relational Inductive Bias&lt;/strong&gt; with Deep Reinforcement Learning. So here is my investigation on what is it and how is this connected to the inductive biases used in Logic.</description>
     </item>
     
     <item>
@@ -60,10 +58,7 @@ In this paper, authors introduce how multi-headed dot product attention can be u
       <pubDate>Wed, 26 Feb 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/understanding-node-attention/</guid>
-      <description>Attention in CNNs (Answer Q-1)
-Attention in CNNs is reweighting the feature map $X \in \mathbb{R}^{N \times C}$, to provide attention to some nodes.
-$$ \begin{aligned} Z &amp;amp; =\alpha \odot X \quad (Z_{i}=\alpha_{i} X_{i}) \\ \text{such that,} \quad \quad &amp;amp; \sum_{i}^{N} \alpha_{i} = 1 \\ \odot &amp;amp; \text{ is element-wise multiplication} \end{aligned} $$
- Note: $\alpha_i$ is a scalar and $X_i$ is vector of size C. So, $Z_i$ is also a vector of size C.</description>
+      <description>My notes on Boris Knyazev, Graham W. Taylor, and Mohamed R. Amer, &lt;a href=&#34;https://arxiv.org/abs/1905.02850&#34; target=&#34;_blank&#34;&gt;NeurIPS 2019&lt;/a&gt;. Written as part of the Complex Networks &lt;a href=&#34;https://personal.utdallas.edu/~fxc190007/courses/20S-7301/&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; by Prof. Feng Chen.</description>
     </item>
     
     <item>
@@ -72,8 +67,7 @@ $$ \begin{aligned} Z &amp;amp; =\alpha \odot X \quad (Z_{i}=\alpha_{i} X_{i}) \\
       <pubDate>Mon, 17 Feb 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/gat/</guid>
-      <description>Introduction Convolutional Neural Networks (CNNs) can effectively transform grid-like structures and have been used for various image segmentation/classification tasks. Various approaches have not been proposed to extended CNNs graph structures. These approaches are broadly divided into two categories:
-  Spectral appraoch leverages the spectral representations of graph and defines convolution in the Fourier domain. However, because such convolutions require eigen-decomposition of graph laplacian, they can not be directly generalized to different graph structures.</description>
+      <description>My notes on Peter Veličković et al. &lt;a href=&#34;https://openreview.net/pdf?id=rJXMpikCZ&#34; target=&#34;_blank&#34;&gt;ICLR 2018&lt;/a&gt;.  Written as part of the Complex  Networks &lt;a href=&#34;https://personal.utdallas.edu/~fxc190007/courses/20S-7301/&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; by Prof. Feng Chen.</description>
     </item>
     
     <item>
@@ -82,8 +76,7 @@ $$ \begin{aligned} Z &amp;amp; =\alpha \odot X \quad (Z_{i}=\alpha_{i} X_{i}) \\
       <pubDate>Wed, 05 Feb 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/gcn/</guid>
-      <description>Introduction Kipf et al. 2017 introduces Graph Convolutional Networks (GCN) which uses features of each node and leverages edges of the graph to derive class similarity between nodes in semi-supervised setting.
-Traditionally semi-supervised learning in a graph-structured data heavily relied on the assumption that the edges in the graph represent class similarities (i.e. nodes with similar classes have edge between them). For example, in an image segmentation task, an image can be thought as a grid (Graph with node for every pixel and edges between neighboring pixels as shown in figure below).</description>
+      <description>My notes on Thomas N Kipf and Max Welling &lt;a href=&#34;https://arxiv.org/abs/1609.02907&#34; target=&#34;_blank&#34;&gt;ICLR 2017&lt;/a&gt;.  Written as part of the Complex  Networks &lt;a href=&#34;https://personal.utdallas.edu/~fxc190007/courses/20S-7301/&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; by Prof. Feng Chen.</description>
     </item>
     
   </channel>

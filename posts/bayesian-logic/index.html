@@ -28,24 +28,24 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="BLOG: Relational Modeling with Unknown Objects"/>
-<meta name="twitter:description" content="Bayesian Logic (BLOG) by Milch et al. provides a language which help us model random functions and probabilistic properties of unknown objects. Going beyong Herbrand Universe."/>
+<meta name="twitter:description" content="BLOG by Milch et al. provides a language which help us model random functions and probabilistic properties of unknown objects. Going beyong Herbrand Universe. This mainly reviews the key contributions and limitations of that paper. Written as part of the Statistical Relational Learning course by Prof.Sriraam Natarajan."/>
 
     <meta property="og:title" content="BLOG: Relational Modeling with Unknown Objects" />
-<meta property="og:description" content="Bayesian Logic (BLOG) by Milch et al. provides a language which help us model random functions and probabilistic properties of unknown objects. Going beyong Herbrand Universe." />
+<meta property="og:description" content="BLOG by Milch et al. provides a language which help us model random functions and probabilistic properties of unknown objects. Going beyong Herbrand Universe. This mainly reviews the key contributions and limitations of that paper. Written as part of the Statistical Relational Learning course by Prof.Sriraam Natarajan." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/bayesian-logic/" />
 <meta property="article:published_time" content="2018-01-31T16:40:08+02:00" />
 <meta property="article:modified_time" content="2018-01-31T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="BLOG: Relational Modeling with Unknown Objects">
-<meta itemprop="description" content="Bayesian Logic (BLOG) by Milch et al. provides a language which help us model random functions and probabilistic properties of unknown objects. Going beyong Herbrand Universe.">
+<meta itemprop="description" content="BLOG by Milch et al. provides a language which help us model random functions and probabilistic properties of unknown objects. Going beyong Herbrand Universe. This mainly reviews the key contributions and limitations of that paper. Written as part of the Statistical Relational Learning course by Prof.Sriraam Natarajan.">
 <meta itemprop="datePublished" content="2018-01-31T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2018-01-31T16:40:08+02:00" />
-<meta itemprop="wordCount" content="1044">
+<meta itemprop="wordCount" content="1065">
 
 
 
-<meta itemprop="keywords" content="SRL,course," />
+<meta itemprop="keywords" content="SRL,coursework," />
 
     
   </head>
@@ -119,8 +119,8 @@
   <li class="breadcrumb__group">
     Jan 31, 2018
   </li> 
-  <li class="tags">  Tagged with:
-      <a href="https://harshakokel.com/tags/srl/" class="button">srl</a>  <a href="https://harshakokel.com/tags/course/" class="button">course</a>
+  <li class="tags crumb"> 
+      <a href="https://harshakokel.com/tags/srl/" class="tag__link">srl</a>  <a href="https://harshakokel.com/tags/coursework/" class="tag__link">coursework</a>
   </li>
 </ol> 
 
@@ -135,22 +135,25 @@
 
   
   
-
-  <p><strong></strong></p>
   
-    <blockquote>My notes on <strong>Brian Milch, Bhaskara Marthi, Stuart Russell, David Sontag, Daniel L. Ong and Andrey Kolobov, IJCAI 2005</strong></blockquote>
+ 
+  
+  
+  
+    <blockquote class="preview">BLOG by <a href="https://people.eecs.berkeley.edu/~russell/papers/ijcai05-blog.pdf" target="_blank">Milch et al.</a> provides a language which help us model random functions and probabilistic properties of unknown objects. Going beyong Herbrand Universe. This mainly reviews the key contributions and limitations of that paper. Written as part of the Statistical Relational Learning course by Prof.Sriraam Natarajan. </blockquote>
+  
   
   <p><p>Most of the First-Order Logic Models we have seen till now like Bayesian Logic Programs or MLNs works with an assumption that we are given a fixed set of objects, a Herbrand Universe and we have a possible world, Herbrand Interpretation on which we build our BLP model or MLN Network. However, in many practical problems we do not have a fixed Herbrand Universe, or we do not know how many objects are there in the universe. This paper introduces BLOG (Bayesian LOGic) which can perform inference even when the objects are unknown. BLOG is a representation language which can generate objects for such an unknown universe and create a Bayesian network which can then be used for inference. BLOG model describes a stochastic process which creates a world by generating objects in an order. The existence of a generated object is governed by the unknown number of objects in the universe and by the random functions defined in the model. The key idea here is that any property of the newly created object depends only on the objects that are already created. Using this and the concept of context specific independence, BLOG generates a countably infinite Bayesian network in which each node has finite set of parents. The finite set of parents and prior knowledge about the distribution makes the inference possible.</p>
-<h2 id="key-contribution">Key contribution</h2>
+<h3 id="key-contribution">Key contribution</h3>
 <p>According to me, the key contribution of this paper is the representation language. This language helps us model random functions and probabilistic properties of unknown objects. Consider the Balls in Urn example provided in the paper. We  do not know the number of balls in the urn and we randomly draw balls and put it in.  We  have no way  to identify if the same ball was drawn twice. We can only detect the color of the ball and that too has false detection probability of 0.2. With this information, we are supposed to find out number of balls in the urn. Most other models will give up at the first step itself. BLOG provides a simple language which can model such a stochastic scenario by using just 6 kinds of statements: Type Declarations, Random Function Declarations, Non-random Function Definitions, Guaranteed Object Statements, Dependency Statements, Generating Functions, and Number Statements. Once we have the model, we can represent any possible instantiation of the world.</p>
-<h2 id="limitations">Limitations</h2>
+<h3 id="limitations">Limitations</h3>
 <p>As BLOG creates a Random Variable for every function and object type, we potentially get a Bayesian Network with exponential number of Random Variables. Although context specific independence assumption helps us do the inference, it is computationally impossible to work with a such huge Bayesian Network. This makes the whole development less viable in practical scenarios as the purpose of the model was to provide inference over unknown or non-finite universe.</p>
 <p>Representation can have unnecessary variables. For example, if we have the evidence that balls drawn in Draw1 and Draw2 are equal, model creates a new constant for that. Also, we would still have all random variables for both <code>Draw1</code> &amp; <code>Draw2</code> like <code>ObsColor[Draw1]</code>, <code>ObsColor[Draw2]</code>. So, there will be 2n extra random variables where n is the number of functions for Draw object.</p>
 <p>To make the Bayesian network inferable, BLOG makes the context specific independence assumption. But this assumption is not straight forward. For instance, in the aircraft example, a blip at time t is dependent on the state of all the aircraft at time t. To make it dependent only on its source aircraft, we would need evidence or prior knowledge about the source of the blip.</p>
 <p>As the BLOG assumes that any newly created object depends only on the already existing object, it is assuming the universe to be acyclic and objects have topological order.</p>
 <p>The model cannot learn any prior distributions. It assumes that it has all the prior distributions from the domain expert.</p>
 <p>As each object is stored as a tuple, they can expand to considerable size. For example, in the aircraft model each blip is represented as (Blip, (Source, (Aircraft, 2)), (Time, 8), 1), if the object blip had k properties the tuple size would increase further.</p>
-<h2 id="critique">Critique</h2>
+<h3 id="critique">Critique</h3>
 <p>Pros:</p>
 <ul>
 <li>The examples of the stochastic world taken are motivating.
@@ -163,9 +166,10 @@ The paper provides a beautiful explanation on the difference between conditionin
 <li>There is inconsistency in the models. For instance, Aircraft example has a number function for creating the blip which assigns the source and time simultaneously. However, in the Ball example, true color of balls is not assigned when it is created using number function. Similarly, the number function of Publication assigns Author but the generating function for author is missing. Hence, it appears that there can be multiple models to represent the same scenario. However, there is no explanation if different representation would result in same joint distribution.</li>
 <li>Paper doesn’t put forward enough experimental evidence. The experiment conducted asserts that 10 balls were drawn and all appeared blue. The query was made about number of balls in the urn. Results showed that when the prior for the number of balls is uniform over 1, . . . , 8, the posterior puts more weight on small numbers of balls. And this experiment was validated by saying ”this makes sense because the more balls there are in the urn, the less likely it is that they are all blue”. Few more experiments would have helped.</li>
 </ul>
-<h4 id="references">References</h4>
+<h3 id="references">References</h3>
 <ul>
-<li>GETOOR, LISE and TASKAR, BEN Introduction to Statistical Relational Learning (Adaptive Computa- tion and Machine Learning), The MIT Press.</li>
+<li>Brian Milch, Bhaskara Marthi, Stuart Russell, David Sontag, Daniel L. Ong and Andrey Kolobov, BLOG: Relational Modeling with Unknown Objects, <a href="https://people.eecs.berkeley.edu/~russell/papers/ijcai05-blog.pdf" target="_blank">IJCAI 2005</a></li>
+<li>Lise Getoor and Ben Tasker, Introduction to Statistical Relational Learning, (Adaptive Computation and Machine Learning), The MIT Press.</li>
 </ul>
 </p>
 
@@ -208,14 +212,14 @@ The paper provides a beautiful explanation on the difference between conditionin
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1611282436"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1611282436"></script>
+<script type="text/javascript" src="/js/lunr.js?1612139571"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1612139571"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1611282436"></script>
+<script type="text/javascript" src="/js/search.js?1612139571"></script>
 
     
 <nav id="menu">

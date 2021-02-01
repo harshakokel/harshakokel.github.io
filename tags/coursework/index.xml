@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coursework on Harsha Kokel</title>
+    <link>https://harshakokel.com/tags/coursework/</link>
+    <description>Recent content in coursework on Harsha Kokel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
+    <lastBuildDate>Fri, 25 Sep 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/coursework/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Logical Neural Network</title>
+      <link>https://harshakokel.com/posts/logical-nn/</link>
+      <pubDate>Fri, 25 Sep 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/posts/logical-nn/</guid>
+      <description>&lt;a href=&#34;https://arxiv.org/abs/2006.13155&#34; target=&#34;_blank&#34;&gt;Ryan Riegel, et al. (arxiv 2020)&lt;/a&gt; proposes to build Neural Network by adding one neuron for each logical gate and literal in a logic formulae and hence building a neural framework for logical inference. This article reviews their work. It was written jointly with &lt;a href=&#34;https://dtrycode.github.io&#34; target=&#34;_blank&#34;&gt;Siwen Yan&lt;/a&gt;, as part of the course on NeuroSymbolic systems by Prof. Sriraam Natarajan.</description>
+    </item>
+    
+    <item>
+      <title>Augmenting Neural Networks with First-order Logic</title>
+      <link>https://harshakokel.com/posts/nn-with-fol/</link>
+      <pubDate>Tue, 22 Sep 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/posts/nn-with-fol/</guid>
+      <description>Declarative knowledge, first-order rules are used in ILP (a lot) to reduce dependency on the data. Since deep neural network are data hungry, can we use some first-order rules and reduce their data requirement? This post reviews the work by Tao and Srikumar &lt;a href=&#34;https://www.aclweb.org/anthology/P19-1028v2.pdf&#34; target=&#34;_blank&#34;&gt;(ACL 2019)&lt;/a&gt; which attempts to answer this research question.</description>
+    </item>
+    
+    <item>
+      <title>Adversarial Attacks on Graph Neural Networks via Meta Learning</title>
+      <link>https://harshakokel.com/posts/meta-attack-gnn/</link>
+      <pubDate>Wed, 29 Apr 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/posts/meta-attack-gnn/</guid>
+      <description>This article reviews a very exciting ICLR 2019 paper: &lt;a href=&#34;https://openreview.net/forum?id=Bylnx209YX&amp;amp;noteId=r1xNHe2tAQ&#34; target=&#34;_blank&#34;&gt;Adversarial Attacks on Graph Neural Networks via Meta Learning&lt;/a&gt;. This was originally written as part of a class assignment at UT dallas.</description>
+    </item>
+    
+    <item>
+      <title>Few-Shot Learning with GNN</title>
+      <link>https://harshakokel.com/posts/few-shot-learning-gnn/</link>
+      <pubDate>Sat, 04 Apr 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/posts/few-shot-learning-gnn/</guid>
+      <description>My notes on Victor Garcia, Joan Bruna, &lt;a href=&#34;https://openreview.net/forum?id=BJj6qGbRW&#34; target=&#34;_blank&#34;&gt;ICLR 2018&lt;/a&gt;. Written as part of the Complex  Networks &lt;a href=&#34;https://personal.utdallas.edu/~fxc190007/courses/20S-7301/&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; by Prof. Feng Chen.</description>
+    </item>
+    
+    <item>
+      <title>Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks</title>
+      <link>https://harshakokel.com/posts/maml/</link>
+      <pubDate>Fri, 27 Mar 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/posts/maml/</guid>
+      <description>My notes on Chelsea Finn, Pieter Abbeel, Sergey Levine, &lt;a href=&#34;http://proceedings.mlr.press/v70/finn17a&#34; target=&#34;_blank&#34;&gt;ICML 2017&lt;/a&gt;. Written as part of the Complex  Networks &lt;a href=&#34;https://personal.utdallas.edu/~fxc190007/courses/20S-7301/&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; by Prof. Feng Chen.</description>
+    </item>
+    
+    <item>
+      <title>Understanding Attention and Generalization in Graph Neural Networks</title>
+      <link>https://harshakokel.com/posts/understanding-node-attention/</link>
+      <pubDate>Wed, 26 Feb 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/posts/understanding-node-attention/</guid>
+      <description>My notes on Boris Knyazev, Graham W. Taylor, and Mohamed R. Amer, &lt;a href=&#34;https://arxiv.org/abs/1905.02850&#34; target=&#34;_blank&#34;&gt;NeurIPS 2019&lt;/a&gt;. Written as part of the Complex Networks &lt;a href=&#34;https://personal.utdallas.edu/~fxc190007/courses/20S-7301/&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; by Prof. Feng Chen.</description>
+    </item>
+    
+    <item>
+      <title>Graph Attention Networks</title>
+      <link>https://harshakokel.com/posts/gat/</link>
+      <pubDate>Mon, 17 Feb 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/posts/gat/</guid>
+      <description>My notes on Peter Veličković et al. &lt;a href=&#34;https://openreview.net/pdf?id=rJXMpikCZ&#34; target=&#34;_blank&#34;&gt;ICLR 2018&lt;/a&gt;.  Written as part of the Complex  Networks &lt;a href=&#34;https://personal.utdallas.edu/~fxc190007/courses/20S-7301/&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; by Prof. Feng Chen.</description>
+    </item>
+    
+    <item>
+      <title>Graph Convolutional Networks</title>
+      <link>https://harshakokel.com/posts/gcn/</link>
+      <pubDate>Wed, 05 Feb 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/posts/gcn/</guid>
+      <description>My notes on Thomas N Kipf and Max Welling &lt;a href=&#34;https://arxiv.org/abs/1609.02907&#34; target=&#34;_blank&#34;&gt;ICLR 2017&lt;/a&gt;.  Written as part of the Complex  Networks &lt;a href=&#34;https://personal.utdallas.edu/~fxc190007/courses/20S-7301/&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; by Prof. Feng Chen.</description>
+    </item>
+    
+    <item>
+      <title>Hierarchical Reinforcement Learning</title>
+      <link>https://harshakokel.com/posts/hierarchical-rl/</link>
+      <pubDate>Mon, 28 Oct 2019 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/posts/hierarchical-rl/</guid>
+      <description>An overview of Hierarchical RL. Written as part of Advanced RL course by Prof. Sriraam Natarajan.</description>
+    </item>
+    
+    <item>
+      <title>Advice based relational learning</title>
+      <link>https://harshakokel.com/posts/advice-based-learning/</link>
+      <pubDate>Sun, 04 Nov 2018 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/posts/advice-based-learning/</guid>
+      <description>As part of an independent study with Prof. Sriraam Natarajan, I read advice-based methods for data in relational first-order logic. Here are my notes on it.</description>
+    </item>
+    
+    <item>
+      <title>BLOG: Relational Modeling with Unknown Objects</title>
+      <link>https://harshakokel.com/posts/bayesian-logic/</link>
+      <pubDate>Wed, 31 Jan 2018 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/posts/bayesian-logic/</guid>
+      <description>BLOG by &lt;a href=&#34;https://people.eecs.berkeley.edu/~russell/papers/ijcai05-blog.pdf&#34; target=&#34;_blank&#34;&gt;Milch et al.&lt;/a&gt; provides a language which help us model random functions and probabilistic properties of unknown objects. Going beyong Herbrand Universe. This mainly reviews the key contributions and limitations of that paper. Written as part of the Statistical Relational Learning course by Prof.Sriraam Natarajan.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -13,7 +13,7 @@
       <pubDate>Fri, 27 Mar 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/maml/</guid>
-      <description>Meta-Learning a.k.a the &amp;lsquo;&amp;lsquo;Learning to Learn&amp;rsquo;&amp;rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model.</description>
+      <description>My notes on Chelsea Finn, Pieter Abbeel, Sergey Levine, &lt;a href=&#34;http://proceedings.mlr.press/v70/finn17a&#34; target=&#34;_blank&#34;&gt;ICML 2017&lt;/a&gt;. Written as part of the Complex  Networks &lt;a href=&#34;https://personal.utdallas.edu/~fxc190007/courses/20S-7301/&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; by Prof. Feng Chen.</description>
     </item>
     
   </channel>

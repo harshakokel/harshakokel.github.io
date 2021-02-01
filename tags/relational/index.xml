@@ -6,14 +6,23 @@
     <description>Recent content in relational on Harsha Kokel</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
-    <lastBuildDate>Mon, 13 Apr 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/relational/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Apr 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/tags/relational/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deep Reinforcement Learning With Relational Inductive Biases</title>
+      <link>https://harshakokel.com/posts/drrl/</link>
+      <pubDate>Wed, 15 Apr 2020 16:40:08 +0200</pubDate>
+      
+      <guid>https://harshakokel.com/posts/drrl/</guid>
+      <description>Relational RL has not made a lot of splashes in real-world because it is easier to write a planner than learn a relational RL agent. This might be about to change with the current achievements of the graph based relational reasoning approaches. This article summarizes my understanding of the pioneering work of Vinicius Zambaldi et al. &lt;a href=&#34;https://openreview.net/forum?id=HkxaFoC9KQ&#34; target=&#34;_blank&#34;&gt;(ICLR 2019)&lt;/a&gt; on Deep Relational RL.</description>
+    </item>
+    
     <item>
       <title>A simple neural network module for relational reasoning</title>
       <link>https://harshakokel.com/posts/relational-network/</link>
       <pubDate>Mon, 13 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/relational-network/</guid>
-      <description>Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&amp;rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: a) the graph or relation between entities is not provided rather learned and b) the edges between entities can be of different types.</description>
+      <description>Overview of Adam Santoro et al. &lt;a href=&#34;https://arxiv.org/abs/1706.01427&#34; target=&#34;_blank&#34;&gt;(NeurIPS 2017)&lt;/a&gt;.</description>
     </item>
     
     <item>
@@ -22,8 +31,7 @@
       <pubDate>Sun, 12 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/rrl/</guid>
-      <description>The paper came before the goal-conditioned RL, Multi-task RL or Graph Neural Network literature. Major motivation of this paper is to learn a generalizable policy. Generalization in terms of varying number of objects in the domain (for example, in blocks-world number of blocks can change) or change in the goal state (for example, stack red block on blue block instead if green on yellow).
-Authors demonstrate that by using approaches from inductive logic programming literature, first-order policy can be learnt which naturally supports both the generalization discussed above.</description>
+      <description>My notes on Džeroski, Sašo, Luc De Raedt, and Kurt Driessens, &lt;a href=&#34;https://link.springer.com/article/10.1023/A:1007694015589&#34; target=&#34;_blank&#34;&gt;Machine Learning 2001&lt;/a&gt;</description>
     </item>
     
   </channel>

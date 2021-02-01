@@ -13,7 +13,7 @@
       <pubDate>Fri, 08 May 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/afe/</guid>
-      <description>Motivation For the success of clinical studies, it is important to recruit people with diverse features. Not all the features are readily available when the decision about recruitment is done. Some features such as demographic details are available at no additional cost while other details like the MRI Image which are costly can be elicitated if the patient is recruited. But since these costly features are not already available during the decision of recruitment, we need a principled approach to make the decision of recruitment in the absence of costly features.</description>
+      <description>Natarjan et al., &lt;a href=&#34;http://utdallas.edu/~sriraam.natarajan/Papers/AFE_IJCAI18.pdf&#34; target=&#34;_blank&#34;&gt;IJCAI 2018&lt;/a&gt; is one of the most ebullient papers from the Starling Lab (in my opinion, of course!). It formalizes a unique problem setting called &lt;strong&gt;Active Feature Elicitation&lt;/strong&gt;. The task here is to select the best set of examples on whom the missing features can be queried actively. This blog post summarizes my understanding of that paper.</description>
     </item>
     
   </channel>

@@ -28,23 +28,20 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Automatically Generating Abstractions for Planning"/>
-<meta name="twitter:description" content="This paper highlights a heuristic property called ordered monotonicity propery of hierarchical domains and provides a way to learn the hierarchy using the sufficient condition for that property.
-A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of $L$ is set of first-order literals, $S$ is the set of finite states (described using literals), and $O$ is the set of operators in the domain. The authors propose to assign a $Level(l), \forall l \in L$, which indicates the hierarchy-level of the literal."/>
+<meta name="twitter:description" content="An effective hierarchical decomposition of a problem would solve a task at lower level without violating the conditions in more abstract/higher levels of the hierarchy. Knoblock (1994) formalizises this intuition as ordered monotonicity property. This post briefly explains that property and describes how to learn the hierarchy using the sufficient condition for that property."/>
 
     <meta property="og:title" content="Automatically Generating Abstractions for Planning" />
-<meta property="og:description" content="This paper highlights a heuristic property called ordered monotonicity propery of hierarchical domains and provides a way to learn the hierarchy using the sufficient condition for that property.
-A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of $L$ is set of first-order literals, $S$ is the set of finite states (described using literals), and $O$ is the set of operators in the domain. The authors propose to assign a $Level(l), \forall l \in L$, which indicates the hierarchy-level of the literal." />
+<meta property="og:description" content="An effective hierarchical decomposition of a problem would solve a task at lower level without violating the conditions in more abstract/higher levels of the hierarchy. Knoblock (1994) formalizises this intuition as ordered monotonicity property. This post briefly explains that property and describes how to learn the hierarchy using the sufficient condition for that property." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/abstraction-for-planning/" />
 <meta property="article:published_time" content="2020-10-21T16:40:08+02:00" />
 <meta property="article:modified_time" content="2020-10-21T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="Automatically Generating Abstractions for Planning">
-<meta itemprop="description" content="This paper highlights a heuristic property called ordered monotonicity propery of hierarchical domains and provides a way to learn the hierarchy using the sufficient condition for that property.
-A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of $L$ is set of first-order literals, $S$ is the set of finite states (described using literals), and $O$ is the set of operators in the domain. The authors propose to assign a $Level(l), \forall l \in L$, which indicates the hierarchy-level of the literal.">
+<meta itemprop="description" content="An effective hierarchical decomposition of a problem would solve a task at lower level without violating the conditions in more abstract/higher levels of the hierarchy. Knoblock (1994) formalizises this intuition as ordered monotonicity property. This post briefly explains that property and describes how to learn the hierarchy using the sufficient condition for that property.">
 <meta itemprop="datePublished" content="2020-10-21T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2020-10-21T16:40:08+02:00" />
-<meta itemprop="wordCount" content="442">
+<meta itemprop="wordCount" content="414">
 
 
 
@@ -122,8 +119,8 @@ A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of 
   <li class="breadcrumb__group">
     Oct 21, 2020
   </li> 
-  <li class="tags">  Tagged with:
-      <a href="https://harshakokel.com/tags/planning/" class="button">planning</a>  <a href="https://harshakokel.com/tags/abstractions/" class="button">abstractions</a>  <a href="https://harshakokel.com/tags/hierarchy/" class="button">hierarchy</a>
+  <li class="tags crumb"> 
+      <a href="https://harshakokel.com/tags/planning/" class="tag__link">planning</a>  <a href="https://harshakokel.com/tags/abstractions/" class="tag__link">abstractions</a>  <a href="https://harshakokel.com/tags/hierarchy/" class="tag__link">hierarchy</a>
   </li>
 </ol> 
 
@@ -138,26 +135,24 @@ A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of 
 
   
   
-
-  <p><strong></strong></p>
   
-    <blockquote>My notes on <strong>Craig Knoblock,  <a href='https://www.isi.edu/integration/papers/knoblock94-aij.pdf'>AIJ 1994 <i class='icon solid fa-file-alt'></i></a></strong></blockquote>
+ 
   
-  <p><p>This paper highlights a heuristic property called <strong>ordered monotonicity propery</strong> of hierarchical domains and provides a way to learn the hierarchy using the sufficient condition for that property.</p>
-<p>A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of $L$ is set of first-order literals, $S$ is the set of finite states (described using literals), and $O$ is the set of operators in the domain. The authors propose to assign a $Level(l), \forall l \in L$, which indicates the hierarchy-level of the literal. Level 0 is the complete ground state and the i &gt; 0 is an abstraction. Any plan at abstraction level $i$ can only access  literals with level $i$ or higher.</p>
+  
+  
+    <blockquote class="preview">An effective hierarchical decomposition of a problem would solve a task at lower level without violating the conditions in more abstract/higher levels of the hierarchy. <a href="https://www.isi.edu/integration/papers/knoblock94-aij.pdf" target="_blank">Knoblock (1994)</a> formalizises this intuition as <strong>ordered monotonicity property</strong>. This post briefly explains that property and describes how to learn the hierarchy using the sufficient condition for that property. </blockquote>
+  
+  
+  <p><p>A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of $L$ is set of first-order literals, $S$ is the set of finite states (described using literals), and $O$ is the set of operators in the domain. The authors propose to assign a $Level(l), \forall l \in L$, which indicates the hierarchy-level of the literal. Level 0 is the complete ground state and the i &gt; 0 is an abstraction. Any plan at abstraction level $i$ can only access  literals with level $i$ or higher.</p>
 <p>An <strong>ordered monotonicity property</strong> says:</p>
 <ul>
-<li>For any abstract plan $\Pi^i$ at level $i$ with operators $\alpha$, the order of operator will remain same for plan at level $i-1$.</li>
+<li>For any abstract plan $\Pi^i$ at level $i$ with operators $\alpha$, the order of operator will remain same for plan at level $i-1$.
+$$\forall \alpha, \alpha^{\prime} \in \Pi^{i},  \alpha  \preceq \alpha^{\prime} \implies \forall  c(\alpha), c(\alpha^{\prime}) \in \Pi^{i-1} c(\alpha)  \preceq c(\alpha^{\prime})$$</li>
+<li>Any addition of an operator at level $i-1$ is allowed only if that operator achieves some precondition $p$ for some other operator which existed at level $i$, and $Level(p)=i-1$.
+$$\exists \beta \in \Pi^{i-1}, \beta \neq c(x) , \forall x \in \Pi^{i} \implies \exists \alpha \in \Pi^{i}, \exists p \in P_{\alpha}, p \in E_{\beta}, Level(p)=i-1$$</li>
+<li>If any operator at $i-1$ changes a literal with level $i$, then that operator should exist at level $i$.
+$$\exists \beta \in \Pi^{i-1}, p \in e_{\beta}, Level(p) \geq i \implies \exists x \in \Pi^{i}, \beta = c(x) $$</li>
 </ul>
-<p>$$\forall \alpha, \alpha^{\prime} \in \Pi^{i},  \alpha  \preceq \alpha^{\prime} \implies \forall  c(\alpha), c(\alpha^{\prime}) \in \Pi^{i-1} c(\alpha)  \preceq c(\alpha^{\prime})$$</p>
-<ul>
-<li>Any addition of an operator at level $i-1$ is allowed only if that operator achieves some precondition $p$ for some other operator which existed at level $i$, and $Level(p)=i-1$.</li>
-</ul>
-<p>$$\exists \beta \in \Pi^{i-1}, \beta \neq c(x) , \forall x \in \Pi^{i} \implies \exists \alpha \in \Pi^{i}, \exists p \in P_{\alpha}, p \in E_{\beta}, Level(p)=i-1$$</p>
-<ul>
-<li>If any operator at $i-1$ changes a literal with level $i$, then that operator should exist at level $i$.</li>
-</ul>
-<p>$$\exists \beta \in \Pi^{i-1}, p \in e_{\beta}, Level(p) \geq i \implies \exists x \in \Pi^{i}, \beta = c(x) $$</p>
 <p>This heuristic property of hierarchy is motivated from the below observation.</p>
 <blockquote>
 <p>An effective partitioning of a problem requires that the subproblems can be solved without violating the conditions that were already achieved in the more abstract levels of the abstraction hierarchy. In other words, a hierarchical planner ideally finds a solution at one level and then maintains the structure of that solution while the remaining
@@ -175,8 +170,7 @@ e \in Relevant \implies Level(e) \geq Level(e^{\prime}) \\
 \wedge \ Level(e) \geq Level(p) \\
 \end{aligned}
 $$</p>
-<p>Although these conditions are not necessary, they are sufficient to ensure the ordered monotonicity property.</p>
-<p>Hence given the problem and description of the domain, the literals can be organized in an topological order. This order is  an abstraction hierarchy.</p>
+<p>Although these conditions are not necessary, they are sufficient to ensure the ordered monotonicity property. Hence given the problem and description of the domain, the literals can be organized in an topological order. This order is  an abstraction hierarchy.</p>
 </p>
 
 
@@ -218,14 +212,14 @@ $$</p>
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1611282436"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1611282436"></script>
+<script type="text/javascript" src="/js/lunr.js?1612139571"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1612139571"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1611282436"></script>
+<script type="text/javascript" src="/js/search.js?1612139571"></script>
 
     
 <nav id="menu">

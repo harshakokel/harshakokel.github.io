@@ -13,7 +13,7 @@
       <pubDate>Wed, 29 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/meta-attack-gnn/</guid>
-      <description>Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes.</description>
+      <description>This article reviews a very exciting ICLR 2019 paper: &lt;a href=&#34;https://openreview.net/forum?id=Bylnx209YX&amp;amp;noteId=r1xNHe2tAQ&#34; target=&#34;_blank&#34;&gt;Adversarial Attacks on Graph Neural Networks via Meta Learning&lt;/a&gt;. This was originally written as part of a class assignment at UT dallas.</description>
     </item>
     
   </channel>

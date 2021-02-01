@@ -13,7 +13,7 @@
       <pubDate>Tue, 03 Sep 2019 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/minimal-sufficient-explanation/</guid>
-      <description>Automated planning problems have long been attempted using Markov Decision Processes (MDPs). MDPs are capable of handling the probabilistic and sequential nature of planning problem. They solve the problem by providing a policy which is a mapping from states to actions. However, to use this policy in the real-world, we first need users to trust the policy. The issue of trust can be ameliorated if the policy provides an explanation for its recommeded actions.</description>
+      <description>My notes on Omar Zia Khan, Pascal Poupart, and James P Black, &lt;a href=&#34;https://ojs.aaai.org/index.php/ICAPS/article/view/13365&#34; target=&#34;_blank&#34;&gt;ICAPS 2009&lt;/a&gt;</description>
     </item>
     
   </channel>

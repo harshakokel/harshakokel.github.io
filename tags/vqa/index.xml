@@ -13,7 +13,7 @@
       <pubDate>Mon, 13 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/relational-network/</guid>
-      <description>Considering that most of the data is some form of graph, there has been lot of focus on improving neural networks to work with graph data. Amidst this, Santoro et al, paper focuses on neural network&amp;rsquo;s ability of doing relational-reasoning i.e. manipulating structured representations of entities and relations. What separates this paper from the other graph network papers is two things: a) the graph or relation between entities is not provided rather learned and b) the edges between entities can be of different types.</description>
+      <description>Overview of Adam Santoro et al. &lt;a href=&#34;https://arxiv.org/abs/1706.01427&#34; target=&#34;_blank&#34;&gt;(NeurIPS 2017)&lt;/a&gt;.</description>
     </item>
     
   </channel>

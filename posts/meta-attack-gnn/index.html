@@ -28,24 +28,24 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Adversarial Attacks on Graph Neural Networks via Meta Learning"/>
-<meta name="twitter:description" content="Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes."/>
+<meta name="twitter:description" content="This article reviews a very exciting ICLR 2019 paper: Adversarial Attacks on Graph Neural Networks via Meta Learning. This was originally written as part of a class assignment at UT dallas."/>
 
     <meta property="og:title" content="Adversarial Attacks on Graph Neural Networks via Meta Learning" />
-<meta property="og:description" content="Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes." />
+<meta property="og:description" content="This article reviews a very exciting ICLR 2019 paper: Adversarial Attacks on Graph Neural Networks via Meta Learning. This was originally written as part of a class assignment at UT dallas." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/meta-attack-gnn/" />
 <meta property="article:published_time" content="2020-04-29T16:40:08+02:00" />
 <meta property="article:modified_time" content="2020-04-29T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="Adversarial Attacks on Graph Neural Networks via Meta Learning">
-<meta itemprop="description" content="Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes.">
+<meta itemprop="description" content="This article reviews a very exciting ICLR 2019 paper: Adversarial Attacks on Graph Neural Networks via Meta Learning. This was originally written as part of a class assignment at UT dallas.">
 <meta itemprop="datePublished" content="2020-04-29T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2020-04-29T16:40:08+02:00" />
-<meta itemprop="wordCount" content="1410">
+<meta itemprop="wordCount" content="1416">
 
 
 
-<meta itemprop="keywords" content="GNN,adversary,course," />
+<meta itemprop="keywords" content="GNN,adversary,coursework," />
 
     
   </head>
@@ -119,8 +119,8 @@
   <li class="breadcrumb__group">
     Apr 29, 2020
   </li> 
-  <li class="tags">  Tagged with:
-      <a href="https://harshakokel.com/tags/gnn/" class="button">gnn</a>  <a href="https://harshakokel.com/tags/adversary/" class="button">adversary</a>  <a href="https://harshakokel.com/tags/course/" class="button">course</a>
+  <li class="tags crumb"> 
+      <a href="https://harshakokel.com/tags/gnn/" class="tag__link">gnn</a>  <a href="https://harshakokel.com/tags/adversary/" class="tag__link">adversary</a>  <a href="https://harshakokel.com/tags/coursework/" class="tag__link">coursework</a>
   </li>
 </ol> 
 
@@ -135,12 +135,15 @@
 
   
   
-
-  <p><strong></strong></p>
   
-    <blockquote>My notes on <strong>Daniel Z&uuml;gner and Stephan G&uuml;nnemann, ICLR 2019</strong></blockquote>
+ 
   
-  <p><p>Paper highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes. The objective of the adversarial attack is to reduce the overall performance of the model by modifying the training data. So the objective can be formulated as a max-min problem where the attacker wants modify the graph to maximize the loss while the training agent will learn parameters to minimize the loss.</p>
+  
+  
+    <blockquote class="preview">This article reviews a very exciting ICLR 2019 paper: <a href="https://openreview.net/forum?id=Bylnx209YX&amp;noteId=r1xNHe2tAQ" target="_blank">Adversarial Attacks on Graph Neural Networks via Meta Learning</a>. This was originally written as part of a class assignment at UT dallas. </blockquote>
+  
+  
+  <p><p>Daniel Zügner and Stephan Günnemann, ICLR 2019 highlights the weakness of Graph Neural Networks. Since the iid assumption does not hold in the graph data, any perturbation at a single node might have major impacts. This weakness can be leveraged by adversaries to attack GNN. The paper is set in a transductive learning setting where a graph is given along with label to some of the nodes and the task is to predict labels of the remaining nodes. The objective of the adversarial attack is to reduce the overall performance of the model by modifying the training data. So the objective can be formulated as a max-min problem where the attacker wants modify the graph to maximize the loss while the training agent will learn parameters to minimize the loss.</p>
 <p>$$
 \underset{{G}}{\arg\max } \  \  \underset{\theta}{\arg\min} \  \mathcal{L}_{\text{train}} \left(f_{\theta}({G})\right) ,
 $$</p>
@@ -315,14 +318,14 @@ $$</p>
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1611282436"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1611282436"></script>
+<script type="text/javascript" src="/js/lunr.js?1612139571"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1612139571"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1611282436"></script>
+<script type="text/javascript" src="/js/search.js?1612139571"></script>
 
     
 <nav id="menu">

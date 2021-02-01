@@ -13,7 +13,7 @@
       <pubDate>Sun, 24 May 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/causal-tools/</guid>
-      <description>There is enough motivation now showing the necessity of learning models that have a correct causal structure. The famous &amp;ldquo;Correlation is not causation&amp;rdquo; quote should ring a bell. Although the research on learning causal structure from observed data has not yet shown its potential. There are certain tasks from causal literature which can still be solved by just using observed data. Specifically, interventional and counterfactual queries can still be answered if we know the causal structure.</description>
+      <description>I read the Book of Why last year and recently in the reading group at Starling lab we read the 7 Tools of causal inference by Prof. Pearl. I was a little taken by how much I have forgotten about causal inference. So I found the need to jolt down my understanding, so I can refer to it later. This article summarized my current understanding of the tools presented in the paper, based on the paper and the book.</description>
     </item>
     
   </channel>

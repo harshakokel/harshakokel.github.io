@@ -13,8 +13,7 @@
       <pubDate>Wed, 21 Oct 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/abstraction-for-planning/</guid>
-      <description>This paper highlights a heuristic property called ordered monotonicity propery of hierarchical domains and provides a way to learn the hierarchy using the sufficient condition for that property.
-A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of $L$ is set of first-order literals, $S$ is the set of finite states (described using literals), and $O$ is the set of operators in the domain. The authors propose to assign a $Level(l), \forall l \in L$, which indicates the hierarchy-level of the literal.</description>
+      <description>An effective hierarchical decomposition of a problem would solve a task at lower level without violating the conditions in more abstract/higher levels of the hierarchy. &lt;a href=&#34;https://www.isi.edu/integration/papers/knoblock94-aij.pdf&#34; target=&#34;_blank&#34;&gt;Knoblock (1994)&lt;/a&gt; formalizises this intuition as &lt;strong&gt;ordered monotonicity property&lt;/strong&gt;. This post briefly explains that property and describes how to learn the hierarchy using the sufficient condition for that property.</description>
     </item>
     
     <item>
@@ -23,7 +22,7 @@ A problem space is defined as $\Sigma = \langle L, S, O \rangle$, consisting of 
       <pubDate>Mon, 28 Oct 2019 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/hierarchical-rl/</guid>
-      <description>Standard RL planning suffers from the curse of dimensionality when the action space is too large and/or state space is infeasible to enumerate. Humans simplify the problem of planning in such complex conditions by abstracting away details which are not relevant at a given time and decomposing actions into hierarchies. Several researchers have proposed to model the temporal-abstraction in RL by composing some form of hierarchy over actions space (Dietterich 1998, Sutton et al 1998, Parr and Russell 1998).</description>
+      <description>An overview of Hierarchical RL. Written as part of Advanced RL course by Prof. Sriraam Natarajan.</description>
     </item>
     
   </channel>

@@ -28,17 +28,17 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tools for Causal Inference"/>
-<meta name="twitter:description" content="There is enough motivation now showing the necessity of learning models that have a correct causal structure. The famous &ldquo;Correlation is not causation&rdquo; quote should ring a bell. Although the research on learning causal structure from observed data has not yet shown its potential. There are certain tasks from causal literature which can still be solved by just using observed data. Specifically, interventional and counterfactual queries can still be answered if we know the causal structure."/>
+<meta name="twitter:description" content="I read the Book of Why last year and recently in the reading group at Starling lab we read the 7 Tools of causal inference by Prof. Pearl. I was a little taken by how much I have forgotten about causal inference. So I found the need to jolt down my understanding, so I can refer to it later. This article summarized my current understanding of the tools presented in the paper, based on the paper and the book."/>
 
     <meta property="og:title" content="Tools for Causal Inference" />
-<meta property="og:description" content="There is enough motivation now showing the necessity of learning models that have a correct causal structure. The famous &ldquo;Correlation is not causation&rdquo; quote should ring a bell. Although the research on learning causal structure from observed data has not yet shown its potential. There are certain tasks from causal literature which can still be solved by just using observed data. Specifically, interventional and counterfactual queries can still be answered if we know the causal structure." />
+<meta property="og:description" content="I read the Book of Why last year and recently in the reading group at Starling lab we read the 7 Tools of causal inference by Prof. Pearl. I was a little taken by how much I have forgotten about causal inference. So I found the need to jolt down my understanding, so I can refer to it later. This article summarized my current understanding of the tools presented in the paper, based on the paper and the book." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/causal-tools/" />
 <meta property="article:published_time" content="2020-05-24T16:40:08+02:00" />
 <meta property="article:modified_time" content="2020-05-24T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="Tools for Causal Inference">
-<meta itemprop="description" content="There is enough motivation now showing the necessity of learning models that have a correct causal structure. The famous &ldquo;Correlation is not causation&rdquo; quote should ring a bell. Although the research on learning causal structure from observed data has not yet shown its potential. There are certain tasks from causal literature which can still be solved by just using observed data. Specifically, interventional and counterfactual queries can still be answered if we know the causal structure.">
+<meta itemprop="description" content="I read the Book of Why last year and recently in the reading group at Starling lab we read the 7 Tools of causal inference by Prof. Pearl. I was a little taken by how much I have forgotten about causal inference. So I found the need to jolt down my understanding, so I can refer to it later. This article summarized my current understanding of the tools presented in the paper, based on the paper and the book.">
 <meta itemprop="datePublished" content="2020-05-24T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2020-05-24T16:40:08+02:00" />
 <meta itemprop="wordCount" content="1852">
@@ -119,8 +119,8 @@
   <li class="breadcrumb__group">
     May 24, 2020
   </li> 
-  <li class="tags">  Tagged with:
-      <a href="https://harshakokel.com/tags/causal/" class="button">causal</a>  <a href="https://harshakokel.com/tags/summary/" class="button">summary</a>
+  <li class="tags crumb"> 
+      <a href="https://harshakokel.com/tags/causal/" class="tag__link">causal</a>  <a href="https://harshakokel.com/tags/summary/" class="tag__link">summary</a>
   </li>
 </ol> 
 
@@ -135,8 +135,13 @@
 
   
   
-
-  <p><strong></strong></p>
+  
+ 
+  
+  
+  
+    <blockquote class="preview">I read the Book of Why last year and recently in the reading group at Starling lab we read the 7 Tools of causal inference by Prof. Pearl. I was a little taken by how much I have forgotten about causal inference. So I found the need to jolt down my understanding, so I can refer to it later. This article summarized my current understanding of the tools presented in the paper, based on the paper and the book. </blockquote>
+  
   
   <p><p>There is enough motivation now showing the necessity of learning models that have a correct causal structure. The famous &ldquo;Correlation is not causation&rdquo; quote should ring a bell. Although the research on learning causal structure from observed data has not yet shown its potential. There are certain tasks from causal literature which can still be solved by just using observed data. Specifically, interventional and counterfactual queries can still be answered if we know the causal structure.
 And, to do that we need the following tools of causal inference popularized by Prof. Pearl.</p>
@@ -239,7 +244,7 @@ $$ -->
 <p>Counterfactual queries are questions about a parallel universe where one(or few) feature(s) is(are) different for a <strong>specific example</strong>, not on the whole population. It is a question always asked in retrospection for a specific instance. For example, An interventional question to analyze importance of wearing mask during current pandemic can be asked as &ldquo;What would be the total number of COVID-19 positive patients, if we banned mask in public?&rdquo; i.e $P($ COVID_Pos $| , do($ wear_mask $= 0) )$. But a counterfactual question would be &ldquo;Given that I had worn mask when I went to buy grocery last week and I do not have COVID-19 today, what would have happened if I had not worn mask?&rdquo; This question is about me, and about a specific instance of not wearing mask. This counterfactual question has to account for every variable which is not a descendent of wear_mask staying exactly the same. So, the fact that I drove to the TomThumb or the cart which I used should stay the same, because in my <em>assumed</em> causal graph, they are not descendants of wear_mask variable. But on the other hand the fact that I washed my hands and face for exactly 12 secs after coming home, and that I entered the spice aisle might change. Because in my causal assumption these are descendent of wearing mask. Hey! I would have washed hands and face for 20 secs if I was not wearing mask and I would have definitely not entered the spice aisle which had like 3 people in there. I would have maintained six feet distance.</p>
 <p>So, mathematically the counterfactual query is $P(h_c^*=1|h_m^\ast=0,h_c=0, h_m=1,..)$, where, $h_c$ is Harsha has COVID-19, $h_m$ is Harsha wore mask, and \ast indicates counterfactual universe. So, all the variable that are not descendants of $h_m$ will stay same i.e $h_i = h_i^\ast, \forall i \notin Des(h_m)$. To compute the probability of the counterfactual query, we need more than the do-calculus from Tool-2.  We need structural equation models (SEMs) and an algorithm.</p>
 <blockquote>
-<p>I strongly recommend <a href="https://www.inference.vc/causal-inference-3-counterfactuals/">Ferenc Huszár&rsquo;s post on counterfactuals</a> for more clarity on how the interventional probability $P(Y| do(X))$ is the computation on population, but counterfactuals is for individuals.</p>
+<p>I strongly recommend <a href="https://www.inference.vc/causal-inference-3-counterfactuals/" target="_blank">Ferenc Huszár&amp;rsquo;s post on counterfactuals</a> for more clarity on how the interventional probability $P(Y| do(X))$ is the computation on population, but counterfactuals is for individuals.</p>
 </blockquote>
 <p>Let&rsquo;s see how we use tool 3 to answer the counterfactual query, &ldquo;What would Alice’s salary be if she had a college degree?&rdquo;. This query is from the fictitious employee data reproduced below from The Book of Why. Here, the experience is mentioned in number of years and three levels of education are : 0 = high school degree, 1 = college degree, 2 = graduate degree. The assumed causal graph is also shown below.</p>
 <div align="center">
@@ -323,14 +328,14 @@ Then, in <strong>step 3</strong>, we estimate the counterfactual parameters, $Ex
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1611282436"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1611282436"></script>
+<script type="text/javascript" src="/js/lunr.js?1612139571"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1612139571"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1611282436"></script>
+<script type="text/javascript" src="/js/search.js?1612139571"></script>
 
     
 <nav id="menu">

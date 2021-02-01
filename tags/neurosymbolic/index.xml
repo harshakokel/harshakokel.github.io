@@ -13,8 +13,7 @@
       <pubDate>Fri, 25 Sep 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/logical-nn/</guid>
-      <description>This article summarizies Ryan Riegel, et al. arxiv 2020 and is written jointly with Siwen Yan
- This paper proposes Logical Neural Network (LNN), a neural framework to perform logical inference. They propose to build a neural network with 1-to-1 correspondence with logical formulae. So, every neuron in the LNN is either a logical literal or logical gate. Given set of logical formulae, a LNN is a graph with one neuron for every unique proposition occurring in any formula and one neuron for each logical operation occurring in each formula, as shown in the figure below.</description>
+      <description>&lt;a href=&#34;https://arxiv.org/abs/2006.13155&#34; target=&#34;_blank&#34;&gt;Ryan Riegel, et al. (arxiv 2020)&lt;/a&gt; proposes to build Neural Network by adding one neuron for each logical gate and literal in a logic formulae and hence building a neural framework for logical inference. This article reviews their work. It was written jointly with &lt;a href=&#34;https://dtrycode.github.io&#34; target=&#34;_blank&#34;&gt;Siwen Yan&lt;/a&gt;, as part of the course on NeuroSymbolic systems by Prof. Sriraam Natarajan.</description>
     </item>
     
     <item>
@@ -23,8 +22,7 @@
       <pubDate>Tue, 22 Sep 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/nn-with-fol/</guid>
-      <description>This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.
-To convert the FOL rules to a network, each predicate in the rule is mapped to a named neuron.</description>
+      <description>Declarative knowledge, first-order rules are used in ILP (a lot) to reduce dependency on the data. Since deep neural network are data hungry, can we use some first-order rules and reduce their data requirement? This post reviews the work by Tao and Srikumar &lt;a href=&#34;https://www.aclweb.org/anthology/P19-1028v2.pdf&#34; target=&#34;_blank&#34;&gt;(ACL 2019)&lt;/a&gt; which attempts to answer this research question.</description>
     </item>
     
     <item>
@@ -33,7 +31,7 @@ To convert the FOL rules to a network, each predicate in the rule is mapped to a
       <pubDate>Tue, 09 Jun 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/neurosymbolic-systems/</guid>
-      <description>Prof. Henry Kautz, in his Robert S. Engelmore Memorial Lecture at AAAI 2020^, talked about the past and present of AI and highlighted that the future of AI is in the combination of the Neural and Symbolic approaches, alluding to the famous and heated AI debate between Prof. Gary Marcus and Prof. Yoshua Benjio. In this regard, he brings forth a taxonomy of Neuro-Symbolic Systems that I aim to elaborate upon.</description>
+      <description>I attended the AAAI 2020 conference in NY, and one of the most influencing talk in that conference (for me, of course!) was the address by Prof. Henry Kautz on &lt;a href=&#34;https://roc-hci.com/announcements/the-third-ai-summer/&#34; target=&#34;_blank&#34;&gt;The Third AI Summer&lt;/a&gt;. In that talk, he provided some taxonomy for the future Neural and Symbolic approaches. This article is my attempt to summarize that taxonomy.</description>
     </item>
     
     <item>
@@ -42,8 +40,7 @@ To convert the FOL rules to a network, each predicate in the rule is mapped to a
       <pubDate>Wed, 15 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/drrl/</guid>
-      <description>Deep RL methods have been every effective but they have poor generalization capability, especially combinatorial generalization (for eg. if the number of blocks are changed in the blocks world). Recent advances in graph network literature have achieved combinatorial generalization by learning neural network that can reason about relationship of various nodes in graphs. Since this reasoning happens pairwise, the algorithms are able to scale to varying number of objects.
-In this paper, authors introduce how multi-headed dot product attention can be used to perform relational reasoning in model-free deep RL and hence achieve combinatorial generalization.</description>
+      <description>Relational RL has not made a lot of splashes in real-world because it is easier to write a planner than learn a relational RL agent. This might be about to change with the current achievements of the graph based relational reasoning approaches. This article summarizes my understanding of the pioneering work of Vinicius Zambaldi et al. &lt;a href=&#34;https://openreview.net/forum?id=HkxaFoC9KQ&#34; target=&#34;_blank&#34;&gt;(ICLR 2019)&lt;/a&gt; on Deep Relational RL.</description>
     </item>
     
   </channel>

@@ -28,20 +28,20 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Minimal Sufficient Explanations for Factored Markov Decision Processes"/>
-<meta name="twitter:description" content="Automated planning problems have long been attempted using Markov Decision Processes (MDPs). MDPs are capable of handling the probabilistic and sequential nature of planning problem. They solve the problem by providing a policy which is a mapping from states to actions. However, to use this policy in the real-world, we first need users to trust the policy. The issue of trust can be ameliorated if the policy provides an explanation for its recommeded actions."/>
+<meta name="twitter:description" content="My notes on Omar Zia Khan, Pascal Poupart, and James P Black, ICAPS 2009"/>
 
     <meta property="og:title" content="Minimal Sufficient Explanations for Factored Markov Decision Processes" />
-<meta property="og:description" content="Automated planning problems have long been attempted using Markov Decision Processes (MDPs). MDPs are capable of handling the probabilistic and sequential nature of planning problem. They solve the problem by providing a policy which is a mapping from states to actions. However, to use this policy in the real-world, we first need users to trust the policy. The issue of trust can be ameliorated if the policy provides an explanation for its recommeded actions." />
+<meta property="og:description" content="My notes on Omar Zia Khan, Pascal Poupart, and James P Black, ICAPS 2009" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/minimal-sufficient-explanation/" />
 <meta property="article:published_time" content="2019-09-03T16:40:08+02:00" />
 <meta property="article:modified_time" content="2019-09-03T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="Minimal Sufficient Explanations for Factored Markov Decision Processes">
-<meta itemprop="description" content="Automated planning problems have long been attempted using Markov Decision Processes (MDPs). MDPs are capable of handling the probabilistic and sequential nature of planning problem. They solve the problem by providing a policy which is a mapping from states to actions. However, to use this policy in the real-world, we first need users to trust the policy. The issue of trust can be ameliorated if the policy provides an explanation for its recommeded actions.">
+<meta itemprop="description" content="My notes on Omar Zia Khan, Pascal Poupart, and James P Black, ICAPS 2009">
 <meta itemprop="datePublished" content="2019-09-03T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2019-09-03T16:40:08+02:00" />
-<meta itemprop="wordCount" content="1089">
+<meta itemprop="wordCount" content="1109">
 
 
 
@@ -119,8 +119,8 @@
   <li class="breadcrumb__group">
     Sep 3, 2019
   </li> 
-  <li class="tags">  Tagged with:
-      <a href="https://harshakokel.com/tags/planning/" class="button">planning</a>  <a href="https://harshakokel.com/tags/xai/" class="button">xai</a>  <a href="https://harshakokel.com/tags/rl/" class="button">rl</a>
+  <li class="tags crumb"> 
+      <a href="https://harshakokel.com/tags/planning/" class="tag__link">planning</a>  <a href="https://harshakokel.com/tags/xai/" class="tag__link">xai</a>  <a href="https://harshakokel.com/tags/rl/" class="tag__link">rl</a>
   </li>
 </ol> 
 
@@ -135,10 +135,13 @@
 
   
   
-
-  <p><strong></strong></p>
   
-    <blockquote>My notes on <strong>Omar Zia Khan, Pascal Poupart, and James P Black. ICAPS 2009</strong></blockquote>
+ 
+  
+  
+  
+    <blockquote class="preview">My notes on Omar Zia Khan, Pascal Poupart, and James P Black, <a href="https://ojs.aaai.org/index.php/ICAPS/article/view/13365" target="_blank">ICAPS 2009</a> </blockquote>
+  
   
   <p><p>Automated planning problems have long been attempted using Markov Decision Processes (MDPs). MDPs are capable of handling the probabilistic and sequential nature of planning problem. They solve the problem by providing a policy which is a mapping from states to actions. However, to use this policy in the real-world, we first need users to trust the policy. The issue of trust can be ameliorated if the policy provides an explanation for its recommeded actions. This is the pretext of khan et al 2009.</p>
 <p>Policy in MDP is usually obtained by optimizing Bellman&rsquo;s equation which considers value of a state as expected discounted total reward. This paper uses an alternate formulation of the value function introduced by  and extends it to the factored MDPs. In the alternate formulation, value function is expressed as a dot product of reward and the discounted occupancy frequencies of all the states. With this formulation, an optimal policy for a given state can explain the recommended action by simply showing that the recommended action has highest occupancy frequency of highly rewarded state(s). To this effect the paper propose three explanation templates:</p>
@@ -154,7 +157,7 @@
 V_{MSE} = \sum_{i \leq k}\mathbb{E}[\operatorname{utility}(s_i)] + \sum_{i &gt; k} \min(\operatorname{utility}(s_i))
 \]</p>
 <p>\[
-V^{\pi^{\star}} \geq V_{MSE} &gt; Q^{\pi^\star}(s_0,a), ,  \forall a \neq \pi^\star(s_0)
+V^{\pi^{\star}} \geq V_{MSE} &gt; Q^{\pi^\star}(s_0,a)\ \  \forall a \neq \pi^\star(s_0)
 \]</p>
 <p>With that definition of $V_{MSE}$, Khan et al. propose an algorithm to produce MSE at any state $s_0$ for a given optimal policy in factored MDP setting. They evaluate the MSE on two experimental domains of &ldquo;course-advising&rdquo; and &ldquo;handwashing&rdquo;. The experimental results show that the number of templates in MSE is high (or low) when the ratio of the expected utility for the optimal and the second best optimal policy is high (or low). User study with advisors in the course-advising domain show that the advisors found the explanations useful and perhaps beneficial for grade-conscious or poor performing students. User study with students show that more than 50% of the students found the explanations easy to understand, accurate and informative. However, most of them needed further information to trust the action recommended.</p>
 <h2 id="critique">Critique</h2>
@@ -165,7 +168,8 @@ V^{\pi^{\star}} \geq V_{MSE} &gt; Q^{\pi^\star}(s_0,a), ,  \forall a \neq \pi^\s
 <p>Finally, in RL we usually assume the policy is mapping of states to a distribution over actions. Explaining a distribution might be complex than a single action. This paper concentrates on explaining the best action out of that distribution. However, there might be two equally good actions, or there might be more than one optimal policy. One has to extend this framework for that use cases before using it in a real system.</p>
 <h3 id="references">References</h3>
 <ol>
-<li>Pascal Poupart. 2005. Exploiting structure to efficiently solve large scalepartially observable Markov decision processes. Citeseer.</li>
+<li>Omar Zia Khan, Pascal Poupart, and James P Black,  Minimal Sufficient Explanations for Factored Markov Decision Processes, <a href="https://ojs.aaai.org/index.php/ICAPS/article/view/13365" target="_blank">ICAPS 2009</a></li>
+<li>Pascal Poupart, Exploiting structure to efficiently solve large scale partially observable Markov decision processes, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.60.1236&amp;rep=rep1&amp;type=pdf" target="_blank">Citeseer 2005</a>.</li>
 </ol>
 </p>
 
@@ -213,14 +217,14 @@ V^{\pi^{\star}} \geq V_{MSE} &gt; Q^{\pi^\star}(s_0,a), ,  \forall a \neq \pi^\s
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1611282436"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1611282436"></script>
+<script type="text/javascript" src="/js/lunr.js?1612139571"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1612139571"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1611282436"></script>
+<script type="text/javascript" src="/js/search.js?1612139571"></script>
 
     
 <nav id="menu">

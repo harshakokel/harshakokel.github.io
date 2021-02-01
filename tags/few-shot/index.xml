@@ -13,7 +13,7 @@
       <pubDate>Sat, 04 Apr 2020 16:40:08 +0200</pubDate>
       
       <guid>https://harshakokel.com/posts/few-shot-learning-gnn/</guid>
-      <description>This paper focuses on $q$-shot $K$-way classification problem &amp;ndash; where we have $K$ class labels and for each class label we have $q$ example images, so totally we have $s=qK$ training images. Authors propose to leverage the progress in Graph Convolutional Networks by formulating this problem as a node classification problem in graph $(G=(V,E))$, where nodes are images and an edge between two nodes indicate those two images are similar and may have same labels.</description>
+      <description>My notes on Victor Garcia, Joan Bruna, &lt;a href=&#34;https://openreview.net/forum?id=BJj6qGbRW&#34; target=&#34;_blank&#34;&gt;ICLR 2018&lt;/a&gt;. Written as part of the Complex  Networks &lt;a href=&#34;https://personal.utdallas.edu/~fxc190007/courses/20S-7301/&#34; target=&#34;_blank&#34;&gt;course&lt;/a&gt; by Prof. Feng Chen.</description>
     </item>
     
   </channel>

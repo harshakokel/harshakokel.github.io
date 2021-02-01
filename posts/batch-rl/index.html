@@ -28,23 +28,17 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Fitted Q and Batch Reinforcement Learning"/>
-<meta name="twitter:description" content="Terminologies Offline Planning Problem (MDP) We are given the full MDP model and the problem is solved using all the components of the MDP
-Online Planning Problem (RL) We have limited knowledge of the MDP. We can discover it by interacting with the system
-Model-based RL Approaches to solving Online planning problem (RL) by first estimating (when missing) or accessing the full MDP Model i.e. transition and reward function and then finding policy $\pi$ is called Model-based RL"/>
+<meta name="twitter:description" content="Some pointers on Batch Reinforcement Learning and Fitted Q. These were gathered while working on an RL for healthcare project, as part of Advanced RL course by Prof. Sriraam Natarajan."/>
 
     <meta property="og:title" content="Fitted Q and Batch Reinforcement Learning" />
-<meta property="og:description" content="Terminologies Offline Planning Problem (MDP) We are given the full MDP model and the problem is solved using all the components of the MDP
-Online Planning Problem (RL) We have limited knowledge of the MDP. We can discover it by interacting with the system
-Model-based RL Approaches to solving Online planning problem (RL) by first estimating (when missing) or accessing the full MDP Model i.e. transition and reward function and then finding policy $\pi$ is called Model-based RL" />
+<meta property="og:description" content="Some pointers on Batch Reinforcement Learning and Fitted Q. These were gathered while working on an RL for healthcare project, as part of Advanced RL course by Prof. Sriraam Natarajan." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/batch-rl/" />
 <meta property="article:published_time" content="2019-12-06T16:40:08+02:00" />
 <meta property="article:modified_time" content="2019-12-06T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="Fitted Q and Batch Reinforcement Learning">
-<meta itemprop="description" content="Terminologies Offline Planning Problem (MDP) We are given the full MDP model and the problem is solved using all the components of the MDP
-Online Planning Problem (RL) We have limited knowledge of the MDP. We can discover it by interacting with the system
-Model-based RL Approaches to solving Online planning problem (RL) by first estimating (when missing) or accessing the full MDP Model i.e. transition and reward function and then finding policy $\pi$ is called Model-based RL">
+<meta itemprop="description" content="Some pointers on Batch Reinforcement Learning and Fitted Q. These were gathered while working on an RL for healthcare project, as part of Advanced RL course by Prof. Sriraam Natarajan.">
 <meta itemprop="datePublished" content="2019-12-06T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2019-12-06T16:40:08+02:00" />
 <meta itemprop="wordCount" content="882">
@@ -125,8 +119,8 @@ Model-based RL Approaches to solving Online planning problem (RL) by first estim
   <li class="breadcrumb__group">
     Dec 6, 2019
   </li> 
-  <li class="tags">  Tagged with:
-      <a href="https://harshakokel.com/tags/rl/" class="button">rl</a>  <a href="https://harshakokel.com/tags/offline/" class="button">offline</a>  <a href="https://harshakokel.com/tags/summary/" class="button">summary</a>
+  <li class="tags crumb"> 
+      <a href="https://harshakokel.com/tags/rl/" class="tag__link">rl</a>  <a href="https://harshakokel.com/tags/offline/" class="tag__link">offline</a>  <a href="https://harshakokel.com/tags/summary/" class="tag__link">summary</a>
   </li>
 </ol> 
 
@@ -141,8 +135,13 @@ Model-based RL Approaches to solving Online planning problem (RL) by first estim
 
   
   
-
-  <p><strong></strong></p>
+  
+ 
+  
+  
+  
+    <blockquote class="preview">Some pointers on Batch Reinforcement Learning and Fitted Q. These were gathered while working on an <a href="/pdf/ECMO-RL.pdf">RL for healthcare</a> project, as part of Advanced RL course by Prof. Sriraam Natarajan. </blockquote>
+  
   
   <p><div class="box">
 <h4 id="terminologies">Terminologies</h4>
@@ -209,9 +208,9 @@ $$</p>
 <p>Further extensions to the fitted Q approaches have learnt $f$ function as some linear combination of the previous function and regression values.</p>
 <h4 id="references">References</h4>
 <ul>
-<li><a name="BatchRL"></a>Lange, S., Gabel, T., &amp; Riedmiller, M. Batch Reinforcement Learning. 2012</li>
-<li><a name="Gordon1995"></a>Gordon, G. J. Stable Function Approximation in Dynamic Programming. ICML. 1995.</li>
-<li><a name="Ernst2005"></a>Ernst, D., Geurts, P., &amp; Wehenkel, L. Tree-Based Batch Mode Reinforcement Learning. In JMLR. 2005.</li>
+<li><a name="BatchRL"></a>Lange, S., Gabel, T., &amp; Riedmiller, M. Batch Reinforcement Learning. <a href="https://link.springer.com/chapter/10.1007/978-3-642-27645-3_2">2012</a></li>
+<li><a name="Gordon1995"></a>Gordon, G. J. Stable Function Approximation in Dynamic Programming, <a href="https://www.sciencedirect.com/science/article/pii/B9781558603776500402">ICML 1995</a>.</li>
+<li><a name="Ernst2005"></a>Ernst, D., Geurts, P., &amp; Wehenkel, L. Tree-Based Batch Mode Reinforcement Learning, In <a href="https://www.jmlr.org/papers/volume6/ernst05a/ernst05a.pdf">JMLR 2005</a>.</li>
 <li><a href="http://www.cs.toronto.edu/~zemel/documents/411/rltutorial.pdf"><a href="http://www.cs.toronto.edu/~zemel/documents/411/rltutorial.pdf">http://www.cs.toronto.edu/~zemel/documents/411/rltutorial.pdf</a></a></li>
 </ul>
 </p>
@@ -260,14 +259,14 @@ $$</p>
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1611282436"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1611282436"></script>
+<script type="text/javascript" src="/js/lunr.js?1612139571"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1612139571"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1611282436"></script>
+<script type="text/javascript" src="/js/search.js?1612139571"></script>
 
     
 <nav id="menu">

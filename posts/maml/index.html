@@ -28,24 +28,24 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks"/>
-<meta name="twitter:description" content="Meta-Learning a.k.a the &lsquo;&lsquo;Learning to Learn&rsquo;&rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model."/>
+<meta name="twitter:description" content="My notes on Chelsea Finn, Pieter Abbeel, Sergey Levine, ICML 2017. Written as part of the Complex  Networks course by Prof. Feng Chen."/>
 
     <meta property="og:title" content="Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks" />
-<meta property="og:description" content="Meta-Learning a.k.a the &lsquo;&lsquo;Learning to Learn&rsquo;&rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model." />
+<meta property="og:description" content="My notes on Chelsea Finn, Pieter Abbeel, Sergey Levine, ICML 2017. Written as part of the Complex  Networks course by Prof. Feng Chen." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/maml/" />
 <meta property="article:published_time" content="2020-03-27T16:40:08+02:00" />
 <meta property="article:modified_time" content="2020-03-27T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks">
-<meta itemprop="description" content="Meta-Learning a.k.a the &lsquo;&lsquo;Learning to Learn&rsquo;&rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model.">
+<meta itemprop="description" content="My notes on Chelsea Finn, Pieter Abbeel, Sergey Levine, ICML 2017. Written as part of the Complex  Networks course by Prof. Feng Chen.">
 <meta itemprop="datePublished" content="2020-03-27T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2020-03-27T16:40:08+02:00" />
 <meta itemprop="wordCount" content="1315">
 
 
 
-<meta itemprop="keywords" content="metalearning,course," />
+<meta itemprop="keywords" content="metalearning,coursework," />
 
     
   </head>
@@ -119,8 +119,8 @@
   <li class="breadcrumb__group">
     Mar 27, 2020
   </li> 
-  <li class="tags">  Tagged with:
-      <a href="https://harshakokel.com/tags/metalearning/" class="button">metalearning</a>  <a href="https://harshakokel.com/tags/course/" class="button">course</a>
+  <li class="tags crumb"> 
+      <a href="https://harshakokel.com/tags/metalearning/" class="tag__link">metalearning</a>  <a href="https://harshakokel.com/tags/coursework/" class="tag__link">coursework</a>
   </li>
 </ol> 
 
@@ -135,10 +135,13 @@
 
   
   
-
-  <p><strong></strong></p>
   
-    <blockquote>My notes on <strong>Chelsea Finn, Pieter Abbeel, Sergey Levine, ICML 2017.</strong></blockquote>
+ 
+  
+  
+  
+    <blockquote class="preview">My notes on Chelsea Finn, Pieter Abbeel, Sergey Levine, <a href="http://proceedings.mlr.press/v70/finn17a" target="_blank">ICML 2017</a>. Written as part of the Complex  Networks <a href="https://personal.utdallas.edu/~fxc190007/courses/20S-7301/" target="_blank">course</a> by Prof. Feng Chen. </blockquote>
+  
   
   <p><p>Meta-Learning a.k.a the &lsquo;&lsquo;Learning to Learn&rsquo;&rsquo; problem, is the field of study where the researchers are trying to learn the parts of model which in standard machine learning setting are decided by researchers/humans/users. To elaborate, consider for example a standard gradient based machine learning problem. Given a training data and test data, to solve a problem the researches first decide what loss function to optimize and based on existing literature or their expertise they figure out various meta-information of the model. In the figure below, for a standard gradient based machine learning model meta-information like network structure, initialization parameters ($\theta^0$), update method etc are all decided manually.</p>
 <p>Meta-learning research aims to learn a model which can help decide such meta-information (all or subset) for any new task.</p>
@@ -179,7 +182,7 @@ $$</p>
 <img align="center" width="500"  src="/images/MAML-algo.png">
 <p><a name="a2">Finn et al. 2017 ICLR, Algorithm 1.</a></p>
 </div>
-<p>Instead of doing the search of $\theta$ for all the tasks in training, like we did in the example above. MAML samples tasks from distribution $p(\mathcal{T})$. <a name="a3"><i class="fa fa-bolt"></i></a> In theory, this might just be a distribution of task based on available sample size of each task or distribution based on the similarity to the test task. In practice, they randomly sampled label set from images corpus and then sampled few examples for training and few for testing. To update the parameters $\theta$ in line 8, <a href="https://github.com/cbfinn/maml/blob/a7f45f1bcd7457fe97b227a21e89b8a82cc5fa49/maml.py#L133">code</a> computes the second gradient using <a href="https://www.tensorflow.org/api_docs/python/tf/compat/v1/train/AdamOptimizer">tensor flow optimizers</a>.</p>
+<p>Instead of doing the search of $\theta$ for all the tasks in training, like we did in the example above. MAML samples tasks from distribution $p(\mathcal{T})$. <a name="a3"><i class="fa fa-bolt"></i></a> In theory, this might just be a distribution of task based on available sample size of each task or distribution based on the similarity to the test task. In practice, they randomly sampled label set from images corpus and then sampled few examples for training and few for testing. To update the parameters $\theta$ in line 8, <a href="https://github.com/cbfinn/maml/blob/a7f45f1bcd7457fe97b227a21e89b8a82cc5fa49/maml.py#L133" target="_blank">code</a> computes the second gradient using <a href="https://www.tensorflow.org/api_docs/python/tf/compat/v1/train/AdamOptimizer" target="_blank">tensor flow optimizers</a>.</p>
 <p>Below figure  explains the MAML update equation used in practice. The first arrow for each task is the gradient from fine-tuning equation and the second arrow is from the meta-optimization equation.</p>
 <div align="center">
 <img align="center" width="200"  src="/images/MAML-update.png">
@@ -236,16 +239,16 @@ The task in 2D Navigation domain is to direct the agent in the 2D space to a par
 <h3 id="references">References</h3>
 <ol>
 <li><a name="myfootnote1">Definition of transfer learning from Wikipedia</a></li>
-<li><a href="https://sites.google.com/view/icml19metalearning">ICML 2019 Meta leraning tutorial</a></li>
-<li><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html">Prof. Hung-yi Lee&rsquo;s slides on meta learning</a></li>
-<li>Alex Nichol, Joshua Achiam, John Schulman <a href="https://arxiv.org/abs/1803.02999"><em>On First-Order Meta-Learning Algorithms</em></a> 2018 &ndash; Reptile paper</li>
-<li><a href="https://openai.com/blog/reptile/">Reptile Blog</a></li>
-<li><a href="https://github.com/AdrienLE/ANIML/blob/master/ANIML.ipynb">Paper repro: Deep Metalearning using “MAML” and “Reptile”</a></li>
+<li><a href="https://sites.google.com/view/icml19metalearning" target="_blank">ICML 2019 Meta leraning tutorial</a></li>
+<li><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html" target="_blank">Prof. Hung-yi Lee&amp;rsquo;s slides on meta learning</a></li>
+<li>Alex Nichol, Joshua Achiam, John Schulman <a href="https://arxiv.org/abs/1803.02999" target="_blank">&lt;em&gt;On First-Order Meta-Learning Algorithms&lt;/em&gt;</a> 2018 &ndash; Reptile paper</li>
+<li><a href="https://openai.com/blog/reptile/" target="_blank">Reptile Blog</a></li>
+<li><a href="https://github.com/AdrienLE/ANIML/blob/master/ANIML.ipynb" target="_blank">Paper repro: Deep Metalearning using “MAML” and “Reptile”</a></li>
 </ol>
 <h3 id="further-resources">Further resources</h3>
 <ol>
-<li><a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html">Tutorial on Meta-Learning by Dr. Lilian Weng</a></li>
-<li><a href="https://github.com/sudharsan13296/Awesome-Meta-Learning">Awesome meta learning lists</a></li>
+<li><a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank">Tutorial on Meta-Learning by Dr. Lilian Weng</a></li>
+<li><a href="https://github.com/sudharsan13296/Awesome-Meta-Learning" target="_blank">Awesome meta learning lists</a></li>
 </ol>
 </p>
 
@@ -293,14 +296,14 @@ The task in 2D Navigation domain is to direct the agent in the 2D space to a par
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1611282436"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1611282436"></script>
+<script type="text/javascript" src="/js/lunr.js?1612139571"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1612139571"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1611282436"></script>
+<script type="text/javascript" src="/js/search.js?1612139571"></script>
 
     
 <nav id="menu">

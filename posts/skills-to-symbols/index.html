@@ -28,23 +28,20 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="From Skills to Symbols: Learning Symbolic Representations for Abstract High-Level Planning"/>
-<meta name="twitter:description" content="This paper learns abstract symbolic representations from lower level trajectories for planning at a high-level. Big Idea of this paper is that given different domains of increasing difficulty at lower level but similar high level tasks, if we are able to segregate the low-level and high-level tasks, the tasks can be considered equivalent at higher level and hence can be solved in a uniform manner.
- For example, given three tasks as shown above:"/>
+<meta name="twitter:description" content="In the pursuit of learning planner from data, I ended up reading Konidaris et al. (JAIR 2018). Getting through this paper was an onerous task. Which I would not like to do again. So, here are my notes on the key concepts from that paper, which are relevant for learning high-level, abstract planner."/>
 
     <meta property="og:title" content="From Skills to Symbols: Learning Symbolic Representations for Abstract High-Level Planning" />
-<meta property="og:description" content="This paper learns abstract symbolic representations from lower level trajectories for planning at a high-level. Big Idea of this paper is that given different domains of increasing difficulty at lower level but similar high level tasks, if we are able to segregate the low-level and high-level tasks, the tasks can be considered equivalent at higher level and hence can be solved in a uniform manner.
- For example, given three tasks as shown above:" />
+<meta property="og:description" content="In the pursuit of learning planner from data, I ended up reading Konidaris et al. (JAIR 2018). Getting through this paper was an onerous task. Which I would not like to do again. So, here are my notes on the key concepts from that paper, which are relevant for learning high-level, abstract planner." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/skills-to-symbols/" />
 <meta property="article:published_time" content="2020-04-22T16:40:08+02:00" />
 <meta property="article:modified_time" content="2020-04-22T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="From Skills to Symbols: Learning Symbolic Representations for Abstract High-Level Planning">
-<meta itemprop="description" content="This paper learns abstract symbolic representations from lower level trajectories for planning at a high-level. Big Idea of this paper is that given different domains of increasing difficulty at lower level but similar high level tasks, if we are able to segregate the low-level and high-level tasks, the tasks can be considered equivalent at higher level and hence can be solved in a uniform manner.
- For example, given three tasks as shown above:">
+<meta itemprop="description" content="In the pursuit of learning planner from data, I ended up reading Konidaris et al. (JAIR 2018). Getting through this paper was an onerous task. Which I would not like to do again. So, here are my notes on the key concepts from that paper, which are relevant for learning high-level, abstract planner.">
 <meta itemprop="datePublished" content="2020-04-22T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2020-04-22T16:40:08+02:00" />
-<meta itemprop="wordCount" content="482">
+<meta itemprop="wordCount" content="503">
 
 
 
@@ -122,8 +119,8 @@
   <li class="breadcrumb__group">
     Apr 22, 2020
   </li> 
-  <li class="tags">  Tagged with:
-      <a href="https://harshakokel.com/tags/planning/" class="button">planning</a>  <a href="https://harshakokel.com/tags/abstractions/" class="button">abstractions</a>  <a href="https://harshakokel.com/tags/rl/" class="button">rl</a>
+  <li class="tags crumb"> 
+      <a href="https://harshakokel.com/tags/planning/" class="tag__link">planning</a>  <a href="https://harshakokel.com/tags/abstractions/" class="tag__link">abstractions</a>  <a href="https://harshakokel.com/tags/rl/" class="tag__link">rl</a>
   </li>
 </ol> 
 
@@ -138,10 +135,13 @@
 
   
   
-
-  <p><strong></strong></p>
   
-    <blockquote>My notes on <strong>George Konidaris, Leslie Pack Kaelbling, Tomas Lozano-Perez, JAIR 2018</strong></blockquote>
+ 
+  
+  
+  
+    <blockquote class="preview">In the pursuit of learning planner from data, I ended up reading Konidaris et al. <a href="https://www.jair.org/index.php/jair/article/view/11175" target="_blank">(JAIR 2018)</a>. Getting through this paper was an onerous task. Which I would not like to do again. So, here are my notes on the key concepts from that paper, which are relevant for learning high-level, abstract planner. </blockquote>
+  
   
   <p><p>This paper learns abstract symbolic representations from lower level trajectories for planning at a high-level. Big Idea of this paper is that given different domains of increasing difficulty at lower level but similar high level tasks, if we are able to segregate the low-level and high-level tasks, the tasks can be considered equivalent at higher level and hence can be solved in a uniform manner.</p>
 <div align="center">
@@ -180,6 +180,8 @@ $Remainder(X,o)$ – possible states with same values as $X$ for all variables e
 <p>$$ Remainder(X,o) = Project(X, mask(o))$$
 $$Im(X,o) = Effects(X,o) \cap Remainder(X,o)$$</p>
 <p>Thus we can learn PDDL operators directly from the trajectories and leverage the rich planning literature to perform high level planning in RL tasks.</p>
+<h4 id="references">References</h4>
+<p>George Konidaris, Leslie Pack Kaelbling, Tomas Lozano-Perez, From Skills to Symbols: Learning Symbolic Representations for Abstract High-Level Planning, <a href="https://www.jair.org/index.php/jair/article/view/11175" target="_blank">JAIR 2018</a></p>
 </p>
 
 
@@ -226,14 +228,14 @@ $$Im(X,o) = Effects(X,o) \cap Remainder(X,o)$$</p>
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1611282436"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1611282436"></script>
+<script type="text/javascript" src="/js/lunr.js?1612139571"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1612139571"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1611282436"></script>
+<script type="text/javascript" src="/js/search.js?1612139571"></script>
 
     
 <nav id="menu">

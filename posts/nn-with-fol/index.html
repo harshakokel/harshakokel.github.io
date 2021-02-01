@@ -28,27 +28,24 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Augmenting Neural Networks with First-order Logic"/>
-<meta name="twitter:description" content="This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.
-To convert the FOL rules to a network, each predicate in the rule is mapped to a named neuron."/>
+<meta name="twitter:description" content="Declarative knowledge, first-order rules are used in ILP (a lot) to reduce dependency on the data. Since deep neural network are data hungry, can we use some first-order rules and reduce their data requirement? This post reviews the work by Tao and Srikumar (ACL 2019) which attempts to answer this research question."/>
 
     <meta property="og:title" content="Augmenting Neural Networks with First-order Logic" />
-<meta property="og:description" content="This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.
-To convert the FOL rules to a network, each predicate in the rule is mapped to a named neuron." />
+<meta property="og:description" content="Declarative knowledge, first-order rules are used in ILP (a lot) to reduce dependency on the data. Since deep neural network are data hungry, can we use some first-order rules and reduce their data requirement? This post reviews the work by Tao and Srikumar (ACL 2019) which attempts to answer this research question." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/nn-with-fol/" />
 <meta property="article:published_time" content="2020-09-22T16:40:08+02:00" />
 <meta property="article:modified_time" content="2020-09-22T16:40:08+02:00" /><meta property="og:site_name" content="Harsha Kokel" />
 
     <meta itemprop="name" content="Augmenting Neural Networks with First-order Logic">
-<meta itemprop="description" content="This paper addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.
-To convert the FOL rules to a network, each predicate in the rule is mapped to a named neuron.">
+<meta itemprop="description" content="Declarative knowledge, first-order rules are used in ILP (a lot) to reduce dependency on the data. Since deep neural network are data hungry, can we use some first-order rules and reduce their data requirement? This post reviews the work by Tao and Srikumar (ACL 2019) which attempts to answer this research question.">
 <meta itemprop="datePublished" content="2020-09-22T16:40:08+02:00" />
 <meta itemprop="dateModified" content="2020-09-22T16:40:08+02:00" />
-<meta itemprop="wordCount" content="496">
+<meta itemprop="wordCount" content="499">
 
 
 
-<meta itemprop="keywords" content="neurosymbolic,course," />
+<meta itemprop="keywords" content="neurosymbolic,coursework," />
 
     
   </head>
@@ -122,8 +119,8 @@ To convert the FOL rules to a network, each predicate in the rule is mapped to a
   <li class="breadcrumb__group">
     Sep 22, 2020
   </li> 
-  <li class="tags">  Tagged with:
-      <a href="https://harshakokel.com/tags/neurosymbolic/" class="button">neurosymbolic</a>  <a href="https://harshakokel.com/tags/course/" class="button">course</a>
+  <li class="tags crumb"> 
+      <a href="https://harshakokel.com/tags/neurosymbolic/" class="tag__link">neurosymbolic</a>  <a href="https://harshakokel.com/tags/coursework/" class="tag__link">coursework</a>
   </li>
 </ol> 
 
@@ -138,12 +135,15 @@ To convert the FOL rules to a network, each predicate in the rule is mapped to a
 
   
   
-
-  <p><strong></strong></p>
   
-    <blockquote>My notes on <strong>Tao Li, Vivek Srikumar, <a href='https://www.aclweb.org/anthology/P19-1028v2.pdf'>ACL 2019</a></strong></blockquote>
+ 
   
-  <p><p>This paper addresses the problem of incorporating declarative  knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency of the data, to achieve comparative performance with less examples.</p>
+  
+  
+    <blockquote class="preview">Declarative knowledge, first-order rules are used in ILP (a lot) to reduce dependency on the data. Since deep neural network are data hungry, can we use some first-order rules and reduce their data requirement? This post reviews the work by Tao and Srikumar <a href="https://www.aclweb.org/anthology/P19-1028v2.pdf" target="_blank">(ACL 2019)</a> which attempts to answer this research question. </blockquote>
+  
+  
+  <p><p>Tao and Srikumar, <a href="https://www.aclweb.org/anthology/P19-1028v2.pdf" target="_blank">ACL 2019</a>, addresses the problem of incorporating declarative knowledge into a Neural Network. They propose converting the (easily available) first-order logic representation of the knowledge into a network and provide a framework to augment this network to any neural network of choice. The main motivation to use the declarative knowledge as an inductive bias is to reduce the dependency on the data, to achieve comparative performance with less examples.</p>
 <p>To convert the FOL rules to a network, each predicate in the rule is mapped to a named neuron. For example, given a rule $A_1 \wedge A_2 \rightarrow B_1$, the network will have 3 named neurons: $a_1, a_2,$ and $b_1$ with arrow from $a_1$ and $a_2$ to $b_1$. The Łukasiewicz T-norm and T-conorm are used as functions for the logical operators, inspired by probabilistic soft logic literature. Auxiliary variables and auxiliary named neurons are included as needed to compute logical operations. For example, $(\lnot A \vee B) \wedge (C \vee D)$ is converted to $P \wedge Q$ with $(\lnot A \vee B) \leftrightarrow P$ and $(C \vee D) \leftrightarrow Q$. The benefit of using Łukasiewicz functions is that they are differentiable. This network doesn&rsquo;t have any parameters hence do not require any learning.</p>
 <p>To ensure that the network is acyclic, the authors recommend using contrapositive statements when needed. For example, if the rule $B_1 \rightarrow A_1$ is introducing cycle in the network, then use its contrapositive equivalent $\lnot A_1 \rightarrow \lnot B_1$ instead.</p>
 <p>This rule network is added as constraint to some layer $y=g(\mathbf{Wx})$ of the original neural network. The <em>constrained neural layer</em> is defined as follows with hyperparameter $\rho$ handling the importance factor.</p>
@@ -202,14 +202,14 @@ To convert the FOL rules to a network, each predicate in the rule is mapped to a
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1611282436"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1611282436"></script>
+<script type="text/javascript" src="/js/lunr.js?1612139571"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1612139571"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1611282436"></script>
+<script type="text/javascript" src="/js/search.js?1612139571"></script>
 
     
 <nav id="menu">
