@@ -3351,11 +3351,12 @@ div.goodreads {
 span.highlight{
   font-size: 1.2em
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1025px){
   div.goodreads {
     float: none;
     width: 100%;
-    margin-left: 0px;
+    margin-left: 2px;
+    margin-right: 2px;
     margin-bottom: 20px;
   }
   li{
