@@ -272,7 +272,7 @@ From [Grothendieck], I have also learned not to take glory in the difficulty of 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://harshakokel.com/projects/</guid>
-      <description>Selected Projects   RePReL: Integrating Relational Planning and Reinforcement Learning for Effective Abstraction Providing state abstraction for better task transfer in taskable reinforcement learning environments using D-FOCI statements. Kokel et al. ICAPS 2021.
+      <description>Selected Projects   Effective Abstraction in Relational RL Providing state abstraction for better task transfer in taskable reinforcement learning environments using D-FOCI statements. Kokel et al. ICAPS 2021.
     Communicating with Computers This is a DARPA funded project to build intelligent minecraft agent that can communicate and collaborate with humans through chat to build structures. [ video ]     Knowledge Intensive Gradient Boosting Leveraging qualitative domain knowledge while learning tree based gradient boosting models to improve predictions in regions where data is noisy or absent.</description>
     </item>
     
