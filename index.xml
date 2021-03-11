@@ -273,7 +273,7 @@ From [Grothendieck], I have also learned not to take glory in the difficulty of 
       
       <guid>https://harshakokel.com/projects/</guid>
       <description>Selected Projects   Effective Abstraction in Relational RL Providing state abstraction for better task transfer in taskable reinforcement learning environments using D-FOCI statements. Kokel et al. ICAPS 2021.
-    Communicating with Computers This is a DARPA funded project to build intelligent minecraft agent that can communicate and collaborate with humans through chat to build structures. [ video ]     Knowledge Intensive Gradient Boosting Leveraging qualitative domain knowledge while learning tree based gradient boosting models to improve predictions in regions where data is noisy or absent.</description>
+    Relational Q Learning Implemented Q-learning for relational domains like blocksworld, where the states are represented using first-order logic predicates. [ code ]     Communicating with Computers This is a DARPA funded project to build intelligent minecraft agent that can communicate and collaborate with humans through chat to build structures.</description>
     </item>
     
   </channel>
