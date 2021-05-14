@@ -1,291 +1,175 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://harshakokel.com/tags/abstractions/</loc>
     <lastmod>2020-10-21T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/abstraction-for-planning/</loc>
     <lastmod>2020-10-21T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/</loc>
     <lastmod>2020-10-21T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/hierarchy/</loc>
     <lastmod>2020-10-21T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/planning/</loc>
     <lastmod>2020-10-21T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/</loc>
     <lastmod>2020-10-21T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/</loc>
     <lastmod>2020-10-21T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/coursework/</loc>
     <lastmod>2020-09-25T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/logical-nn/</loc>
     <lastmod>2020-09-25T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/neurosymbolic/</loc>
     <lastmod>2020-09-25T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/nn-with-fol/</loc>
     <lastmod>2020-09-22T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/summary/</loc>
     <lastmod>2020-06-09T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/neurosymbolic-systems/</loc>
     <lastmod>2020-06-09T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/causal/</loc>
     <lastmod>2020-05-24T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/causal-tools/</loc>
     <lastmod>2020-05-24T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/afe/</loc>
     <lastmod>2020-05-08T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/active-learning/</loc>
     <lastmod>2020-05-08T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/healthcare/</loc>
     <lastmod>2020-05-08T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/starling/</loc>
     <lastmod>2020-05-08T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/adversary/</loc>
     <lastmod>2020-04-29T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/meta-attack-gnn/</loc>
     <lastmod>2020-04-29T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/gnn/</loc>
     <lastmod>2020-04-29T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/skills-to-symbols/</loc>
     <lastmod>2020-04-22T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/rl/</loc>
     <lastmod>2020-04-22T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/drrl/</loc>
     <lastmod>2020-04-15T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/relational/</loc>
     <lastmod>2020-04-15T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/relational-network/</loc>
     <lastmod>2020-04-13T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/vqa/</loc>
     <lastmod>2020-04-13T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/rrl/</loc>
     <lastmod>2020-04-12T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/srl/</loc>
     <lastmod>2020-04-12T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/few-shot/</loc>
     <lastmod>2020-04-04T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/few-shot-learning-gnn/</loc>
     <lastmod>2020-04-04T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/ilp/</loc>
     <lastmod>2020-03-30T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/relational-inductive-bias/</loc>
     <lastmod>2020-03-30T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/metalearning/</loc>
     <lastmod>2020-03-27T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/maml/</loc>
     <lastmod>2020-03-27T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/her/</loc>
     <lastmod>2020-03-20T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/generalization/</loc>
     <lastmod>2020-03-18T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/imitation/</loc>
     <lastmod>2020-03-18T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/logic-program-policies/</loc>
     <lastmod>2020-03-18T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/understanding-node-attention/</loc>
     <lastmod>2020-02-26T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/gat/</loc>
     <lastmod>2020-02-17T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/gcn/</loc>
     <lastmod>2020-02-05T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/batch-rl/</loc>
     <lastmod>2019-12-06T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/offline/</loc>
     <lastmod>2019-12-06T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/hierarchical-rl/</loc>
     <lastmod>2019-10-28T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/active-advice-seeking/</loc>
     <lastmod>2019-10-05T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/advice/</loc>
     <lastmod>2019-10-05T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/minimal-sufficient-explanation/</loc>
     <lastmod>2019-09-03T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/xai/</loc>
     <lastmod>2019-09-03T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/advice-based-learning/</loc>
     <lastmod>2018-11-04T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/tags/survey/</loc>
     <lastmod>2018-11-04T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/srl-for-myocardialinfarction/</loc>
     <lastmod>2018-02-28T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/posts/bayesian-logic/</loc>
     <lastmod>2018-01-31T16:40:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/cv/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/misc/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://harshakokel.com/projects/</loc>
   </url>
-  
 </urlset>
