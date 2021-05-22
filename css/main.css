@@ -2032,7 +2032,7 @@ a.image {
 
 /* List */
 ol {
-  list-style: decimal;
+  list-style: none;
   margin: 0 0 2em 0;
   padding-left: 2em;}
   ol li {
@@ -3754,3 +3754,46 @@ span.paper-highlight {
     color:var(--lowlight-color);
     padding: 1px 3px 1px 3px;
 }
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popuptext {
+  position: fixed;
+  display: none;
+  max-width: 40em;
+  max-height: 30em;
+  margin: auto;
+  padding: 2em 1em 3.5em 1em;;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3d4449;
+  color: white;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#closeButton {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+}
+
+.popuptext button {
+    margin-right: 0;
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+    background-color: rgba(255,255,255,1)
+}
+

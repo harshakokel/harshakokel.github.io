@@ -102,3 +102,30 @@ $( document ).ready(function() {
         }
     });
 });
+
+function citationPopup(id) {
+  var popup = document.getElementById("myPopup_"+id);
+  // popup.classList.toggle("show");
+  popup.style.display = "block";
+}
+
+function citationPopupClose(id) {
+  var popup = document.getElementById("myPopup_"+id);
+  // popup.classList.toggle("show");
+  popup.style.display = "none";
+}
+
+function copytext(id) {
+  var copyText = document.getElementById("cite_"+id);
+  var text = copyText.innerText;
+  copyText.value = text
+
+  //create a selection range
+  var CopyRange = document.createRange();
+  //choose the element we want to select the text of
+  CopyRange.selectNode(copyText);
+  //select the text inside the range
+  window.getSelection().addRange(CopyRange);
+  document.execCommand("copy");     //remove our selection range
+  alert("Citation Copied!");
+}
