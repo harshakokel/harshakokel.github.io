@@ -30,8 +30,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   line-height: 1; }
 
-ol, ul {
-  list-style: none; }
+/* ol, ul {
+  list-style: none; } */
 
 blockquote, q {
   quotes: none; }
@@ -2032,7 +2032,7 @@ a.image {
 
 /* List */
 ol {
-  list-style: none;
+  /* list-style: none; */
   margin: 0 0 2em 0;
   padding-left: 2em;}
   ol li {
@@ -3797,3 +3797,6 @@ span.paper-highlight {
     background-color: rgba(255,255,255,1)
 }
 
+#publications > ol {
+  list-style: none;
+}

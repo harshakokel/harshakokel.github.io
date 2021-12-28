@@ -41,7 +41,7 @@
     <meta itemprop="name" content="Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks">
 <meta itemprop="description" content="My notes on Chelsea Finn, Pieter Abbeel, Sergey Levine, ICML 2017. Written as part of the Complex  Networks course by Prof. Feng Chen."><meta itemprop="datePublished" content="2020-03-27T16:40:08&#43;02:00" />
 <meta itemprop="dateModified" content="2020-03-27T16:40:08&#43;02:00" />
-<meta itemprop="wordCount" content="1315">
+<meta itemprop="wordCount" content="1313">
 <meta itemprop="keywords" content="metalearning,coursework," />
     
   </head>
@@ -209,7 +209,7 @@ $$ -->
 <blockquote>
 <p>Notice that the initial parameter $\theta$ used in MAML is equivalent to $\phi$ in the reptile algorithm.</p>
 </blockquote>
-<p><a name="a6"><i class="fa fa-bolt"></i></a> Instead of computing the $\theta^{\prime}_i$ for each task with one step gradient, Reptile computes parameter $W$ by running stochastic gradient descent for $k$ steps. Then instead of computing the gradient w.r.t the task for updating the initial parameter $theta$ (as done in line 8 of MAML), Reptile recommend to just shift the initial parameter in the direction of $W$ by using $(W - \phi)$ as gradient. Below figure explains the Reptile update process.</p>
+<p><a name="a6"><i class="fa fa-bolt"></i></a> Instead of computing the $\theta^{\prime}_i$ for each task with one step gradient, Reptile computes parameter $W$ by running stochastic gradient descent for $k$ steps. Then instead of computing the gradient w.r.t the task for updating the initial parameter $\theta$ (as done in line 8 of MAML), Reptile recommend to just shift the initial parameter in the direction of $W$ by using $(W - \phi)$ as gradient. Below figure explains the Reptile update process.</p>
 <div align="center">
 <img align="center" width="300"  src="/images/Reptile-update.png">
 <p><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html">Adapted from slides of Prof. Hung-yi Lee.</a></p>
@@ -236,10 +236,10 @@ The task in 2D Navigation domain is to direct the agent in the 2D space to a par
 <ol>
 <li><a name="myfootnote1">Definition of transfer learning from Wikipedia</a></li>
 <li><a href="https://sites.google.com/view/icml19metalearning" target="_blank">ICML 2019 Meta leraning tutorial</a></li>
-<li><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html" target="_blank">Prof. Hung-yi Lee&amp;rsquo;s slides on meta learning</a></li>
-<li>Alex Nichol, Joshua Achiam, John Schulman <a href="https://arxiv.org/abs/1803.02999" target="_blank">&lt;em&gt;On First-Order Meta-Learning Algorithms&lt;/em&gt;</a> 2018 &ndash; Reptile paper</li>
+<li>Prof. Hung-yi Lee&rsquo;s <a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html" target="_blank">slides</a> on meta learning</li>
+<li>Reptile paper: Alex Nichol, Joshua Achiam, John Schulman <a href="https://arxiv.org/abs/1803.02999" target="_blank">On First-Order Meta-Learning Algorithms</a>, 2018</li>
 <li><a href="https://openai.com/blog/reptile/" target="_blank">Reptile Blog</a></li>
-<li><a href="https://github.com/AdrienLE/ANIML/blob/master/ANIML.ipynb" target="_blank">Paper repro: Deep Metalearning using “MAML” and “Reptile”</a></li>
+<li><a href="https://github.com/AdrienLE/ANIML/blob/master/ANIML.ipynb" target="_blank">Code: Deep Metalearning using “MAML” and “Reptile”</a></li>
 </ol>
 <h3 id="further-resources">Further resources</h3>
 <ol>
@@ -292,14 +292,14 @@ The task in 2D Navigation domain is to direct the agent in the 2D space to a par
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1639495749"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1639495749"></script>
+<script type="text/javascript" src="/js/lunr.js?1640714685"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1640714685"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1639495749"></script>
+<script type="text/javascript" src="/js/search.js?1640714685"></script>
 
     
 <nav id="menu">
