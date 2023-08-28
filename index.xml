@@ -5,6 +5,7 @@
     <link>https://harshakokel.com/</link>
     <description>Recent content on Harsha Kokel</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
     <lastBuildDate>Wed, 21 Oct 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -251,7 +252,7 @@
 hkokel@utdallas.edu
 The University of Texas at Dallas,
 Erik Jonsson School of Engineering and Computer Science,
-StARLinG Lab: 3.214, 800 W. Campbell Road, Dallas, TX 75080  Google Scholar | Semantic Scholar |  DBLP |  ORCID |  Research Gate Resume     Education   Doctor of Philosophy (Ph.D.) Computer Science &amp;nbsp; [ Fall 2018 - present ]  The University of Texas at Dallas, TX, USA  Advisor: Prof.</description>
+StARLinG Lab: 3.214, 800 W. Campbell Road, Dallas, TX 75080 Google Scholar | Semantic Scholar | DBLP | ORCID | Research Gate Resume Education Doctor of Philosophy (Ph.D.) Computer Science &amp;nbsp; [ Fall 2018 - present ] The University of Texas at Dallas, TX, USA Advisor: Prof. Sriraam Natarajan Master of Science (M.</description>
     </item>
     
     <item>
@@ -272,8 +273,8 @@ From [Grothendieck], I have also learned not to take glory in the difficulty of 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://harshakokel.com/projects/</guid>
-      <description>Selected Projects   Link prediction using NeSy models Compared different Neurosymbolic and symbolic models for a simple task of link prediction. More details.
-    Relational Q Learning Implemented Q-learning for relational domains like blocksworld, where the states are represented using first-order logic predicates. [ code ]     Effective Abstraction in Relational RL Providing state abstraction for better task transfer in taskable reinforcement learning environments using D-FOCI statements.</description>
+      <description>Selected Projects Link prediction using NeSy models Compared different Neurosymbolic and symbolic models for a simple task of link prediction. More details.
+Effective Abstraction in Relational RL Providing state abstraction for better task transfer in taskable reinforcement learning environments using D-FOCI statements. [ code ] Relational Q Learning Implemented Q-learning for relational domains like blocksworld, where the states are represented using first-order logic predicates. [ code ] Communicating with Computers This is a DARPA funded project to build intelligent minecraft agent that can communicate and collaborate with humans through chat to build structures.</description>
     </item>
     
   </channel>
