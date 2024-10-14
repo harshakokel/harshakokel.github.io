@@ -34,12 +34,13 @@
 <meta property="og:description" content="Ryan Riegel, et al. (arxiv 2020) proposes to build Neural Network by adding one neuron for each logical gate and literal in a logic formulae and hence building a neural framework for logical inference. This article reviews their work. It was written jointly with Siwen Yan, as part of the course on NeuroSymbolic systems by Prof. Sriraam Natarajan." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/logical-nn/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-09-25T16:40:08+02:00" />
-<meta property="article:modified_time" content="2020-09-25T16:40:08+02:00" /><meta property="og:site_name" content="AI Research Scientist, &lt;br&gt; IBM Research" />
+<meta property="article:published_time" content="2020-09-25T16:40:08&#43;02:00" />
+<meta property="article:modified_time" content="2020-09-25T16:40:08&#43;02:00" /><meta property="og:site_name" content="Harsha Kokel" />
+
 
     <meta itemprop="name" content="Logical Neural Network">
-<meta itemprop="description" content="Ryan Riegel, et al. (arxiv 2020) proposes to build Neural Network by adding one neuron for each logical gate and literal in a logic formulae and hence building a neural framework for logical inference. This article reviews their work. It was written jointly with Siwen Yan, as part of the course on NeuroSymbolic systems by Prof. Sriraam Natarajan."><meta itemprop="datePublished" content="2020-09-25T16:40:08+02:00" />
-<meta itemprop="dateModified" content="2020-09-25T16:40:08+02:00" />
+<meta itemprop="description" content="Ryan Riegel, et al. (arxiv 2020) proposes to build Neural Network by adding one neuron for each logical gate and literal in a logic formulae and hence building a neural framework for logical inference. This article reviews their work. It was written jointly with Siwen Yan, as part of the course on NeuroSymbolic systems by Prof. Sriraam Natarajan."><meta itemprop="datePublished" content="2020-09-25T16:40:08&#43;02:00" />
+<meta itemprop="dateModified" content="2020-09-25T16:40:08&#43;02:00" />
 <meta itemprop="wordCount" content="769">
 <meta itemprop="keywords" content="neurosymbolic,coursework," />
   </head>
@@ -143,13 +144,13 @@
     <blockquote class="preview"><a href="https://arxiv.org/abs/2006.13155" target="_blank">Ryan Riegel, et al. (arxiv 2020)</a> proposes to build Neural Network by adding one neuron for each logical gate and literal in a logic formulae and hence building a neural framework for logical inference. This article reviews their work. It was written jointly with <a href="https://dtrycode.github.io" target="_blank">Siwen Yan</a>, as part of the course on NeuroSymbolic systems by Prof. Sriraam Natarajan. </blockquote>
   
   
-  <p><p><a href="https://arxiv.org/abs/2006.13155" target="_blank">Ryan Riegel, et al. (arxiv 2020)</a> proposes Logical Neural Network (LNN), a neural framework to perform logical inference. They propose to build a neural network with 1-to-1 correspondence with logical formulae. So, every neuron in the LNN is either a logical literal or logical gate. Given set of logical formulae, a LNN is a graph with one neuron for every unique proposition occurring in any formula and one neuron for each logical operation occurring in each formula, as shown in the figure below. Each neuron outputs a lower and upper bound on the truth values of the corresponding sub-formulae or proposition.  A logical neural accepts the output of their corresponding neurons and propositional neurons accepts the bound on propositions&rsquo; truth value.</p>
+  <p><p><a href="https://arxiv.org/abs/2006.13155" target="_blank">Ryan Riegel, et al. (arxiv 2020)</a> proposes Logical Neural Network (LNN), a neural framework to perform logical inference. They propose to build a neural network with 1-to-1 correspondence with logical formulae. So, every neuron in the LNN is either a logical literal or logical gate. Given set of logical formulae, a LNN is a graph with one neuron for every unique proposition occurring in any formula and one neuron for each logical operation occurring in each formula, as shown in the figure below. Each neuron outputs a lower and upper bound on the truth values of the corresponding sub-formulae or proposition.  A logical neural accepts the output of their corresponding neurons and propositional neurons accepts the bound on propositions' truth value.</p>
 <div align="center">
 <img align="center" width="400"  src="../../images/LNN.png">
 <p>src: Ryan Riegel, et al. (arxiv 2020)</p>
 </div>
 <p>For purpose of demonstrating the contributions authors use proposition formulae in the paper and extend it to FOL in the appendix. Hence, the class presentation focused on propositional formulae only.  It is long known that a neuron can be treated as logical gate and hence a neural network can approximate any boolean formula. Authors claim that although this fact is known, it has not been explored much. For example, KBANN<sup><a href="#ref1">1</a></sup> uses the symbolic knowledge to create an initial neural network but then the parameters of the neural network are learned from examples, so the notion of neuron being the logical gate is lost. Literature from differential ILP like Tensor Log<sup><a href="#ref2">2</a></sup>, which also uses symbolic knowledge/clauses to build the structure of neural network, do not use neurons as logical gates. Perhaps one exception is the CIL2P<sup><a href="#ref3">3</a></sup> work of Garcez.</p>
-<p>Since the truth values can be any value between [0,1], the choice of activation function for the logical operators must implement real-valued logic. There can be multiple ways of achieving that using importance weighting, this paper proposes weighted nonlinear logic using Łukasiewicz-like logic. Other types of real-valued logic functions can be used and the framework is able to accommodate that. The activation function defined using the weighted generalization of the Łukasiewicz logic still follows the logic properties and the DeMorgan&rsquo;s laws. Augmenting NN with FOL paper<sup><a href="#ref4">4</a></sup> also uses  Łukasiewicz logic as activation function in the augmented network. The difference is that paper does not consider real-valued logic and hence does not have upper or lower bounds. It also does not use weighted generalization. This weighted generalization of logic is the main contribution of the paper.</p>
+<p>Since the truth values can be any value between [0,1], the choice of activation function for the logical operators must implement real-valued logic. There can be multiple ways of achieving that using importance weighting, this paper proposes weighted nonlinear logic using Ñukasiewicz-like logic. Other types of real-valued logic functions can be used and the framework is able to accommodate that. The activation function defined using the weighted generalization of the Ñukasiewicz logic still follows the logic properties and the DeMorgan&rsquo;s laws. Augmenting NN with FOL paper<sup><a href="#ref4">4</a></sup> also uses  Łukasiewicz logic as activation function in the augmented network. The difference is that paper does not consider real-valued logic and hence does not have upper or lower bounds. It also does not use weighted generalization. This weighted generalization of logic is the main contribution of the paper.</p>
 <p>Inference is performed using the iterative upward and downward pass of the network and learning is strictly restricted to the parameter learning since the structure is built using formulae. Hence the LNN model retains the interpretability of the original logical formulae in the network.</p>
 <p>LNN is empirically evaluated on 3 benchmark datasets: Smokers and friends, Lehigh University Benchmark (LUBM), and Thousands of Problems for Theorem Proving (TPTP). These experiments show that the LNN performs comparative to the LTNs (Logic Tensor Networks) and better than MLNs (Markov Logic Networks). LNN is better able to handle the contradictions and is the only neural model that was able to solve any common sense reasoning problem of TPTP. This clearly demonstrates the power of LNN as neural theorem prover.</p>
 <p>The use of many-valued logic in AI or ML has been scarce. It has mainly been used in the philosophical studies and its usefulness in the field of AI is unexplored, except for the use in fuzzy logic. Perhaps this paper opens door for use of many valued logic in neuro-symbolic studies.</p>
@@ -228,14 +229,14 @@
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1727661084"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1727661084"></script>
+<script type="text/javascript" src="/js/lunr.js?1728867485"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1728867485"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1727661084"></script>
+<script type="text/javascript" src="/js/search.js?1728867485"></script>
 
     
 <nav id="menu">
