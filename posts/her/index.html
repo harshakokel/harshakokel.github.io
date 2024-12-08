@@ -34,13 +34,12 @@
 <meta property="og:description" content="My notes on Marcin Andrychowicz et al. NeurIPS 2017." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harshakokel.com/posts/her/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-03-20T16:40:08&#43;02:00" />
-<meta property="article:modified_time" content="2020-03-20T16:40:08&#43;02:00" /><meta property="og:site_name" content="Harsha Kokel" />
-
+<meta property="article:published_time" content="2020-03-20T16:40:08+02:00" />
+<meta property="article:modified_time" content="2020-03-20T16:40:08+02:00" /><meta property="og:site_name" content="AI Research Scientist, &lt;br&gt; IBM Research" />
 
     <meta itemprop="name" content="Hindsight Experience Replay">
-<meta itemprop="description" content="My notes on Marcin Andrychowicz et al. NeurIPS 2017."><meta itemprop="datePublished" content="2020-03-20T16:40:08&#43;02:00" />
-<meta itemprop="dateModified" content="2020-03-20T16:40:08&#43;02:00" />
+<meta itemprop="description" content="My notes on Marcin Andrychowicz et al. NeurIPS 2017."><meta itemprop="datePublished" content="2020-03-20T16:40:08+02:00" />
+<meta itemprop="dateModified" content="2020-03-20T16:40:08+02:00" />
 <meta itemprop="wordCount" content="303">
 <meta itemprop="keywords" content="RL," />
   </head>
@@ -146,13 +145,13 @@
   
   <p><p>Remember the sampling approaches used for approximate inference in Bayesian Networks, how the <strong>rejection sampling</strong> is super expensive since it wastes lot of samples and we try to capitalize on those samples by providing weights in <strong>importance sampling</strong>. This paper proposes something similar.</p>
 <p>In standard RL setting, with sparse reward there can be a long time before the Q-values propagate from the goal state to individual states and even when they do because of sparsity they might not be adequate to differentiate between different states. Popular solution for this problem is to use reward shaping functions but even they have some unforeseen consequences.</p>
-<p>This paper highlights that even though the current trajectory $T_i = &lt;s_0, a_0, s_1, a_1, &hellip; s_{t_i}, a_{t_i}&gt;$ did not reach the achieved goal state $g_i$, it reached the state $s_{t_i}$ and hence if the goal state was $s_{t_i}$ this would have been a useful trajectory. With the advent of goal-conditioned policy learning, policies $\pi$ are no longer learnt for a single goal, rather goal state $g$ is taken as input along with state and action. i.e instead of $\pi:S \times A \rightarrow [0,1]$, goal-conditioned policies are $\pi:S \times A \times S_G \rightarrow [0,1]$. So, we can engineer different goal for trajectories which do not reach their pre-determined goal and add it to the *replay buffer* with engineered goal state as well as the pre-determined goal. This increases the buffer size, providing more transition samples to learn.</p>
+<p>This paper highlights that even though the current trajectory $T_i = &lt;s_0, a_0, s_1, a_1, &hellip; s_{t_i}, a_{t_i}&gt;$ did not reach the achieved goal state $g_i$, it reached the state $s_{t_i}$ and hence if the goal state was $s_{t_i}$ this would have been a useful trajectory. With the advent of goal-conditioned policy learning, policies $\pi$ are no longer learnt for a single goal, rather goal state $g$ is taken as input along with state and action. i.e instead of $\pi:S \times A \rightarrow [0,1]$, goal-conditioned policies are $\pi:S \times A \times S_G \rightarrow [0,1]$. So, we can engineer different goal for trajectories which do not reach their pre-determined goal and add it to the <em>replay buffer</em> with engineered goal state as well as the pre-determined goal. This increases the buffer size, providing more transition samples to learn.</p>
 <h3 id="critique">Critique</h3>
 <p>Although the idea of the using the existing sampled trajectory by engineering the goal seems useful, it is not clear if there exists a principled approach to do this and how is it better than engineering reward-shaping functions?</p>
 <h3 id="references">References</h3>
 <ol>
 <li>Marcin Andrychowicz, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, Pieter Abbeel, Wojciech Zaremba, <a href="https://arxiv.org/abs/1707.01495" target="_blank">NeurIPS 2017</a></li>
-<li><a href="https://openai.com/blog/ingredients-for-robotics-research/">https://openai.com/blog/ingredients-for-robotics-research/</a></li>
+<li><a href="https://openai.com/blog/ingredients-for-robotics-research/" target="_blank">https://openai.com/blog/ingredients-for-robotics-research/</a></li>
 </ol>
 </p>
 
@@ -200,14 +199,14 @@
 
 
 
-<script type="text/javascript" src="/js/lunr.js?1728868841"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1728868841"></script>
+<script type="text/javascript" src="/js/lunr.js?1733636623"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733636623"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harshakokel.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1728868841"></script>
+<script type="text/javascript" src="/js/search.js?1733636623"></script>
 
     
 <nav id="menu">

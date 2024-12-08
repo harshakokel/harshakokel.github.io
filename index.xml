@@ -5,6 +5,7 @@
     <link>https://harshakokel.com/</link>
     <description>Recent content on Harsha Kokel</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <copyright>Original-Theme is licensed with the Creative Commons Attribution 3.0 Unported License</copyright>
     <lastBuildDate>Wed, 21 Oct 2020 16:40:08 +0200</lastBuildDate><atom:link href="https://harshakokel.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -248,9 +249,9 @@
       
       <guid>https://harshakokel.com/cv/</guid>
       <description>Curriculum Vitae Harsha Kokel, Ph.D.
-Harsha Kokel
+AI Research Scientist, IBM Research
 harsha.kokel@ibm.com
-650 Harry Road, Almaden Research Center San Jose, CA 95120-6099, US Office: B1-252  Google Scholar | Semantic Scholar |  DBLP |  ORCID |  Research Gate    Experience Industry   Research Scientist, IBM Research, USA &amp;nbsp; [March 2023 - present]    Research Intern, IBM T. J. Watson Research Center, Yorktown Heights, NY, USA &amp;nbsp; [ Summer 2021, Summer 2022]  Bridging the gap between Symbolic planning and Reinforcement Learning.</description>
+650 Harry Road, Almaden Research Center San Jose, CA 95120-6099, US Office: B1-252 Google Scholar | Semantic Scholar | DBLP | ORCID | Research Gate Experience Industry Research Scientist, IBM Research, USA &amp;nbsp; [March 2023 - present] Research Intern, IBM T. J. Watson Research Center, Yorktown Heights, NY, USA &amp;nbsp; [ Summer 2021, Summer 2022] Bridging the gap between Symbolic planning and Reinforcement Learning.</description>
     </item>
     
     <item>
@@ -271,9 +272,9 @@ From [Grothendieck], I have also learned not to take glory in the difficulty of 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://harshakokel.com/publications/</guid>
-      <description>Publications  [P2] ACPBench: Reasoning about Action, Change, and Planning (Preprint),
-Harsha Kokel, Michael Katz, Kavitha Srinivas, Shirin Sohrabi, In ArXiv 2024. paper | blog | code  [W10] Automating Thought of Search: A Journey Towards Soundness and Completeness,
-Daniel Cao, Michael Katz, Harsha Kokel, Kavitha Srinivas, Shirin Sohrabi, In OWA Workshop at NeurIPS 2024. paper  [C11] Thought of Search: Planning with Language Models Through The Lens of Efficiency,</description>
+      <description>Publications [C12] TabSketchFM: Sketch-based Tabular Representation Learning for Data Discovery over Data Lakes,* Joint first-authors
+Aamod Khatiwada*, Harsha Kokel*, Ibrahim Abdelaziz, Subhajit Chaudhury, Julian Dolby, Oktie Hassanzadeh, Zhenhan Huang, Tejaswini Pedapati, Horst Samulowitz, Kavitha Srinivas, In ICDE 2024. paper [P2] ACPBench: Reasoning about Action, Change, and Planning (Preprint),
+Harsha Kokel, Michael Katz, Kavitha Srinivas, Shirin Sohrabi, In ArXiv 2024. paper | blog | code [C11] Thought of Search: Planning with Language Models Through The Lens of Efficiency,</description>
     </item>
     
     <item>
@@ -282,8 +283,7 @@ Daniel Cao, Michael Katz, Harsha Kokel, Kavitha Srinivas, Shirin Sohrabi, In OWA
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://harshakokel.com/projects/</guid>
-      <description>Selected Projects   Link prediction using NeSy models Compared different Neurosymbolic and symbolic models for a simple task of link prediction. More details.
-    Relational Q Learning Implemented Q-learning for relational domains like blocksworld, where the states are represented using first-order logic predicates. [ code ]     Effective Abstraction in Relational RL Providing state abstraction for better task transfer in taskable reinforcement learning environments using D-FOCI statements.</description>
+      <description> </description>
     </item>
     
   </channel>
