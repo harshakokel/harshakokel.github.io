@@ -272,9 +272,10 @@ From [Grothendieck], I have also learned not to take glory in the difficulty of 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://harshakokel.com/publications/</guid>
-      <description>Publications [C12] TabSketchFM: Sketch-based Tabular Representation Learning for Data Discovery over Data Lakes,* Joint first-authors
-Aamod Khatiwada*, Harsha Kokel*, Ibrahim Abdelaziz, Subhajit Chaudhury, Julian Dolby, Oktie Hassanzadeh, Zhenhan Huang, Tejaswini Pedapati, Horst Samulowitz, Kavitha Srinivas, In ICDE 2024. paper [P2] ACPBench: Reasoning about Action, Change, and Planning (Preprint),
-Harsha Kokel, Michael Katz, Kavitha Srinivas, Shirin Sohrabi, In ArXiv 2024. paper | blog | code [C11] Thought of Search: Planning with Language Models Through The Lens of Efficiency,</description>
+      <description>Publications [P2] Can Cross Encoders Produce Useful Sentence Embeddings? (Preprint),
+Haritha Ananthakrishnan, Julian Dolby, Harsha Kokel, Horst Samulowitz, Kavitha Srinivas, In ArXiv 2025. paper [C13] ACPBench: Reasoning about Action, Change, and Planning,
+Harsha Kokel, Michael Katz, Kavitha Srinivas, Shirin Sohrabi, In AAAI 2025. paper | blog | code [C12] TabSketchFM: Sketch-based Tabular Representation Learning for Data Discovery over Data Lakes,* Joint first-authors
+Aamod Khatiwada*, Harsha Kokel*, Ibrahim Abdelaziz, Subhajit Chaudhury, Julian Dolby, Oktie Hassanzadeh, Zhenhan Huang, Tejaswini Pedapati, Horst Samulowitz, Kavitha Srinivas, In ICDE 2024.</description>
     </item>
     
     <item>
