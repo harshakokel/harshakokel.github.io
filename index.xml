@@ -272,10 +272,9 @@ From [Grothendieck], I have also learned not to take glory in the difficulty of 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://harshakokel.com/publications/</guid>
-      <description>Publications [W11] ACPBench Hard: Unrestrained Reasoning about Action, Change, and Planning,
-Harsha Kokel, Michael Katz, Kavitha Srinivas, Shirin Sohrabi, In LM4Plan Workshop at AAAI 2025. paper [C14] Combining Planning and Reinforcement Learning for Solving Relational Multiagent Domains,
-Nikhilesh Prabhakar, Ranveer Singh, Harsha Kokel, Sriraam Natarajan, Prasad Tadepalli, In AAMAS 2025. paper [A4] Automating Thought of Search: A Journey Towards Soundness and Completeness (Student Abstract),
-Daniel Cao, Michael Katz, Harsha Kokel, Kavitha Srinivas, Shirin Sohrabi, In AAAI 2025.</description>
+      <description>Publications [P3] QueryGym: Step-by-Step Interaction with Relational Databases,
+Haritha Ananthakrishnan, Harsha Kokel, Kelsey Sikes, Debarun Bhattacharjya, Michael Katz, Shirin Sohrabi, Kavitha Srinivas, In ArXiv 2025. paper [W12] TOPJoin: A Context-Aware Multi-Criteria Approach for Joinable Column Search,
+Harsha Kokel, Aamod Khatiwada, Tejaswini Pedapati, Haritha Ananthakrishnan, Oktie Hassanzadeh, Horst Samulowitz, Kavitha Srinivas, In TaDA Workshop at VLDB 2025. paper | code [W11] ACPBench Hard: Unrestrained Reasoning about Action, Change, and Planning,</description>
     </item>
     
     <item>
