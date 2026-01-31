@@ -243,6 +243,17 @@
     </item>
     
     <item>
+      <title>All Updates</title>
+      <link>https://harshakokel.com/news/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://harshakokel.com/news/</guid>
+      <description>All Updates Thrilled to share that our paper ACPBench-Hard has been accepted to ICLR 2026! 🎉 It’s incredibly rewarding to see this work is already gaining traction in the research community — with 10,000+ downloads on Hugging Face.
+Jan &amp;#39;26 Will be attending NeurIPS 2025 in San Diego. Presenting a Tutorial on Planning in the Era of Language Models and showcasing Query Gym at IBM Booth.
+Dec &amp;#39;25 The work on Black-Box Uncertainty Quantification for Large Language Models via Ensemble-of-Ensembles lead by Wang Ma in the Summer of 2025 is now accepted at Assessing and Improving Reliability of Foundation Models in the Real World (AIR-FM) Workshop at AAAI 2026.</description>
+    </item>
+    
+    <item>
       <title>CV</title>
       <link>https://harshakokel.com/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -251,7 +262,7 @@
       <description>Curriculum Vitae Harsha Kokel, Ph.D.
 AI Research Scientist, IBM Research
 harsha.kokel@ibm.com
-650 Harry Road, Almaden Research Center San Jose, CA 95120-6099, US Office: B1-252 Google Scholar | Semantic Scholar | DBLP | ORCID | Research Gate Experience Industry Research Scientist, IBM Research, USA &amp;nbsp; [March 2023 - present] Research Intern, IBM T. J. Watson Research Center, Yorktown Heights, NY, USA &amp;nbsp; [ Summer 2021, Summer 2022] Bridging the gap between Symbolic planning and Reinforcement Learning.</description>
+555 Bailey Ave, San Jose, CA 95141, USA Office: E215 Google Scholar | Semantic Scholar | DBLP | ORCID | Research Gate Experience Industry Research Scientist, IBM Research, USA &amp;nbsp; [March 2023 - present] Research Intern, IBM T. J. Watson Research Center, Yorktown Heights, NY, USA &amp;nbsp; [ Summer 2021, Summer 2022] Bridging the gap between Symbolic planning and Reinforcement Learning.</description>
     </item>
     
     <item>
